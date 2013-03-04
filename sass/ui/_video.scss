@@ -1,0 +1,18 @@
+	body .video {
+		width: 100%;
+		position: relative;
+		height: 0;
+		padding-bottom: 56.25%;
+	}
+	
+	.youtube.video, .vimeo.video, .twitch.video {
+		padding-top: 30px;
+	}
+	
+	.video > video, .video > iframe, .video > object, .video > embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
