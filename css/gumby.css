@@ -5,7 +5,7 @@
 * ---------------------------
 * Follow @gumbycss on twitter and spread the love.
 * We worked super hard on making this awesome and released it to the web.
-* All we ask is you leave this in tact.
+* All we ask is you leave this intact. #gumbyisawesome
 *
 * http://www.gumbyframework.com/
 */
@@ -337,7 +337,7 @@ img { -ms-interpolation-mode: bicubic; }
 .navbar ul li.field input.search { background: #191a1b; border: none; color: #f2f2f2; }
 .navbar ul li:hover > a { position: relative; background: #868d92; z-index: 1000; }
 .navbar ul li .dropdown { width: auto; min-width: 0px; max-width: 320px; height: 0; position: absolute; background: #fafafa; overflow: hidden; z-index: 999; }
-.navbar ul li:hover .dropdown { min-height: 60px; max-height: 561px; overflow: visible; height: auto; width: 100%; padding: 0; border-top: 1px solid #3e4043; -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); -webkit-transition: ease-in-out 0.2s; -moz-transition: ease-in-out 0.2s; -o-transition: ease-in-out 0.2s; transition: ease-in-out 0.2s; }
+.navbar ul li:hover .dropdown { min-height: 60px; max-height: 561px; overflow: visible; height: auto; width: 100%; padding: 0; border-top: 1px solid #3e4043; -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); }
 .navbar ul a.toggle { display: block; }
 
 .navbar > ul > li > li > a { padding: 0 33px; }
@@ -583,9 +583,9 @@ i.icon-cancel:before { content: "\2715"; height: inherit; }
 
 i.icon-cancel-circled:before { content: "\2716"; height: inherit; }
 
-.icon-cancel-square.icon-left a:before, .icon-cancel-square.icon-right a:after { content: "\274e"; height: inherit; }
+.icon-cancel-squared.icon-left a:before, .icon-cancel-squared.icon-right a:after { content: "\274e"; height: inherit; }
 
-i.icon-cancel-square:before { content: "\274e"; height: inherit; }
+i.icon-cancel-squared:before { content: "\274e"; height: inherit; }
 
 .icon-plus.icon-left a:before, .icon-plus.icon-right a:after { content: "\2b"; height: inherit; }
 
