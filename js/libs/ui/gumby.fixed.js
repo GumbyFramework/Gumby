@@ -42,8 +42,13 @@
 		fixedPoint = fixedPoint instanceof jQuery ? this.fixedPoint.offset().top : this.fixedPoint;
 		unfixPoint = unfixPoint instanceof jQuery ? this.unfixPoint.offset().top : this.unfixPoint;
 
+		// ensure unfix point is never reached if not set
+		if(!unfixPoint) {
+			unfixPoint = offset * 2;
+		}
+
 		// scrolled past fixed point and no fixed class present
-		if(offset >= fixedPoint && !this.$el.hasClass('fixed')) {
+		if((offset >= fixedPoint) && (offset < unfixPoint)  && !this.$el.hasClass('fixed')) {
 			this.$el.addClass('fixed').trigger('gumby.onFixed');
 
 		// before fixed point, pass 0 to onUnfixed event
