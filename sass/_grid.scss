@@ -203,15 +203,11 @@ img {
 /* Nicolas Gallagher's micro clearfix */
 
 .clearfix {
-  @include pie-clearfix;
-  &:before {
-    content:"";
-    display: table;
-  }
+  @include clearfix();
 }
 
 .row {
-  @extend .clearfix;
+  @include clearfix();
 }
 
 
