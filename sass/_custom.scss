@@ -1,1 +1,343 @@
 // Your custom SCSS should be written here...
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+
+//  ANYTHING BELOW THIS COMMENT IS FOR DEMONSTRATION  //
+//   PURPOSES DURING TESTING OF THE SEMANTIC GRID     //
+
+//   MAKE SURE THAT ITS CONTENTS ARE ERASED FROM THE  //
+//     DOCUMENT BEFORE PUSHING TO DEVELOP BRANCH      //
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+
+///////////////// SEMANTIC GRID TEST ///////////////////
+
+.funbucket {
+  @include row();
+  margin-bottom: 20px;
+  &#header {
+  	border: none;
+  }
+}
+
+.onesemantic, .onesemantics {
+  @include column(1);
+  border: 1px solid #eee;
+  &.alt {
+  	@include hybrid(1);
+  }
+}
+
+.twosemantics {
+  @include column(2);
+  border: 1px solid #eee;
+   &.alt {
+  	@include hybrid(2);
+  }
+}
+
+.threesemantics {
+  @include column(3);
+  border: 1px solid #eee;
+  &.alt {
+  	@include hybrid(3);
+  }
+}
+
+.foursemantics {
+  @include column(4);
+  border: 1px solid #eee;
+  &.alt {
+  	@include hybrid(4);
+  }
+}
+
+.fivesemantics {
+  @include column(5);
+  border: 1px solid #eee;
+  &.alt {
+  	@include hybrid(5);
+  }
+}
+
+.sixsemantics {
+  @include column(6);
+  border: 1px solid #eee;
+  &.alt {
+  	@include hybrid(6);
+  }
+}
+
+.sevensemantics {
+  @include column(7);
+  border: 1px solid #eee;
+  &.alt {
+  	@include hybrid(7);
+  }
+}
+
+.eightsemantics {
+  @include column(8);
+  border: 1px solid #eee;
+  &.alt {
+  	@include hybrid(8);
+  }
+}
+
+.ninesemantics {
+  @include column(9);
+  border: 1px solid #eee;
+  &.alt {
+  	@include hybrid(9);
+  }
+}
+
+.tensemantics {
+  @include column(10);
+  border: 1px solid #eee;
+  &.alt {
+  	@include hybrid(10);
+  }
+}
+
+.elevensemantics {
+  @include column(11);
+  border: 1px solid #eee;
+  &.alt {
+  	@include hybrid(11);
+  }
+}
+
+.twelvesemantics {
+  @include column(12);
+  border: 1px solid #eee;
+  &.alt {
+  	@include hybrid(12);
+  }
+}
+
+.thirteensemantics {
+	@include hybrid(13);
+	border: 1px solid #eee;
+}
+
+.fourteensemantics {
+	@include hybrid(14);
+	border: 1px solid #eee;
+}
+
+.fifteensemantics {
+	@include hybrid(15);
+	border: 1px solid #eee;
+}
+
+.sixteensemantics {
+	@include hybrid(16);
+	border: 1px solid #eee;
+}
+
+.pushing_one {
+	@include push(1);
+	&.alt {
+		@include push(1, hybrid);
+	}
+}
+
+.pushing_two {
+	@include push(2);
+	&.alt {
+		@include push(2, hybrid);
+	}
+}
+
+.pushing_three {
+	@include push(3);
+	&.alt {
+		@include push(3, hybrid);
+	}
+}
+
+.pushing_four {
+	@include push(4);
+	&.alt {
+		@include push(4, hybrid);
+	}
+}
+
+.pushing_five {
+	@include push(5);
+	&.alt {
+		@include push(5, hybrid);
+	}
+}
+
+.pushing_six {
+	@include push(6);
+	&.alt {
+		@include push(6, hybrid);
+	}
+}
+
+.pushing_seven {
+	@include push(7);
+	&.alt {
+		@include push(7, hybrid);
+	}
+}
+
+.pushing_eight {
+	@include push(8);
+	&.alt {
+		@include push(8, hybrid);
+	}
+}
+
+.pushing_nine {
+	@include push(9);
+	&.alt {
+		@include push(9, hybrid);
+	}
+}
+
+.pushing_ten {
+	@include push(10);
+	&.alt {
+		@include push(10, hybrid);
+	}
+}
+
+.pushing_eleven {
+	@include push(11);
+	&.alt {
+		@include push(11, hybrid);
+	}
+}
+
+.pushing_twelve {
+	@include push(12);
+	&.alt {
+		@include push(12, hybrid);
+	}
+}
+
+.pushing_thirteen {
+	@include push(13);
+	&.alt {
+		@include push(13, hybrid);
+	}
+}
+
+.pushing_fourteen {
+	@include push(14);
+	&.alt {
+		@include push(14, hybrid);
+	}
+}
+
+.pushing_fifteen {
+	@include push(15);
+	&.alt {
+		@include push(15, hybrid);
+	}
+}
+
+[class^="cent"], [class*="cent"] {
+	border: 1px solid #eee;
+}
+
+.cent16 {
+  @include hybrid(16, center);
+}
+.cent15 {
+	@include hybrid(15, center);
+}
+.cent14 {
+	@include hybrid(14, center);
+}
+.cent13 {
+	@include hybrid(13, center);
+}
+.cent12 {
+	@include hybrid(12, center);
+}
+.cent11 {
+	@include column(11, center);
+	&.alt {
+  	@include hybrid(11, center);
+  }
+}
+
+.cent10 {
+	@include column(10, center);
+	&.alt {
+  	@include hybrid(10, center);
+  }
+}
+
+.cent9 {
+	@include column(9, center);
+	&.alt {
+  	@include hybrid(9, center);
+  }
+}
+
+.cent8 {
+	@include column(8, center);
+	&.alt {
+  	@include hybrid(8, center);
+  }
+}
+
+.cent7 {
+	@include column(7, center);
+	&.alt {
+  	@include hybrid(7, center);
+  }
+}
+
+.cent6 {
+	@include column(6, center);
+	&.alt {
+  	@include hybrid(6, center);
+  }
+}
+
+.cent5 {
+	@include column(5, center);
+	&.alt {
+  	@include hybrid(5, center);
+  }
+}
+
+.cent4 {
+	@include column(4, center);
+	&.alt {
+  	@include hybrid(4, center);
+  }
+}
+
+.cent3 {
+	@include column(3, center);
+	&.alt {
+  	@include hybrid(3, center);
+  }
+}
+
+.cent2 {
+	@include column(2, center);
+	&.alt {
+  	@include hybrid(2, center);
+  }
+}
+
+.cent1 {
+	@include column(1, center);
+	&.alt {
+  	@include hybrid(1, center);
+  }
+}
+
+

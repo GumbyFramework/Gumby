@@ -1,6 +1,12 @@
 # Require any additional compass plugins here.
+# If you ran 'gem install modular-scale', uncomment this:
+
 require 'modular-scale'
 require 'sassy-math'
+
+# Tell compass where to find extensions
+# If you followed directions and ran 'gem install modular-scale' comment this:
+# extensions_dir = "sass/extensions"
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -15,7 +21,7 @@ output_style = :compact
 # relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-line_comments = false
+line_comments = true
 
 
 # If you prefer the indented syntax, you might want to regenerate this
