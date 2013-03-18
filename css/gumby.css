@@ -519,41 +519,48 @@ img { -ms-interpolation-mode: bicubic; }
 
 /* Nicolas Gallagher's micro clearfix */
 /* line 205, ../sass/_grid.scss */
-.clearfix, .row { *zoom: 1; }
-/* line 38, ../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.clearfix:after, .row:after { content: ""; display: table; clear: both; }
-/* line 207, ../sass/_grid.scss */
-.clearfix:before, .row:before { content: ""; display: table; }
+.clearfix { *zoom: 1; }
+/* line 3, ../sass/functions/_clearfix.scss */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+/* line 7, ../sass/functions/_clearfix.scss */
+.clearfix:after { clear: both; }
 
-/* line 220, ../sass/_grid.scss */
+/* line 209, ../sass/_grid.scss */
+.row { *zoom: 1; }
+/* line 3, ../sass/functions/_clearfix.scss */
+.row:before, .row:after { content: ""; display: table; }
+/* line 7, ../sass/functions/_clearfix.scss */
+.row:after { clear: both; }
+
+/* line 216, ../sass/_grid.scss */
 .valign { display: table; width: 100%; }
-/* line 223, ../sass/_grid.scss */
+/* line 219, ../sass/_grid.scss */
 .valign > div { display: table-cell; vertical-align: middle; }
-/* line 227, ../sass/_grid.scss */
+/* line 223, ../sass/_grid.scss */
 .valign ​ > article { display: table-cell; vertical-align: middle; }
 
 /* Mobile */
-@media only screen and (max-width: 767px) { /* line 236, ../sass/_grid.scss */
+@media only screen and (max-width: 767px) { /* line 232, ../sass/_grid.scss */
   body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; }
-  /* line 242, ../sass/_grid.scss */
+  /* line 238, ../sass/_grid.scss */
   .container { min-width: 0; margin-left: 0; margin-right: 0; }
-  /* line 247, ../sass/_grid.scss */
+  /* line 243, ../sass/_grid.scss */
   .row { width: 100%; min-width: 0; margin-left: 0; margin-right: 0; }
-  /* line 253, ../sass/_grid.scss */
+  /* line 249, ../sass/_grid.scss */
   .row .row .column, .row .row .columns { padding: 0; }
-  /* line 257, ../sass/_grid.scss */
+  /* line 253, ../sass/_grid.scss */
   .row .centered { margin: 0 !important; }
-  /* line 261, ../sass/_grid.scss */
+  /* line 257, ../sass/_grid.scss */
   .column, .columns { width: auto !important; float: none; margin-left: 0; margin-right: 0; }
-  /* line 267, ../sass/_grid.scss */
+  /* line 263, ../sass/_grid.scss */
   .column:last-child, .columns:last-child { margin-right: 0; float: none; }
-  /* line 273, ../sass/_grid.scss */
+  /* line 269, ../sass/_grid.scss */
   [class*="column"] + [class*="column"]:last-child { float: none; }
-  /* line 276, ../sass/_grid.scss */
+  /* line 272, ../sass/_grid.scss */
   [class*="column"]:before { display: table; }
-  /* line 279, ../sass/_grid.scss */
+  /* line 275, ../sass/_grid.scss */
   [class*="column"]:after { display: table; clear: both; }
-  /* line 285, ../sass/_grid.scss */
+  /* line 281, ../sass/_grid.scss */
   [class^="push_"], [class*="push_"] { margin-left: 0 !important; } }
 /*=====================================================
  Navigation (with dropdowns)
