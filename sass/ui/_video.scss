@@ -3,10 +3,12 @@
 		position: relative;
 		height: 0;
 		padding-bottom: 56.25%;
-	}
-	
-	.youtube.video, .vimeo.video, .twitch.video {
-		padding-top: 30px;
+		&.twitch {
+			padding-top: 30px;
+		}
+		&.youtube, &.vimeo {
+			// Nothing goes here anymore. Both use overlay transports.
+		}
 	}
 	
 	.video > video, .video > iframe, .video > object, .video > embed {
