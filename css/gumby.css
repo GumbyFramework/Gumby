@@ -2926,9 +2926,9 @@ form fieldset legend { padding: 5px 10px; }
 /* line 1, ../sass/ui/_video.scss */
 body .video { width: 100%; position: relative; height: 0; padding-bottom: 56.25%; }
 /* line 6, ../sass/ui/_video.scss */
-body .video.twitch { padding-top: 30px; }
+body .video.twitch, body .video.youtube.show_controls { padding-top: 30px; }
 
-/* line 14, ../sass/ui/_video.scss */
+/* line 16, ../sass/ui/_video.scss */
 .video > video, .video > iframe, .video > object, .video > embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 /* line 18, ../sass/_custom.scss */

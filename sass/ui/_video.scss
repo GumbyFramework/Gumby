@@ -3,8 +3,10 @@
 		position: relative;
 		height: 0;
 		padding-bottom: 56.25%;
-		&.twitch {
+		&.twitch, &.youtube.show_controls {
 			padding-top: 30px;
+			// Use .show_controls f you want the play/pause controls
+			// to show before the video plays, like on older youtube.
 		}
 		&.youtube, &.vimeo {
 			// Nothing goes here anymore. Both use overlay transports.
