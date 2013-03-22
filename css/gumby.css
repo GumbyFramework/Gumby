@@ -1,13 +1,21 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-/*
-* Gumby Framework Version 2.0
-* ---------------------------
+/**
+* Gumby Framework
+* ---------------
+*
 * Follow @gumbycss on twitter and spread the love.
 * We worked super hard on making this awesome and released it to the web.
 * All we ask is you leave this intact. #gumbyisawesome
 *
-* http://www.gumbyframework.com/
+* Gumby Framework
+* http://gumbyframework.com
+*
+* Built with love by your friends @digitalsurgeons
+* http://www.digitalsurgeons.com
+*
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
 */
 /* line 17, ../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
