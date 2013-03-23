@@ -159,6 +159,7 @@
 				} else if($this.data('gumbyTouchStart')) {
 					$this.data('gumbyTouchStart', false);
 					event.type = "gumbyTap";
+					$this.stopImmediatePropagation();
 					$.event.handle.apply(this, arguments);
 				}
 			}
