@@ -7,9 +7,17 @@
 
 	function Fixed($el) {
 		this.$el = $el;
-		this.$holder = Gumby.selectAttr.apply(this.$el, ['holder']) || $(window);
+		this.$holder = Gumby.selectAttr.apply(this.$el, ['holder']);
 		this.fixedPoint = Gumby.selectAttr.apply(this.$el, ['fixed']);
 		this.unfixPoint = false;
+
+		// if holder attr set then create jQuery object
+		// otherwise use window for scrolling cals
+		if(this.$holder) {
+			this.$holder = $(this.$holder);
+		} else {
+			this.$holder = $(window);
+		}
 
 		// fix/unfix points specified
 		if(this.fixedPoint.indexOf('|') > -1) {
