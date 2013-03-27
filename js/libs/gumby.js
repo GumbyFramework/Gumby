@@ -140,11 +140,11 @@
 	Gumby.prototype.setupTapEvent = function() {
 		$.event.special.gumbyTap = {
 			setup: function(data) {
-				$(this).bind('touchstart touchend touchmove', jQuery.event.special.gumbyTap.handler);
+				$(this).bind('touchstart touchend touchmove', $.event.special.gumbyTap.handler);
 			},
 
 			teardown: function() {
-				$(this).unbind('touchstart touchend touchmove', jQuery.event.special.gumbyTap.handler);
+				$(this).unbind('touchstart touchend touchmove', $.event.special.gumbyTap.handler);
 			},
 
 			handler: function(event) {
