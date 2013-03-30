@@ -73,14 +73,14 @@
 
 	// grab attribute value, testing data- gumby- and no prefix
 	Gumby.prototype.selectAttr = function() {
-		var x;
+		var i = 0;
 
 		// any number of attributes can be passed
-		for(x in arguments) {
+		for(; i < arguments.length; i++) {
 			// various formats
-			var attr = arguments[x],
-				dataAttr = 'data-'+arguments[x],
-				gumbyAttr = 'gumby-'+arguments[x];
+			var attr = arguments[i],
+				dataAttr = 'data-'+arguments[i],
+				gumbyAttr = 'gumby-'+arguments[i];
 
 			// first test for data-attr
 			if(this.attr(dataAttr)) {
