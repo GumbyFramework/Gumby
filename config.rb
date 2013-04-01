@@ -1,12 +1,14 @@
 # Require any additional compass plugins here.
-# If you ran 'gem install modular-scale', uncomment this:
 
-require 'modular-scale'
-require 'sassy-math'
+# Tell compass where to find local extensions
+# If you followed directions and ran 'gem install modular-scale' comment the next two lines out:
+extensions_dir = "sass/extensions"
 
-# Tell compass where to find extensions
-# If you followed directions and ran 'gem install modular-scale' comment this:
-# extensions_dir = "sass/extensions"
+Compass::Frameworks.register('modular-scale', :path => File.expand_path("#{extensions_dir}/modular-scale"))
+
+# Uncomment these to use regular Ruby gems.
+# require 'modular-scale'
+# require 'sassy-math'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -21,7 +23,7 @@ output_style = :compact
 # relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-line_comments = true
+line_comments = false
 
 
 # If you prefer the indented syntax, you might want to regenerate this
