@@ -56,7 +56,7 @@ body { background: white; font-family: "Open Sans"; font-weight: 400; color: #55
 /* Fonts */
 @font-face { font-family: "entypo"; font-style: normal; font-weight: 400; src: url(../fonts/icons/entypo.eot); src: url("../fonts/icons/entypo.eot?#iefix") format("ie9-skip-eot"), url("../fonts/icons/entypo.woff") format("woff"), url("../fonts/icons/entypo.ttf") format("truetype"); }
 
-h1, h2, h3, h4, h5, h6 { font-family: "Open Sans"; font-weight: 300; color: #444444; text-rendering: optimizelegibility; padding-top: 0.273em; line-height: 1.15538em; padding-bottom: 0.273em; }
+h1, h2, h3, h4, h5, h6 { font-family: "Open Sans"; font-weight: 300; color: #444444; text-rendering: optimizeLegibility; padding-top: 0.273em; line-height: 1.15538em; padding-bottom: 0.273em; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #d04526; }
 
 @media only screen and (max-width: 767px) { h1, h2, h3, h4, h5, h6 { word-wrap: break-word; } }
@@ -417,8 +417,8 @@ img { -ms-interpolation-mode: bicubic; }
 
 /* Buttons */
 .btn, .skiplink { display: inline-block; width: auto; background: #f2f2f2; -webkit-appearance: none; font-family: "Open Sans"; font-weight: 600; padding: 0 !important; text-align: center; }
-.btn a, .btn input, .btn button, .skiplink a, .skiplink input, .skiplink button { display: block; padding: 0 18px; color: white; height: 100%; }
-.btn input, .btn button, .skiplink input, .skiplink button { background: none; border: none; font-size: 100%; cursor: pointer; }
+.btn > a, .btn input, .btn button, .skiplink > a, .skiplink input, .skiplink button { display: block; padding: 0 18px; color: white; height: 100%; }
+.btn input, .btn button, .skiplink input, .skiplink button { background: none; border: none; width: 100%; font-size: 100%; cursor: pointer; font-weight: 400; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .btn.xlarge, .skiplink.xlarge { font-size: 30px; font-size: 1.875rem; height: 66px; line-height: 64px; }
 .btn.xlarge a, .skiplink.xlarge a { position: relative; padding: 0 30px; }
 .btn.xlarge.icon-left a, .skiplink.xlarge.icon-left a { padding-left: 66px; }
@@ -1664,18 +1664,18 @@ form fieldset legend { padding: 5px 10px; }
 .field .input { position: relative; padding: 0 10px; background: #fff; border: 1px solid #d8d8d8; height: 36px; line-height: 34px; font-size: 16px; font-size: 1rem; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
 .field .input.search { height: 36px; line-height: 34px; -webkit-border-radius: 1000px; -moz-border-radius: 1000px; -ms-border-radius: 1000px; -o-border-radius: 1000px; border-radius: 1000px; }
 .field .input.textarea { height: auto; }
-.field .xnarrow { width: 16%; }
-.field .narrow { width: 21%; }
-.field .normal { width: 31%; }
-.field .wide { width: 46%; }
-.field .xwide { width: 71%; }
+.field .xnarrow { width: 13.33333%; }
+.field .narrow { width: 30.66667%; }
+.field .normal { width: 48%; }
+.field .wide { width: 65.33333%; }
+.field .xwide { width: 82.66667%; }
 .field .xxwide { width: 100%; }
 .field .xnarrow, .field .narrow, .field .normal, .field .wide, .field .xwide, .field .xxwide { margin: 0; }
 .field .xnarrow:last-child, .field .narrow:last-child, .field .normal:last-child, .field .wide:last-child, .field .xwide:last-child, .field .xxwide:last-child { margin-left: -4px; }
-.field .xnarrow:first-child, .field .narrow:first-child, .field .normal:first-child, .field .wide:first-child, .field .xwide:first-child, .field .xxwide:first-child { margin-right: 4%; margin-left: 0; }
+.field .xnarrow:first-child, .field .narrow:first-child, .field .normal:first-child, .field .wide:first-child, .field .xwide:first-child, .field .xxwide:first-child { margin-right: 3.94%; margin-left: 0; }
+.field .xnarrow:first-child:last-child, .field .narrow:first-child:last-child, .field .normal:first-child:last-child, .field .wide:first-child:last-child, .field .xwide:first-child:last-child, .field .xxwide:first-child:last-child { margin: 0; }
 .field label + .xnarrow:last-child, .field label + .narrow:last-child, .field label + .normal:last-child, .field label + .wide:last-child, .field label + .xwide:last-child, .field label + .xxwide:last-child { margin-left: 0; }
-@media only screen and (max-width: 768px) { .field .xnarrow:first-child, .field .narrow:first-child, .field .normal:first-child, .field .wide:first-child, .field .xwide:first-child, .field .xxwide:first-child { margin-right: 3%; }
-  .field .xxwide:first-child, .field .xxwide:last-child { margin-right: 0%; } }
+@media only screen and (max-width: 960px) { .field .xxwide:first-child, .field .xxwide:last-child { margin-right: 0%; } }
 .field.prepend, .field.append { font-size: 0; white-space: nowrap; padding-bottom: 3.5px; }
 .field.prepend input, .field.prepend .input, .field.append input, .field.append .input { display: inline-block; max-width: 100%; }
 .field.prepend input, .field.prepend .input { -webkit-border-radius: 0px 4px 4px 0; -moz-border-radius: 0px 4px 4px 0; -ms-border-radius: 0px 4px 4px 0; -o-border-radius: 0px 4px 4px 0; border-radius: 0px 4px 4px 0; }
