@@ -73,14 +73,14 @@
 
 	// grab attribute value, testing data- gumby- and no prefix
 	Gumby.prototype.selectAttr = function() {
-		var x;
+		var i = 0;
 
 		// any number of attributes can be passed
-		for(x in arguments) {
+		for(; i < arguments.length; i++) {
 			// various formats
-			var attr = arguments[x],
-				dataAttr = 'data-'+arguments[x],
-				gumbyAttr = 'gumby-'+arguments[x];
+			var attr = arguments[i],
+				dataAttr = 'data-'+arguments[i],
+				gumbyAttr = 'gumby-'+arguments[i];
 
 			// first test for data-attr
 			if(this.attr(dataAttr)) {
@@ -140,11 +140,11 @@
 	Gumby.prototype.setupTapEvent = function() {
 		$.event.special.gumbyTap = {
 			setup: function(data) {
-				$(this).bind('touchstart touchend touchmove', jQuery.event.special.gumbyTap.handler);
+				$(this).bind('touchstart touchend touchmove', $.event.special.gumbyTap.handler);
 			},
 
 			teardown: function() {
-				$(this).unbind('touchstart touchend touchmove', jQuery.event.special.gumbyTap.handler);
+				$(this).unbind('touchstart touchend touchmove', $.event.special.gumbyTap.handler);
 			},
 
 			handler: function(event) {
@@ -159,6 +159,7 @@
 				} else if($this.data('gumbyTouchStart')) {
 					$this.data('gumbyTouchStart', false);
 					event.type = "gumbyTap";
+					$this.click(function(e) { e.stopImmediatePropagation(); });
 					$.event.handle.apply(this, arguments);
 				}
 			}
