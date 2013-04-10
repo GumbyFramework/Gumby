@@ -1,11 +1,19 @@
-/*!
-* Gumby Framework Version 2.0
-* ---------------------------
+/**
+* Gumby Framework
+* ---------------
+*
 * Follow @gumbycss on twitter and spread the love.
 * We worked super hard on making this awesome and released it to the web.
 * All we ask is you leave this intact. #gumbyisawesome
 *
-* http://www.gumbyframework.com/
+* Gumby Framework
+* http://gumbyframework.com
+*
+* Built with love by your friends @digitalsurgeons
+* http://www.digitalsurgeons.com
+*
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
 */
 
 @import "modular-scale";
@@ -15,9 +23,6 @@
 
 @import "compass";
 @import "compass/reset";
-@import "compass/css3";
-@import "compass/css3/images";
-@import "compass/utilities/general/clearfix";
 
 @import "functions/all";
 

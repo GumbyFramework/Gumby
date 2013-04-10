@@ -94,8 +94,11 @@ form {
 			margin-left: -4px;
 		}
 		&:first-child {
-			margin-right: 4%;
+			margin-right: 3.94%;
 			margin-left: 0;
+		}
+		&:first-child:last-child {
+			margin: 0;
 		}
 	}
 
@@ -107,14 +110,7 @@ form {
 		}
 	}
 
-	@include respond(portrait-tablets) {
-
-		
-		@include input-sizes-list() {
-			&:first-child {
-				margin-right: 3%;
-			}
-		}
+	@include respond(document-width) {
 
 		.xxwide:first-child, .xxwide:last-child {
 			margin-right: 0%;
