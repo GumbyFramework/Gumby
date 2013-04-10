@@ -41,11 +41,11 @@
 	// initialize Gumby
 	Gumby.prototype.init = function() {
 		// init UI modules
-		scope.initUIModules();
+		this.initUIModules();
 
 		// call ready callback if available
-		if(scope.onReady) {
-			scope.onReady();
+		if(this.onReady) {
+			this.onReady();
 		}
 	};
 
