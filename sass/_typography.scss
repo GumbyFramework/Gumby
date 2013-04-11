@@ -4,7 +4,7 @@
     font-family: '#{$font-family}';
     font-weight: $header-font-weight;
     color: $header-font-color;
-    text-rendering: optimizelegibility;
+    text-rendering: optimizeLegibility;
     @include padding-leader($rhythm-spacing);
     @include adjust-leading-to($rhythm-height);
     @include padding-trailer($rhythm-spacing);

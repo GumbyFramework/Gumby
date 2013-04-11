@@ -9,17 +9,27 @@
 
  ==================================================*/
 
-.container {
-  padding: 0px $gutter-in-px + px;
-}
+// We're removing the container class in favor
+// of adding padding to rows at the $device-width
+// breakpoint.
+
+/*.container {
+  padding: 0px $gutter-in-px;
+}*/
 
 .row {
   width: 100%;
-  max-width: $row-max-width + px;
+  max-width: $row-max-width;
   min-width: $min-device-width;
   margin: 0 auto;
+  @include respond(document-width) {
+    padding: 0 $gutter-in-px;
+  }
   .row {
     min-width: 0px;
+    @include respond(document-width) {
+      padding: 0;
+    }
   }
 }
 
@@ -193,15 +203,11 @@ img {
 /* Nicolas Gallagher's micro clearfix */
 
 .clearfix {
-  @include pie-clearfix;
-  &:before {
-    content:"";
-    display: table;
-  }
+  @include clearfix();
 }
 
 .row {
-  @extend .clearfix;
+  @include clearfix();
 }
 
 
