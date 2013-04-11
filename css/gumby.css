@@ -339,7 +339,8 @@ img { -ms-interpolation-mode: bicubic; }
  Navigation (with dropdowns)
  ======================================================*/
 .navbar { width: 100%; display: block; margin-bottom: 20px; background: #4a4d50; }
-@media only screen and (max-width: 767px) { .navbar { position: relative; border: none; } }
+@media only screen and (max-width: 767px) { .navbar { position: relative; border: none; }
+  .navbar .column, .navbar .columns { min-height: 0; } }
 .navbar.fixed { top: 0; left: 0; z-index: 99999; }
 .navbar a.toggle { display: none; }
 @media only screen and (max-width: 767px) { .navbar a.toggle { top: 18%; right: 4%; width: 46px; position: absolute; text-align: center; display: inline-block; color: white; background: #4a4d50; height: 40px; line-height: 38px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; font-size: 30px; font-size: 1.875rem; }

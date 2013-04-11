@@ -13,6 +13,9 @@
 	@include respond(all-phones) {
 		position: relative;
   	border: none;
+  	.column, .columns {
+  		min-height: 0;
+  	}
 	}
 
 	&.fixed {
