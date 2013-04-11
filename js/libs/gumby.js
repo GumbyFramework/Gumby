@@ -30,23 +30,24 @@
 
 		var scope = this;
 
-		// when document is ready init
+		// when document ready call oldie callback
 		this.$dom.ready(function() {
-
-			// call oldie callback if available
 			if(scope.isOldie && scope.onOldie) {
 				scope.onOldie();
 			}
-
-			// init UI modules
-			scope.initUIModules();
-
-			// call ready callback if available
-			if(scope.onReady) {
-				scope.onReady();
-			}
 		});
 	}
+
+	// initialize Gumby
+	Gumby.prototype.init = function() {
+		// init UI modules
+		this.initUIModules();
+
+		// call ready callback if available
+		if(this.onReady) {
+			this.onReady();
+		}
+	};
 
 	// public helper - return debuggin object including uiModules object
 	Gumby.prototype.debug = function() {
