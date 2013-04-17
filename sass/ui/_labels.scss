@@ -59,7 +59,7 @@
 
 .alert {
 	padding: 0 10px;
-	font-family: '#{$font-family}';
+	font-family: $font-family;
 	font-weight: $font-weight-semibold;
 	list-style-type: none;
 	word-wrap: break-word;
