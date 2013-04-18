@@ -11,10 +11,8 @@ $hybrid: 16 !default; 					    // 16 Column Default Hybrid Grid
 // Responsiveness Settings
 $min-device-width: 320px; 				  // iPhone Portrait
 $tablet-device-width: 768px;				// iPad Portrait
-$desktop-device-width: 979px;				// Desktop min-width
 $document-width: $row-max-width;		// Default Document
 $max-device-width: 2880px;				  // Max Document Size
-$include-visibility-classes: true !default; // Include Visibility Helpers Classes
 
 // Spacing
 $nav-distance: 0px; 								// Navigation distance from the top of the viewport
