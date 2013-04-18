@@ -1,0 +1,47 @@
+/*=====================================================
+ 
+  Visibility Helpers Classes
+  
+  ======================================================*/
+
+@if $include-visibility-classes {
+
+  /* For Desktop */
+  .visible-desktop {
+    display: inherit !important;
+  }
+
+  .visible-phone,
+  .visible-tablet,
+  .hidden-desktop {
+    display: none !important;
+  }
+
+  /* For Tablet */
+  @media (min-width: $tablet-device-width) and (max-width: $desktop-device-width) {
+
+    .hidden-desktop,
+    .visible-tablet {
+      display: inherit !important;
+    }
+
+    .visible-desktop,
+    .hidden-tablet {
+      display: none !important;
+    }
+  }
+
+  /* For Phone */
+  @media (max-width: $tablet-device-width - 1) {
+
+    .hidden-desktop,
+    .visible-phone {
+      display: inherit !important;
+    }
+
+    .visible-desktop,
+    .hidden-phone {
+      display: none !important;
+    }
+  }
+}
