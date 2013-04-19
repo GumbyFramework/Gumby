@@ -163,7 +163,7 @@
 				z-index: 999;
 			}
 			&:hover .dropdown {
-				min-height: 60px;
+				min-height: 50px;
 				max-height: $tablet-device-width - 207;
 				overflow: visible;
 				height: auto;
@@ -189,7 +189,7 @@
 		  		position: relative;
 		  		top: 0;
 		  		background: darken($navbar-color, 8%);
-		  		min-height: 60px;
+		  		min-height: 50px;
 		  		max-height: 250px;
 		  		height: auto;
 		  		overflow: scroll;

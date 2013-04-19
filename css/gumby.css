@@ -363,10 +363,10 @@ img { -ms-interpolation-mode: bicubic; }
 .navbar ul li.field input.search { background: #191a1b; border: none; color: #f2f2f2; }
 .navbar ul li:hover > a { position: relative; background: #868d92; z-index: 1000; }
 .navbar ul li .dropdown { width: auto; min-width: 0px; max-width: 320px; height: 0; position: absolute; background: #fafafa; overflow: hidden; z-index: 999; }
-.navbar ul li:hover .dropdown { min-height: 60px; max-height: 561px; overflow: visible; height: auto; width: 100%; padding: 0; border-top: 1px solid #3e4043; -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); }
+.navbar ul li:hover .dropdown { min-height: 50px; max-height: 561px; overflow: visible; height: auto; width: 100%; padding: 0; border-top: 1px solid #3e4043; -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); }
 @media only screen and (max-width: 767px) { .navbar ul li .dropdown { width: 100%; max-width: 100%; position: relative; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; }
   .navbar ul li:hover .dropdown { border-bottom: 1px solid #313436; }
-  .navbar ul li:hover .dropdown ul { position: relative; top: 0; background: #36393b; min-height: 60px; max-height: 250px; height: auto; overflow: scroll; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; }
+  .navbar ul li:hover .dropdown ul { position: relative; top: 0; background: #36393b; min-height: 50px; max-height: 250px; height: auto; overflow: scroll; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; }
   .navbar ul li:hover .dropdown ul li { min-height: 50px; border-bottom: #3e4043; }
   .navbar ul li:hover .dropdown ul li a { color: white; border-bottom: 1px solid #313436; }
   .navbar ul li:hover .dropdown ul li a:hover { color: #d04526; } }
