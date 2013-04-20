@@ -8,7 +8,7 @@
 	function SkipLink($el) {
 
 		this.$el = $el;
-		this.animateElement = $.browser.webkit ? 'body' : 'html';
+		this.animateElement = 'body, html';
 		this.targetPos = 0;
 		this.duration = Number(Gumby.selectAttr.apply(this.$el, ['duration'])) || 200;
 		this.offset = Gumby.selectAttr.apply(this.$el, ['offset']) || false;
