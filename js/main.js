@@ -16,10 +16,5 @@ Gumby.oldie(function() {
 // Document ready
 $(function() {
 
-	console.log("HI!");
-	$('.skip').on('gumby.onComplete', function() {
-		console.log("HELLO");
-	});
-
 });
 
