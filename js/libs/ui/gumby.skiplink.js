@@ -8,7 +8,6 @@
 	function SkipLink($el) {
 
 		this.$el = $el;
-		this.animateElement = $.browser.webkit ? 'body' : 'html';
 		this.targetPos = 0;
 		this.duration = Number(Gumby.selectAttr.apply(this.$el, ['duration'])) || 200;
 		this.offset = Gumby.selectAttr.apply(this.$el, ['offset']) || false;
@@ -61,9 +60,9 @@
 		var scope = this;
 
 		// slide to position of target
-		$(scope.animateElement).animate({
+		$('html,body').animate({
 			'scrollTop' : this.calculateOffset()
-		}, this.duration, this.easing, function() {
+		}, this.duration, this.easing).promise().done(function() {
 			scope.$el.trigger('gumby.onComplete');
 		});
 	};
