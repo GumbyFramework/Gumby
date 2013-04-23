@@ -357,6 +357,7 @@ form {
 		outline: none;
 		-webkit-appearance: none;
 		z-index: 99;
+        cursor: pointer;
 		@include font-size($norm);
 	}
 }
