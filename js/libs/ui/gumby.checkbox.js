@@ -11,7 +11,7 @@
 		var scope = this;
 
 		// listen for click event and custom gumby check/uncheck events
-		this.$el.on(Gumby.click, function(e) {
+		this.$el.on('click', function(e) {
 			scope.click(e);
 		}).on('gumby.check', function() {
 			scope.update(true);

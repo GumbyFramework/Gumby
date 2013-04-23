@@ -30,7 +30,7 @@
 	// intialise toggles, switches will inherit method
 	Toggle.prototype.init = function() {
 		this.targets = this.parseTargets();
-		this.on = Gumby.selectAttr.apply(this.$el, ['on']) || Gumby.click;
+		this.on = Gumby.selectAttr.apply(this.$el, ['on']) || 'click';
 
 		var scope = this;
 
