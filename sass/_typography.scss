@@ -1,7 +1,7 @@
 
 
   h1,h2,h3,h4,h5,h6 {
-    font-family: '#{$font-family}';
+    font-family: $font-family;
     font-weight: $header-font-weight;
     color: $header-font-color;
     text-rendering: optimizeLegibility;
@@ -57,7 +57,7 @@
  	======================================================*/
 
 p {
-  font-family: '#{$font-family}';
+  font-family: $font-family;
   font-weight: $body-font-weight;
   @include font-size($base-font-size);
   margin-bottom: $base-line-height / 2;
