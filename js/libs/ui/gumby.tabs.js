@@ -14,7 +14,7 @@
 		var scope = this;
 
 		// listen for click event on tab nav and custom gumby set event
-		this.$nav.children('a').on('click', function(e) {
+		this.$nav.children('a').on(Gumby.click, function(e) {
 			e.preventDefault();
 			scope.click($(this));
 		});
@@ -42,7 +42,7 @@
 
 	// set specific tab
 	Tabs.prototype.set = function(e, index) {
-		this.$nav.eq(index).find('a').trigger('click');
+		this.$nav.eq(index).find('a').trigger(Gumby.click);
 	};
 
 	// add initialisation
