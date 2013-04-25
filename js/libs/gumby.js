@@ -22,6 +22,7 @@
 	function Gumby() {
 		this.$dom = $(document);
 		this.isOldie = !!this.$dom.find('html').hasClass('oldie');
+		this.click = 'click';
 		this.uiModules = {};
 		this.inits = {};
 	}
