@@ -10,7 +10,7 @@ Gumby.ready(function() {
 
 // Oldie document loaded
 Gumby.oldie(function() {
-
+	console.log("Oldie");
 });
 
 // Document ready

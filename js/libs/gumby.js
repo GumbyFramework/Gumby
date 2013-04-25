@@ -24,28 +24,29 @@
 		this.isOldie = !!this.$dom.find('html').hasClass('oldie');
 		this.uiModules = {};
 		this.inits = {};
-		this.onReady = false;
-		this.onOldie = false;
-
-		var scope = this;
-
-		// when document ready call oldie callback
-		this.$dom.ready(function() {
-			if(scope.isOldie && scope.onOldie) {
-				scope.onOldie();
-			}
-		});
 	}
 
 	// initialize Gumby
 	Gumby.prototype.init = function() {
 		// init UI modules
 		this.initUIModules();
+	};
 
-		// call ready callback if available
-		if(this.onReady) {
-			this.onReady();
+	// public helper - set Gumby ready callback
+	Gumby.prototype.ready = function(code) {
+		if(code && typeof code !== 'function') {
+			return false;
 		}
+
+		var scope = this;
+
+		// when document ready call oldie callback
+		this.$dom.ready(function() {
+			code();
+			if(scope.isOldie) {
+				scope.onOldie();
+			}
+		});
 	};
 
 	// public helper - return debuggin object including uiModules object
@@ -57,18 +58,18 @@
 		};
 	};
 
-	// public helper - set Gumby ready callback
-	Gumby.prototype.ready = function(code) {
-		if(code && typeof code === 'function') {
-			this.onReady = code;
-		}
-	};
-
 	// public helper - set oldie callback
 	Gumby.prototype.oldie = function(code) {
-		if(code && typeof code === 'function') {
-			this.onOldie = code;
+		if(code && typeof code !== 'function' || !this.isOldie) {
+			return false;
 		}
+
+		var scope = this;
+
+		// when document ready call oldie callback
+		this.$dom.ready(function() {
+			code();
+		});
 	};
 
 	// grab attribute value, testing data- gumby- and no prefix
