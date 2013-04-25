@@ -27,6 +27,27 @@
 		}
 	}
 
+	// Modal constructor
+	function Modal($el) {
+		this.$el = $($el);
+		this.targets = [];
+		this.on = '';
+
+		if (this.$el.length) {
+			this.init();
+		}
+	}
+
+	// Center element for modal
+	var modalCenter = function ($el) {
+		$el.css({
+			top: "50%",
+			left: "50%",
+			marginTop: - ($el.outerHeight() / 2),
+			marginLeft: - ($el.outerWidth() / 2)
+		});
+	}
+
 	// intialise toggles, switches will inherit method
 	Toggle.prototype.init = function() {
 		this.targets = this.parseTargets();
@@ -94,6 +115,9 @@
 	// Switch object inherits from Toggle
 	Switch.prototype = new Toggle();
 	Switch.constructor = Switch;
+	// Modal object inherits from Toggle
+	Modal.prototype = new Toggle();
+	Modal.constructor = Switch;
 
 	// Toggle specific trigger method
 	Toggle.prototype.trigger = function(cb) {
@@ -146,6 +170,39 @@
 		}
 	};
 
+	// Modal specific trigger method
+	Modal.prototype.trigger = function(cb) {
+		// name of modal blocker
+		this.blocker = "gumby-modal-blocker";
+		// no targets just add active class to switch
+		if (!this.targets) {
+			this.$el.addClass('active');
+			modalCenter(this.$el);
+		// display first element
+		} else if (this.targets[0].length > 0) {
+			this.$el.add(this.targets[0]).addClass('active');
+			// display blocker if not exists
+			if ($("." + this.blocker).length === 0)
+			{
+				$('body').append('<div class="' + this.blocker + '"></div>');
+			}
+			modalCenter(this.targets[0]);
+		}
+		// hidden second element if exists
+		if (this.targets.length > 1) {
+			// remove blocker if no first element to display
+			if (this.targets[0].length === 0) {
+				$("." + this.blocker).remove();
+			}
+
+			this.targets[1].removeClass('active');
+		}
+		// call event handler here, applying scope of object Switch/Toggle
+		if(cb && typeof cb === 'function') {
+			cb.apply(this);
+		}
+	};
+
 	// add toggle initialisation
 	Gumby.addInitalisation('toggles', function() {
 		$('.toggle').each(function() {
@@ -174,6 +231,20 @@
 		});
 	});
 
+	// add modal initialisation
+	Gumby.addInitalisation('modals', function() {
+		$('.modal').each(function() {
+			var $this = $(this);
+			// this element has already been initialized
+			if ($this.data('isModal')) {
+				return true;
+			}
+			// mark element as initialized
+			$this.data('isModal', true);
+			new Modal($this);
+		});
+	});
+
 	// register UI module
 	Gumby.UIModule({
 		module: 'toggleswitch',
@@ -182,6 +253,7 @@
 			// Run initialize methods
 			Gumby.initialize('switches');
 			Gumby.initialize('toggles');
+			Gumby.initialize('modals');
 		}
 	});
 }();
