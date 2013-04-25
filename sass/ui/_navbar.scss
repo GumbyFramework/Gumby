@@ -387,19 +387,40 @@
     inset 0 3px 5px #000
   ;
   overflow: hidden;
-  -webkit-transition-duration: .3s;  /* Saf3.2+, Chrome */
-  -moz-transition-duration: .3s;  /* FF4+ */
-  -ms-transition-duration: .3s;  /* IE10 */
-  -o-transition-duration: .3s;  /* Opera 10.5+ */
-  transition-duration: .3s;
+  @include transition-duration(.3s);
   &.active {
     height: auto;
     max-height: 800px;
-    -webkit-transition-duration: .5s;  /* Saf3.2+, Chrome */
-    -moz-transition-duration: .5s;  /* FF4+ */
-    -ms-transition-duration: .5s;  /* IE10 */
-    -o-transition-duration: .5s;  /* Opera 10.5+ */
-    transition-duration: .5s;
+    @include transition-duration(.5s);
   }
 }
 
+.modaler {
+  display: none;
+  position:fixed;
+  z-index: 10000;
+  max-height: 0;
+  width: 400px;
+  background: #fff;
+  padding: 15px;
+  &.active {
+    height: auto;
+    max-height: 800px;
+    display:block;
+    @include border-radius(4px);
+    @include box-shadow(0 0 10px #000);
+  }
+}
+
+.gumby-modal-blocker {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  background: #000;
+  opacity: 0.75;
+}
