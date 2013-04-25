@@ -1,0 +1,306 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Gumby - A Flexible, Responsive CSS Framework - Powered by SASS</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="humans.txt">
+
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+  <!-- Facebook Metadata /-->
+  <meta property="fb:page_id" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:description" content=""/>
+  <meta property="og:title" content=""/>
+
+  <!-- Google+ Metadata /-->
+  <meta itemprop="name" content="">
+  <meta itemprop="description" content="">
+  <meta itemprop="image" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
+       However, there is a blank style.css in the css directory should you prefer -->
+  <link rel="stylesheet" href="css/gumby.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+  <script src="js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+
+
+<body>
+
+  <div class="row">
+        <h1 class="lead">Drawers</h1>
+        <p class="btn medium primary">
+          <a href="#"  class="modal" gumby-trigger="#modaler1">Open Modal</a>
+        </p>
+        <p class="btn medium primary">
+          <a href="#"  class="toggle" gumby-trigger="#drawer2|#drawer3">Toggle Bottom Drawers</a>
+        </p>
+        <p class="btn medium primary">
+          <a href="#"  class="switch" gumby-trigger="|.drawer">Close All Drawers</a>
+        </p>
+        <p class="btn medium primary">
+          <a href="#"  class="modal" gumby-trigger="#modaler2">Open Modal 2</a>
+        </p>
+
+            <div class="modaler" id="modaler1">
+              <h2><a href="http://www.digitalsurgeons.com">Digital Surgeons 1</a></h2>
+              <a href="#" class="modal" gumby-trigger="|#modaler1">close</a>
+            </div>
+            <div class="modaler" id="modaler2">
+              <h2><a href="http://www.digitalsurgeons.com">Digital Surgeons 2</a></h2>
+              <a href="#" class="modal" gumby-trigger="|#modaler2">close</a> |
+              <a href="#" class="modal" gumby-trigger="#modaler1|#modaler2">(close 2, open 1)</a>
+            </div>
+
+        <div class="row">
+          <div class="six columns">
+            <div class="drawer" id="drawer2">
+              <h2><a href="http://www.digitalsurgeons.com">Digital Surgeons 2</a></h2>
+
+            </div>
+          </div>
+          <div class="six columns">
+            <div class="drawer" id="drawer3">
+              <h2><a href="http://www.digitalsurgeons.com">Digital Surgeons 3</a></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+          <div class="row">
+      <h1 class="lead">Buttons</h1>
+      <div class="row">
+        <div class="four columns">
+          <h4 class="lead">Sizes</h4>
+          <div class="xlarge btn default"><a href="#">Extra Large</a></div>
+          <div class="large btn default"><a href="#">Large</a></div>
+          <div class="medium btn default"><a href="#">Medium</a></div>
+          <div class="small btn default"><a href="#">Small</a></div>
+          <div class="medium oval btn default"><a href="#">Oval</a></div>
+          <div class="medium metro rounded btn default"><a href="#">Rounded</a></div>
+          <div class="medium squared btn default"><a href="#">Squared</a></div>
+          <div class="medium btn pill-left default"><a href="#">Pill Left</a></div>
+          <div class="medium btn pill-right default"><a href="#">Pill Right</a></div>
+        </div>
+        <div class="four columns">
+          <h4 class="lead">Metro Style</h4>
+          <div class="medium primary btn"><a href="#">Primary</a></div>
+          <div class="medium secondary btn"><a href="#">Secondary</a></div>
+          <div class="medium default btn"><a href="#">Default</a></div>
+          <div class="medium info btn"><a href="#">Info</a></div>
+          <div class="medium danger btn"><a href="#">Danger</a></div>
+          <div class="medium warning btn"><a href="#">Warning</a></div>
+          <div class="medium success btn"><a href="#">Success</a></div>
+          <div class="medium info btn icon-left entypo icon-mail"><a href="#">Icon Left</a></div>
+          <div class="medium default btn icon-right entypo icon-camera"><a href="#">Icon Right</a></div>
+          <div class="medium default btn"><input type="submit" value="Submit" /></div>
+          <div class="medium info btn"><button>Button</button></div>
+        </div>
+        <div class="four columns pretty">
+          <h4 class="lead">Pretty Style</h4>
+          <div class="pretty medium primary btn"><a href="#">Primary</a></div>
+          <div class="pretty medium secondary btn"><a href="#">Secondary</a></div>
+          <div class="pretty medium default btn"><a href="#">Default</a></div>
+          <div class="pretty medium info btn"><a href="#">Info</a></div>
+          <div class="pretty medium danger btn"><a href="#">Danger</a></div>
+          <div class="pretty medium warning btn"><a href="#">Warning</a></div>
+          <div class="pretty medium success btn"><a href="#">Success</a></div>
+          <div class="medium info btn icon-left icon-user"><a href="#">Icon Left</a></div>
+          <div class="medium default btn icon-right icon-camera"><a href="#">Icon Right</a></div>
+          <div class="pretty medium default btn"><input type="submit" value="Submit" /></div>
+          <div class="pretty medium info btn"><button>Button</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <h1 class="lead">Indicators</h1>
+      <div class="row">
+        <div class="four columns">
+          <h4 class="lead">Badges</h4>
+          <li class="primary badge">2</li>
+          <li class="secondary badge">2</li>
+          <li class="default badge">2</li>
+          <li class="info badge">2</li>
+          <li class="danger badge">2</li>
+          <li class="warning badge">2</li>
+          <li class="success badge">2</li>
+          <li class="light badge">2</li>
+          <li class="dark badge">2</li>
+        </div>
+        <div class="four columns">
+          <h4 class="lead">Labels</h4>
+          <li class="primary label">Primary</li>
+          <li class="secondary label">Secondary</li>
+          <li class="default label">Default</li>
+          <li class="info label">Info</li>
+          <li class="danger label">Important</li>
+          <li class="warning label">Warning</li>
+          <li class="success label">Success</li>
+          <li class="light label">Light</li>
+          <li class="dark label">Dark</li>
+        </div>
+        <div class="four columns">
+          <h4 class="lead">Alerts</h4>
+          <li class="primary alert">KHAAAAAAAAAAAAAAANNNN!!!!</li>
+          <li class="secondary alert">We are the Silence. And Silence will fall!</li>
+          <li class="default alert">Fez's are cool.</li>
+          <li class="info alert">Don't blink. Blink and you're dead.</li>
+          <li class="danger alert">I’m sorry, Dave. I’m afraid I can’t do that.</li>
+          <li class="warning alert">My spidey sense is tingling...</li>
+          <li class="success alert">Great Success! Very nice!</li>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <h1 class="lead">Forms</h1>
+      <div class="row">
+        <div class="four columns">
+          <h4 class="lead">Text Inputs</h4>
+          <form>
+            <ul>
+              <li class="field"><input class="text input" type="text" placeholder="Text input" /></li>
+              <li class="field"><input class="email input" type="email" placeholder="Email input" /></li>
+              <li class="field"><input class="password input" type="password" placeholder="Password input" /></li>
+              <li class="field"><input class="phone input" type="tel" placeholder="Telephone Number" /></li>
+              <li class="field"><input class="numeric input" type="number" placeholder="Numeric input" /></li>
+              <li class="field"><input class="search input" type="search" placeholder="Search input" /></li>
+              <li class="field"><textarea class="input textarea" placeholder="Textarea" rows="3"></textarea></li>
+              <li class="field success"><input class="text input" type="text" placeholder="Text input" /></li>
+              <li class="field warning"><input class="email input" type="email" placeholder="Email input" /></li>
+              <li class="field danger"><input class="password input" type="password" placeholder="Password input" /></li>
+            </ul>
+          </form>
+        </div>
+        <div class="four columns">
+          <h4 class="lead">Conjoined Inputs</h4>
+          <form>
+            <ul>
+              <li class="prepend field">
+                <span class="adjoined">@</span>
+                <input class="xwide text input" type="text" placeholder="Text input" />
+              </li>
+              <li class="append field">
+                <input class="xwide email input" type="email" placeholder="Email input" />
+                <span class="adjoined">@</span>
+              </li>
+              <li class="prepend append field">
+                <span class="adjoined">$</span>
+                <input class="wide text input" type="text" placeholder="Text input" />
+                <span class="adjoined">.00</span>
+              </li>
+              <li class="prepend field">
+                <div class="medium primary btn"><a href="#">Go</a></div>
+                <input class="wide text input" type="text" placeholder="Text input" />
+              </li>
+              <li class="append field">
+                <input class="wide email input" type="email" placeholder="Email input" />
+                <div class="medium primary btn"><a href="#">Go</a></div>
+              </li>
+              <li class="prepend append field">
+                <span class="adjoined">$</span>
+                <input class="normal text input" type="text" placeholder="Text input" />
+                <div class="medium primary btn"><a href="#">Go</a></div>
+              </li>
+              <li class="prepend append double field">
+                <input class="text input" type="text" placeholder="Text input" />
+                <input class="password input" type="password" placeholder="Password input" />
+              </li>
+            </ul>
+          </form>
+        </div>
+        <div class="four columns">
+          <h4 class="lead">Input Sizes</h4>
+          <form>
+            <ul>
+              <li class="field"><input class="xxwide text input" type="text" placeholder="xxwide input" /></li>
+              <li class="field">
+                <input class="xwide email input" type="email" placeholder="xwide input" />
+                <input class="xnarrow text input" type="text" placeholder="xnarrow input" />
+              </li>
+              <li class="field">
+                <input class="wide text input" type="password" placeholder="wide input" />
+                <input class="narrow text input" type="text" placeholder="narrow input" />
+              </li>
+              <li class="field">
+                <input class="normal text input" type="text" placeholder="normal input" />
+                <input class="normal text input" type="text" placeholder="normal input" />
+              </li>
+              <li class="field">
+                <input class="narrow text input" type="text" placeholder="narrow input" />
+                <input class="wide text input" type="text" placeholder="wide input" />
+              </li>
+              <li class="field">
+                <input class="xnarrow text input" type="text" placeholder="xnarrow input" />
+                <input class="xwide text input" type="text" placeholder="xwide input" />
+              </li>
+            </ul>
+            <fieldset>
+              <legend>Fieldset with legend</legend>
+              <ul>
+                <li class="field">
+                  <label class="inline" for="text1">Label 1</label>
+                  <input class="wide text input" name="text1" type="text" placeholder="wide input" />
+                </li>
+                <li class="field">
+                  <label class="inline" for="text2">Label 2</label>
+                  <input class="wide password input" name="text2" type="password" placeholder="wide input" />
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+
+  <!-- Grab Google CDN's jQuery, fall back to local if offline -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+
+  <!--
+  Include gumby.js followed by UI modules.
+  Or concatenate and minify into a single file
+-->
+  <script src="js/libs/gumby.js"></script>
+  <script src="js/libs/ui/gumby.retina.js"></script>
+  <script src="js/libs/ui/gumby.fixed.js"></script>
+  <script src="js/libs/ui/gumby.skiplink.js"></script>
+  <script src="js/libs/ui/gumby.toggleswitch.js"></script>
+  <script src="js/libs/ui/gumby.checkbox.js"></script>
+  <script src="js/libs/ui/gumby.radiobtn.js"></script>
+  <script src="js/libs/ui/gumby.tabs.js"></script>
+  <script src="js/libs/ui/jquery.validation.js"></script>
+  <script src="js/libs/gumby.init.js"></script>
+ 
+
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+
+  </body>
+</html>
