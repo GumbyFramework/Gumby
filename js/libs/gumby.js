@@ -55,7 +55,8 @@
 		return {
 			$dom: this.$dom,
 			isOldie: this.isOldie,
-			uiModules: this.uiModules
+			uiModules: this.uiModules,
+			click: this.click
 		};
 	};
 
