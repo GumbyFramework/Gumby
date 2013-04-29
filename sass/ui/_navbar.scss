@@ -433,7 +433,6 @@
    	}
    	> .content, > .overlay {
    		@include opacity(0);
-   		@include transition-duration(0s);
    	}
    	&.active {
    		z-index: 999999;
