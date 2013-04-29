@@ -22,19 +22,11 @@
 	function Gumby() {
 		this.$dom = $(document);
 		this.isOldie = !!this.$dom.find('html').hasClass('oldie');
-		this.uiModules = {};
-		this.inits = {};
+		this.click = 'click';
 		this.onReady = false;
 		this.onOldie = false;
-
-		var scope = this;
-
-		// when document ready call oldie callback
-		this.$dom.ready(function() {
-			if(scope.isOldie && scope.onOldie) {
-				scope.onOldie();
-			}
-		});
+		this.uiModules = {};
+		this.inits = {};
 	}
 
 	// initialize Gumby
@@ -42,19 +34,19 @@
 		// init UI modules
 		this.initUIModules();
 
-		// call ready callback if available
-		if(this.onReady) {
-			this.onReady();
-		}
-	};
+		var scope = this;
 
-	// public helper - return debuggin object including uiModules object
-	Gumby.prototype.debug = function() {
-		return {
-			$dom: this.$dom,
-			isOldie: this.isOldie,
-			uiModules: this.uiModules
-		};
+		// call ready() code when dom is ready
+		this.$dom.ready(function() {
+			if(scope.onReady) {
+				scope.onReady();
+			}
+
+			// call oldie() callback if applicable
+			if(scope.isOldie && scope.onOldie) {
+				scope.onOldie();
+			}
+		});
 	};
 
 	// public helper - set Gumby ready callback
@@ -66,10 +58,21 @@
 
 	// public helper - set oldie callback
 	Gumby.prototype.oldie = function(code) {
-		if(code && typeof code === 'function') {
+		if(code && typeof code === 'function' || !this.isOldie) {
 			this.onOldie = code;
 		}
 	};
+
+	// public helper - return debuggin object including uiModules object
+	Gumby.prototype.debug = function() {
+		return {
+			$dom: this.$dom,
+			isOldie: this.isOldie,
+			uiModules: this.uiModules,
+			click: this.click
+		};
+	};
+
 
 	// grab attribute value, testing data- gumby- and no prefix
 	Gumby.prototype.selectAttr = function() {

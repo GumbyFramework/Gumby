@@ -16,7 +16,7 @@
 		var scope = this;
 
 		// skip to target element on click or trigger of gumby.skipTo event
-		this.$el.on('click gumby.skip', function(e) {
+		this.$el.on(Gumby.click+' gumby.skip', function(e) {
 			e.preventDefault();
 			// calculate target on each click
 			// other UI interactions could effect this
