@@ -13,16 +13,13 @@ body {
   color: $body-font-color;
   position: relative;
   -webkit-font-smoothing: $font-smoothing;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden; 
-  -moz-backface-visibility: hidden; 
-  -ms-backface-visibility: hidden; 
   @include respond(all-phones) {
     -webkit-text-size-adjust: none;
     -ms-text-size-adjust: none;
     width: 100%;
     min-width: 0;
   }
+  @include backface-visibility(hidden); // Fixes Chrome 1px shift rendering issue on CSS3 transitions.
 }
 
 .ie9 {
