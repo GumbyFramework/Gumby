@@ -1828,5 +1828,5 @@ body .video.twitch, body .video.youtube.show_controls { padding-top: 30px; }
 .modal > .overlay { width: 100%; height: 100%; position: absolute; background: black; background: rgba(0, 0, 0, 0.8); z-index: 1; }
 .modal > .content { width: 50%; height: 50%; position: absolute; top: 25%; left: 50%; margin: 0 -25%; padding: 20px; background: white; z-index: 2; overflow: auto; }
 .modal > .content, .modal > .overlay { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
-.modal.active { z-index: 999999; }
+.modal.active { z-index: 999999 !important; }
 .modal.active > .overlay, .modal.active > .content { -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }

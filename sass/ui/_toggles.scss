@@ -58,7 +58,7 @@
  		@include opacity(0);
  	}
  	&.active {
- 		z-index: 999999;
+ 		z-index: 999999 !important;
  		> .overlay, > .content {
    		@include transition-duration(.5s);
  			@include opacity(1);
