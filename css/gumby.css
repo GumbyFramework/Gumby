@@ -413,16 +413,6 @@ img { -ms-interpolation-mode: bicubic; }
 .subnav li a, .subnav dd a { color: #05390a; font-size: 15px; text-decoration: none; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
 .subnav li.active a, .subnav dd.active a { background: #5dbb73; padding: 5px 9px; text-shadow: 0 1px 1px #77d58e; }
 
-.drawer { position: relative; width: 100%; max-height: 0; background: #222; -webkit-box-shadow: inset 0 -3px 5px black, inset 0 3px 5px black; box-shadow: inset 0 -3px 5px black, inset 0 3px 5px black; overflow: hidden; -webkit-transition-duration: .3s; /* Saf3.2+, Chrome */ -moz-transition-duration: .3s; /* FF4+ */ -ms-transition-duration: .3s; /* IE10 */ -o-transition-duration: .3s; /* Opera 10.5+ */ transition-duration: .3s; }
-.drawer.active { height: auto; max-height: 800px; -webkit-transition-duration: .5s; /* Saf3.2+, Chrome */ -moz-transition-duration: .5s; /* FF4+ */ -ms-transition-duration: .5s; /* IE10 */ -o-transition-duration: .5s; /* Opera 10.5+ */ transition-duration: .5s; }
-
-.modal { width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: -999999; }
-.modal > .overlay { width: 100%; height: 100%; position: absolute; background: black; background: rgba(0, 0, 0, 0.8); z-index: 1; }
-.modal > .content { width: 50%; height: 50%; position: absolute; top: 25%; left: 50%; margin: 0 -25%; padding: 20px; background: white; z-index: 2; overflow: auto; }
-.modal > .content, .modal > .overlay { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
-.modal.active { z-index: 999999; }
-.modal.active > .overlay, .modal.active > .content { -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
-
 /* Buttons */
 .btn, .skiplink { display: inline-block; width: auto; background: #f2f2f2; -webkit-appearance: none; font-family: "Open Sans"; font-weight: 600; padding: 0 !important; text-align: center; }
 .btn > a, .btn input, .btn button, .skiplink > a, .skiplink input, .skiplink button { display: block; padding: 0 18px; color: white; height: 100%; }
@@ -1828,3 +1818,13 @@ body .video { width: 100%; position: relative; height: 0; padding-bottom: 56.25%
 body .video.twitch, body .video.youtube.show_controls { padding-top: 30px; }
 
 .video > video, .video > iframe, .video > object, .video > embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.drawer { position: relative; width: 100%; max-height: 0; background: #222; -webkit-box-shadow: inset 0 -3px 5px black, inset 0 3px 5px black; box-shadow: inset 0 -3px 5px black, inset 0 3px 5px black; overflow: hidden; -webkit-transition-duration: .3s; /* Saf3.2+, Chrome */ -moz-transition-duration: .3s; /* FF4+ */ -ms-transition-duration: .3s; /* IE10 */ -o-transition-duration: .3s; /* Opera 10.5+ */ transition-duration: .3s; }
+.drawer.active { height: auto; max-height: 800px; -webkit-transition-duration: .5s; /* Saf3.2+, Chrome */ -moz-transition-duration: .5s; /* FF4+ */ -ms-transition-duration: .5s; /* IE10 */ -o-transition-duration: .5s; /* Opera 10.5+ */ transition-duration: .5s; }
+
+.modal { width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: -999999; }
+.modal > .overlay { width: 100%; height: 100%; position: absolute; background: black; background: rgba(0, 0, 0, 0.8); z-index: 1; }
+.modal > .content { width: 50%; height: 50%; position: absolute; top: 25%; left: 50%; margin: 0 -25%; padding: 20px; background: white; z-index: 2; overflow: auto; }
+.modal > .content, .modal > .overlay { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
+.modal.active { z-index: 999999; }
+.modal.active > .overlay, .modal.active > .content { -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
