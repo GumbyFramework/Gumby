@@ -54,7 +54,7 @@ form {
 		outline: none;
 		resize: none;
 		-webkit-appearance: none;
-		font-family: '#{$font-family}';
+		font-family: $font-family;
 		font-weight: $font-weight-light;
 		@include font-size($norm);
 		@include box-shadow(none);
@@ -170,7 +170,7 @@ form {
 		padding: 0 10px 0 10px;
 		background: $default-color;
 		border: 1px solid darken($default-color, 10%);
-		font-family: '#{$font-family}';
+		font-family: $font-family;
 		font-weight: $font-weight-semibold;
 		color: $body-font-color;
 		@include font-size($norm);
@@ -329,7 +329,7 @@ form {
 	overflow: hidden;
 	border: 1px solid darken($default-color, 5%);
 	border-radius: 4px;
-	font-family: '#{$font-family}';
+	font-family: $font-family;
 	font-weight: $font-weight-semibold;
 	@include line-and-height(height-calc($norm));
 	@include background-image(linear-gradient(lighten($default-color, 20%), $default-color));
@@ -357,6 +357,7 @@ form {
 		outline: none;
 		-webkit-appearance: none;
 		z-index: 99;
+        cursor: pointer;
 		@include font-size($norm);
 	}
 }

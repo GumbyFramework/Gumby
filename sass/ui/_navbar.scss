@@ -68,6 +68,7 @@
   			padding: 0;
   			img {
   				width: auto;
+  				height: auto;
   				max-width: 100%;
   			}
   		}
@@ -112,7 +113,7 @@
 			@include respond(all-phones) {
 				display: block;
 		  	position: relative;
-		  	min-height: 60px;
+		  	min-height: 50px;
 				max-height: 320px;
 		  	height: auto;
 		  	width: 100%;
@@ -163,7 +164,7 @@
 				z-index: 999;
 			}
 			&:hover .dropdown {
-				min-height: 60px;
+				min-height: 50px;
 				max-height: $tablet-device-width - 207;
 				overflow: visible;
 				height: auto;
@@ -189,7 +190,7 @@
 		  		position: relative;
 		  		top: 0;
 		  		background: darken($navbar-color, 8%);
-		  		min-height: 60px;
+		  		min-height: 50px;
 		  		max-height: 250px;
 		  		height: auto;
 		  		overflow: scroll;
@@ -288,6 +289,7 @@
 
 .navbar li .dropdown ul {
 	margin: 0;
+        display: block;
 	> li {
 		position:relative;
 		display: block;

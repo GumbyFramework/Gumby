@@ -20,7 +20,7 @@
         padding: 0 $norm;
         margin: 0;
         color: $body-font-color;
-        font-family: '#{$font-family}';
+        font-family: $font-family;
         font-weight: $tabs-font-weight;
         border: 1px solid darken($default-color, 5%);
         border-width: 1px 1px 0 1px;
