@@ -51,6 +51,27 @@
 </style>
 
 <body>
+
+  <div class="modal" id="modal1">
+    <div class="overlay switch" gumby-trigger="|#modal1"></div>
+    <div class="content">
+      <div class="row">
+        <aside class="four columns">
+          <p>My sidebar goes here</p>
+          <p>My sidebar goes here</p>
+          <p>My sidebar goes here</p>
+          <p>My sidebar goes here</p>
+        </aside>
+        <div class="eight columns">
+          <p>My content goes here</p>
+          <p>My content goes here</p>
+          <p>My content goes here</p>
+          <p>My content goes here</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="navbar" id="nav1">
     <div class="row">
       <a class="toggle" gumby-trigger="#nav1 > .row > ul" href="#"><i class="icon-menu"></i></a>
@@ -624,6 +645,10 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="row" id="modals">
+          <h1 class="lead">Modals</h1>
+          <p class="btn primary medium"><a href="#" class="switch" gumby-trigger="#modal1">Open Modal</a></p>
       </div>
       <div class="row">
         <h1 class="lead">Skip Links</h1>

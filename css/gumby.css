@@ -413,9 +413,6 @@ img { -ms-interpolation-mode: bicubic; }
 .subnav li a, .subnav dd a { color: #05390a; font-size: 15px; text-decoration: none; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
 .subnav li.active a, .subnav dd.active a { background: #5dbb73; padding: 5px 9px; text-shadow: 0 1px 1px #77d58e; }
 
-.drawer { position: relative; width: 100%; max-height: 0; background: #222; -webkit-box-shadow: inset 0 -3px 5px black, inset 0 3px 5px black; box-shadow: inset 0 -3px 5px black, inset 0 3px 5px black; overflow: hidden; -webkit-transition-duration: .3s; /* Saf3.2+, Chrome */ -moz-transition-duration: .3s; /* FF4+ */ -ms-transition-duration: .3s; /* IE10 */ -o-transition-duration: .3s; /* Opera 10.5+ */ transition-duration: .3s; }
-.drawer.active { height: auto; max-height: 800px; -webkit-transition-duration: .5s; /* Saf3.2+, Chrome */ -moz-transition-duration: .5s; /* FF4+ */ -ms-transition-duration: .5s; /* IE10 */ -o-transition-duration: .5s; /* Opera 10.5+ */ transition-duration: .5s; }
-
 /* Buttons */
 .btn, .skiplink { display: inline-block; width: auto; background: #f2f2f2; -webkit-appearance: none; font-family: "Open Sans"; font-weight: 600; padding: 0 !important; text-align: center; }
 .btn > a, .btn input, .btn button, .skiplink > a, .skiplink input, .skiplink button { display: block; padding: 0 18px; color: white; height: 100%; }
