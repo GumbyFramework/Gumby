@@ -38,7 +38,8 @@
   background: rgba(0, 0, 0, 0.8);
  	> .content {
  		width: 50%;
- 		height: 50%;
+ 		min-height: 50%;
+    max-height: 65%;
  		position: absolute;
  		top: 25%;
  		left: 50%;
