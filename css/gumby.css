@@ -40,7 +40,7 @@ html { font-size: 16px; line-height: 1.625em; }
 
 html * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-body { background: white; font-family: "Open Sans"; font-weight: 400; color: #555555; position: relative; -webkit-font-smoothing: antialiased; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; -o-backface-visibility: hidden; backface-visibility: hidden; }
+body { background: white; font-family: "Open Sans"; font-weight: 400; color: #555555; position: relative; -webkit-font-smoothing: antialiased; -webkit-backface-visibility: hidden; }
 @media only screen and (max-width: 767px) { body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; } }
 
 html, body { height: 100%; }
@@ -54,6 +54,8 @@ html, body { height: 100%; }
 
 .fixed { position: fixed; }
 @media only screen and (max-width: 768px) { .fixed { position: relative !important; } }
+
+.center-text { text-align: center; }
 
 /* Fonts */
 @font-face { font-family: "entypo"; font-style: normal; font-weight: 400; src: url(../fonts/icons/entypo.eot); src: url("../fonts/icons/entypo.eot?#iefix") format("ie9-skip-eot"), url("../fonts/icons/entypo.woff") format("woff"), url("../fonts/icons/entypo.ttf") format("truetype"); }
@@ -1821,12 +1823,14 @@ body .video.twitch, body .video.youtube.show_controls { padding-top: 30px; }
 
 .video > video, .video > iframe, .video > object, .video > embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.drawer { position: relative; width: 100%; max-height: 0; background: #222; -webkit-box-shadow: inset 0 -3px 5px black, inset 0 3px 5px black; box-shadow: inset 0 -3px 5px black, inset 0 3px 5px black; overflow: hidden; -webkit-transition-duration: .3s; /* Saf3.2+, Chrome */ -moz-transition-duration: .3s; /* FF4+ */ -ms-transition-duration: .3s; /* IE10 */ -o-transition-duration: .3s; /* Opera 10.5+ */ transition-duration: .3s; }
+.drawer { position: relative; width: 100%; max-height: 0; background: #3e4144; -webkit-box-shadow: inset 0 -2px 5px #313436, inset 0 2px 5px #313436; -moz-box-shadow: inset 0 -2px 5px #313436, inset 0 2px 5px #313436; box-shadow: inset 0 -2px 5px #313436, inset 0 2px 5px #313436; overflow: hidden; -webkit-transition-duration: .3s; /* Saf3.2+, Chrome */ -moz-transition-duration: .3s; /* FF4+ */ -ms-transition-duration: .3s; /* IE10 */ -o-transition-duration: .3s; /* Opera 10.5+ */ transition-duration: .3s; }
 .drawer.active { height: auto; max-height: 800px; -webkit-transition-duration: .5s; /* Saf3.2+, Chrome */ -moz-transition-duration: .5s; /* FF4+ */ -ms-transition-duration: .5s; /* IE10 */ -o-transition-duration: .5s; /* Opera 10.5+ */ transition-duration: .5s; }
 
-.modal { width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: -999999; }
-.modal > .overlay { width: 100%; height: 100%; position: absolute; background: black; background: rgba(0, 0, 0, 0.8); z-index: 1; }
-.modal > .content { width: 50%; height: 50%; position: absolute; top: 25%; left: 50%; margin: 0 -25%; padding: 20px; background: white; z-index: 2; overflow: auto; }
-.modal > .content, .modal > .overlay { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
+.modal { width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: -999999; background: black; background: rgba(0, 0, 0, 0.8); }
+.modal > .content { width: 50%; min-height: 50%; max-height: 65%; position: relative; top: 25%; margin: 0 auto; padding: 20px; background: white; z-index: 2; overflow: auto; }
+@media only screen and (max-width: 768px) { .modal > .content { width: 80%; } }
+@media only screen and (max-width: 767px) { .modal > .content { width: 92.5%; } }
+.modal > .content > .close { position: absolute; top: 10px; right: 10px; cursor: pointer; }
+.modal, .modal > .content { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; -o-transition-duration: 0.3s; transition-duration: 0.3s; }
 .modal.active { z-index: 999999; }
-.modal.active > .overlay, .modal.active > .content { -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
+.modal.active, .modal.active > .content { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }

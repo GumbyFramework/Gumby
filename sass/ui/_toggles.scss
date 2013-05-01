@@ -3,12 +3,10 @@
   position: relative;
   width: 100%;
   max-height: 0;
-  background: #222;
-  -webkit-box-shadow: inset 0 -3px 5px #000,
-    inset 0 3px 5px #000
-  ;
-  box-shadow: inset 0 -3px 5px #000,
-    inset 0 3px 5px #000
+  background: $drawer-background-color;
+  @include box-shadow(
+    inset $drawer-inner-shadow-x-offset  #{-$drawer-inner-shadow-y-offset} $drawer-inner-shadow-blur $drawer-inner-shadow-color,
+    inset $drawer-inner-shadow-x-offset $drawer-inner-shadow-y-offset $drawer-inner-shadow-blur $drawer-inner-shadow-color);
   ;
   overflow: hidden;
   -webkit-transition-duration: .3s;  /* Saf3.2+, Chrome */
@@ -34,34 +32,40 @@
 	top: 0;
 	left: 0;
 	z-index: -999999;
- 	> .overlay {
- 		width: 100%;
- 		height: 100%;
- 		position: absolute;
- 		background: rgb(0, 0, 0);
-   	background: rgba(0, 0, 0, 0.8);
-   	z-index: 1;
- 	}
+  background: rgb(0, 0, 0);
+  background: $modal-overlay-color;
  	> .content {
  		width: 50%;
- 		height: 50%;
- 		position: absolute;
+ 		min-height: 50%;
+    max-height: 65%;
+ 		position: relative;
  		top: 25%;
- 		left: 50%;
- 		margin: 0 -25%;
+ 		margin: 0 auto;
  		padding: $gutter-in-px;
- 		background: $white;
+ 		background: $modal-window-color;
  		z-index: 2;
  		overflow: auto;
- 	}
- 	> .content, > .overlay {
- 		@include opacity(0);
- 	}
+    @include respond(portrait-tablets) {
+      width: 80%;
+    }
+    @include respond(all-phones) {
+      width: 92.5%;
+    }
+ 	  > .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  }
+  &, > .content {
+    @include opacity(0);
+    @include transition-duration(.3s);
+  }
  	&.active {
  		z-index: 999999;
- 		> .overlay, > .content {
-   		@include transition-duration(.5s);
- 			@include opacity(1);
- 		}
+    &, > .content {
+      @include opacity(1);
+    }
  	}
 }
