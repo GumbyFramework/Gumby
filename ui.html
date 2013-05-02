@@ -5,7 +5,7 @@
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
 <!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
 
@@ -48,9 +48,25 @@
   h4.lead { margin-bottom:10px; }
   #icon_map ul li { font-size: 16px; }
   .smallify { font-size: 13px; }
+  .modal h2, .modal .btn { margin: 5% 0 20px; }
 </style>
 
 <body>
+
+  <div class="modal" id="modal1">
+    <div class="content">
+      <a class="close switch" gumby-trigger="|#modal1"><i class="icon-cancel" /></i></a>
+      <div class="row">
+        <div class="ten columns centered center-text">
+          <h2>This is a modal.</h2>
+          <p>Gumby modals are easy to make using Toggles &amp; Switches. The <span class="label default">.modal</span> class already has the required styles which you can open and close using Toggles &amp; Switches.</p>
+
+          <p class="btn primary medium"><a href="#" class="switch" gumby-trigger="|#modal1">Close Modal</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="navbar" id="nav1">
     <div class="row">
       <a class="toggle" gumby-trigger="#nav1 > .row > ul" href="#"><i class="icon-menu"></i></a>
@@ -625,6 +641,10 @@
           </div>
         </div>
       </div>
+      <div class="row" id="modals">
+        <h1 class="lead">Modals</h1>
+        <p class="btn primary medium"><a href="#" class="switch" gumby-trigger="#modal1">Open Modal</a></p>
+      </div>
       <div class="row">
         <h1 class="lead">Skip Links</h1>
         <div class="row">
@@ -1162,7 +1182,6 @@
   <!--
   Include gumby.js followed by UI modules.
   Or concatenate and minify into a single file
-  -->
   <script src="js/libs/gumby.js"></script>
   <script src="js/libs/ui/gumby.retina.js"></script>
   <script src="js/libs/ui/gumby.fixed.js"></script>
@@ -1173,17 +1192,18 @@
   <script src="js/libs/ui/gumby.tabs.js"></script>
   <script src="js/libs/ui/jquery.validation.js"></script>
   <script src="js/libs/gumby.init.js"></script>
-  <!--<script src="js/libs/gumby.min.js"></script>-->
+  -->
+  <script src="js/libs/gumby.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
   <!-- Change UA-XXXXX-X to be your site's ID -->
-  <script>
+  <!--<script>
     window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
     Modernizr.load({
       load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
     });
-  </script>
+  </script>-->
 
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
