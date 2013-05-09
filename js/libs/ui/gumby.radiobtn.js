@@ -48,11 +48,11 @@
 
 		// uncheck radio buttons in same group - uncheck input, remove checked class, remove <i>
 		$('.radio').has(group).removeClass('checked')
-				   .find('input').attr('checked', false).end()
+				   .find('input').prop('checked', false).end()
 				   .find('i').remove();
 
 		// check this radio button - check input, add checked class, append <i>
-		$input.attr('checked', true);
+		$input.prop('checked', true);
 		this.$el.append('<i class="icon-dot" />').addClass('checked').trigger('gumby.onChange');
 	};
 
