@@ -10,7 +10,11 @@ Gumby.ready(function() {
 
 // Oldie document loaded
 Gumby.oldie(function() {
-	console.log("Oldie");
+	console.log("This is an oldie browser...");
+});
+
+Gumby.touch(function() {
+	console.log("This is a touch enabled device...");
 });
 
 // Document ready
