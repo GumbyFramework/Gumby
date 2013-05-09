@@ -119,6 +119,15 @@ $bigger-radius: 8px;
 // Tabs
 $tab-height: 42px;
 
+// Drawers & Modals
+$modal-overlay-color: rgba(0, 0, 0, 0.8);
+$modal-window-color: $white;
+$drawer-background-color: #3e4144;
+$drawer-inner-shadow-x-offset: 0;
+$drawer-inner-shadow-y-offset: 2px;
+$drawer-inner-shadow-blur: 5px;
+$drawer-inner-shadow-color: #313436;
+
 // Floats
 $default-float: left;
 $switch-float: right;
