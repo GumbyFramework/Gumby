@@ -11,11 +11,20 @@
 
 		var scope = this;
 
+		// need to find a way to calculate dropdown height here
+		this.$items.filter(':has(.dropdown)').each(function() {
+
+		});
+
 		this.$items.on(Gumby.click, function(e) {
+			var $this = $(this);
+
+			// prevent jump to top of page
 			if(this.href === '#') {
 				e.preventDefault();
 			}
-			scope.dropdown($(this).index());
+
+			scope.dropdown($this.index());
 		});
 	}
 
