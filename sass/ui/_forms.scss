@@ -63,9 +63,7 @@ form {
 		position: relative;
 	}
 	.radio input[type="radio"], .checkbox input[type="checkbox"] {
-		visibility: hidden;
-		position: absolute;
-		z-index: -99999;
+		display: none;
 	}
 	.input {
 		position: relative;
