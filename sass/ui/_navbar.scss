@@ -182,48 +182,6 @@
 
 }
 
-.no-touch .navbar ul li:hover .dropdown,
-.touch .navbar ul li.active .dropdown {
-	min-height: 50px;
-	max-height: $tablet-device-width - 207;
-	overflow: visible;
-	height: auto;
-	width: 100%;
-	padding: 0;
-	border-top: 1px solid darken($navbar-color, 5%);
-	-webkit-box-shadow: 0px 3px 4px rgba(0,0,0,.3);
-	box-shadow: 0px 3px 4px rgba(0,0,0,.3);
-	border-bottom: 1px solid darken($navbar-color, 10%);
-	ul {
-  		position: relative;
-  		top: 0;
-  		background: darken($navbar-color, 8%);
-  		min-height: 50px;
-  		max-height: 250px;
-  		height: auto;
-  		overflow: scroll;
-  		@include box-shadow(none !important);
-  		@include transition-duration(.5s);
-  		li {
-  			min-height: 50px;
-  			border-bottom: darken($navbar-color, 5%);
-  			a {
-  				color: $white;
-  				border-bottom: 1px solid darken($navbar-color, 10%);
-  				&:hover {color: $body-link-color;}
-			}
-  		}
-  	}
-}
-
-.no-touch .navbar ul li:hover > a,
-.touch .navbar ul li.active > a {
-	position: relative;
-	background: $info-hover-color;
-	z-index: 1000;
-}
-
-
 
 /**** Navbar positioning for Microsoft's browser who deserves not to be mentioned ****/
 
@@ -317,28 +275,71 @@
 			display: none;
 			background: lighten($default-color, 10%);
 		}
-		&:hover .dropdown {
-			border-top: none;
-			display: block;
-			position: absolute;
-			z-index: 9999;
-			left: $min-device-width;
-			top: $nav-distance;
-			margin-top: 0;
-			@include respond(all-phones) {
-				position: relative;
-				left: 0;
-				ul {
-					background: darken($navbar-color, 15%) !important;
-				}
-			}
-		}
 	}
 	li:first-child a {
 		border-radius: 0;
 	}
 	li a:hover {
 		background: $default-color;
+	}
+}
+
+.no-touch .navbar ul li:hover .dropdown,
+.touch .navbar ul li.active .dropdown {
+	min-height: 50px;
+	max-height: $tablet-device-width - 207;
+	overflow: visible;
+	height: auto;
+	width: 100%;
+	padding: 0;
+	border-top: 1px solid darken($navbar-color, 5%);
+	-webkit-box-shadow: 0px 3px 4px rgba(0,0,0,.3);
+	box-shadow: 0px 3px 4px rgba(0,0,0,.3);
+	border-bottom: 1px solid darken($navbar-color, 10%);
+	ul {
+  		position: relative;
+  		top: 0;
+  		background: darken($navbar-color, 8%);
+  		min-height: 50px;
+  		max-height: 250px;
+  		height: auto;
+  		overflow: scroll;
+  		@include box-shadow(none !important);
+  		@include transition-duration(.5s);
+  		li {
+  			min-height: 50px;
+  			border-bottom: darken($navbar-color, 5%);
+  			a {
+  				color: $white;
+  				border-bottom: 1px solid darken($navbar-color, 10%);
+  				&:hover {color: $body-link-color;}
+			}
+  		}
+  	}
+}
+
+.no-touch .navbar ul li:hover > a,
+.touch .navbar ul li.active > a {
+	position: relative;
+	background: $info-hover-color;
+	z-index: 1000;
+}
+
+.no-touch .navbar li .dropdown ul li:hover .dropdown,
+.touch .navbar li .dropdown ul li.active .dropdown {
+	border-top: none;
+	display: block;
+	position: absolute;
+	z-index: 9999;
+	left: $min-device-width;
+	top: $nav-distance;
+	margin-top: 0;
+	@include respond(all-phones) {
+		position: relative;
+		left: 0;
+		ul {
+			background: darken($navbar-color, 15%) !important;
+		}
 	}
 }
 

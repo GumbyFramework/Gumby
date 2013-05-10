@@ -7,7 +7,7 @@
 
 	function Navbar($el) {
 		this.$el = $el;
-		this.$items = this.$el.find('ul').first().children('li');
+		this.$items = this.$el.find('li');
 
 		var scope = this;
 
