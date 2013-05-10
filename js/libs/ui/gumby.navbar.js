@@ -7,7 +7,27 @@
 
 	function Navbar($el) {
 		this.$el = $el;
+		this.$items = this.$el.find('ul').first().children('li');
+
 		var scope = this;
+
+		this.$items.on(Gumby.click, function(e) {
+			e.preventDefault();
+
+			var $this = $(this);
+
+			// we have dropdowns so open/cose
+			if($this.find('.dropdown').length) {
+				if($this.hasClass('active')) {
+					$(this).removeClass('active');
+				} else {
+					$(this).addClass('active');
+				}
+			// no dropdown so close others
+			} else {
+				scope.$items.removeClass('active');
+			}
+		});
 	}
 
 	// add initialisation
