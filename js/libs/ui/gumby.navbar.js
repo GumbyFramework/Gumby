@@ -12,23 +12,29 @@
 		var scope = this;
 
 		this.$items.on(Gumby.click, function(e) {
-			e.preventDefault();
-
-			var $this = $(this);
-
-			// we have dropdowns so open/cose
-			if($this.find('.dropdown').length) {
-				if($this.hasClass('active')) {
-					$(this).removeClass('active');
-				} else {
-					$(this).addClass('active');
-				}
-			// no dropdown so close others
-			} else {
-				scope.$items.removeClass('active');
+			if(this.href === '#') {
+				e.preventDefault();
 			}
+			scope.dropdown($(this).index());
 		});
 	}
+
+	// hide/show dropdowns
+	Navbar.prototype.dropdown = function(index) {
+		var $this = this.$items.eq(index);
+
+		// we have dropdowns so open/cose
+		if($this.find('.dropdown').length) {
+			if($this.hasClass('active')) {
+				$this.removeClass('active');
+			} else {
+				$this.addClass('active');
+			}
+		// no dropdown so close others
+		} else {
+			this.$items.removeClass('active');
+		}
+	};
 
 	// add initialisation
 	Gumby.addInitalisation('navbars', function() {
