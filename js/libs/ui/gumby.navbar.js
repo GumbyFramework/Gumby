@@ -12,12 +12,10 @@
 
 	function Navbar($el) {
 		this.$el = $el;
-		this.$items = this.$el.find('li');
-
 		var scope = this;
 
 		// when navbar items are tapped hide/show dropdowns
-		this.$items.on(Gumby.click, function(e) {
+		this.$el.find('li').on(Gumby.click, function(e) {
 			var $this = $(this);
 
 			e.stopPropagation();
