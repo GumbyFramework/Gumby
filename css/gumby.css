@@ -83,7 +83,7 @@ h6 { font-size: 16px; font-size: 1rem; }
   h2 { font-size: 36px; font-size: 2.25rem; } }
 .subhead { color: #777; font-weight: normal; margin-bottom: 20px; }
 
-/*=====================================================  	Links & Paragraph styles 	 	======================================================*/
+/*=====================================================  Links & Paragraph styles  ======================================================*/
 p { font-family: "Open Sans"; font-weight: 400; font-size: 16px; font-size: 1rem; margin-bottom: 13px; line-height: 1.625em; }
 p.lead { font-size: 20px; font-size: 1.25rem; margin-bottom: 18px; }
 @media only screen and (max-width: 768px) { p { font-size: 17.6px; font-size: 1.1rem; line-height: 1.625em; } }
@@ -92,7 +92,7 @@ a { color: #d04526; text-decoration: none; outline: 0; line-height: inherit; }
 a:hover { color: #c03d20; }
 
 /*=====================================================
- 	Lists 	 ======================================================*/
+ Lists  ======================================================*/
 ul, ol { margin-bottom: 0.273em; }
 
 ul { list-style: none outside; }
@@ -123,7 +123,7 @@ small { font-size: 56.4%; line-height: inherit; }
 
 h1 small, h2 small, h3 small, h4 small, h5 small { color: #777; }
 
-/*	Blockquotes  */
+/*  Blockquotes  */
 blockquote { line-height: 20px; color: #777; margin: 0 0 18px; padding: 9px 20px 0 19px; border-left: 5px solid #cccccc; }
 blockquote p { line-height: 20px; color: #777; }
 blockquote cite { display: block; font-size: 12px; font-size: 1.2rem; color: #555555; }
@@ -137,8 +137,7 @@ abbr, acronym { text-transform: uppercase; font-size: 90%; color: #222; border-b
 
 abbr { text-transform: none; }
 
-/**
-	 * Print styles.  Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com) */
+/** Print styles.  Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com) */
 @media print { * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
   /* Black prints faster: sanbeiji.com/archives/953 */
   p a { color: #555555 !important; text-decoration: underline; }
@@ -156,10 +155,7 @@ abbr { text-transform: none; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; } }
 /*=================================================
-
-	+++ LE GRID +++
-	A Responsive Grid -- Gumby defaults to a standard 960 grid,
-	but you can change it to whatever you'd like.
+ +++ LE GRID +++ A Responsive Grid -- Gumby defaults to a standard 960 grid, but you can change it to whatever you'd like.
  ==================================================*/
 /*.container { padding: 0px $gutter-in-px;
 }*/
