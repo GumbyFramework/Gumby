@@ -5,35 +5,36 @@
 
 	'use strict';
 
+	// define module class and init only if we're on touch devices
+	if(!Modernizr.touch) {
+		return;
+	}
+
 	function Navbar($el) {
 		this.$el = $el;
 		this.$items = this.$el.find('li');
 
 		var scope = this;
 
-		// need to find a way to calculate dropdown height here
-		this.$items.filter(':has(.dropdown)').each(function() {
-
-		});
-
+		// when navbar items are tapped hide/show dropdowns
 		this.$items.on(Gumby.click, function(e) {
 			var $this = $(this);
+
+			e.stopPropagation();
 
 			// prevent jump to top of page
 			if(this.href === '#') {
 				e.preventDefault();
 			}
 
-			scope.dropdown($this.index());
+			scope.dropdown($this);
 		});
 	}
 
 	// hide/show dropdowns
-	Navbar.prototype.dropdown = function(index) {
-		var $this = this.$items.eq(index);
-
+	Navbar.prototype.dropdown = function($this) {
 		// we have dropdowns so open/cose
-		if($this.find('.dropdown').length) {
+		if($this.children('.dropdown').length) {
 			if($this.hasClass('active')) {
 				$this.removeClass('active');
 			} else {
@@ -64,10 +65,7 @@
 		module: 'navbar',
 		events: [],
 		init: function() {
-			// initialize module only if we're on touch devices
-			if(Modernizr.touch) {
-				Gumby.initialize('navbars');
-			}
+			Gumby.initialize('navbars');
 		}
 	});
 }();

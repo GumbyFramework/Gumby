@@ -148,11 +148,6 @@
           color: $default-color;
         }
       }
-      &:hover > a {
-        position: relative;
-        background: $info-hover-color;
-        z-index: 1000;
-      }
       .dropdown {
         width: auto;
         min-width: 0px;
@@ -183,7 +178,6 @@
           height: auto;
           overflow: scroll;
           @include box-shadow(none !important);
-          @include transition-duration(.5s);
           li {
             min-height: 50px;
             border-bottom: darken($navbar-color, 5%);
@@ -277,7 +271,7 @@
 
 .navbar li .dropdown ul {
   margin: 0;
-        display: block;
+  display: block;
   > li {
     position:relative;
     display: block;
@@ -309,9 +303,12 @@
   li:first-child a {
     border-radius: 0;
   }
-  li a:hover {
-    background: $default-color;
-  }
+}
+
+.no-touch .navbar ul li:hover > a {
+  position: relative;
+  background: $info-hover-color;
+  z-index: 1000;
 }
 
 .no-touch .navbar ul li:hover .dropdown, 
@@ -327,8 +324,8 @@
   box-shadow: 0px 3px 4px rgba(0,0,0,.3);
 }
 
-.no-touch .navbar li .dropdown ul li:hover .dropdown,
-.touch .navbar li .dropdown ul li.active .dropdown {
+.no-touch .navbar li .dropdown ul > li:hover .dropdown,
+.touch .navbar li .dropdown ul > li.active .dropdown {
   border-top: none;
   display: block;
   position: absolute;
@@ -343,6 +340,14 @@
       background: darken($navbar-color, 15%) !important;
     }
   }
+}
+
+.no-touch .navbar li .dropdown ul li a:hover {
+  background: $default-color;
+}
+
+.touch .navbar a:hover {
+  color: $navbar-link-color !important;
 }
 
 .subnav {
