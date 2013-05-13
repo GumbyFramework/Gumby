@@ -365,17 +365,15 @@ img { -ms-interpolation-mode: bicubic; }
 .navbar ul li.field { margin-bottom: 0 !important; margin-right: 0; }
 @media only screen and (max-width: 767px) { .navbar ul li.field { padding: 0 20px; } }
 .navbar ul li.field input.search { background: #191a1b; border: none; color: #f2f2f2; }
-.navbar ul li:hover > a { position: relative; background: #868d92; z-index: 1000; }
 .navbar ul li .dropdown { width: auto; min-width: 0px; max-width: 320px; height: 0; position: absolute; background: #fafafa; overflow: hidden; z-index: 999; }
-.navbar ul li:hover .dropdown { min-height: 50px; max-height: 561px; overflow: visible; height: auto; width: 100%; padding: 0; border-top: 1px solid #3e4043; -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); }
 @media only screen and (max-width: 767px) { .navbar ul li .dropdown { width: 100%; max-width: 100%; position: relative; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; }
-  .navbar ul li:hover .dropdown { border-bottom: 1px solid #313436; }
-  .navbar ul li:hover .dropdown ul { position: relative; top: 0; background: #36393b; min-height: 50px; max-height: 250px; height: auto; overflow: scroll; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; }
-  .navbar ul li:hover .dropdown ul li { min-height: 50px; border-bottom: #3e4043; }
-  .navbar ul li:hover .dropdown ul li a { color: white; border-bottom: 1px solid #313436; }
-  .navbar ul li:hover .dropdown ul li a:hover { color: #d04526; } }
+  .navbar ul li.active .dropdown { border-bottom: 1px solid #313436; }
+  .navbar ul li.active .dropdown ul { position: relative; top: 0; background: #36393b; min-height: 50px; max-height: 250px; height: auto; overflow: scroll; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; }
+  .navbar ul li.active .dropdown ul li { min-height: 50px; border-bottom: #3e4043; }
+  .navbar ul li.active .dropdown ul li a { color: white; border-bottom: 1px solid #313436; }
+  .navbar ul li.active .dropdown ul li a:hover { color: #d04526; } }
 @media only screen and (min-width: 768px) and (max-width: 939px) { .navbar > ul > li > .btn a { padding: 0 10px 0 10px !important; }
-  .navbar ul > li .dropdown ul li:hover .dropdown { left: -320px; } }
+  .navbar ul > li .dropdown ul li.active .dropdown { left: -320px; } }
 
 /**** Navbar positioning for Microsoft's browser who deserves not to be mentioned ****/
 .ie7 .navbar > ul { width: auto; }
@@ -404,11 +402,19 @@ img { -ms-interpolation-mode: bicubic; }
 .navbar li .dropdown ul > li a { display: block; padding: 0 20px; color: #d04526; border-bottom: 1px solid #cccccc; text-shadow: none; height: 51px; line-height: 49px; }
 @media only screen and (max-width: 767px) { .navbar li .dropdown ul > li a { padding: 0 20px; } }
 .navbar li .dropdown ul > li .dropdown { display: none; background: white; }
-.navbar li .dropdown ul > li:hover .dropdown { border-top: none; display: block; position: absolute; z-index: 9999; left: 320px; top: 0px; margin-top: 0; }
-@media only screen and (max-width: 767px) { .navbar li .dropdown ul > li:hover .dropdown { position: relative; left: 0; }
-  .navbar li .dropdown ul > li:hover .dropdown ul { background: #252728 !important; } }
 .navbar li .dropdown ul li:first-child a { border-radius: 0; }
-.navbar li .dropdown ul li a:hover { background: #f2f2f2; }
+
+.no-touch .navbar ul li:hover > a { position: relative; background: #868d92; z-index: 1000; }
+
+.no-touch .navbar ul li:hover .dropdown, .touch .navbar ul li.active .dropdown { min-height: 50px; max-height: 561px; overflow: visible; height: auto; width: 100%; padding: 0; border-top: 1px solid #3e4043; -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); }
+
+.no-touch .navbar li .dropdown ul > li:hover .dropdown, .touch .navbar li .dropdown ul > li.active .dropdown { border-top: none; display: block; position: absolute; z-index: 9999; left: 320px; top: 0px; margin-top: 0; }
+@media only screen and (max-width: 767px) { .no-touch .navbar li .dropdown ul > li:hover .dropdown, .touch .navbar li .dropdown ul > li.active .dropdown { position: relative; left: 0; }
+  .no-touch .navbar li .dropdown ul > li:hover .dropdown ul, .touch .navbar li .dropdown ul > li.active .dropdown ul { background: #252728 !important; } }
+
+.no-touch .navbar li .dropdown ul li a:hover { background: #f2f2f2; }
+
+.touch .navbar a:hover { color: white !important; }
 
 .subnav { display: block; width: auto; overflow: hidden; margin: 0 0 18px 0; padding-top: 4px; }
 .subnav li, .subnav dt, .subnav dd { float: left; display: inline; margin-left: 9px; margin-bottom: 4px; }
