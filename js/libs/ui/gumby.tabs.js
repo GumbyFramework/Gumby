@@ -8,8 +8,10 @@
 	function Tabs($el) {
 
 		this.$el = $el;
-		this.$nav = this.$el.find('ul.tab-nav > li');
-		this.$content = this.$el.find('.tab-content');
+    this.$nav = this.$el.find('ul.tab-nav > li' +
+      ($el.data("tabSet") ? '[tabSet="'+$el.data('tabSet')+'"]' : ''));
+    this.$content = this.$el.find( '.tab-content' +
+      ($el.data("tabSet") ? '[tabSet="'+$el.data('tabSet')+'"]' : ''));
 
 		var scope = this;
 
@@ -55,6 +57,8 @@
 			}
 			// mark element as initialized
 			$this.data('isTabs', true);
+      // store the tabSet name
+      $this.data('tabSet', this.getAttribute('tabSet'));
 			new Tabs($this);
 		});
 	});
