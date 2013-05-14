@@ -10,7 +10,10 @@
 		this.$el = $el;
 		this.$holder = $(window);
 		this.ratio = Number(Gumby.selectAttr.apply(this.$el, ['parallax'])) || 1;
-		this.startPos = (this.$el.offset().top * this.ratio) * -1;
+		this.offset = Number(Gumby.selectAttr.apply(this.$el, ['offset'])) || 0;
+
+		// calculate starting bg position
+		this.startPos = ((this.$el.offset().top - this.offset) * this.ratio) * -1;
 
 		var scope = this;
 
