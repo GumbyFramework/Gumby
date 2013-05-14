@@ -9,6 +9,7 @@
 
 		this.$el = $el;
 		var scope = this;
+
 	}
 
 	// add initialisation
@@ -21,7 +22,7 @@
 			}
 			// mark element as initialized
 			$this.data('isParallax', true);
-			new Checkbox($this);
+			new Parallax($this);
 		});
 	});
 
