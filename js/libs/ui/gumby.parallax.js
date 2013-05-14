@@ -20,6 +20,9 @@
 		this.$holder.scroll(function() {
 			scope.scroll();
 		});
+
+		// this should update windows that load scrolled
+		this.scroll();
 	}
 
 	// update bg position based on scroll and parallax ratio
