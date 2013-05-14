@@ -12,6 +12,9 @@
 		this.ratio = Number(Gumby.selectAttr.apply(this.$el, ['parallax'])) || 1;
 		this.offset = Number(Gumby.selectAttr.apply(this.$el, ['offset'])) || 0;
 
+		// calculate starting bg position
+		this.startPos = ((this.$el.offset().top - this.offset) * this.ratio) * -1;
+
 		// find holder element
 		if(this.$holder) {
 			this.$holder = $(this.$holder);
@@ -20,10 +23,12 @@
 		// no holder element so default to window
 		if(!this.$holder || !this.$holder.length) {
 			this.$holder = $(window);
-		}
 
-		// calculate starting bg position
-		this.startPos = ((this.$el.offset().top - this.$holder.offset().top - this.offset) * this.ratio) * -1;
+		// holder is set and not window so add to offset calc
+		} else {
+			// calculate starting bg position
+			this.startPos -= this.$holder.offset().top;
+		}
 
 		var scope = this;
 
