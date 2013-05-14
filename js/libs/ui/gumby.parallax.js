@@ -8,12 +8,22 @@
 	function Parallax($el) {
 
 		this.$el = $el;
-		this.$holder = $(window);
+		this.$holder = Gumby.selectAttr.apply(this.$el, ['holder']);
 		this.ratio = Number(Gumby.selectAttr.apply(this.$el, ['parallax'])) || 1;
 		this.offset = Number(Gumby.selectAttr.apply(this.$el, ['offset'])) || 0;
 
+		// find holder element
+		if(this.$holder) {
+			this.$holder = $(this.$holder);
+		}
+
+		// no holder element so default to window
+		if(!this.$holder || !this.$holder.length) {
+			this.$holder = $(window);
+		}
+
 		// calculate starting bg position
-		this.startPos = ((this.$el.offset().top - this.offset) * this.ratio) * -1;
+		this.startPos = ((this.$el.offset().top - this.$holder.offset().top - this.offset) * this.ratio) * -1;
 
 		var scope = this;
 
