@@ -9,7 +9,8 @@
 
 		this.$el = $el;
 		this.$holder = $(window);
-		this.startPos = this.$el.offset().top * -1;
+		this.ratio = Number(Gumby.selectAttr.apply(this.$el, ['parallax'])) || 1;
+		this.startPos = (this.$el.offset().top * this.ratio) * -1;
 
 		var scope = this;
 
@@ -23,7 +24,7 @@
 
 	// update bg position based on scroll and parallax ratio
 	Parallax.prototype.scroll = function() {
-		this.setPosition(this.startPos + this.$holder.scrollTop());
+		this.setPosition(this.startPos + (this.$holder.scrollTop() * this.ratio));
 	};
 
 	// set background y axis position with 50% x axis
