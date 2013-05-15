@@ -330,7 +330,7 @@
   display: block;
   position: absolute;
   z-index: 9999;
-  left: $min-device-width;
+  left: 100%;
   top: $nav-distance;
   margin-top: 0;
   @include respond(all-phones) {
