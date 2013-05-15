@@ -5,6 +5,11 @@
 
 	'use strict';
 
+	// define module class and init only if we're on touch devices
+	if(Modernizr.touch) {
+		return;
+	}
+
 	function Parallax($el) {
 
 		this.$el = $el;
