@@ -18,7 +18,7 @@
 		this.offset = Number(Gumby.selectAttr.apply(this.$el, ['offset'])) || 0;
 
 		// calculate starting bg position
-		this.startPos = ((this.$el.offset().top - this.offset) * this.ratio) * -1;
+		this.startPos = ((this.$el.offset().top - this.offset) * this.ratio);
 
 		// find holder element
 		if(this.$holder) {
@@ -50,7 +50,7 @@
 
 	// update bg position based on scroll and parallax ratio
 	Parallax.prototype.scroll = function() {
-		this.setPosition(this.startPos + (this.$holder.scrollTop() * this.ratio));
+		this.setPosition(this.startPos - (this.$holder.scrollTop() * this.ratio));
 	};
 
 	// set background y axis position with 50% x axis
