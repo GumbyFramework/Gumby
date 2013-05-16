@@ -177,7 +177,7 @@
           min-height: 50px;
           max-height: 250px;
           height: auto;
-          overflow: scroll;
+          overflow: auto;
           @include box-shadow(none !important);
           li {
             min-height: 50px;
