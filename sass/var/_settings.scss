@@ -3,19 +3,19 @@
 
 
 // Grid Settings
-$row-max-width: 940px !default;    		// 940px
-$gutter-in-px: 20px !default;      		// 20px
-$cols: 12 !default;              		// 12 Column Default Grid
-$hybrid: 16 !default; 					    // 16 Column Default Hybrid Grid
+$row-max-width: 940px !default;    				// 940px
+$gutter-in-px: 20px !default;      				// 20px
+$cols: 12 !default;              				// 12 Column Default Grid
+$hybrid: 16 !default;							// 16 Column Default Hybrid Grid
 
 // Responsiveness Settings
-$min-device-width: 320px; 				  // iPhone Portrait
-$tablet-device-width: 768px;				// iPad Portrait
-$document-width: $row-max-width;		// Default Document
-$max-device-width: 2880px;				  // Max Document Size
+$min-device-width: 320px; 						// iPhone Portrait
+$tablet-device-width: 768px;					// iPad Portrait
+$document-width: $row-max-width;				// Default Document
+$max-device-width: 2880px;						// Max Document Size
 
 // Spacing
-$nav-distance: 0px; 								// Navigation distance from the top of the viewport
+$nav-distance: 0px; 							// Navigation distance from the top of the viewport
 
 // Typography
 $font-family: "Open Sans";
@@ -46,7 +46,7 @@ $rhythm-height: .711;
 // Modular Scale Settings
 // http://www.modularscale.com by Tim Brown
 // https://github.com/scottkellum/modular-scale
-$ratio: $golden !default;									// Ratio for Modular Scale
+$ratio: $golden !default;						// Ratio for Modular Scale
 $base-font-size: 16px !default;
 $importantNum: 78px !default;
 $base-size: $base-font-size $importantNum;
@@ -55,7 +55,7 @@ $base-size: $base-font-size $importantNum;
 // Sizing
 $xsmall: ms(-2);
 $small: ms(-1);
-$norm: ms(0);			// $base-font-size (16px == default)
+$norm: ms(0);									// $base-font-size (16px == default)
 $med: ms(1);
 $large: ms(2);
 $larger: ms(3);
@@ -106,15 +106,15 @@ $metro-radius: 0 !default;
 $bigger-radius: 8px;
 
 // Buttons
-	// Font Sizing
-	$xlarge-button-font-size: $larger;
-	$large-button-font-size: $large;
-	$medium-button-font-size: $norm;
-	$small-button-font-size: $small;
-	// Padding
-	$default-button-padding: $med;
-	// Height
-	$default-button-height: 36px;
+// Font Sizing
+$xlarge-button-font-size: $larger;
+$large-button-font-size: $large;
+$medium-button-font-size: $norm;
+$small-button-font-size: $small;
+// Padding
+$default-button-padding: $med;
+// Height
+$default-button-height: 36px;
 
 // Tabs
 $tab-height: 42px;
