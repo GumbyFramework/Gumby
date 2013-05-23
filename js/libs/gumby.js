@@ -23,8 +23,7 @@
 		this.$dom = $(document);
 		this.isOldie = !!this.$dom.find('html').hasClass('oldie');
 		this.click = 'click';
-		this.onReady = false;
-		this.onOldie = false;
+		this.onReady = this.onOldie = this.onTouch = false;
 		this.uiModules = {};
 		this.inits = {};
 	}
@@ -46,6 +45,11 @@
 			if(scope.isOldie && scope.onOldie) {
 				scope.onOldie();
 			}
+
+			// call touch() callback if applicable
+			if(Modernizr.touch && scope.onTouch) {
+				scope.onTouch();
+			}
 		});
 	};
 
@@ -58,8 +62,15 @@
 
 	// public helper - set oldie callback
 	Gumby.prototype.oldie = function(code) {
-		if(code && typeof code === 'function' || !this.isOldie) {
+		if(code && typeof code === 'function') {
 			this.onOldie = code;
+		}
+	};
+
+	// public helper - set touch callback
+	Gumby.prototype.touch = function(code) {
+		if(code && typeof code === 'function') {
+			this.onTouch = code;
 		}
 	};
 

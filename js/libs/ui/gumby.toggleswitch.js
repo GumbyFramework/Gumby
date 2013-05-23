@@ -71,29 +71,18 @@
 		}
 
 		// return array of both targets, split and return 0, 1
-		var targets = targetStr.split('|');
+		targets = targetStr.split('|');
 		return targets.length > 1 ? [$(targets[0]), $(targets[1])] : [$(targets[0])];
 	};
 
 	// call triggered event and pass target data
 	Toggle.prototype.triggered = function() {
-		var targetLength = this.targets.length,
-			// if no targets then use toggle/switch itself
-			targetData = !targetLength ? [this.$el.hasClass('active')] : [],
-			i;
-
-		// loop round targets and store boolean indicating if selector is active
-		for(i = 0; i < targetLength; i++) {
-			targetData.push(this.targets[i].hasClass('active'));
-		}
-
 		// trigger gumby.onTrigger event and pass array of target status data
-		this.$el.trigger('gumby.onTrigger', targetData);
+		this.$el.trigger('gumby.onTrigger', [this.$el.hasClass('active')]);
 	};
 
 	// Switch object inherits from Toggle
 	Switch.prototype = new Toggle();
-	Switch.constructor = Switch;
 
 	// Toggle specific trigger method
 	Toggle.prototype.trigger = function(cb) {

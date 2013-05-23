@@ -9,7 +9,8 @@ Modernizr.load({
 	// if present load custom jQuery mobile build and update Gumby.click
 	yep: 'js/libs/jquery.mobile.custom.min.js',
 	callback: function(url, result, key) {
-		if(result) {
+		// check jQuery mobile has successfully loaded before using tap events
+		if($.mobile) {
 			window.Gumby.click = 'tap';
 		}
 	},

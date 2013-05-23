@@ -6,23 +6,23 @@
 
 // Set local icon font
 @font-face {
-	font-family: '#{$icons}';
-	font-style: normal;
+  font-family: '#{$icons}';
+  font-style: normal;
   font-weight: 400;
   src: url(../fonts/icons/#{$icons}.eot);
-	src: url('../fonts/icons/#{$icons}.eot?#iefix') format('ie9-skip-eot'),
-			 url('../fonts/icons/#{$icons}.woff') format('woff'),
-			 url('../fonts/icons/#{$icons}.ttf')  format('truetype');
+  src: url('../fonts/icons/#{$icons}.eot?#iefix') format('ie9-skip-eot'),
+       url('../fonts/icons/#{$icons}.woff') format('woff'),
+       url('../fonts/icons/#{$icons}.ttf')  format('truetype');
 }
 
 // To include your own, local copies of fonts, use the following template
 //
 //@font-face {
-//	font-family: '#{$some-font-variable}';
-//	font-style: normal;
+//  font-family: '#{$some-font-variable}';
+//  font-style: normal;
 //  font-weight: 400;
 //  src: url(../fonts/icons/#{$some-font-variable}.eot);
-//	src: url('../fonts/icons/#{$some-font-variable}.eot?#iefix') format('ie9-skip-eot'),
-//			 url('../fonts/icons/#{$some-font-variable}.woff') format('woff'),
-//			 url('../fonts/icons/#{$some-font-variable}.ttf')  format('truetype');
+//  src: url('../fonts/icons/#{$some-font-variable}.eot?#iefix') format('ie9-skip-eot'),
+//       url('../fonts/icons/#{$some-font-variable}.woff') format('woff'),
+//       url('../fonts/icons/#{$some-font-variable}.ttf')  format('truetype');
 //}

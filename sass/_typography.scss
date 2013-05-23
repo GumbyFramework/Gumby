@@ -52,9 +52,9 @@
 
 /*=====================================================
  
- 	Links & Paragraph styles
- 	
- 	======================================================*/
+  Links & Paragraph styles
+  
+  ======================================================*/
 
 p {
   font-family: $font-family;
@@ -84,8 +84,8 @@ a {
 
 /*=====================================================
 
- 	Lists
- 	
+  Lists
+  
  ======================================================*/
 
 ul, ol {
@@ -163,7 +163,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small {
   color: #777;
 }
 
-/*	Blockquotes  */
+/*  Blockquotes  */
 
 blockquote {
   line-height: 20px;
@@ -212,7 +212,7 @@ abbr {
 }
 
 /**
-	 * Print styles.
+   * Print styles.
  *
  * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
  * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
