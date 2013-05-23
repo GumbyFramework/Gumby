@@ -19,6 +19,7 @@ body {
     width: 100%;
     min-width: 0;
   }
+  -webkit-transform:rotateY(0deg);  // Set initial facing - Fixes animation stuttering when -webkit-backface-visibility:(hidden) used in Chrome Version 26.0.1410.64 m on windows 7 (at least)
   -webkit-backface-visibility:(hidden); // Fixes Chrome 1px shift rendering issue on CSS3 transitions.
 }
 
