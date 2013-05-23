@@ -7,13 +7,13 @@
     padding: 0;
     border-bottom: 1px solid darken($default-color, 5%);
     > li {
-      position: relative;
       display: inline-block;
       width: auto;
       padding: 0;
       margin: 0 $gutter 0 0;
       cursor: default;
       top: 1px;
+      @include box-shadow(0 1px 0 $white);
       > a {
         display: block;
         width: auto;
@@ -39,7 +39,7 @@
       }
       &.active > a {
         @include line-and-height($tab-height + 1);
-        background: #fff;
+        background: $white;
       }
       &:last-child {
         margin-right: 0;

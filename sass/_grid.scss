@@ -39,7 +39,6 @@
   margin-left: $gutter;
   float: $default-float;
   min-height: 1px;
-  position: relative;
   @include box-sizing(border-box);
 }
 

@@ -165,7 +165,7 @@ abbr { text-transform: none; }
 @media only screen and (max-width: 960px) { .row .row { padding: 0; } }
 
 /* To fix the grid into a different size, set max-width to your desired width */
-.column, .columns { margin-left: 2.12766%; float: left; min-height: 1px; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.column, .columns { margin-left: 2.12766%; float: left; min-height: 1px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 .column:first-child, .columns:first-child, .alpha { margin-left: 0px; }
 
@@ -1660,7 +1660,7 @@ form ul, form ul li { margin-left: 0; list-style-type: none; }
 form fieldset { border-style: solid; border-width: 0.0625em; padding: 1.5625em; border-color: #d8d8d8; margin: 18px 0; }
 form fieldset legend { padding: 5px 10px; }
 
-.field { position: relative; max-width: 100%; overflow: hidden; margin-bottom: 10px; vertical-align: middle; /* remove inline-block white-space — A 0px font-size = 0px of white space */ }
+.field { position: relative; max-width: 100%; margin-bottom: 10px; vertical-align: middle; /* remove inline-block white-space — A 0px font-size = 0px of white space */ }
 .field.metro, .field .metro { -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
 .field input, .field input[type="*"], .field textarea { max-width: 100%; width: 100%; padding: 0; margin: 0; border: none; outline: none; resize: none; -webkit-appearance: none; font-family: "Open Sans"; font-weight: 300; font-size: 16px; font-size: 1rem; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
 .field .radio, .field .checkbox { position: relative; }
@@ -1794,11 +1794,11 @@ form fieldset legend { padding: 5px 10px; }
 /* Tabs */
 .tabs { display: block; }
 .tabs .tab-nav { margin: 0; padding: 0; border-bottom: 1px solid #e5e5e5; }
-.tabs .tab-nav > li { position: relative; display: inline-block; width: auto; padding: 0; margin: 0 2.12766% 0 0; cursor: default; top: 1px; }
+.tabs .tab-nav > li { display: inline-block; width: auto; padding: 0; margin: 0 2.12766% 0 0; cursor: default; top: 1px; -webkit-box-shadow: 0 1px 0 white; -moz-box-shadow: 0 1px 0 white; box-shadow: 0 1px 0 white; }
 .tabs .tab-nav > li > a { display: block; width: auto; padding: 0 16px; margin: 0; color: #555555; font-family: "Open Sans"; font-weight: 600; border: 1px solid #e5e5e5; border-width: 1px 1px 0 1px; text-shadow: 0 1px 1px white; background: #f2f2f2; cursor: pointer; -webkit-border-radius: 4px 4px 0 0; -moz-border-radius: 4px 4px 0 0; -ms-border-radius: 4px 4px 0 0; -o-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0; height: 42px; line-height: 40px; }
 .tabs .tab-nav > li > a:hover { text-decoration: none; background: whitesmoke; }
 .tabs .tab-nav > li > a:active { background: #ededed; }
-.tabs .tab-nav > li.active > a { height: 43px; line-height: 41px; background: #fff; }
+.tabs .tab-nav > li.active > a { height: 43px; line-height: 41px; background: white; }
 .tabs .tab-nav > li:last-child { margin-right: 0; }
 .tabs .tab-content { display: none; padding: 20px 10px; }
 .tabs .tab-content.active { display: block; }
