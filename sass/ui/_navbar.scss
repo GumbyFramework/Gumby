@@ -328,21 +328,25 @@
 .no-touch .navbar ul li:hover .dropdown ul {
   position: relative;
   top: 0;
-  background: darken($navbar-color, 8%);
   min-height: 50px;
   max-height: 250px;
   height: auto;
-  overflow: scroll;
   @include box-shadow(none !important);
   @include transition-duration(.5s);
+  @include respond(all-phones) {
+    overflow: auto;
+    background: darken($navbar-color, 8%);
+    li {
+      border-bottom: darken($navbar-color, 5%);
+      a {
+        color: $white;
+        border-bottom: 1px solid darken($navbar-color, 10%);
+        &:hover {color: $body-link-color;}
+      }
+    }
+  }
   li {
     min-height: 50px;
-    border-bottom: darken($navbar-color, 5%);
-    a {
-      color: $white;
-      border-bottom: 1px solid darken($navbar-color, 10%);
-      &:hover {color: $body-link-color;}
-    }
   }
 }
 
