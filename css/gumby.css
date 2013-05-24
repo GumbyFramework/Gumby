@@ -404,10 +404,13 @@ img { -ms-interpolation-mode: bicubic; }
 
 .no-touch .navbar ul li:hover .dropdown, .touch .navbar ul li.active .dropdown { min-height: 50px; max-height: 561px; overflow: visible; height: auto; width: 100%; padding: 0; border-top: 1px solid #3e4043; -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); }
 
-.no-touch .navbar ul li:hover .dropdown ul { position: relative; top: 0; background: #36393b; min-height: 50px; max-height: 250px; height: auto; overflow: scroll; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; }
-.no-touch .navbar ul li:hover .dropdown ul li { min-height: 50px; border-bottom: #3e4043; }
-.no-touch .navbar ul li:hover .dropdown ul li a { color: white; border-bottom: 1px solid #313436; }
-.no-touch .navbar ul li:hover .dropdown ul li a:hover { color: #d04526; }
+.no-touch .navbar ul li:hover .dropdown ul { position: relative; top: 0; min-height: 50px; max-height: 250px; height: auto; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; min-height: 50px; max-height: 250px; height: auto; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; }
+.no-touch .navbar ul li:hover .dropdown ul li { min-height: 50px; }
+@media only screen and (max-width: 767px) { .no-touch .navbar ul li:hover .dropdown ul { overflow: auto; background: #36393b; }
+  .no-touch .navbar ul li:hover .dropdown ul li { border-bottom: #3e4043; }
+  .no-touch .navbar ul li:hover .dropdown ul li a { color: white; border-bottom: 1px solid #313436; }
+  .no-touch .navbar ul li:hover .dropdown ul li a:hover { color: #d04526; } }
+.no-touch .navbar ul li:hover .dropdown ul li { min-height: 50px; }
 
 .no-touch .navbar li .dropdown ul > li:hover .dropdown, .touch .navbar li .dropdown ul > li.active .dropdown { border-top: none; display: block; position: absolute; z-index: 9999; left: 100%; top: 0px; margin-top: 0; }
 @media only screen and (max-width: 767px) { .no-touch .navbar li .dropdown ul > li:hover .dropdown, .touch .navbar li .dropdown ul > li.active .dropdown { position: relative; left: 0; }
