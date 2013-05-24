@@ -325,6 +325,27 @@
   box-shadow: 0px 3px 4px rgba(0,0,0,.3);
 }
 
+.no-touch .navbar ul li:hover .dropdown ul {
+  position: relative;
+  top: 0;
+  background: darken($navbar-color, 8%);
+  min-height: 50px;
+  max-height: 250px;
+  height: auto;
+  overflow: scroll;
+  @include box-shadow(none !important);
+  @include transition-duration(.5s);
+  li {
+    min-height: 50px;
+    border-bottom: darken($navbar-color, 5%);
+    a {
+      color: $white;
+      border-bottom: 1px solid darken($navbar-color, 10%);
+      &:hover {color: $body-link-color;}
+    }
+  }
+}
+
 .no-touch .navbar li .dropdown ul > li:hover .dropdown,
 .touch .navbar li .dropdown ul > li.active .dropdown {
   border-top: none;
