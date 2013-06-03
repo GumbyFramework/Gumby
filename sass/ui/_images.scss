@@ -2,7 +2,7 @@
   line-height:0;
   margin-bottom: 20px;
   &.circle {
-    border-radius: 50% !important;
+    @include border-radius(50% !important);
     overflow: hidden;
     width: auto;
   }
@@ -12,7 +12,7 @@
   }
   &.photo {
     border: 5px solid #fff;
-    box-shadow: 0 0 1px $body-font-color; 
+    @include box-shadow(0 0 1px $body-font-color);
     &.polaroid {
       padding-bottom: 50px;
       background: #fff;
