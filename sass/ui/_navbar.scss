@@ -119,8 +119,7 @@
         height: auto;
         width: 100%;
         border-right: 0 !important;
-        -webkit-box-shadow: none;
-        box-shadow: none;
+        @include box-shadow(none);
         @include transition-duration(.5s);
       }
 
@@ -225,10 +224,8 @@
 
 .pretty.navbar {
   @include background-image(linear-gradient(lighten($navbar-color, 20%),darken($navbar-color, 10%)));
-  -webkit-box-shadow: inset 0 1px 1px lighten($navbar-color, 20%),
-    0 1px 2px rgba(0,0,0,0.80) !important; /* Remove this line if you dont want a dropshadow on your navigation*/
-  box-shadow: inset 0 1px 1px lighten($navbar-color, 20%),
-        0 1px 2px rgba(0,0,0,0.80) !important; /* Remove this line if you dont want a dropshadow on your navigation*/
+  @include box-shadow(inset 0 1px 1px lighten($navbar-color, 20%),
+          0 1px 2px rgba(0,0,0,0.80) !important); /* Remove this line if you dont want a dropshadow on your navigation*/
   
   // Pretty Nav Toggle Styles
   @include respond(all-phones) {
@@ -253,7 +250,7 @@
     }
   }
   &.row {
-    border-radius: $button-radius;
+    @include border-radius($button-radius);
     @include respond(all-phones) {
       @include border-radius(0);
     }
@@ -261,10 +258,10 @@
   ul li.field input.search {
     @include background-image(linear-gradient(darken($navbar-color, 20%), lighten($navbar-color, 2%)));
     border: none;
-    box-shadow: 0 1px 2px lighten($navbar-color, 25%) !important; /* Remove this line if you dont want a dropshadow on your navigation*/
+    @include box-shadow(0 1px 2px lighten($navbar-color, 25%) !important); /* Remove this line if you dont want a dropshadow on your navigation*/
   }
   > ul > li:first-child, .pretty.navbar > ul > li:first-child a:hover {
-    box-shadow: none;
+    @include box-shadow(none);
   }
 }
 
@@ -280,7 +277,7 @@
     float: left;
     text-align: left;
     height: auto;
-    border-radius: none;
+    @include border-radius(none);
     @include respond(tablets) {
       max-width: $min-device-width;
       word-wrap: break-word;
@@ -302,7 +299,7 @@
     }
   }
   li:first-child a {
-    border-radius: 0;
+    @include border-radius(0);
   }
 }
 
@@ -321,8 +318,7 @@
   width: 100%;
   padding: 0;
   border-top: 1px solid darken($navbar-color, 5%);
-  -webkit-box-shadow: 0px 3px 4px rgba(0,0,0,.3);
-  box-shadow: 0px 3px 4px rgba(0,0,0,.3);
+  @include box-shadow(0px 3px 4px rgba(0,0,0,.3));
 }
 
 .no-touch .navbar ul li:hover .dropdown ul {
@@ -399,9 +395,7 @@
     color: #05390a;
     font-size: 15px;
     text-decoration: none;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+    @include border-radius(4px);
   }
   li.active a, dd.active a {
     background: #5dbb73;
