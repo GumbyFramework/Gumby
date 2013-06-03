@@ -75,6 +75,7 @@ form {
     &.search {
       @include line-and-height(height-calc($norm));
       @include border-radius(1000px);
+      padding-right: 0;
     }
   }
   .input.textarea {
