@@ -9,19 +9,11 @@
     inset $drawer-inner-shadow-x-offset $drawer-inner-shadow-y-offset $drawer-inner-shadow-blur $drawer-inner-shadow-color);
   ;
   overflow: hidden;
-  -webkit-transition-duration: .3s;  /* Saf3.2+, Chrome */
-  -moz-transition-duration: .3s;  /* FF4+ */
-  -ms-transition-duration: .3s;  /* IE10 */
-  -o-transition-duration: .3s;  /* Opera 10.5+ */
-  transition-duration: .3s;
+  @include transition-duration(.3s);
   &.active {
     height: auto;
     max-height: 800px;
-    -webkit-transition-duration: .5s;  /* Saf3.2+, Chrome */
-    -moz-transition-duration: .5s;  /* FF4+ */
-    -ms-transition-duration: .5s;  /* IE10 */
-    -o-transition-duration: .5s;  /* Opera 10.5+ */
-    transition-duration: .5s;
+    @include transition-duration(.5s);
   }
 }
 
