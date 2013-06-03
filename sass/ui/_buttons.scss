@@ -118,33 +118,33 @@
     @each $grade in $ui-coloring {
       &.#{nth($grade, 1)} {
         @include background-image(linear-gradient(lighten(nth($grade, 2), 20%), saturate(nth($grade, 2), 5%)));
-        box-shadow: inset 0 0 3px lighten(nth($grade, 2), 45%);
+        @include box-shadow(inset 0 0 3px lighten(nth($grade, 2), 45%));
         border: 1px solid darken(nth($grade, 2), 15%);
         &:hover {
           @include background-image(linear-gradient(lighten(nth($grade, 3), 15%), saturate(nth($grade, 3), 5%)));
-          box-shadow: inset 0 0 3px lighten(nth($grade, 3), 40%);
+          @include box-shadow(inset 0 0 3px lighten(nth($grade, 3), 40%));
           border: 1px solid darken(nth($grade, 3), 15%);
         }
         &:active {
           @include background-image(linear-gradient(saturate(nth($grade, 2), 5%), lighten(nth($grade, 2), 20%)));
-          box-shadow: inset 0 0 3px lighten(nth($grade, 2), 50%);
+          @include box-shadow(inset 0 0 3px lighten(nth($grade, 2), 50%));
         }
-      @if nth($grade, 1) == default {
-        a, input, button {
-          text-shadow: 0 1px 1px lighten(nth($grade, 2), 20%);
+        @if nth($grade, 1) == default {
+          a, input, button {
+            text-shadow: 0 1px 1px lighten(nth($grade, 2), 20%);
+          }
         }
-      }
-      @elseif nth($grade, 1) == warning {
-        color: darken(nth($grade, 2), 40%);
-        a, input, button {
-          text-shadow: 0 1px 1px lighten(nth($grade, 2), 20%);
+        @elseif nth($grade, 1) == warning {
+          color: darken(nth($grade, 2), 40%);
+          a, input, button {
+            text-shadow: 0 1px 1px lighten(nth($grade, 2), 20%);
+          }
         }
-      }
-      @else {
-        a, input, button {
-          text-shadow: 0 1px 1px darken(nth($grade, 2), 20%);
+        @else {
+          a, input, button {
+            text-shadow: 0 1px 1px darken(nth($grade, 2), 20%);
+          }
         }
-      }
       }
     }
   }
