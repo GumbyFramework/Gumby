@@ -46,7 +46,7 @@ $rhythm-height: .711;
 // Modular Scale Settings
 // http://www.modularscale.com by Tim Brown
 // https://github.com/scottkellum/modular-scale
-$ratio: $golden !default;						// Ratio for Modular Scale
+$ratio: golden();						// Ratio for Modular Scale
 $base-font-size: 16px !default;
 $importantNum: 78px !default;
 $base-size: $base-font-size $importantNum;
