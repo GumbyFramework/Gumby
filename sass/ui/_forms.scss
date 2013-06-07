@@ -41,6 +41,8 @@ form {
   max-width: 100%;
   margin-bottom: 10px;
   vertical-align: middle;
+  // Font-size 16px for weird form style error
+  font-size: 16px;
   &.metro, .metro {
     @include border-radius(0);
   }
@@ -226,8 +228,8 @@ form {
           content: "#{$entypo-icon-check}";
         }
         font-size: $norm;
-        position:absolute;
-        top: 5px;
+        position: absolute;
+        top: percentage((strip-units($base-font-size)) / 100) - 2;
         right: 15px;
         z-index: 999;
         color: nth($error, 2);
