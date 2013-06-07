@@ -14,6 +14,12 @@
 		this.rate = Gumby.selectAttr.apply(this.$el, ['rate']) || 1;
 		// parse font sizes (min|max)
 		this.fontSizes = this.parseSizes(Gumby.selectAttr.apply(this.$el, ['sizes']));
+
+		var scope = this;
+
+		$(window).on('load resize orientationchange', function() {
+			scope.resize();
+		});
 	}
 
 	FitText.prototype.resize = function() {
@@ -29,6 +35,8 @@
 				min: Number.NEGATIVE_INFINITY,
 				max: Number.POSITIVE_INFINITY
 			};
+
+		if(!attrStr) { return sizes; }
 
 		// min and/or max specified
 		if(attrStr.indexOf('|') > -1) {
