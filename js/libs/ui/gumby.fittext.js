@@ -21,33 +21,48 @@
 	};
 
 	FitText.prototype.calculateSize = function() {
-		return Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize));
+		return Math.max(Math.min(this.$el.width() / (this.rate*10), parseFloat(this.fontSizes.max)), parseFloat(this.fontSizes.min));
 	};
 
 	FitText.prototype.parseSizes = function(attrStr) {
-		console.log(attrStr);
+		var sizes = {
+				min: Number.NEGATIVE_INFINITY,
+				max: Number.POSITIVE_INFINITY
+			};
+
+		// min and/or max specified
+		if(attrStr.indexOf('|') > -1) {
+			attrStr = attrStr.split('|');
+
+			sizes.min = Number(attrStr[0]) || sizes.min;
+			sizes.max = Number(attrStr[1]) || sizes.max;
+		}
+
+		sizes.min = Number(attrStr) || sizes.min;
+
+		return sizes;
 	};
 
 	// add initialisation
-	Gumby.addInitalisation('checkboxes', function() {
-		$('.checkbox').each(function() {
+	Gumby.addInitalisation('fittext', function() {
+		$('.fittext').each(function() {
 			var $this = $(this);
 			// this element has already been initialized
-			if($this.data('isCheckbox')) {
+			if($this.data('isFittext')) {
 				return true;
 			}
 			// mark element as initialized
-			$this.data('isCheckbox', true);
-			new Checkbox($this);
+			$this.data('isFittext', true);
+			new FitText($this);
 		});
 	});
 
 	// register UI module
 	Gumby.UIModule({
-		module: 'checkbox',
-		events: ['onCheck', 'onUncheck', 'onChange', 'check', 'uncheck'],
+		module: 'fittext',
+		events: [],
 		init: function() {
-			Gumby.initialize('checkboxes');
+			Gumby.initialize('fittext');
 		}
 	});
 }();
