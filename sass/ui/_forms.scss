@@ -329,14 +329,15 @@ form {
   @include border-radius(4px);
   font-family: $font-family;
   font-weight: $font-weight-semibold;
-  @include line-and-height(height-calc($norm));
+  height: auto;
   @include background-image(linear-gradient(lighten($default-color, 20%), $default-color));
   &:after {
     content: "\25BE";
     z-index: 0;
     position:absolute;
     right: 8%;
-    top: 0%;
+    top: 50%;
+    margin-top: -12px;
     color: $body-font-color;
   }
   &:first-child {
