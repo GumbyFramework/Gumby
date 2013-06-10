@@ -329,6 +329,14 @@
   height: auto;
   @include box-shadow(none !important);
   @include transition-duration(.5s);
+  li {
+    min-height: 50px;
+  }
+  min-height: 50px;
+  max-height: 250px;
+  height: auto;
+  @include box-shadow(none !important);
+  @include transition-duration(.5s);
   @include respond(all-phones) {
     overflow: auto;
     background: darken($navbar-color, 8%);
