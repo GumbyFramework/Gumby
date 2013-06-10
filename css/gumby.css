@@ -1833,8 +1833,6 @@ form fieldset legend { padding: 5px 10px; }
 .image.photo { border: 5px solid white; -webkit-box-shadow: 0 0 1px #555555; -moz-box-shadow: 0 0 1px #555555; box-shadow: 0 0 1px #555555; }
 .image.photo.polaroid { padding-bottom: 50px; background: #fff; }
 
-.parallax { background-attachment: fixed !important; }
-
 body .video { width: 100%; position: relative; height: 0; padding-bottom: 56.25%; }
 body .video.twitch, body .video.youtube.show_controls { padding-top: 30px; }
 
