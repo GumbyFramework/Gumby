@@ -1753,6 +1753,9 @@ form fieldset legend { padding: 5px 10px; }
 .picker:first-child { margin-left: 0; }
 .picker select { position: relative; display: block; min-width: 100%; width: 135%; height: 34px; padding: 6px 45px 6px 15px; color: #555555; border: none; background: transparent; outline: none; -webkit-appearance: none; z-index: 99; cursor: pointer; font-size: 16px; font-size: 1rem; }
 
+.ie9 .radio.checked i, .oldie .radio.checked i { top: 2px; }
+.ie9 .checkbox.checked i, .oldie .checkbox.checked i { top: 1px; }
+
 /* Labels */
 .badge, .label { height: 20px; display: inline-block; font-family: Helvetica, arial, verdana, sans-serif; font-weight: bold; line-height: 20px; text-align: center; color: #fff; }
 .badge a, .label a { color: #fff; }

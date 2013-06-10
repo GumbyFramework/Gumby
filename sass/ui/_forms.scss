@@ -360,3 +360,15 @@ form {
     @include font-size($norm);
   }
 }
+
+// IE fixes - seems no other way around this :(
+.ie9, .oldie {
+  .radio.checked i {
+    top: 2px;
+  }
+  .checkbox.checked i {
+    top: 1px;
+  }
+}
+
+
