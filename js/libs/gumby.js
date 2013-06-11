@@ -26,6 +26,11 @@
 		this.onReady = this.onOldie = this.onTouch = false;
 		this.uiModules = {};
 		this.inits = {};
+
+		// check and set path with js/libs default
+		this.path = $('script[gumby-path]').attr('gumby-path') ||
+					$('script[data-path]').attr('data-path') ||
+					'js/libs';
 	}
 
 	// initialize Gumby
@@ -83,7 +88,6 @@
 			click: this.click
 		};
 	};
-
 
 	// grab attribute value, testing data- gumby- and no prefix
 	Gumby.prototype.selectAttr = function() {
