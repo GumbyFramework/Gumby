@@ -7,9 +7,9 @@
 
   @if $is-important {
     font-size: $size + px !important;
-    font-size: ($size / 16) + rem !important;
+    font-size: ($size / strip-units($base-font-size)) + rem !important;
   } @else {
     font-size: $size + px;
-    font-size: ($size / 16) + rem;
+    font-size: ($size / strip-units($base-font-size)) + rem;
   }
 }

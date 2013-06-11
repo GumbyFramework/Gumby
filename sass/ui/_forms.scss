@@ -41,6 +41,8 @@ form {
   max-width: 100%;
   margin-bottom: 10px;
   vertical-align: middle;
+  // Font-size 16px for weird form style error
+  font-size: 16px;
   &.metro, .metro {
     @include border-radius(0);
   }
@@ -226,8 +228,8 @@ form {
           content: "#{$entypo-icon-check}";
         }
         font-size: $norm;
-        position:absolute;
-        top: 5px;
+        position: absolute;
+        top: percentage((strip-units($base-font-size)) / 100) - 2;
         right: 15px;
         z-index: 999;
         color: nth($error, 2);
@@ -327,14 +329,15 @@ form {
   @include border-radius(4px);
   font-family: $font-family;
   font-weight: $font-weight-semibold;
-  @include line-and-height(height-calc($norm));
+  height: auto;
   @include background-image(linear-gradient(lighten($default-color, 20%), $default-color));
   &:after {
     content: "\25BE";
     z-index: 0;
     position:absolute;
     right: 8%;
-    top: 0%;
+    top: 50%;
+    margin-top: -12px;
     color: $body-font-color;
   }
   &:first-child {
@@ -357,3 +360,15 @@ form {
     @include font-size($norm);
   }
 }
+
+// IE fixes - seems no other way around this :(
+.ie9, .oldie {
+  .radio.checked i {
+    top: 2px;
+  }
+  .checkbox.checked i {
+    top: 1px;
+  }
+}
+
+

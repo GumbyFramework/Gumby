@@ -6,9 +6,7 @@
   @if $size == narrow { $size: 30.6666666667%; }
   @if $size == xnarrow { $size: 13.3333333333%; }
 
-  $width: $size;
-
-  width: $width;
+  width: $size;
 }
 
 @mixin input-sizes-list() {

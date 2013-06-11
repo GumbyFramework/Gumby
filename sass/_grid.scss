@@ -62,7 +62,9 @@
         width: columns($i);
       }
       .one.columns {
-        @extend .one.column
+        // Fix for Sass bug
+        // @extend .one.column
+        width: columns($i);
       }
     }
     @else{
@@ -108,7 +110,9 @@
         width: columns($i, true);
       }
       .one.columns {
-        @extend .one.column
+        // Temp fix for Sass bug
+        // @extend .one.column
+        width: columns($i, true);
       }
     }
     @else{
