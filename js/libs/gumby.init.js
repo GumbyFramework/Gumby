@@ -4,7 +4,7 @@
 
 // test for touch event support
 Modernizr.load({
-	test: !Modernizr.touch,
+	test: Modernizr.touch,
 
 	// if present load custom jQuery mobile build and update Gumby.click
 	yep: Gumby.path+'/jquery.mobile.custom.min.js',

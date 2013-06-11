@@ -30,6 +30,7 @@
 		// check and set path with js/libs default
 		this.path = $('script[gumby-path]').attr('gumby-path') ||
 					$('script[data-path]').attr('data-path') ||
+					$('script[path]').attr('path') ||
 					'js/libs';
 	}
 
