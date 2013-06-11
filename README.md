@@ -6,6 +6,8 @@ prototypes with a flexible and responsive grid system and UI kit.
 
 Full documentation can be found at [http://gumbyframework.com](http://gumbyframework.com/docs).
 
+More information can be found in the [Wiki](https://github.com/GumbyFramework/Gumby/wiki).
+
 Gumby is developed with love by your friends at [Digital Surgeons](http://www.digitalsurgeons.com).
 
 Gumby has a few dependencies. Big thank you to the innovative geniuses behind these awesome technologies.
@@ -13,6 +15,7 @@ Gumby has a few dependencies. Big thank you to the innovative geniuses behind th
 - [Sass](https://github.com/nex3/sass) - Nathan Weizenbaum
 - [Compass](https://github.com/chriseppstein/compass) - Chris Eppstein
 - [Modular Scale](https://github.com/Team-Sass/modular-scale) - Scott Kellum
+- [FitText](http://fittextjs.com/) - Paravel
 - [jQuery](http://jquery.com/)
 - [Modernizr](http://modernizr.com/)
 
