@@ -217,22 +217,24 @@ form {
   @each $error in danger $danger-color, warning $warning-color, success $success-color {
     &.#{nth($error, 1)} {
       &:after {
-        font-family: "#{$icons}";
-        @if nth($error, 1) == danger {
-          content: "#{$entypo-icon-cancel-circled}";
-        }
-        @if nth($error, 1) == warning {
-          content: "#{$entypo-icon-attention}";
-        }
-        @if nth($error, 1) == success {
-          content: "#{$entypo-icon-check}";
-        }
+        @if($icons != ""){
+          font-family: "#{$icons}";
+          @if nth($error, 1) == danger {
+            content: "#{$entypo-icon-cancel-circled}";
+          }
+          @if nth($error, 1) == warning {
+            content: "#{$entypo-icon-attention}";
+          }
+          @if nth($error, 1) == success {
+            content: "#{$entypo-icon-check}";
+          }
         font-size: $norm;
         position: absolute;
         top: percentage((strip-units($base-font-size)) / 100) - 2;
         right: 15px;
         z-index: 999;
         color: nth($error, 2);
+        }
       }
 
       // <input> does not allow :before & :after
