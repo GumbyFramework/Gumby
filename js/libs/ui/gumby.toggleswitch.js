@@ -31,6 +31,7 @@
 	Toggle.prototype.init = function() {
 		this.targets = this.parseTargets();
 		this.on = Gumby.selectAttr.apply(this.$el, ['on']) || Gumby.click;
+		this.className = Gumby.selectAttr.apply(this.$el, ['classname']) || 'active';
 
 		var scope = this;
 
@@ -78,7 +79,7 @@
 	// call triggered event and pass target data
 	Toggle.prototype.triggered = function() {
 		// trigger gumby.onTrigger event and pass array of target status data
-		this.$el.trigger('gumby.onTrigger', [this.$el.hasClass('active')]);
+		this.$el.trigger('gumby.onTrigger', [this.$el.hasClass(this.className)]);
 	};
 
 	// Switch object inherits from Toggle
@@ -88,21 +89,21 @@
 	Toggle.prototype.trigger = function(cb) {
 		// no targets just toggle active class on toggle
 		if(!this.targets) {
-			this.$el.toggleClass('active');
+			this.$el.toggleClass(this.className);
 
 		// combine single target with toggle and toggle active class
 		} else if(this.targets.length == 1) {
-			this.$el.add(this.targets[0]).toggleClass('active');
+			this.$el.add(this.targets[0]).toggleClass(this.className);
 
 		// if two targets check active state of first
 		// always combine toggle and first target
 		} else if(this.targets.length > 1) {
-			if(this.targets[0].hasClass('active')) {
-				this.$el.add(this.targets[0]).removeClass('active');
-				this.targets[1].addClass('active');
+			if(this.targets[0].hasClass(this.className)) {
+				this.$el.add(this.targets[0]).removeClass(this.className);
+				this.targets[1].addClass(this.className);
 			} else {
-				this.targets[1].removeClass('active');
-				this.$el.add(this.targets[0]).addClass('active');
+				this.targets[1].removeClass(this.className);
+				this.$el.add(this.targets[0]).addClass(this.className);
 			}
 		}
 
@@ -116,17 +117,17 @@
 	Switch.prototype.trigger = function(cb) {
 		// no targets just add active class to switch
 		if(!this.targets) {
-			this.$el.addClass('active');
+			this.$el.addClass(this.className);
 
 		// combine single target with switch and add active class
 		} else if(this.targets.length == 1) {
-			this.$el.add(this.targets[0]).addClass('active');
+			this.$el.add(this.targets[0]).addClass(this.className);
 
 		// if two targets check active state of first
 		// always combine switch and first target
 		} else if(this.targets.length > 1) {
-			this.$el.add(this.targets[0]).addClass('active');
-			this.targets[1].removeClass('active');
+			this.$el.add(this.targets[0]).addClass(this.className);
+			this.targets[1].removeClass(this.className);
 		}
 
 		// call event handler here, applying scope of object Switch/Toggle
