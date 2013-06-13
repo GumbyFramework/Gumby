@@ -138,6 +138,9 @@
   @if $direction == left {
     @extend %pull-left;
   }
+  @elseif $direction == none {
+    @extend %pull-none;
+  }
   @else {
     @extend %pull-right;
   }
