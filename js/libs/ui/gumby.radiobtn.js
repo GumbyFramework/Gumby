@@ -51,9 +51,15 @@
 				   .find('input').prop('checked', false).end()
 				   .find('i').remove();
 
-		// check this radio button - check input, add checked class, append <i>
+		// check this radio button - check input, add checked class
 		$input.prop('checked', true);
-		this.$el.append('<i class="icon-dot" />').addClass('checked').trigger('gumby.onChange');
+		this.$el.addClass('checked')
+		
+		// find span, append <i>
+		var $span = this.$el.find('span')
+		$span.append('<i class="icon-dot" />');
+
+		this.$el.trigger('gumby.onChange');
 	};
 
 	// add initialisation

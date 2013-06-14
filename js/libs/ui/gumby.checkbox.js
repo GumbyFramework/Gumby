@@ -50,8 +50,13 @@
 		// check checkbox - check input, add checked class, append <i>
 		if(check) {
 			this.$el.find('input').prop('checked', true).end()
-				.addClass('checked').append('<i class="icon-check" />')
-				.trigger('gumby.onCheck').trigger('gumby.onChange');
+				.addClass('checked');
+
+				// find span, append <i>
+				var $span = this.$el.find('span')
+				$span.append('<i class="icon-check" />');
+				
+				this.$el.trigger('gumby.onCheck').trigger('gumby.onChange');
 
 		// uncheck checkbox - uncheck input, remove checked class, remove <i>
 		} else {
