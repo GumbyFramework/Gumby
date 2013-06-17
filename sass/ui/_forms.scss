@@ -164,8 +164,10 @@ form {
     margin-bottom:0;
     z-index: 99;
   }
-  &.prepend .btn a, &.append .btn a {
-    padding: 0 12px;
+  &.prepend .btn, &.append .btn {
+    a, input, button {
+      padding: 0 12px;
+    }
   }
 
   &.prepend .adjoined, &.append .adjoined  {
