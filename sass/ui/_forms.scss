@@ -307,8 +307,9 @@ form {
   }
   .radio.checked i, .checkbox.checked i {
     position: absolute;
-    top: 0;
-    left: -7px;
+    top: -1px;
+    left: -8px;
+    line-height: 16px;
   }
 }
   
@@ -361,14 +362,10 @@ form {
   }
 }
 
-// IE fixes - seems no other way around this :(
-.ie9, .oldie {
-  .radio.checked i {
-    top: 2px;
-  }
-  .checkbox.checked i {
-    top: 1px;
+// IE9 fix - seems no other way around this :(
+.ie9 {
+  .radio.checked i, .checkbox.checked i {
+    top: 0px;
   }
 }
-
 
