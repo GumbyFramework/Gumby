@@ -55,7 +55,11 @@ html, body { height: 100%; }
 .fixed { position: fixed; }
 @media only screen and (max-width: 768px) { .fixed { position: relative !important; } }
 
-.center-text { text-align: center; }
+.text-center { text-align: center; }
+
+.text-left { text-align: left; }
+
+.text-right { text-align: right; }
 
 /* Fonts */
 @font-face { font-family: "entypo"; font-style: normal; font-weight: 400; src: url(../fonts/icons/entypo.eot); src: url("../fonts/icons/entypo.eot?#iefix") format("ie9-skip-eot"), url("../fonts/icons/entypo.woff") format("woff"), url("../fonts/icons/entypo.ttf") format("truetype"); }
