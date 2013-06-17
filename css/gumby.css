@@ -1747,7 +1747,7 @@ form fieldset legend { padding: 5px 10px; }
 .field .radio span, .field .checkbox span { display: inline-block; width: 16px; height: 16px; position: relative; top: 2px; border: solid 1px #cccccc; background: #fefefe; }
 .field .radio span { -webkit-border-radius: 8px; -moz-border-radius: 8px; -ms-border-radius: 8px; -o-border-radius: 8px; border-radius: 8px; }
 .field .checkbox span { -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
-.field .radio.checked i, .field .checkbox.checked i { position: absolute; top: 0; left: -7px; }
+.field .radio.checked i, .field .checkbox.checked i { position: absolute; top: -1px; left: -8px; line-height: 16px; }
 
 .field .text input[type="search"] { -webkit-appearance: textfield; }
 
@@ -1757,8 +1757,7 @@ form fieldset legend { padding: 5px 10px; }
 .picker:first-child { margin-left: 0; }
 .picker select { position: relative; display: block; min-width: 100%; width: 135%; height: 34px; padding: 6px 45px 6px 15px; color: #555555; border: none; background: transparent; outline: none; -webkit-appearance: none; z-index: 99; cursor: pointer; font-size: 16px; font-size: 1rem; }
 
-.ie9 .radio.checked i, .oldie .radio.checked i { top: 2px; }
-.ie9 .checkbox.checked i, .oldie .checkbox.checked i { top: 1px; }
+.ie9 .radio.checked i, .ie9 .checkbox.checked i { top: 0px; }
 
 /* Labels */
 .badge, .label { height: 20px; display: inline-block; font-family: Helvetica, arial, verdana, sans-serif; font-weight: bold; line-height: 20px; text-align: center; color: #fff; }

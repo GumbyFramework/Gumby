@@ -47,15 +47,22 @@
 
 	// update checkbox, check equals true/false to sepcify check/uncheck
 	Checkbox.prototype.update = function(check) {
+
+		var $input = this.$el.find('input'),
+			$span = this.$el.find('span');
+
 		// check checkbox - check input, add checked class, append <i>
 		if(check) {
-			this.$el.find('input').prop('checked', true).end()
-				.addClass('checked').append('<i class="icon-check" />')
+
+			$span.append('<i class="icon-check" />');
+
+			$input.prop('checked', true).end()
+				.addClass('checked')
 				.trigger('gumby.onCheck').trigger('gumby.onChange');
 
 		// uncheck checkbox - uncheck input, remove checked class, remove <i>
 		} else {
-			this.$el.find('input').prop('checked', false).end()
+			$input.prop('checked', false).end()
 				.find('i').remove().end()
 				.removeClass('checked').trigger('gumby.onUncheck').trigger('gumby.onChange');
 		}
