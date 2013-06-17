@@ -19,7 +19,6 @@ body {
     width: 100%;
     min-width: 0;
   }
-  -webkit-backface-visibility:(hidden); // Fixes Chrome 1px shift rendering issue on CSS3 transitions.
 }
 
 html, body {
