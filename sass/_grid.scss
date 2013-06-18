@@ -61,16 +61,9 @@
       .one.column {
         width: columns($i);
       }
-      .one.columns {
-        // Fix for Sass bug
-        // @extend .one.column
-        width: columns($i);
-      }
     }
-    @else{
-      .#{number-as-word($i)}.columns {
-        width: columns($i);
-      }
+    .#{number-as-word($i)}.columns {
+      width: columns($i);
     }
   }
 }
@@ -105,20 +98,13 @@
 // Generate Hybrid Grid Column Classes
 .#{number-as-word($hybrid)}.colgrid .row {
   @for $i from 1 through $hybrid{
-    @if $i == 1{
+    @if $i == 1 {
       .one.column {
         width: columns($i, true);
       }
-      .one.columns {
-        // Temp fix for Sass bug
-        // @extend .one.column
-        width: columns($i, true);
-      }
     }
-    @else{
-      .#{number-as-word($i)}.columns{
-        width: columns($i, true);
-      }
+    .#{number-as-word($i)}.columns{
+      width: columns($i, true);
     }
   }
 }
