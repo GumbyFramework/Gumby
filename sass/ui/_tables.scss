@@ -1,14 +1,8 @@
 /* --- tables --- */
-
-
-/* background colors */
 $table-bgcolor: #fff;
 $table-thead-bgcolor: #3085D6;
-
 $table-row-first-cell-font-weight: bold;
 
-
-/* borders */
 $table-border-size: 1px;
 $table-border-style: solid;
 $table-border-color: #E5E5E5;
@@ -16,13 +10,10 @@ $table-cell-border-size: 1px;
 $table-cell-border-color: #E5E5E5;
 $table-cell-border-style: solid;
 
-
-/* if .striped */
+/* .striped */
 $table-stripe-bgcolor: #E5E5E5;
-
-/* if .rounded */
+/* .rounded */
 $table-border-radius: 4px;
-
 
 
 table {
