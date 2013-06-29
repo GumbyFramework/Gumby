@@ -10,18 +10,33 @@
 
 	function FitText($el) {
 		this.$el = $el;
-		// optional compressor rate
-		this.rate = Gumby.selectAttr.apply(this.$el, ['rate']) || 1;
-		// optional font sizes (min|max)
-		this.fontSizes = this.parseSizes(Gumby.selectAttr.apply(this.$el, ['sizes']));
+
+		this.rate = 0;
+		this.fontSizes = {};
+
+		// set up module based on attributes
+		this.setup();
 
 		var scope = this;
+
+		// re-initialize module
+		this.$el.on('gumby.initialize', function() {
+			scope.setup();
+		});
 
 		// lets go
 		$(window).on('load resize orientationchange', function() {
 			scope.resize();
 		});
 	}
+
+	// set up module based on attributes
+	FitText.prototype.setup = function() {
+		// optional compressor rate
+		this.rate = Number(Gumby.selectAttr.apply(this.$el, ['rate'])) || 1;
+		// optional font sizes (min|max)
+		this.fontSizes = this.parseSizes(Gumby.selectAttr.apply(this.$el, ['sizes']));
+	};
 
 	// apply the resizing
 	FitText.prototype.resize = function() {
