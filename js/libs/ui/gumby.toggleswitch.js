@@ -29,11 +29,10 @@
 
 	// intialise toggles, switches will inherit method
 	Toggle.prototype.init = function() {
-		this.targets = this.parseTargets();
-		this.on = Gumby.selectAttr.apply(this.$el, ['on']) || Gumby.click;
-		this.className = Gumby.selectAttr.apply(this.$el, ['classname']) || 'active';
-
 		var scope = this;
+
+		// set up module based on attributes
+		this.setup();
 
 		// bind to specified event and trigger
 		this.$el.on(this.on, function(e) {
@@ -50,7 +49,17 @@
 		// listen for gumby.trigger to dynamically trigger toggle/switch
 		}).on('gumby.trigger', function() {
 			scope.trigger(scope.triggered);
+		// re-initialize module
+		}).on('gumby.initialize', function() {
+			scope.setup();
 		});
+	};
+
+	// set up module based on attributes
+	Toggle.prototype.setup = function() {
+		this.targets = this.parseTargets();
+		this.on = Gumby.selectAttr.apply(this.$el, ['on']) || Gumby.click;
+		this.className = Gumby.selectAttr.apply(this.$el, ['classname']) || 'active';
 	};
 
 	// parse data-for attribute, switches will inherit method
