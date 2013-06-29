@@ -31,7 +31,6 @@
 				scope.skipTo();
 			}
 		}).on('gumby.initialize', function() {
-			console.log("In");
 			scope.setup();
 		});
 	}
