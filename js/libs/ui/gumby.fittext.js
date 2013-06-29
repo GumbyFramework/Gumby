@@ -74,13 +74,22 @@
 	};
 
 	// add initialisation
-	Gumby.addInitalisation('fittext', function() {
+	Gumby.addInitalisation('fittext', function(all) {
 		$('.fittext').each(function() {
 			var $this = $(this);
+
 			// this element has already been initialized
-			if($this.data('isFittext')) {
+			// and we're only initializing new modules
+			if($this.data('isFittext') && !all) {
+				return true;
+
+			// this element has already been initialized
+			// and we need to reinitialize it
+			} else if($this.data('isFittext') && all) {
+				$this.trigger('gumby.initialize');
 				return true;
 			}
+
 			// mark element as initialized
 			$this.data('isFittext', true);
 			new FitText($this);

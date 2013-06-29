@@ -125,9 +125,9 @@
 	};
 
 	// initialize a uiModule
-	Gumby.prototype.initialize = function(ref) {
+	Gumby.prototype.initialize = function(ref, all) {
 		if(this.inits[ref] && typeof this.inits[ref] === 'function') {
-			this.inits[ref]();
+			this.inits[ref](all);
 		}
 	};
 

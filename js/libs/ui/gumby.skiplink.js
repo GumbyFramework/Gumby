@@ -110,13 +110,22 @@
 	};
 
 	// add initialisation
-	Gumby.addInitalisation('skiplinks', function() {
+	Gumby.addInitalisation('skiplinks', function(all) {
 		$('.skiplink > a, .skip').each(function() {
 			var $this = $(this);
+
 			// this element has already been initialized
-			if($this.data('isSkipLink')) {
+			// and we're only initializing new modules
+			if($this.data('isSkipLink') && !all) {
+				return true;
+
+			// this element has already been initialized
+			// and we need to reinitialize it
+			} else if($this.data('isSkipLink') && all) {
+				$this.trigger('gumby.initialize');
 				return true;
 			}
+
 			// mark element as initialized
 			$this.data('isSkipLink', true);
 			new SkipLink($this);
