@@ -20,6 +20,6 @@ Gumby.touch(function() {
 
 // Document ready
 $(function() {
-
+	
 });
 
