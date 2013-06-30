@@ -11,7 +11,7 @@ Modernizr.load({
 	callback: function(url, result, key) {
 		// check jQuery mobile has successfully loaded before using tap events
 		if($.mobile) {
-			window.Gumby.click = 'tap';
+			window.Gumby.click += ' tap';
 		}
 	},
 

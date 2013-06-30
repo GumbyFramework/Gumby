@@ -20,6 +20,8 @@
 
 		// skip to target element on click or trigger of gumby.skipTo event
 		this.$el.on(Gumby.click+' gumby.skip', function(e) {
+
+			e.stopImmediatePropagation();
 			e.preventDefault();
 
 			// calculate target on each click if update var set to true

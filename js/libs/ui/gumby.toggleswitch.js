@@ -36,13 +36,13 @@
 
 		// bind to specified event and trigger
 		this.$el.on(this.on, function(e) {
+			// stop propagation
+			e.stopImmediatePropagation();
+
 			// only disable default if <a>
 			if($(this).prop('tagName') === 'A') {
 				e.preventDefault();
 			}
-
-			// stop propagation
-			e.stopPropagation();
 
 			scope.trigger(scope.triggered);
 

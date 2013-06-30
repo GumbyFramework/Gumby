@@ -12,7 +12,18 @@
 
 		// listen for click event and custom gumby check/uncheck events
 		this.$el.on(Gumby.click, function(e) {
-			scope.click(e);
+			// prevent propagation
+			e.stopImmediatePropagation();
+
+			// prevent checkbox checking, we'll do that manually
+			e.preventDefault();
+
+			// check/uncheck
+			if(scope.$el.hasClass('checked')) {
+				scope.update(false);
+			} else {
+				scope.update(true);
+			}
 		}).on('gumby.check', function() {
 			scope.update(true);
 		}).on('gumby.uncheck', function() {
@@ -24,26 +35,6 @@
 			scope.update(true);
 		}
 	}
-
-	// handle checkbox click event
-	Checkbox.prototype.click = function(e) {
-
-		// element responsible for event trigger
-		var $target = $(e.target);
-
-		// prevent propagation
-		e.stopPropagation();
-
-		// prevent checkbox checking, we'll do that manually
-		e.preventDefault();
-
-		// check/uncheck
-		if(this.$el.hasClass('checked')) {
-			this.update(false);
-		} else {
-			this.update(true);
-		}
-	};
 
 	// update checkbox, check equals true/false to sepcify check/uncheck
 	Checkbox.prototype.update = function(check) {
