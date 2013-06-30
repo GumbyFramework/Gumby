@@ -5,7 +5,7 @@
 
 	'use strict';
 
-	// define module class and init only if we're on touch devices
+	// define and init module on touch enabled devices only
 	if(!Modernizr.touch) {
 		return;
 	}
@@ -15,34 +15,23 @@
 		var scope = this;
 
 		// when navbar items are tapped hide/show dropdowns
-		this.$el.find('li').on(Gumby.click, function(e) {
+		this.$el.find('li').on('tap', function(e) {
+			// prevent click from triggering here too
+			e.stopImmediatePropagation();
+			e.preventDefault();
+
 			var $this = $(this);
 
-			e.stopPropagation();
-
-			// prevent jump to top of page
-			if(this.href === '#') {
-				e.preventDefault();
+			// we have dropdowns so open/cose
+			if($this.children('.dropdown').length) {
+				if($this.hasClass('active')) {
+					$this.removeClass('active');
+				} else {
+					$this.addClass('active');
+				}
 			}
-
-			scope.dropdown($this);
 		});
 	}
-
-	// hide/show dropdowns
-	Navbar.prototype.dropdown = function($this) {
-		// we have dropdowns so open/cose
-		if($this.children('.dropdown').length) {
-			if($this.hasClass('active')) {
-				$this.removeClass('active');
-			} else {
-				$this.addClass('active');
-			}
-		// no dropdown so close others
-		} else {
-			this.$items.removeClass('active');
-		}
-	};
 
 	// add initialisation
 	Gumby.addInitalisation('navbars', function() {
