@@ -10,18 +10,33 @@
 
 	function FitText($el) {
 		this.$el = $el;
-		// optional compressor rate
-		this.rate = Gumby.selectAttr.apply(this.$el, ['rate']) || 1;
-		// optional font sizes (min|max)
-		this.fontSizes = this.parseSizes(Gumby.selectAttr.apply(this.$el, ['sizes']));
+
+		this.rate = 0;
+		this.fontSizes = {};
+
+		// set up module based on attributes
+		this.setup();
 
 		var scope = this;
+
+		// re-initialize module
+		this.$el.on('gumby.initialize', function() {
+			scope.setup();
+		});
 
 		// lets go
 		$(window).on('load resize orientationchange', function() {
 			scope.resize();
 		});
 	}
+
+	// set up module based on attributes
+	FitText.prototype.setup = function() {
+		// optional compressor rate
+		this.rate = Number(Gumby.selectAttr.apply(this.$el, ['rate'])) || 1;
+		// optional font sizes (min|max)
+		this.fontSizes = this.parseSizes(Gumby.selectAttr.apply(this.$el, ['sizes']));
+	};
 
 	// apply the resizing
 	FitText.prototype.resize = function() {
@@ -59,13 +74,22 @@
 	};
 
 	// add initialisation
-	Gumby.addInitalisation('fittext', function() {
+	Gumby.addInitalisation('fittext', function(all) {
 		$('.fittext').each(function() {
 			var $this = $(this);
+
 			// this element has already been initialized
-			if($this.data('isFittext')) {
+			// and we're only initializing new modules
+			if($this.data('isFittext') && !all) {
+				return true;
+
+			// this element has already been initialized
+			// and we need to reinitialize it
+			} else if($this.data('isFittext') && all) {
+				$this.trigger('gumby.initialize');
 				return true;
 			}
+
 			// mark element as initialized
 			$this.data('isFittext', true);
 			new FitText($this);

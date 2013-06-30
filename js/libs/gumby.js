@@ -102,16 +102,16 @@
 				gumbyAttr = 'gumby-'+arguments[i];
 
 			// first test for data-attr
-			if(this.attr(dataAttr)) {
-				return this.attr(dataAttr);
+			if(this.is('['+dataAttr+']')) {
+				return this.attr(dataAttr) ? this.attr(dataAttr) : true;
 
 			// next test for gumby-attr
-			} else if(this.attr(gumbyAttr)) {
-				return this.attr(gumbyAttr);
+			} else if(this.is('['+gumbyAttr+']')) {
+				return this.attr(gumbyAttr) ? this.attr(gumbyAttr) : true;
 
 			// finally no prefix
-			} else if(this.attr(attr)) {
-				return this.attr(attr);
+			} else if(this.is('['+attr+']')) {
+				return this.attr(attr) ? this.attr(attr) : true;
 			}
 		}
 
@@ -125,9 +125,9 @@
 	};
 
 	// initialize a uiModule
-	Gumby.prototype.initialize = function(ref) {
+	Gumby.prototype.initialize = function(ref, all) {
 		if(this.inits[ref] && typeof this.inits[ref] === 'function') {
-			this.inits[ref]();
+			this.inits[ref](all);
 		}
 	};
 

@@ -29,11 +29,10 @@
 
 	// intialise toggles, switches will inherit method
 	Toggle.prototype.init = function() {
-		this.targets = this.parseTargets();
-		this.on = Gumby.selectAttr.apply(this.$el, ['on']) || Gumby.click;
-		this.className = Gumby.selectAttr.apply(this.$el, ['classname']) || 'active';
-
 		var scope = this;
+
+		// set up module based on attributes
+		this.setup();
 
 		// bind to specified event and trigger
 		this.$el.on(this.on, function(e) {
@@ -50,7 +49,17 @@
 		// listen for gumby.trigger to dynamically trigger toggle/switch
 		}).on('gumby.trigger', function() {
 			scope.trigger(scope.triggered);
+		// re-initialize module
+		}).on('gumby.initialize', function() {
+			scope.setup();
 		});
+	};
+
+	// set up module based on attributes
+	Toggle.prototype.setup = function() {
+		this.targets = this.parseTargets();
+		this.on = Gumby.selectAttr.apply(this.$el, ['on']) || Gumby.click;
+		this.className = Gumby.selectAttr.apply(this.$el, ['classname']) || 'active';
 	};
 
 	// parse data-for attribute, switches will inherit method
@@ -137,13 +146,21 @@
 	};
 
 	// add toggle initialisation
-	Gumby.addInitalisation('toggles', function() {
+	Gumby.addInitalisation('toggles', function(all) {
 		$('.toggle').each(function() {
 			var $this = $(this);
+
 			// this element has already been initialized
-			if($this.data('isToggle')) {
+			// and we're only initializing new modules
+			if($this.data('isToggle') && !all) {
 				return true;
+
+			// this element has already been initialized
+			// and we need to reinitialize it
+			} else if($this.data('isToggle') && all) {
+				$this.trigger('gumby.initialize');
 			}
+
 			// mark element as initialized
 			$this.data('isToggle', true);
 			new Toggle($this);
@@ -151,13 +168,22 @@
 	});
 
 	// add switches initialisation
-	Gumby.addInitalisation('switches', function() {
+	Gumby.addInitalisation('switches', function(all) {
 		$('.switch').each(function() {
 			var $this = $(this);
+
 			// this element has already been initialized
-			if($this.data('isSwitch')) {
+			// and we're only initializing new modules
+			if($this.data('isSwitch') && !all) {
+				return true;
+
+			// this element has already been initialized
+			// and we need to reinitialize it
+			} else if($this.data('isSwitch') && all) {
+				$this.trigger('gumby.initialize');
 				return true;
 			}
+
 			// mark element as initialized
 			$this.data('isSwitch', true);
 			new Switch($this);
