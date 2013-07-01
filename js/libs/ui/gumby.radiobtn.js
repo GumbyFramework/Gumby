@@ -12,7 +12,14 @@
 
 		// listen for click event and custom gumby check event
 		this.$el.on(Gumby.click, function(e) {
-			scope.click(e);
+			// prevent propagation
+			e.stopImmediatePropagation();
+
+			// prevent radio button checking, we'll do that manually
+			e.preventDefault();
+
+			// check radio button
+			scope.update();
 		}).on('gumby.check', function() {
 			scope.update();
 		});
@@ -22,22 +29,6 @@
 			scope.update();
 		}
 	}
-
-	// handle radio button click event
-	RadioBtn.prototype.click = function(e) {
-
-		// element responsible for event trigger
-		var $target = $(e.target);
-
-		// prevent propagation
-		e.stopPropagation();
-
-		// prevent radio button checking, we'll do that manually
-		e.preventDefault();
-
-		// check radio button
-		this.update();
-	};
 
 	// check radio button, uncheck all others in name group
 	RadioBtn.prototype.update = function() {
