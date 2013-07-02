@@ -9,12 +9,17 @@
 		this.$el = $el;
 		this.fixedPoint = this.parseAttrValue(Gumby.selectAttr.apply(this.$el, ['fixed']));
 		this.pinPoint = this.parseAttrValue(Gumby.selectAttr.apply(this.$el, ['pin']));
+		this.offset = this.parseAttrValue(Gumby.selectAttr.apply(this.$el, ['offset']));
 		this.$parent = this.$el.parents('.columns, .column, .row').first();
+		this.state = false;
 		this.measurements = {
 			left: 0,
 			width: 0
 		};
-		this.state = false;
+
+		if(this.offset) {
+			this.offset = Number(this.offset);
+		}
 
 		var scope = this,
 			$window = $(window);
@@ -53,7 +58,7 @@
 		this.state = 'fixed';
 		this.$el.css({
 			'position' : 'fixed',
-			'top' : 0
+			'top' : 0 + this.offset
 		}).addClass('fixed');
 		this.constrain();
 	};
