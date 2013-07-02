@@ -9,12 +9,27 @@
 		this.$el = $el;
 		this.fixedPoint = this.parseAttrValue(Gumby.selectAttr.apply(this.$el, ['fixed']));
 		this.pinPoint = this.parseAttrValue(Gumby.selectAttr.apply(this.$el, ['pin']));
+		this.$parent = this.$el.parents('.columns, .column, .row').first();
+		this.measurements = {
+			left: 0,
+			width: 0
+		};
 		this.state = false;
 
-		var scope = this;
-		$(window).scroll(function() {
+		var scope = this,
+			$window = $(window);
+
+		$window.scroll(function() {
 			scope.monitorScroll();
 		});
+
+		if(this.$parent) {
+			this.measure();
+			$window.resize(function() {
+				scope.measure();
+				scope.constrain();
+			});
+		}
 	}
 
 	// monitor scroll and trigger changes based on position
@@ -40,19 +55,31 @@
 			'position' : 'fixed',
 			'top' : 0
 		}).addClass('fixed');
+		this.constrain();
 	};
 
 	// unfix the element and update state
 	Fixed.prototype.unfix = function() {
 		this.state = 'unfixed';
-		this.$el.css({
-			'position' : 'inherit',
-			'top' : 'auto'
-		}).removeClass('fixed');
+		this.$el.attr('style', '').removeClass('fixed');
 	};
 
 	Fixed.prototype.pin = function() {
 		
+	};
+
+	Fixed.prototype.constrain = function() {
+		this.$el.css({
+			left: this.measurements.left,
+			width: this.measurements.width
+		});
+	};
+
+	Fixed.prototype.measure = function() {
+		var offsets = this.$parent.offset();
+
+		this.measurements.left = offsets.left;
+		this.measurements.width = this.$parent.width();
 	};
 
 	// parse attribute values, could be px, top, selector
