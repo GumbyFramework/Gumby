@@ -32,7 +32,7 @@
 		}).on('swiperight', this.openLink)
 
 		// append open link icon 
-		.children('a').append('<i class="icon-export"></i>').children('i')
+		.children('a').append('<i class="icon-popup"></i>').children('i')
 
 		// and bind to click event to open link
 		.on('tap', this.openLink);
