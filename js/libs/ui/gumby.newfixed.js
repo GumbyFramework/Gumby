@@ -7,19 +7,32 @@
 
 	function Fixed($el) {
 		this.$el = $el;
+
 		this.fixedPoint = this.parseAttrValue(Gumby.selectAttr.apply(this.$el, ['fixed']));
+
+		// pin point is optional
 		this.pinPoint = Gumby.selectAttr.apply(this.$el, ['pin']) || false;
+
+		// offset from fixed point
 		this.offset = Number(Gumby.selectAttr.apply(this.$el, ['offset'])) || 0;
-		this.top = Number(Gumby.selectAttr.apply(this.$el, ['top'])) || 0;
+
+		// offset from pin point
 		this.pinOffset = Number(Gumby.selectAttr.apply(this.$el, ['pinoffset'])) || 0;
+
+		// top position when fixed
+		this.top = Number(Gumby.selectAttr.apply(this.$el, ['top'])) || 0;
+
+		// reference to the parent, row/column
 		this.$parent = this.$el.parents('.columns, .column, .row').first();
 		this.parentRow = !!this.$parent.hasClass('row');
+
 		this.state = false;
 		this.measurements = {
 			left: 0,
 			width: 0
 		};
 
+		// if optional pin point set then parse now
 		if(this.pinPoint) {
 			this.pinPoint = this.parseAttrValue(this.pinPoint);
 		}
@@ -27,12 +40,16 @@
 		var scope = this,
 			$window = $(window);
 
+		// monitor scroll and update fixed elements accordingly
 		$window.scroll(function() {
 			scope.monitorScroll();
 		});
 
+		// if we have a parent constrain dimenions
 		if(this.$parent) {
+			// measure up
 			this.measure();
+			// and on resize reset measurement
 			$window.resize(function() {
 				scope.measure();
 				scope.constrain();
@@ -47,17 +64,14 @@
 			fixedPoint = this.fixedPoint instanceof jQuery ? this.fixedPoint.offset().top : this.fixedPoint,
 			pinPoint = false;
 
+		// if a pin point is set recalculate
 		if(this.pinPoint) {
 			pinPoint = this.pinPoint instanceof jQuery ? this.pinPoint.offset().top : this.pinPoint;
 		}
 
-		if(this.offset) {
-			fixedPoint -= this.offset;
-		}
-
-		if(this.pinOffset) {
-			pinPoint -= this.pinOffset;
-		}
+		// apply offsets
+		if(this.offset) { fixedPoint -= this.offset; }
+		if(this.pinOffset) { pinPoint -= this.pinOffset; }
 
 		// fix it
 		if((scrollAmount >= fixedPoint) && this.state !== 'fixed') {
@@ -80,7 +94,11 @@
 		this.$el.css({
 			'top' : 0 + this.top
 		}).addClass('fixed').removeClass('pinned');
-		this.constrain();
+
+		// if we have a parent constrain dimenions
+		if(this.$parent) {
+			this.constrain();
+		}
 	};
 
 	// unfix the element and update state
@@ -89,14 +107,15 @@
 		this.$el.attr('style', '').removeClass('fixed pinned');
 	};
 
+	// pin the element in position
 	Fixed.prototype.pin = function() {
-		console.log("PIN");
 		this.state = 'pinned';
 		this.$el.css({
 			'top' : this.$el.offset().top
 		}).addClass('pinned');
 	};
 
+	// constrain elements dimensions to match width/height
 	Fixed.prototype.constrain = function() {
 		this.$el.css({
 			left: this.measurements.left,
@@ -104,12 +123,14 @@
 		});
 	};
 
+	// measure up the parent for constraining
 	Fixed.prototype.measure = function() {
 		var offsets = this.$parent.offset(), parentPadding;
 
 		this.measurements.left = offsets.left;
 		this.measurements.width = this.$parent.width();
 
+		// if element has a parent row then need to consider padding
 		if(this.parentRow) {
 			parentPadding = Number(this.$parent.css('paddingLeft').replace(/px/, ''));
 			if(parentPadding) {
