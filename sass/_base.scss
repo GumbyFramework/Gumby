@@ -42,6 +42,9 @@ html, body {
 
 .fixed {
   position: fixed;
+  &.pinned {
+    position: absolute;
+  }
   @include respond(portrait-tablets) {
     position: relative !important;
     top: auto !important;

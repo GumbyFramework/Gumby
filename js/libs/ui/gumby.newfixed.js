@@ -8,9 +8,10 @@
 	function Fixed($el) {
 		this.$el = $el;
 		this.fixedPoint = this.parseAttrValue(Gumby.selectAttr.apply(this.$el, ['fixed']));
-		this.pinPoint = this.parseAttrValue(Gumby.selectAttr.apply(this.$el, ['pin']));
+		this.pinPoint = Gumby.selectAttr.apply(this.$el, ['pin']) || false;
 		this.offset = Number(Gumby.selectAttr.apply(this.$el, ['offset'])) || 0;
 		this.top = Number(Gumby.selectAttr.apply(this.$el, ['top'])) || 0;
+		this.pinOffset = Number(Gumby.selectAttr.apply(this.$el, ['pinoffset'])) || 0;
 		this.$parent = this.$el.parents('.columns, .column, .row').first();
 		this.parentRow = !!this.$parent.hasClass('row');
 		this.state = false;
@@ -18,6 +19,10 @@
 			left: 0,
 			width: 0
 		};
+
+		if(this.pinPoint) {
+			this.pinPoint = this.parseAttrValue(this.pinPoint);
+		}
 
 		var scope = this,
 			$window = $(window);
@@ -39,19 +44,33 @@
 	Fixed.prototype.monitorScroll = function() {
 		var scrollAmount = $(window).scrollTop(),
 			// recalculate selector attributes as position may have changed
-			fixedPoint = this.fixedPoint instanceof jQuery ? this.fixedPoint.offset().top : this.fixedPoint;
+			fixedPoint = this.fixedPoint instanceof jQuery ? this.fixedPoint.offset().top : this.fixedPoint,
+			pinPoint = false;
+
+		if(this.pinPoint) {
+			pinPoint = this.pinPoint instanceof jQuery ? this.pinPoint.offset().top : this.pinPoint;
+		}
 
 		if(this.offset) {
 			fixedPoint -= this.offset;
 		}
 
+		if(this.pinOffset) {
+			pinPoint -= this.pinOffset;
+		}
+
 		// fix it
 		if((scrollAmount >= fixedPoint) && this.state !== 'fixed') {
-			this.fix();
-
+			if(!pinPoint || scrollAmount < pinPoint) {
+				this.fix();
+			}
 		// unfix it
 		} else if(scrollAmount < fixedPoint && this.state === 'fixed') {
 			this.unfix();
+
+		// pin it
+		} else if(pinPoint && scrollAmount >= pinPoint && this.state !== 'pinned') {
+			this.pin();
 		}
 	};
 
@@ -59,20 +78,23 @@
 	Fixed.prototype.fix = function() {
 		this.state = 'fixed';
 		this.$el.css({
-			'position' : 'fixed',
 			'top' : 0 + this.top
-		}).addClass('fixed');
+		}).addClass('fixed').removeClass('pinned');
 		this.constrain();
 	};
 
 	// unfix the element and update state
 	Fixed.prototype.unfix = function() {
 		this.state = 'unfixed';
-		this.$el.attr('style', '').removeClass('fixed');
+		this.$el.attr('style', '').removeClass('fixed pinned');
 	};
 
 	Fixed.prototype.pin = function() {
-		
+		console.log("PIN");
+		this.state = 'pinned';
+		this.$el.css({
+			'top' : this.$el.offset().top
+		}).addClass('pinned');
 	};
 
 	Fixed.prototype.constrain = function() {
