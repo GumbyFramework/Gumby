@@ -239,6 +239,10 @@ form {
         }
       }
 
+      &.no-icon:after {
+        display: none;
+      }
+
       // <input> does not allow :before & :after
       // pseudo elements. Removing validation
       // icons from those elements to avoid
