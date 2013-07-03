@@ -9,17 +9,15 @@
 		this.$el = $el;
 		this.fixedPoint = this.parseAttrValue(Gumby.selectAttr.apply(this.$el, ['fixed']));
 		this.pinPoint = this.parseAttrValue(Gumby.selectAttr.apply(this.$el, ['pin']));
-		this.offset = this.parseAttrValue(Gumby.selectAttr.apply(this.$el, ['offset']));
+		this.offset = Number(Gumby.selectAttr.apply(this.$el, ['offset'])) || 0;
+		this.top = Number(Gumby.selectAttr.apply(this.$el, ['top'])) || 0;
 		this.$parent = this.$el.parents('.columns, .column, .row').first();
+		this.parentRow = !!this.$parent.hasClass('row');
 		this.state = false;
 		this.measurements = {
 			left: 0,
 			width: 0
 		};
-
-		if(this.offset) {
-			this.offset = Number(this.offset);
-		}
 
 		var scope = this,
 			$window = $(window);
@@ -43,6 +41,10 @@
 			// recalculate selector attributes as position may have changed
 			fixedPoint = this.fixedPoint instanceof jQuery ? this.fixedPoint.offset().top : this.fixedPoint;
 
+		if(this.offset) {
+			fixedPoint -= this.offset;
+		}
+
 		// fix it
 		if((scrollAmount >= fixedPoint) && this.state !== 'fixed') {
 			this.fix();
@@ -58,7 +60,7 @@
 		this.state = 'fixed';
 		this.$el.css({
 			'position' : 'fixed',
-			'top' : 0 + this.offset
+			'top' : 0 + this.top
 		}).addClass('fixed');
 		this.constrain();
 	};
@@ -81,10 +83,17 @@
 	};
 
 	Fixed.prototype.measure = function() {
-		var offsets = this.$parent.offset();
+		var offsets = this.$parent.offset(), parentPadding;
 
 		this.measurements.left = offsets.left;
 		this.measurements.width = this.$parent.width();
+
+		if(this.parentRow) {
+			parentPadding = Number(this.$parent.css('paddingLeft').replace(/px/, ''));
+			if(parentPadding) {
+				this.measurements.left += parentPadding;
+			}
+		}
 	};
 
 	// parse attribute values, could be px, top, selector
