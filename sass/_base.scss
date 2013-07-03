@@ -44,6 +44,8 @@ html, body {
   position: fixed;
   @include respond(portrait-tablets) {
     position: relative !important;
+    top: auto !important;
+    left: auto !important;
   }
 }
 
