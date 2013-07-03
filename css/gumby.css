@@ -1853,13 +1853,8 @@ body .video.twitch, body .video.youtube.show_controls { padding-top: 30px; }
 .modal.active { z-index: 999999; }
 .modal.active, .modal.active > .content { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 
-/* --- tables --- */
-/* background colors */
-/* borders */
-/* if .striped */
-/* if .rounded */
-table { display: table; background-color: white; border-collapse: collapse; border-spacing: 0; margin-bottom: 20px; max-width: 100%; border: 1px solid #e5e5e5; }
-table caption { text-align: center; font-weight: bold; font-size: 30px; padding: 1em; }
+table { display: table; background-color: white; border-collapse: collapse; border-spacing: 0; margin-bottom: 20px; width: 100%; border: 1px solid #e5e5e5; }
+table caption { text-align: center; font-size: 30px; padding: .75em; }
 table thead th, table tbody td, table tr td { display: table-cell; padding: 10px; vertical-align: top; text-align: left; border-top: 1px solid #e5e5e5; }
 table tr td, table tbody tr td { font-size: 16px; }
 table tr td:first-child { font-weight: bold; }

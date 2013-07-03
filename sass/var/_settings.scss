@@ -128,6 +128,21 @@ $drawer-inner-shadow-y-offset: 2px;
 $drawer-inner-shadow-blur: 5px;
 $drawer-inner-shadow-color: #313436;
 
+// Tables
+$table-bgcolor: #fff;
+$table-thead-bgcolor: $primary-color;
+$table-row-first-cell-font-weight: bold;
+$table-border-size: 1px;
+$table-border-style: solid;
+$table-border-color: #e5e5e5;
+$table-cell-border-size: 1px;
+$table-cell-border-color: #e5e5e5;
+$table-cell-border-style: solid;
+// .rounded
+$table-border-radius: 4px;
+// .striped
+$table-stripe-bgcolor: #e5e5e5;
+
 // Floats
 $default-float: left;
 $switch-float: right;

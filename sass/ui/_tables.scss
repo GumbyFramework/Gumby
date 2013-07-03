@@ -1,35 +1,16 @@
-/* --- tables --- */
-$table-bgcolor: #fff;
-$table-thead-bgcolor: #3085D6;
-$table-row-first-cell-font-weight: bold;
-
-$table-border-size: 1px;
-$table-border-style: solid;
-$table-border-color: #E5E5E5;
-$table-cell-border-size: 1px;
-$table-cell-border-color: #E5E5E5;
-$table-cell-border-style: solid;
-
-/* .striped */
-$table-stripe-bgcolor: #E5E5E5;
-/* .rounded */
-$table-border-radius: 4px;
-
-
 table {
 	display: table;
 	background-color: $table-bgcolor;
 	border-collapse: collapse;
 	border-spacing: 0;
 	margin-bottom: 20px;
-	max-width: 100%;
+	width: 100%;
 	border: $table-border-size $table-border-style $table-border-color;
 
 	caption {
 		text-align: center;
-		font-weight: bold;
 		font-size: $larger;
-		padding: 1em;
+		padding: .75em;
 	}
 
 	thead th,
