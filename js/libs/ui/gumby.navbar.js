@@ -8,7 +8,6 @@
 	// define and init module on touch enabled devices only
 	// when we are at tablet size or smaller
 	if(!Modernizr.touch || $(window).width() > 768) {
-		console.log("CANCEL!");
 		return;
 	}
 
