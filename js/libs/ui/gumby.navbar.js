@@ -9,7 +9,7 @@
 
 	// define and init module on touch enabled devices only
 	// when we are at tablet size or smaller
-	if(!Modernizr.touch || $(window).width() > 768) {
+	if(!Modernizr.touch || $(window).width() > Gumby.breakpoint) {
 
 		// add Gumby no touch class
 		$html.addClass('gumby-no-touch');

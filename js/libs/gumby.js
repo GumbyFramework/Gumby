@@ -28,10 +28,10 @@
 		this.inits = {};
 
 		// check and set path with js/libs default
-		this.path = $('script[gumby-path]').attr('gumby-path') ||
-					$('script[data-path]').attr('data-path') ||
-					$('script[path]').attr('path') ||
-					'js/libs';
+		this.path = $('script[gumby-path]').attr('gumby-path') || 'js/libs';
+
+		// check and set breakpoint with 768 default
+		this.breakpoint = Number($('script[gumby-breakpoint]').attr('gumby-breakpoint')) || 768;
 	}
 
 	// initialize Gumby
