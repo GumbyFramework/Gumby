@@ -5,38 +5,63 @@
 
 	'use strict';
 
+	var $html = Gumby.$dom.find('html');
+
 	// define and init module on touch enabled devices only
-	if(!Modernizr.touch) {
+	// when we are at tablet size or smaller
+	if(!Modernizr.touch || $(window).width() > 768) {
+
+		// add Gumby no touch class
+		$html.addClass('gumby-no-touch');
 		return;
 	}
 
+	// add Gumby touch class
+	$html.addClass('gumby-touch');
+
 	function Navbar($el) {
 		this.$el = $el;
+		this.$dropDowns = this.$el.find('li:has(.dropdown)');
 		var scope = this;
 
-		// when navbar items are tapped hide/show dropdowns
-		this.$el.find('li:has(.dropdown)').on('tap', function(e) {
-			// prevent click from triggering here too
+		// when navbar items
+		this.$dropDowns
+		// are tapped hide/show dropdowns
+		.on('tap', this.toggleDropdown)
+		// are swiped right open link
+		.on('swiperight', this.openLink);
+
+		// if there's a link set
+		if(this.$dropDowns.children('a').attr('href') !== '#') {
+			// append an icon
+			this.$dropDowns.children('a').append('<i class="icon-popup"></i>').children('i')
+			// and bind to click event to open link
+			.on('tap', this.openLink);
+		}
+
+		// on mousemove and touchstart toggle modernizr classes and disable/enable this module
+		// workaround for Pixel and other multi input devices
+		$(window).on('mousemove touchstart', function(e) {
 			e.stopImmediatePropagation();
-			e.preventDefault();
-
-			var $this = $(this);
-
-			if($this.hasClass('active')) {
-				$this.removeClass('active');
-			} else {
-				$this.addClass('active');
+			if(e.type === 'mousemove') {
+				scope.$dropDowns.on('mouseover mouseout', scope.toggleDropdown);
 			}
-
-		// swiping right opens link
-		}).on('swiperight', this.openLink)
-
-		// append open link icon 
-		.children('a').append('<i class="icon-popup"></i>').children('i')
-
-		// and bind to click event to open link
-		.on('tap', this.openLink);
+		});
 	}
+
+	Navbar.prototype.toggleDropdown = function(e) {
+		// prevent click from triggering here too
+		e.stopImmediatePropagation();
+		e.preventDefault();
+
+		var $this = $(this);
+
+		if($this.hasClass('active')) {
+			$this.removeClass('active');
+		} else {
+			$this.addClass('active');
+		}
+	};
 
 	// handle opening list item link 
 	Navbar.prototype.openLink = function(e) {
