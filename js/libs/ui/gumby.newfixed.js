@@ -23,8 +23,9 @@
 		this.top = Number(Gumby.selectAttr.apply(this.$el, ['top'])) || 0;
 
 		// reference to the parent, row/column
-		this.$parent = this.$el.parents('.columns, .column, .row').first();
-		this.parentRow = !!this.$parent.hasClass('row');
+		this.$parent = this.$el.parents('.columns, .column, .row');
+		this.$parent = this.$parent.length ? this.$parent.first() : false;
+		this.parentRow = this.$parent ? !!this.$parent.hasClass('row') : false;
 
 		this.state = false;
 		this.measurements = {
@@ -47,6 +48,7 @@
 
 		// if we have a parent constrain dimenions
 		if(this.$parent) {
+			console.log(this.$parent);
 			// measure up
 			this.measure();
 			// and on resize reset measurement
