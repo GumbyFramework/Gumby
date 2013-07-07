@@ -53,7 +53,10 @@ html, body { height: 100%; }
 .hide.active, .show { display: block; }
 
 .fixed { position: fixed; }
-@media only screen and (max-width: 768px) { .fixed { position: relative !important; } }
+.fixed.pinned { position: absolute; }
+@media only screen and (max-width: 768px) { .fixed { position: relative !important; top: auto !important; left: auto !important; } }
+
+.unfixed { position: relative !important; top: auto !important; left: auto !important; }
 
 .text-center { text-align: center; }
 
