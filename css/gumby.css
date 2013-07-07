@@ -334,7 +334,7 @@ img { -ms-interpolation-mode: bicubic; }
   .container { min-width: 0; margin-left: 0; margin-right: 0; }
   .row { width: 100%; min-width: 0; margin-left: 0; margin-right: 0; }
   .row .row .column, .row .row .columns { padding: 0; }
-  .row .centered { margin: 0 !important; }
+  .row .centered { margin-left: 0 !important; }
   .column, .columns { width: auto !important; float: none; margin-left: 0; margin-right: 0; }
   .column:last-child, .columns:last-child { margin-right: 0; float: none; }
   [class*="column"] + [class*="column"]:last-child { float: none; }
