@@ -22,6 +22,12 @@
 		// top position when fixed
 		this.top = Number(Gumby.selectAttr.apply(this.$el, ['top'])) || 0;
 
+		// constrain can be turned off
+		this.constrainEl = Gumby.selectAttr.apply(this.$el, ['constrain']) || true;
+		if(this.constrainEl === 'false') {
+			this.constrainEl = false;
+		}
+
 		// reference to the parent, row/column
 		this.$parent = this.$el.parents('.columns, .column, .row');
 		this.$parent = this.$parent.length ? this.$parent.first() : false;
@@ -47,8 +53,7 @@
 		});
 
 		// if we have a parent constrain dimenions
-		if(this.$parent) {
-			console.log(this.$parent);
+		if(this.$parent && this.constrainEl) {
 			// measure up
 			this.measure();
 			// and on resize reset measurement
