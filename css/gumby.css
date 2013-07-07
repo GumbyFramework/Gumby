@@ -56,6 +56,8 @@ html, body { height: 100%; }
 .fixed.pinned { position: absolute; }
 @media only screen and (max-width: 768px) { .fixed { position: relative !important; top: auto !important; left: auto !important; } }
 
+.unfixed { position: relative !important; top: auto !important; left: auto !important; }
+
 .text-center { text-align: center; }
 
 .text-left { text-align: left; }

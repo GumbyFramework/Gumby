@@ -52,6 +52,12 @@ html, body {
   }
 }
 
+.unfixed {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
 .text-center {
   text-align: center;
 }

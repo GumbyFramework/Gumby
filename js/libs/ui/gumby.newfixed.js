@@ -41,7 +41,7 @@
 			$window = $(window);
 
 		// monitor scroll and update fixed elements accordingly
-		$window.scroll(function() {
+		$window.on('scroll load', function() {
 			scope.monitorScroll();
 		});
 
@@ -51,8 +51,10 @@
 			this.measure();
 			// and on resize reset measurement
 			$window.resize(function() {
-				scope.measure();
-				scope.constrain();
+				if(scope.state) {
+					scope.measure();
+					scope.constrain();
+				}
 			});
 		}
 	}
@@ -93,7 +95,7 @@
 		this.state = 'fixed';
 		this.$el.css({
 			'top' : 0 + this.top
-		}).addClass('fixed').removeClass('pinned').trigger('gumby.onFixed');
+		}).addClass('fixed').removeClass('unfixed pinned').trigger('gumby.onFixed');
 
 		// if we have a parent constrain dimenions
 		if(this.$parent) {
@@ -104,7 +106,7 @@
 	// unfix the element and update state
 	Fixed.prototype.unfix = function() {
 		this.state = 'unfixed';
-		this.$el.attr('style', '').removeClass('fixed pinned').trigger('gumby.onUnfixed');
+		this.$el.addClass('unfixed').removeClass('fixed pinned').trigger('gumby.onUnfixed');
 	};
 
 	// pin the element in position
@@ -112,7 +114,7 @@
 		this.state = 'pinned';
 		this.$el.css({
 			'top' : this.$el.offset().top
-		}).addClass('pinned').trigger('gumby.onPinned');
+		}).addClass('pinned fixed').removeClass('unfixed').trigger('gumby.onPinned');
 	};
 
 	// constrain elements dimensions to match width/height
