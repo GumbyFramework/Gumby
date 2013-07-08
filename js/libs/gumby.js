@@ -30,8 +30,8 @@
 		// check and set path with js/libs default
 		this.path = $('script[gumby-path]').attr('gumby-path') || 'js/libs';
 
-		// check and set breakpoint with 768 default
-		this.breakpoint = Number($('script[gumby-breakpoint]').attr('gumby-breakpoint')) || 768;
+		// check and set breakpoint with 1024 default
+		this.breakpoint = Number($('script[gumby-breakpoint]').attr('gumby-breakpoint')) || 1024;
 	}
 
 	// initialize Gumby

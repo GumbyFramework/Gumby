@@ -132,6 +132,9 @@
                      0 1px 0 darken($navbar-color, 20%);
         @include line-and-height(height-calc($larger - 3));
         @include font-size($norm);
+        i.icon-popup {
+          position: absolute;
+        }
       }
       .btn {
         border-color: darken($navbar-color, 30%) !important;
@@ -303,7 +306,8 @@
   }
 }
 
-.gumby-no-touch .navbar ul li:hover > a {
+.gumby-no-touch .navbar ul li:hover > a,
+.gumby-touch .navbar ul li.active > a {
   position: relative;
   background: $info-hover-color;
   z-index: 1000;
