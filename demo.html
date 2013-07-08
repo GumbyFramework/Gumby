@@ -1060,13 +1060,29 @@
 
   </section>
 
+
   <!-- Grab Google CDN's jQuery, fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>')</script>
+  <!-- 2.0 for modern browsers, 1.10 for .oldie -->
+  <script>
+  if(!Modernizr.oldie) {
+    document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
+  } else {
+    document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
+  }
+  </script>
+  <script>
+  if(!window.jQuery) {
+    if(!Modernizr.oldie) {
+      document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+    } else {
+      document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>');
+    }
+  }
+  </script>
 
   <!--
   Include gumby.js followed by UI modules.
-  Or concatenate and minify into a single file-->
+  Or concatenate and minify into a single file
   <script src="js/libs/gumby.js"></script>
   <script src="js/libs/ui/gumby.retina.js"></script>
   <script src="js/libs/ui/gumby.fixed.js"></script>
@@ -1078,9 +1094,9 @@
   <script src="js/libs/ui/gumby.navbar.js"></script>
   <script src="js/libs/ui/gumby.fittext.js"></script>
   <script src="js/libs/ui/jquery.validation.js"></script>
-  <script src="js/libs/gumby.init.js"></script>
+  <script src="js/libs/gumby.init.js"></script>-->
 
-  <!--<script src="js/libs/gumby.min.js"></script>-->
+  <script src="js/libs/gumby.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
