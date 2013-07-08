@@ -1064,7 +1064,8 @@
   <!-- Grab Google CDN's jQuery, fall back to local if offline -->
   <!-- 2.0 for modern browsers, 1.10 for .oldie -->
   <script>
-  if(!Modernizr.oldie) {
+  var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
+  if(!oldieCheck) {
     document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
   } else {
     document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
@@ -1072,7 +1073,7 @@
   </script>
   <script>
   if(!window.jQuery) {
-    if(!Modernizr.oldie) {
+    if(!oldieCheck) {
       document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
     } else {
       document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>');
