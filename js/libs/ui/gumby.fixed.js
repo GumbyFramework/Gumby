@@ -8,6 +8,36 @@
 	function Fixed($el) {
 		this.$el = $el;
 
+		this.fixedPoint = '';
+		this.pinPoint = false;
+		this.offset = 0;
+		this.pinOffset = 0;
+		this.top = 0;
+		this.constrainEl = true;
+		this.state = false;
+		this.measurements = {
+			left: 0,
+			width: 0
+		};
+
+		// set up module based on attributes
+		this.setup();
+
+		var scope = this;
+
+		// monitor scroll and update fixed elements accordingly
+		$(window).on('scroll load', function() {
+			scope.monitorScroll();
+		});
+
+		// reinitialize event listener
+		this.$el.on('gumby.initialize', function() {
+			scope.setup();
+		});
+	}
+
+	// set up module based on attributes
+	Fixed.prototype.setup = function() {
 		this.fixedPoint = this.parseAttrValue(Gumby.selectAttr.apply(this.$el, ['fixed']));
 
 		// pin point is optional
@@ -33,38 +63,24 @@
 		this.$parent = this.$parent.length ? this.$parent.first() : false;
 		this.parentRow = this.$parent ? !!this.$parent.hasClass('row') : false;
 
-		this.state = false;
-		this.measurements = {
-			left: 0,
-			width: 0
-		};
-
 		// if optional pin point set then parse now
 		if(this.pinPoint) {
 			this.pinPoint = this.parseAttrValue(this.pinPoint);
 		}
-
-		var scope = this,
-			$window = $(window);
-
-		// monitor scroll and update fixed elements accordingly
-		$window.on('scroll load', function() {
-			scope.monitorScroll();
-		});
 
 		// if we have a parent constrain dimenions
 		if(this.$parent && this.constrainEl) {
 			// measure up
 			this.measure();
 			// and on resize reset measurement
-			$window.resize(function() {
+			$(window).resize(function() {
 				if(scope.state) {
 					scope.measure();
 					scope.constrain();
 				}
 			});
 		}
-	}
+	};
 
 	// monitor scroll and trigger changes based on position
 	Fixed.prototype.monitorScroll = function() {
