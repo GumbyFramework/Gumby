@@ -38,6 +38,8 @@
 
 	// set up module based on attributes
 	Fixed.prototype.setup = function() {
+		var scope = this;
+
 		this.fixedPoint = this.parseAttrValue(Gumby.selectAttr.apply(this.$el, ['fixed']));
 
 		// pin point is optional
