@@ -36,13 +36,13 @@
 
 	// initialize Gumby
 	Gumby.prototype.init = function() {
-		// init UI modules
-		this.initUIModules();
-
 		var scope = this;
 
 		// call ready() code when dom is ready
 		this.$dom.ready(function() {
+			// init UI modules
+			scope.initUIModules();
+
 			if(scope.onReady) {
 				scope.onReady();
 			}
