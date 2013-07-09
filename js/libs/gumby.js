@@ -28,21 +28,21 @@
 		this.inits = {};
 
 		// check and set path with js/libs default
-		this.path = $('script[gumby-path]').attr('gumby-path') ||
-					$('script[data-path]').attr('data-path') ||
-					$('script[path]').attr('path') ||
-					'js/libs';
+		this.path = $('script[gumby-path]').attr('gumby-path') || 'js/libs';
+
+		// check and set breakpoint with 1024 default
+		this.breakpoint = Number($('script[gumby-breakpoint]').attr('gumby-breakpoint')) || 1024;
 	}
 
 	// initialize Gumby
 	Gumby.prototype.init = function() {
-		// init UI modules
-		this.initUIModules();
-
 		var scope = this;
 
 		// call ready() code when dom is ready
 		this.$dom.ready(function() {
+			// init UI modules
+			scope.initUIModules();
+
 			if(scope.onReady) {
 				scope.onReady();
 			}
@@ -102,16 +102,16 @@
 				gumbyAttr = 'gumby-'+arguments[i];
 
 			// first test for data-attr
-			if(this.attr(dataAttr)) {
-				return this.attr(dataAttr);
+			if(this.is('['+dataAttr+']')) {
+				return this.attr(dataAttr) ? this.attr(dataAttr) : true;
 
 			// next test for gumby-attr
-			} else if(this.attr(gumbyAttr)) {
-				return this.attr(gumbyAttr);
+			} else if(this.is('['+gumbyAttr+']')) {
+				return this.attr(gumbyAttr) ? this.attr(gumbyAttr) : true;
 
 			// finally no prefix
-			} else if(this.attr(attr)) {
-				return this.attr(attr);
+			} else if(this.is('['+attr+']')) {
+				return this.attr(attr) ? this.attr(attr) : true;
 			}
 		}
 
@@ -125,9 +125,9 @@
 	};
 
 	// initialize a uiModule
-	Gumby.prototype.initialize = function(ref) {
+	Gumby.prototype.initialize = function(ref, all) {
 		if(this.inits[ref] && typeof this.inits[ref] === 'function') {
-			this.inits[ref]();
+			this.inits[ref](all);
 		}
 	};
 

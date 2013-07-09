@@ -5,42 +5,88 @@
 
 	'use strict';
 
-	// define module class and init only if we're on touch devices
-	if(!Modernizr.touch) {
+	var $html = Gumby.$dom.find('html');
+
+	// define and init module on touch enabled devices only
+	// when we are at tablet size or smaller
+	if(!Modernizr.touch || $(window).width() > Gumby.breakpoint) {
+
+		// add Gumby no touch class
+		$html.addClass('gumby-no-touch');
 		return;
 	}
 
+	// add Gumby touch class
+	$html.addClass('gumby-touch');
+
 	function Navbar($el) {
 		this.$el = $el;
+		this.$dropDowns = this.$el.find('li:has(.dropdown)');
 		var scope = this;
 
-		// when navbar items are tapped hide/show dropdowns
-		this.$el.find('li').on(Gumby.click, function(e) {
-			var $this = $(this);
+		// when navbar items
+		this.$dropDowns
+		// are tapped hide/show dropdowns
+		.on('tap', this.toggleDropdown)
+		// are swiped right open link
+		.on('swiperight', this.openLink);
 
-			e.stopPropagation();
+		// if there's a link set
+		if(this.$dropDowns.children('a').attr('href') !== '#') {
+			// append an icon
+			this.$dropDowns.children('a').append('<i class="icon-popup"></i>').children('i')
+			// and bind to click event to open link
+			.on('tap', this.openLink);
+		}
 
-			// prevent jump to top of page
-			if(this.href === '#') {
-				e.preventDefault();
+		// on mousemove and touchstart toggle modernizr classes and disable/enable this module
+		// workaround for Pixel and other multi input devices
+		$(window).on('mousemove touchstart', function(e) {
+			e.stopImmediatePropagation();
+			if(e.type === 'mousemove') {
+				scope.$dropDowns.on('mouseover mouseout', scope.toggleDropdown);
 			}
-
-			scope.dropdown($this);
 		});
 	}
 
-	// hide/show dropdowns
-	Navbar.prototype.dropdown = function($this) {
-		// we have dropdowns so open/cose
-		if($this.children('.dropdown').length) {
-			if($this.hasClass('active')) {
-				$this.removeClass('active');
-			} else {
-				$this.addClass('active');
-			}
-		// no dropdown so close others
+	Navbar.prototype.toggleDropdown = function(e) {
+		// prevent click from triggering here too
+		e.stopImmediatePropagation();
+		e.preventDefault();
+
+		var $this = $(this);
+
+		if($this.hasClass('active')) {
+			$this.removeClass('active');
 		} else {
-			this.$items.removeClass('active');
+			$this.addClass('active');
+		}
+	};
+
+	// handle opening list item link 
+	Navbar.prototype.openLink = function(e) {
+		e.stopImmediatePropagation();
+		e.preventDefault();
+
+		var $this = $(this),
+			$el, href;
+
+		// tapped icon
+		if($this.is('i')) {
+			$el = $this.parent('a');
+		// swiped li
+		} else if($this.is('li')) {
+			$el = $this.children('a');
+		}
+
+		href = $el.attr('href');
+
+		// open in new window
+		if($el.attr('target') == 'blank') {
+			window.open(href);
+		// regular relocation
+		} else {
+			window.location = href;
 		}
 	};
 
