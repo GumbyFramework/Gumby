@@ -42,15 +42,15 @@
 </head>
 
 <style>
-	*[data-tooltip] {
+	.ttip {
 		/* just for this example, delete later */
 		color: red !important;
 		position: relative;
 	}
 
-	*[data-tooltip]:after {
+	.ttip:after {
 		display: inline-block;
-		background: #666;
+		background: #444;
 		border: 1px solid #333;
 		border-bottom: 0;
 		border-radius: 3px;
@@ -65,7 +65,7 @@
 		margin-bottom: 8px;
 
 		color: #fff;
-		content: attr(data-tooltip);
+		content: attr(class="ttip" data-tooltip);
 		line-height: 1.5;
 		font-size: .75rem;
 
@@ -85,7 +85,7 @@
         box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
 	}
 
-	*[data-tooltip]:before {
+	.ttip:before {
 		content: "";
 		width: 0;
 		height: 0;
@@ -105,15 +105,15 @@
 		pointer-events: none;
   	}
 
-
-	*[data-tooltip]:hover:after,
-	*[data-tooltip]:hover:before {
+	.ttip:hover:after,
+	.ttip:hover:before {
 		transition: all 0.1s ease;
 		opacity: 1;
 	}
 
-
-
+	.ie9 .ttip:after {
+		border: 0;
+	}
 
 </style>
 
@@ -122,16 +122,15 @@
 	<div class="row">
 		<h1 class="lead">Tooltips</h1>
 		<div class="row">
-			<h3>Let's put tooltips on <a href="#" data-tooltip="yeah baby, tooltip on a link"><em>everything</em></a>!</h3>
-			<p>Red elements have tooltips. Nulla gravida <span data-tooltip="span tooltip lol!">luctus</span> ultrices. In nulla justo, imperdiet ac dui sed, viverra malesuada mauris. In non leo ipsum. Integer ac pellentesque elit, et ultrices velit. Pellentesque pulvinar felis vel ultrices aliquam. Nam eleifend vestibulum lorem, sit amet mattis nisi suscipit commodo. Cras</p>
-			<p>How about a <a href="#" class="tip" data-tooltip="this is a tooltip with may too much stuff crammed into it but you never what people will want to try">small</a> link with a huge tooltip.</p>
+			<h3>Let's put tooltips on <a href="#" class="ttip" data-tooltip="yeah baby, tooltip on a link"><em>everything</em></a>!</h3>
+			<p>Red elements have tooltips. Nulla gravida <span class="ttip" data-tooltip="span tooltip lol!">luctus</span> ultrices. In nulla justo, imperdiet ac dui sed, viverra malesuada mauris. In non leo ipsum. Integer ac pellentesque elit, et ultrices velit. Pellentesque pulvinar felis vel ultrices aliquam. Nam eleifend vestibulum lorem, sit amet mattis nisi suscipit commodo. Cras</p>
+			<p>How about a <a href="#" class="tip" class="ttip" data-tooltip="this is a tooltip with may too much stuff crammed into it but you never what people will want to try">small</a> link with a huge tooltip.</p>
 			<p>But does it work on kitties???</p>
 			<div class="row">
-				<p class="two columns image photo" data-tooltip="Of course it works on kitties, we're not savages"><img src="http://placekitten.com/g/200/200" alt=""</p>
+				<p class="two columns image photo" class="ttip" data-tooltip="Of course it works on kitties, we're not savages"><img src="http://placekitten.com/g/200/200" alt=""</p>
 			</div>
 		</div>
 	</div>
-
 
 
 
