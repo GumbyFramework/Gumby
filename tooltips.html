@@ -1,0 +1,194 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+
+	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+			 More info: h5bp.com/b/378 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Gumby - A Flexible, Responsive CSS Framework - Powered by SASS</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="humans.txt">
+
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+	<!-- Facebook Metadata /-->
+	<meta property="fb:page_id" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:description" content=""/>
+	<meta property="og:title" content=""/>
+
+	<!-- Google+ Metadata /-->
+	<meta itemprop="name" content="">
+	<meta itemprop="description" content="">
+	<meta itemprop="image" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
+			 However, there is a blank style.css in the css directory should you prefer -->
+	<link rel="stylesheet" href="css/gumby.css">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+
+	<script src="js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+<style>
+	*[data-tooltip] {
+		/* just for this example, delete later */
+		color: red !important;
+		position: relative;
+	}
+
+	*[data-tooltip]:after {
+		display: inline-block;
+		background: #666;
+		border: 1px solid #333;
+		border-bottom: 0;
+		border-radius: 3px;
+
+		padding: .5rem .75rem;
+		min-width: 100px;
+		max-width: 300px;
+
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+		margin-bottom: 8px;
+
+		color: #fff;
+		content: attr(data-tooltip);
+		line-height: 1.5;
+		font-size: .75rem;
+
+		transition: all 0.15s ease;
+		opacity: 0;
+		pointer-events: none;
+
+		background: -moz-linear-gradient(top,  rgba(102,102,102,1) 0%, rgba(62,62,62,1) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,51,51,0)), color-stop(100%,rgba(85,85,85,1)));
+		background: -webkit-linear-gradient(top,  rgba(102,102,102,1) 0%,rgba(62,62,62,1) 100%);
+		background: -o-linear-gradient(top,  rgba(102,102,102,1) 0%,rgba(62,62,62,1) 100%);
+		background: -ms-linear-gradient(top,  rgba(102,102,102,1) 0%,rgba(62,62,62,1) 100%);
+		background: linear-gradient(to bottom,  rgba(102,102,102,1) 0%,rgba(62,62,62,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00333333', endColorstr='#555555',GradientType=0 );
+
+		-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
+	}
+
+	*[data-tooltip]:before {
+		content: "";
+		width: 0;
+		height: 0;
+		border-top: 5px solid #444;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+
+		transition: all 0.1s ease;
+		position: absolute;
+		left: 8px;
+		bottom: 100%;
+		margin-bottom: 3px;
+
+		transition: all 0.1s ease;
+		opacity: 0;
+
+		pointer-events: none;
+  	}
+
+
+	*[data-tooltip]:hover:after,
+	*[data-tooltip]:hover:before {
+		transition: all 0.1s ease;
+		opacity: 1;
+	}
+
+
+
+
+</style>
+
+<body>
+
+	<div class="row">
+		<h1 class="lead">Tooltips</h1>
+		<div class="row">
+			<h3>Let's put tooltips on <a href="#" data-tooltip="yeah baby, tooltip on a link"><em>everything</em></a>!</h3>
+			<p>Red elements have tooltips. Nulla gravida <span data-tooltip="span tooltip lol!">luctus</span> ultrices. In nulla justo, imperdiet ac dui sed, viverra malesuada mauris. In non leo ipsum. Integer ac pellentesque elit, et ultrices velit. Pellentesque pulvinar felis vel ultrices aliquam. Nam eleifend vestibulum lorem, sit amet mattis nisi suscipit commodo. Cras</p>
+			<p>How about a <a href="#" class="tip" data-tooltip="this is a tooltip with may too much stuff crammed into it but you never what people will want to try">small</a> link with a huge tooltip.</p>
+			<p>But does it work on kitties???</p>
+			<div class="row">
+				<p class="two columns image photo" data-tooltip="Of course it works on kitties, we're not savages"><img src="http://placekitten.com/g/200/200" alt=""</p>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- Grab Google CDN's jQuery, fall back to local if offline -->
+	<!-- 2.0 for modern browsers, 1.10 for .oldie -->
+	<script>
+	var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
+	if(!oldieCheck) {
+	document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
+	} else {
+	document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
+	}
+	</script>
+	<script>
+	if(!window.jQuery) {
+	if(!oldieCheck) {
+	  document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+	} else {
+	  document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>');
+	}
+	}
+	</script>
+
+	<!--
+	Include gumby.js followed by UI modules.
+	Or concatenate and minify into a single file
+	<script src="js/libs/gumby.js"></script>
+	<script src="js/libs/ui/gumby.retina.js"></script>
+	<script src="js/libs/ui/gumby.fixed.js"></script>
+	<script src="js/libs/ui/gumby.skiplink.js"></script>
+	<script src="js/libs/ui/gumby.toggleswitch.js"></script>
+	<script src="js/libs/ui/gumby.checkbox.js"></script>
+	<script src="js/libs/ui/gumby.radiobtn.js"></script>
+	<script src="js/libs/ui/gumby.tabs.js"></script>
+	<script src="js/libs/ui/gumby.navbar.js"></script>
+	<script src="js/libs/ui/gumby.fittext.js"></script>
+	<script src="js/libs/ui/jquery.validation.js"></script>
+	<script src="js/libs/gumby.init.js"></script>-->
+
+	<script src="js/libs/gumby.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- Change UA-XXXXX-X to be your site's ID -->
+	<!--<script>
+	window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+	Modernizr.load({
+	  load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+	});
+	</script>-->
+
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	   chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+
+  </body>
+</html>
