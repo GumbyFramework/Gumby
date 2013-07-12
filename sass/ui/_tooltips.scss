@@ -20,11 +20,11 @@
 			margin-top: 8px;
 		}	@else if $tt-position == "left" {
 			right: 100%;
-			top: 0;
+			top: -35%;
 			margin-right: 8px;
 		} @else if $tt-position == "right" {
 			left: 100%;
-			top: 0;
+			top: -35%;
 			margin-left: 8px;
 		}	@else if $tt-position == "top" {
 			left: 0;
@@ -47,7 +47,7 @@
 		pointer-events: none;
 
 		@if $tt-pretty != "no" {
-			@include background-image(linear-gradient(lighten($tt-bgcolor, 10%), $tt-bgcolor));
+			@include background-image(linear-gradient($tt-position, lighten($tt-bgcolor, 10%), $tt-bgcolor));
 			@include box-shadow(0 0 5px 0 rgba($tt-bgcolor,.25));
 		}
 	}
@@ -64,18 +64,18 @@
 			border-left: 8px solid transparent;
 			border-right: 8px solid transparent;
 		}	@else if $tt-position == "left" {
-			top: 8px;
+			top: 5px;
 			right: 100%;
 			border-left: 8px solid $tt-bgcolor !important;
 			border-top: 8px solid transparent;
 			border-bottom: 8px solid transparent;
 		} @else if $tt-position == "right" {
-			top: 8px;
+			top: 5px;
 			left: 100%;
 			border-right: 8px solid $tt-bgcolor !important;
 			border-top: 8px solid transparent;
 			border-bottom: 8px solid transparent;
-		}	@else if $tt-position {
+		}	@else if $tt-position == "top" {
 			bottom: 100%;
 			left: 8px;
 			border-top: 8px solid $tt-bgcolor !important;
@@ -95,6 +95,5 @@
 }
 
 .ttip {
-	@include tooltip($tt-min-width, $tt-textalign, $tt-bgcolor);
-	&:after { background-color: red !important; }
+	@include tooltip($tt-min-width, $tt-bgcolor, $tt-position);
 }
