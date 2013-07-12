@@ -145,10 +145,12 @@ $table-stripe-bgcolor: #e5e5e5;
 
 // Tooltips
 $tt-min-width: 200px;
-$tt-bgcolor: #666666;
-$tt-position: bottom;					// position: top / bottom / left / right
+$tt-bgcolor: #ff0000;
+$tt-position: right;					// position: top / bottom / left / right
 $tt-textalign: left;					// optional: text alignment: left / right    <--- kind of janky
-$tt-pretty: yes;						// yes = pretty / no = flat
+$tt-pretty: no;							// yes = pretty / no = flat
+// do we want an option for "fluid & no-wrap" one-line version vs fixed widths that stack type?
+
 
 // Floats
 $default-float: left;
