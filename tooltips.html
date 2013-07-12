@@ -41,94 +41,12 @@
 	<script src="js/libs/modernizr-2.6.2.min.js"></script>
 </head>
 
-<style>
-	.ttip {
-		/* just for this example, delete later */
-		color: red !important;
-		position: relative;
-	}
-
-	.ttip:after {
-		display: inline-block;
-		background: #444;
-		border: 1px solid #333;
-		border-bottom: 0;
-		border-radius: 3px;
-
-		padding: .5rem .75rem;
-		min-width: 100px;
-		max-width: 300px;
-
-		position: absolute;
-		bottom: 100%;
-		left: 0;
-		margin-bottom: 8px;
-
-		color: #fff;
-		content: attr(class="ttip" data-tooltip);
-		line-height: 1.5;
-		font-size: .75rem;
-
-		transition: all 0.15s ease;
-		opacity: 0;
-		pointer-events: none;
-
-		background: -moz-linear-gradient(top,  rgba(102,102,102,1) 0%, rgba(62,62,62,1) 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,51,51,0)), color-stop(100%,rgba(85,85,85,1)));
-		background: -webkit-linear-gradient(top,  rgba(102,102,102,1) 0%,rgba(62,62,62,1) 100%);
-		background: -o-linear-gradient(top,  rgba(102,102,102,1) 0%,rgba(62,62,62,1) 100%);
-		background: -ms-linear-gradient(top,  rgba(102,102,102,1) 0%,rgba(62,62,62,1) 100%);
-		background: linear-gradient(to bottom,  rgba(102,102,102,1) 0%,rgba(62,62,62,1) 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00333333', endColorstr='#555555',GradientType=0 );
-
-		-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
-        box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
-	}
-
-	.ttip:before {
-		content: "";
-		width: 0;
-		height: 0;
-		border-top: 5px solid #444;
-		border-left: 5px solid transparent;
-		border-right: 5px solid transparent;
-
-		transition: all 0.1s ease;
-		position: absolute;
-		left: 8px;
-		bottom: 100%;
-		margin-bottom: 3px;
-
-		transition: all 0.1s ease;
-		opacity: 0;
-
-		pointer-events: none;
-  	}
-
-	.ttip:hover:after,
-	.ttip:hover:before {
-		transition: all 0.1s ease;
-		opacity: 1;
-	}
-
-	.ie9 .ttip:after {
-		border: 0;
-	}
-
-</style>
-
 <body>
 
 	<div class="row">
 		<h1 class="lead">Tooltips</h1>
 		<div class="row">
-			<h3>Let's put tooltips on <a href="#" class="ttip" data-tooltip="yeah baby, tooltip on a link"><em>everything</em></a>!</h3>
-			<p>Red elements have tooltips. Nulla gravida <span class="ttip" data-tooltip="span tooltip lol!">luctus</span> ultrices. In nulla justo, imperdiet ac dui sed, viverra malesuada mauris. In non leo ipsum. Integer ac pellentesque elit, et ultrices velit. Pellentesque pulvinar felis vel ultrices aliquam. Nam eleifend vestibulum lorem, sit amet mattis nisi suscipit commodo. Cras</p>
-			<p>How about a <a href="#" class="tip" class="ttip" data-tooltip="this is a tooltip with may too much stuff crammed into it but you never what people will want to try">small</a> link with a huge tooltip.</p>
-			<p>But does it work on kitties???</p>
-			<div class="row">
-				<p class="two columns image photo" class="ttip" data-tooltip="Of course it works on kitties, we're not savages"><img src="http://placekitten.com/g/200/200" alt=""</p>
-			</div>
+			<p><a href="#" class="ttip" data-tooltip="hooray">MOTHERFLIPPIN TOOLTIPS</a></p>
 		</div>
 	</div>
 
