@@ -1821,7 +1821,7 @@ form fieldset legend { padding: 5px 10px; }
 .tabs .tab-nav > li > a { display: block; width: auto; padding: 0 16px; margin: 0; color: #555555; font-family: "Open Sans"; font-weight: 600; border: 1px solid #e5e5e5; border-width: 1px 1px 0 1px; text-shadow: 0 1px 1px white; background: #f2f2f2; cursor: pointer; -webkit-border-radius: 4px 4px 0 0; -moz-border-radius: 4px 4px 0 0; -ms-border-radius: 4px 4px 0 0; -o-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0; height: 42px; line-height: 40px; }
 .tabs .tab-nav > li > a:hover { text-decoration: none; background: whitesmoke; }
 .tabs .tab-nav > li > a:active { background: #ededed; }
-.tabs .tab-nav > li.active > a { height: 43px; line-height: 41px; background: white; }
+.tabs .tab-nav > li.active > a { height: 43px; line-height: 41px; background: white; cursor: default; }
 .tabs .tab-nav > li:last-child { margin-right: 0; }
 .tabs .tab-content { display: none; padding: 20px 10px; }
 .tabs .tab-content.active { display: block; }
