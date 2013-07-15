@@ -1,0 +1,19 @@
+{
+    "name": "gumbyframework/gumby",
+    "description": "A Flexible, Responsive CSS Framework - Powered by Sass",
+    "keywords": ["gumby", "gumby2", "css", "sass"],
+    "homepage": "http://gumbyframework.com/",
+    "license": "MIT",
+    "authors" : [
+        {
+            "name": "Digital Surgeons",
+            "email": "gumby@digitalsurgeons.com",
+            "homepage": "http://www.digitalsurgeons.com"   
+        }
+    ],
+    "support": {
+    	"issues": "https://github.com/GumbyFramework/Gumby/issues",
+    	"source": "https://github.com/GumbyFramework/Gumby",
+    	"forum": "https://plus.google.com/u/0/communities/108760896951473344451"
+    }
+}
