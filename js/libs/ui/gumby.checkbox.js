@@ -12,6 +12,11 @@
 
 		// listen for click event and custom gumby check/uncheck events
 		this.$el.on(Gumby.click, function(e) {
+			// do nothing if checkbox is disabled
+            if (scope.$el.find('input').is('[disabled]')) {
+                return;
+            }
+			
 			// prevent propagation
 			e.stopImmediatePropagation();
 
