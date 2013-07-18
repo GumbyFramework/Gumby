@@ -24,177 +24,141 @@
     left: 0;
     z-index: 99999;
   }
-  a.toggle {
-    display: none;
+}
 
-    // Navigation Toggle Mobile styles
-    @include respond(all-phones) {
-      top: 18%;
-      right: 4%;
-      width: 46px;
-      position: absolute;
-      text-align: center;
-      display: inline-block;
-      color: $navbar-link-color;
-      background: $navbar-color;
-      @include line-and-height(40px);
-      @include border-radius($button-radius);
-      @include font-size($larger);
-      &:hover {
-        background: lighten($navbar-color, 5%);
-      }
-      &:active, &.active {
-        background: darken($navbar-color, 5%);
-      }
-    }
+.navbar a.toggle {
+  display: none;
 
-  }
-  .logo {
+  // Navigation Toggle Mobile styles
+  @include respond(all-phones) {
+    top: 18%;
+    right: 4%;
+    width: 46px;
+    position: absolute;
+    text-align: center;
     display: inline-block;
-    margin: 0 $gutter 0 0;
-    padding: 0;
-    @include line-and-height(height-calc($larger - 3));
-    a {
-      display: block;
-      padding: 0 0 0 $norm;
-      overflow: hidden;
-      @include line-and-height(height-calc($larger - 3));
+    color: $navbar-link-color;
+    background: $navbar-color;
+    @include line-and-height(40px);
+    @include border-radius($button-radius);
+    @include font-size($larger);
+    &:hover {
+      background: lighten($navbar-color, 5%);
     }
-
-    // Navbar Logo Mobile Styles
-    @include respond(all-phones) {
-      float: $default-float;
-      display: inline;
-      a {
-        padding: 0;
-        img {
-          width: auto;
-          height: auto;
-          max-width: 100%;
-        }
-      }
-    }
-  }
-
-  ul {
-    display: table;
-    vertical-align: middle;
-    margin: 0;
-    float: none;
-
-    // Navbar Navigation List Mobile Specific Styles
-    @include respond(all-phones) {
-      position: absolute;
-      display: block;
-      width: 100% !important;
-      height: 0;
-      max-height: 0;
-      top: 60px;
-      left: 0;
-      overflow: hidden;
-      text-align: center;
+    &:active, &.active {
       background: darken($navbar-color, 5%);
-      &.active {
-        height: auto;
-        max-height: 600px;
-        z-index: 999999;
-        @include transition-duration(.5s);
-        @include box-shadow(0 2px 2px darken($navbar-color, 15%));
-      }
     }
+  }
+}
 
-    li {
-      display: table-cell;
-      text-align: center;
-      padding-bottom: 0;
-      margin: 0;
-      @include line-and-height(height-calc($larger - 3));
+.navbar .logo {
+  display: inline-block;
+  margin: 0 $gutter 0 0;
+  padding: 0;
+  @include line-and-height(height-calc($larger - 3));
+  a {
+    display: block;
+    padding: 0 0 0 $norm;
+    overflow: hidden;
+    @include line-and-height(height-calc($larger - 3));
+  }
 
-      // Navbar List Item Mobile Specific Styles
-      @include respond(all-phones) {
-        display: block;
-        position: relative;
-        min-height: 50px;
-        max-height: 320px;
-        height: auto;
-        width: 100%;
-        border-right: 0 !important;
-        @include box-shadow(none);
-        @include transition-duration(.5s);
-      }
-
-      > a {
-        display: block;
-        padding: 0 ms(0);
-        white-space: nowrap;
-        color: $navbar-link-color;
-        text-shadow: 0 1px 2px darken($navbar-color, 20%),
-                     0 1px 0 darken($navbar-color, 20%);
-        @include line-and-height(height-calc($larger - 3));
-        @include font-size($norm);
-        i.icon-popup {
-          position: absolute;
-        }
-      }
-      .btn {
-        border-color: darken($navbar-color, 30%) !important;
-      }
-      &.field {
-        margin-bottom: 0 !important;
-        margin-right: 0;
-        @include respond(all-phones) {
-          padding: 0 $gutter-in-px;
-        }
-        input.search {
-          background: darken($navbar-color, 20%);
-          border: none;
-          color: $default-color;
-        }
-      }
-      .dropdown {
+  // Navbar Logo Mobile Styles
+  @include respond(all-phones) {
+    float: $default-float;
+    display: inline;
+    a {
+      padding: 0;
+      img {
         width: auto;
-        min-width: 0px;
-        max-width: $min-device-width;
-        height: 0;
-        position: absolute;
-        background: lighten($default-color, 3%);
-        overflow: hidden;
-        z-index: 999;
-      }
-      // Navigation Dropdown Mobile Specific Styles
-      @include respond(all-phones) {
-        .dropdown {
-          width: 100%;
-          max-width: 100%;
-          position: relative;
-          @include box-shadow(none !important);
-        }
-        &.active .dropdown {
-          border-bottom: 1px solid darken($navbar-color, 10%);
-        }
-        &.active .dropdown ul {
-          position: relative;
-          top: 0;
-          background: darken($navbar-color, 8%);
-          min-height: 50px;
-          max-height: 250px;
-          height: auto;
-          overflow: auto;
-          @include box-shadow(none !important);
-          li {
-            min-height: 50px;
-            border-bottom: darken($navbar-color, 5%);
-            a {
-              color: $white;
-              border-bottom: 1px solid darken($navbar-color, 10%);
-              &:hover {color: $body-link-color;}
-            }
-          }
-        }
+        height: auto;
+        max-width: 100%;
       }
     }
   }
+}
 
+.navbar ul {
+  display: table;
+  vertical-align: middle;
+  margin: 0;
+  float: none;
+
+  // Navbar Navigation List Mobile Specific Styles
+  @include respond(all-phones) {
+    position: absolute;
+    display: block;
+    width: 100% !important;
+    height: 0;
+    max-height: 0;
+    top: 60px;
+    left: 0;
+    overflow: hidden;
+    text-align: center;
+    background: darken($navbar-color, 5%);
+    &.active {
+      height: auto;
+      max-height: 600px;
+      z-index: 999999;
+      @include transition-duration(.5s);
+      @include box-shadow(0 2px 2px darken($navbar-color, 15%));
+    }
+  }
+}
+
+.navbar li {
+  display: table-cell;
+  text-align: center;
+  padding-bottom: 0;
+  margin: 0;
+  @include line-and-height(height-calc($larger - 3));
+
+  // Navbar List Item Mobile Specific Styles
+  @include respond(all-phones) {
+    display: block;
+    position: relative;
+    min-height: 50px;
+    max-height: 320px;
+    height: auto;
+    width: 100%;
+    border-right: 0 !important;
+    @include box-shadow(none);
+    @include transition-duration(.5s);
+  }
+
+  > a {
+    display: block;
+    padding: 0 ms(0);
+    white-space: nowrap;
+    color: $navbar-link-color;
+    text-shadow: 0 1px 2px darken($navbar-color, 20%),
+                 0 1px 0 darken($navbar-color, 20%);
+    @include line-and-height(height-calc($larger - 3));
+    @include font-size($norm);
+    i.icon-popup {
+      position: absolute;
+    }
+  }
+
+  &.field {
+    margin-bottom: 0 !important;
+    margin-right: 0;
+    @include respond(all-phones) {
+      padding: 0 $gutter-in-px;
+    }
+    input.search {
+      background: darken($navbar-color, 20%);
+      border: none;
+      color: $default-color;
+    }
+  }
+}
+
+.navbar li .btn {
+  border-color: darken($navbar-color, 30%) !important;
+}
+
+.navbar {
   // Mobile Only Navbar Styles
   @include respond(tablets) {
     > ul > li > .btn a {
@@ -204,7 +168,6 @@
       left: -$min-device-width;
     }
   }
-
 }
 
 
@@ -269,6 +232,48 @@
 }
 
 // Dropdown menu styles
+
+.navbar li .dropdown {
+  width: auto;
+  min-width: 0px;
+  max-width: $min-device-width;
+  height: 0;
+  position: absolute;
+  background: lighten($default-color, 3%);
+  overflow: hidden;
+  z-index: 999;
+  // Navigation Dropdown Mobile Specific Styles
+  @include respond(all-phones) {
+    .dropdown {
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      @include box-shadow(none !important);
+    }
+    &.active .dropdown {
+      border-bottom: 1px solid darken($navbar-color, 10%);
+    }
+    &.active .dropdown ul {
+      position: relative;
+      top: 0;
+      background: darken($navbar-color, 8%);
+      min-height: 50px;
+      max-height: 250px;
+      height: auto;
+      overflow: auto;
+      @include box-shadow(none !important);
+      li {
+        min-height: 50px;
+        border-bottom: darken($navbar-color, 5%);
+        a {
+          color: $white;
+          border-bottom: 1px solid darken($navbar-color, 10%);
+          &:hover {color: $body-link-color;}
+        }
+      }
+    }
+  }
+}
 
 .navbar li .dropdown ul {
   margin: 0;
@@ -400,18 +405,18 @@
     }
   }
   dt {
-    color: #999;
+    color: $default-color;
     font-weight: normal;
   }
   li a, dd a {
-    color: #05390a;
+    color: $navbar-link-color;
     font-size: 15px;
     text-decoration: none;
     @include border-radius(4px);
   }
   li.active a, dd.active a {
-    background: #5dbb73;
+    background: $navbar-color;
     padding: 5px 9px;
-    text-shadow: 0 1px 1px #77d58e;
+    text-shadow: 0 1px 1px $navbar-color;
   }
 }
