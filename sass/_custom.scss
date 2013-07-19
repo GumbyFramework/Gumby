@@ -1,1 +1,56 @@
 // Your custom SCSS should be written here...
+
+.myembaseddiv {
+	max-width: em($row-max-width);
+	background: $primary-color;
+  position: relative;
+  padding-right: em(35px);
+  &:after {
+    content: "#{$entypo-icon-code}";
+    font-family: $icons;
+    position: absolute;
+    font-size: 200px;
+    z-index: -1;
+    display:none;
+  }
+	@include respond('max-width: #{em(620px)}') {
+		background: $warning-color;
+	}
+	@include respond('max-width: #{em(500px)}') {
+		width: 100%;
+		background: $secondary-color;
+    padding-top: 300px;
+    padding-right: 0;
+    &:after {
+      z-index: 999;
+      display:block;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      top: 120px;
+      color: #fff;
+    }
+	}
+	h2{
+		@include respond('max-width: #{em(500px)}') {
+			background: $secondary-color;
+      text-align: center;
+      color: #fff;
+		}
+	}
+}
+
+.special {
+  @include palette(success);
+}
+
+.nestedemdiv {
+  font-size: 14px;
+  .morenestedemdiv {
+    width: em(250px, 14px);
+    background-color: $warning-color;
+      @include respond(all-phones) {
+        p {font-size: em(16px, 14px);}
+      }
+  }
+}
