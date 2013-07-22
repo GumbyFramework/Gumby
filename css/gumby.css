@@ -1678,7 +1678,7 @@ form ul, form ul li { margin-left: 0; list-style-type: none; }
 form fieldset { border-style: solid; border-width: 0.0625em; padding: 1.5625em; border-color: #d8d8d8; margin: 18px 0; }
 form fieldset legend { padding: 5px 10px; }
 
-.field { position: relative; max-width: 100%; margin-bottom: 10px; vertical-align: middle; font-size: 16px; /* remove inline-block white-space — A 0px font-size = 0px of white space */ }
+.field { position: relative; max-width: 100%; margin-bottom: 10px; vertical-align: middle; font-size: 16px; overflow: hidden; /* remove inline-block white-space — A 0px font-size = 0px of white space */ }
 .field.metro, .field .metro { -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
 .field input, .field input[type="*"], .field textarea { max-width: 100%; width: 100%; padding: 0; margin: 0; border: none; outline: none; resize: none; -webkit-appearance: none; font-family: "Open Sans"; font-weight: 300; font-size: 16px; font-size: 1rem; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
 .field .radio, .field .checkbox { position: relative; }
