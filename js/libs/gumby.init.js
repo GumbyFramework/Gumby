@@ -2,9 +2,14 @@
 * Gumby Init
 */
 
+// test for Windows Phone
+Modernizr.addTest('windowsphone', function() {
+	return window.navigator.userAgent.indexOf("Windows Phone") > 0; 
+});
+
 // test for touch event support
 Modernizr.load({
-	test: Modernizr.touch,
+	test: Modernizr.touch || Modernizr.windowsphone,
 
 	// if present load custom jQuery mobile build and update Gumby.click
 	yep: Gumby.path+'/jquery.mobile.custom.min.js',

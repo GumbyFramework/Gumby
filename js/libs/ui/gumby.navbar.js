@@ -9,8 +9,8 @@
 
 	// define and init module on touch enabled devices only
 	// when we are at tablet size or smaller
-	if(!Modernizr.touch || $(window).width() > Gumby.breakpoint) {
-
+	if( (!Modernizr.touch || $(window).width() > Gumby.breakpoint)
+			&& !Modernizr.windowsphone ) {
 		// add Gumby no touch class
 		$html.addClass('gumby-no-touch');
 		return;
@@ -41,12 +41,14 @@
 
 		// on mousemove and touchstart toggle modernizr classes and disable/enable this module
 		// workaround for Pixel and other multi input devices
-		$(window).on('mousemove touchstart', function(e) {
-			e.stopImmediatePropagation();
-			if(e.type === 'mousemove') {
-				scope.$dropDowns.on('mouseover mouseout', scope.toggleDropdown);
-			}
-		});
+		if( !Modernizr.windowsphone ) {
+			$(window).on('mousemove touchstart', function(e) {
+				e.stopImmediatePropagation();
+				if(e.type === 'mousemove') {
+					scope.$dropDowns.on('mouseover mouseout', scope.toggleDropdown);
+				}
+			});	
+		}
 	}
 
 	Navbar.prototype.toggleDropdown = function(e) {
