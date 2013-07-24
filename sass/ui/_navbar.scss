@@ -23,7 +23,13 @@
     top: 0;
     left: 0;
     z-index: 99999;
+
+    &+.navbar-fix {
+      height: 60px;
+      @include repsond(portrait-tablets) { display: none; }
+    }
   }
+
   a.toggle {
     display: none;
 
@@ -229,7 +235,7 @@
   @include background-image(linear-gradient(lighten($navbar-color, 20%),darken($navbar-color, 10%)));
   @include box-shadow(inset 0 1px 1px lighten($navbar-color, 20%),
           0 1px 2px rgba(0,0,0,0.80) !important); /* Remove this line if you dont want a dropshadow on your navigation*/
-  
+
   // Pretty Nav Toggle Styles
   @include respond(all-phones) {
     a.toggle {
@@ -313,7 +319,7 @@
   z-index: 1000;
 }
 
-.gumby-no-touch .navbar ul li:hover .dropdown, 
+.gumby-no-touch .navbar ul li:hover .dropdown,
 .gumby-touch .navbar ul li.active .dropdown {
   min-height: 50px;
   max-height: $tablet-device-width - 207;
