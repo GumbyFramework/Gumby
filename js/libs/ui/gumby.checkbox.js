@@ -38,7 +38,7 @@
 		});
 
 		// update any .checked checkboxes on load
-		if(scope.$el.hasClass('checked')) {
+		if(this.$input.prop('checked') || scope.$el.hasClass('checked')) {
 			scope.update(true);
 		}
 	}
