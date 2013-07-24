@@ -13,6 +13,7 @@ Gumby.oldie(function() {
 	console.log("This is an oldie browser...");
 });
 
+// Touch devices loaded
 Gumby.touch(function() {
 	console.log("This is a touch enabled device...");
 });

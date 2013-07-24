@@ -29,27 +29,37 @@
 
 	// intialise toggles, switches will inherit method
 	Toggle.prototype.init = function() {
-		this.targets = this.parseTargets();
-		this.on = Gumby.selectAttr.apply(this.$el, ['on']) || Gumby.click;
-
 		var scope = this;
+
+		// set up module based on attributes
+		this.setup();
 
 		// bind to specified event and trigger
 		this.$el.on(this.on, function(e) {
+			// stop propagation
+			e.stopImmediatePropagation();
+
 			// only disable default if <a>
 			if($(this).prop('tagName') === 'A') {
 				e.preventDefault();
 			}
-
-			// stop propagation
-			e.stopPropagation();
 
 			scope.trigger(scope.triggered);
 
 		// listen for gumby.trigger to dynamically trigger toggle/switch
 		}).on('gumby.trigger', function() {
 			scope.trigger(scope.triggered);
+		// re-initialize module
+		}).on('gumby.initialize', function() {
+			scope.setup();
 		});
+	};
+
+	// set up module based on attributes
+	Toggle.prototype.setup = function() {
+		this.targets = this.parseTargets();
+		this.on = Gumby.selectAttr.apply(this.$el, ['on']) || Gumby.click;
+		this.className = Gumby.selectAttr.apply(this.$el, ['classname']) || 'active';
 	};
 
 	// parse data-for attribute, switches will inherit method
@@ -78,7 +88,7 @@
 	// call triggered event and pass target data
 	Toggle.prototype.triggered = function() {
 		// trigger gumby.onTrigger event and pass array of target status data
-		this.$el.trigger('gumby.onTrigger', [this.$el.hasClass('active')]);
+		this.$el.trigger('gumby.onTrigger', [this.$el.hasClass(this.className)]);
 	};
 
 	// Switch object inherits from Toggle
@@ -88,21 +98,21 @@
 	Toggle.prototype.trigger = function(cb) {
 		// no targets just toggle active class on toggle
 		if(!this.targets) {
-			this.$el.toggleClass('active');
+			this.$el.toggleClass(this.className);
 
 		// combine single target with toggle and toggle active class
 		} else if(this.targets.length == 1) {
-			this.$el.add(this.targets[0]).toggleClass('active');
+			this.$el.add(this.targets[0]).toggleClass(this.className);
 
 		// if two targets check active state of first
 		// always combine toggle and first target
 		} else if(this.targets.length > 1) {
-			if(this.targets[0].hasClass('active')) {
-				this.$el.add(this.targets[0]).removeClass('active');
-				this.targets[1].addClass('active');
+			if(this.targets[0].hasClass(this.className)) {
+				this.$el.add(this.targets[0]).removeClass(this.className);
+				this.targets[1].addClass(this.className);
 			} else {
-				this.targets[1].removeClass('active');
-				this.$el.add(this.targets[0]).addClass('active');
+				this.targets[1].removeClass(this.className);
+				this.$el.add(this.targets[0]).addClass(this.className);
 			}
 		}
 
@@ -116,17 +126,17 @@
 	Switch.prototype.trigger = function(cb) {
 		// no targets just add active class to switch
 		if(!this.targets) {
-			this.$el.addClass('active');
+			this.$el.addClass(this.className);
 
 		// combine single target with switch and add active class
 		} else if(this.targets.length == 1) {
-			this.$el.add(this.targets[0]).addClass('active');
+			this.$el.add(this.targets[0]).addClass(this.className);
 
 		// if two targets check active state of first
 		// always combine switch and first target
 		} else if(this.targets.length > 1) {
-			this.$el.add(this.targets[0]).addClass('active');
-			this.targets[1].removeClass('active');
+			this.$el.add(this.targets[0]).addClass(this.className);
+			this.targets[1].removeClass(this.className);
 		}
 
 		// call event handler here, applying scope of object Switch/Toggle
@@ -136,13 +146,21 @@
 	};
 
 	// add toggle initialisation
-	Gumby.addInitalisation('toggles', function() {
+	Gumby.addInitalisation('toggles', function(all) {
 		$('.toggle').each(function() {
 			var $this = $(this);
+
 			// this element has already been initialized
-			if($this.data('isToggle')) {
+			// and we're only initializing new modules
+			if($this.data('isToggle') && !all) {
 				return true;
+
+			// this element has already been initialized
+			// and we need to reinitialize it
+			} else if($this.data('isToggle') && all) {
+				$this.trigger('gumby.initialize');
 			}
+
 			// mark element as initialized
 			$this.data('isToggle', true);
 			new Toggle($this);
@@ -150,13 +168,22 @@
 	});
 
 	// add switches initialisation
-	Gumby.addInitalisation('switches', function() {
+	Gumby.addInitalisation('switches', function(all) {
 		$('.switch').each(function() {
 			var $this = $(this);
+
 			// this element has already been initialized
-			if($this.data('isSwitch')) {
+			// and we're only initializing new modules
+			if($this.data('isSwitch') && !all) {
+				return true;
+
+			// this element has already been initialized
+			// and we need to reinitialize it
+			} else if($this.data('isSwitch') && all) {
+				$this.trigger('gumby.initialize');
 				return true;
 			}
+
 			// mark element as initialized
 			$this.data('isSwitch', true);
 			new Switch($this);

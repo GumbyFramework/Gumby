@@ -19,7 +19,6 @@ body {
     width: 100%;
     min-width: 0;
   }
-  -webkit-backface-visibility:(hidden); // Fixes Chrome 1px shift rendering issue on CSS3 transitions.
 }
 
 html, body {
@@ -43,11 +42,30 @@ html, body {
 
 .fixed {
   position: fixed;
+  &.pinned {
+    position: absolute;
+  }
   @include respond(portrait-tablets) {
     position: relative !important;
+    top: auto !important;
+    left: auto !important;
   }
 }
 
-.center-text {
+.unfixed {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.text-center {
   text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }

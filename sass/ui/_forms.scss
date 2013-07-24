@@ -41,6 +41,8 @@ form {
   max-width: 100%;
   margin-bottom: 10px;
   vertical-align: middle;
+  // Font-size 16px for weird form style error
+  font-size: 16px;
   &.metro, .metro {
     @include border-radius(0);
   }
@@ -75,6 +77,7 @@ form {
     &.search {
       @include line-and-height(height-calc($norm));
       @include border-radius(1000px);
+      padding-right: 0;
     }
   }
   .input.textarea {
@@ -161,8 +164,10 @@ form {
     margin-bottom:0;
     z-index: 99;
   }
-  &.prepend .btn a, &.append .btn a {
-    padding: 0 12px;
+  &.prepend .btn, &.append .btn {
+    a, input, button {
+      padding: 0 12px;
+    }
   }
 
   &.prepend .adjoined, &.append .adjoined  {
@@ -214,22 +219,28 @@ form {
   @each $error in danger $danger-color, warning $warning-color, success $success-color {
     &.#{nth($error, 1)} {
       &:after {
-        font-family: "#{$icons}";
-        @if nth($error, 1) == danger {
-          content: "#{$entypo-icon-cancel-circled}";
-        }
-        @if nth($error, 1) == warning {
-          content: "#{$entypo-icon-attention}";
-        }
-        @if nth($error, 1) == success {
-          content: "#{$entypo-icon-check}";
-        }
+        @if($icons != ""){
+          font-family: "#{$icons}";
+          @if nth($error, 1) == danger {
+            content: "#{$entypo-icon-cancel-circled}";
+          }
+          @if nth($error, 1) == warning {
+            content: "#{$entypo-icon-attention}";
+          }
+          @if nth($error, 1) == success {
+            content: "#{$entypo-icon-check}";
+          }
         font-size: $norm;
-        position:absolute;
-        top: 5px;
+        position: absolute;
+        top: percentage((strip-units($base-font-size)) / 100) - 2;
         right: 15px;
         z-index: 999;
         color: nth($error, 2);
+        }
+      }
+
+      &.no-icon:after {
+        display: none;
       }
 
       // <input> does not allow :before & :after
@@ -297,19 +308,16 @@ form {
     background: #fefefe;
   }
   .radio span {
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
+    @include border-radius(8px);
   }
   .checkbox span {
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
+    @include border-radius(3px);
   }
   .radio.checked i, .checkbox.checked i {
     position: absolute;
-    top: 0;
-    left: -7px;
+    top: -1px;
+    left: -8px;
+    line-height: 16px;
   }
 }
   
@@ -327,17 +335,18 @@ form {
   margin: 0 0 2px 1.2%;
   overflow: hidden;
   border: 1px solid darken($default-color, 5%);
-  border-radius: 4px;
+  @include border-radius(4px);
   font-family: $font-family;
   font-weight: $font-weight-semibold;
-  @include line-and-height(height-calc($norm));
+  height: auto;
   @include background-image(linear-gradient(lighten($default-color, 20%), $default-color));
   &:after {
     content: "\25BE";
     z-index: 0;
     position:absolute;
     right: 8%;
-    top: 0%;
+    top: 50%;
+    margin-top: -12px;
     color: $body-font-color;
   }
   &:first-child {
@@ -360,3 +369,11 @@ form {
     @include font-size($norm);
   }
 }
+
+// IE9 fix - seems no other way around this :(
+.ie9 {
+  .radio.checked i, .checkbox.checked i {
+    top: 0px;
+  }
+}
+

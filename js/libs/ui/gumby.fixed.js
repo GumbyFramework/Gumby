@@ -7,67 +7,162 @@
 
 	function Fixed($el) {
 		this.$el = $el;
-		this.$holder = Gumby.selectAttr.apply(this.$el, ['holder']);
-		this.fixedPoint = Gumby.selectAttr.apply(this.$el, ['fixed']);
-		this.unfixPoint = false;
 
-		// if holder attr set then create jQuery object
-		// otherwise use window for scrolling cals
-		if(this.$holder) {
-			this.$holder = $(this.$holder);
-		} else {
-			this.$holder = $(window);
-		}
+		this.fixedPoint = '';
+		this.pinPoint = false;
+		this.offset = 0;
+		this.pinOffset = 0;
+		this.top = 0;
+		this.constrainEl = true;
+		this.state = false;
+		this.measurements = {
+			left: 0,
+			width: 0
+		};
 
-		// fix/unfix points specified
-		if(this.fixedPoint.indexOf('|') > -1) {
-			var points = this.fixedPoint.split('|');
-			this.fixedPoint = points[0];
-			this.unfixPoint = points[1];
-		}
-
-		// parse possible parameters
-		this.fixedPoint = this.parseAttrValue(this.fixedPoint);
-		if(this.unfixPoint) {
-			this.unfixPoint = this.parseAttrValue(this.unfixPoint);
-		}
+		// set up module based on attributes
+		this.setup();
 
 		var scope = this;
-		this.$holder.scroll(function() {
-			scope.scroll();
+
+		// monitor scroll and update fixed elements accordingly
+		$(window).on('scroll load', function() {
+			scope.monitorScroll();
+		});
+
+		// reinitialize event listener
+		this.$el.on('gumby.initialize', function() {
+			scope.setup();
 		});
 	}
 
-	// handle scroll event on window/specified holder
-	Fixed.prototype.scroll = function() {
-		var offset = this.$holder.scrollTop(),
-			fixedPoint = this.fixedPoint,
-			unfixPoint = this.unfixPoint,
-			endPoint = this.endPoint;
+	// set up module based on attributes
+	Fixed.prototype.setup = function() {
+		var scope = this;
 
-		// if fixed point, unfix point or end point are DOM fragements
-		// then re-calculate values as could have been updated
-		fixedPoint = fixedPoint instanceof jQuery ? this.fixedPoint.offset().top : this.fixedPoint;
-		unfixPoint = unfixPoint instanceof jQuery ? this.unfixPoint.offset().top : this.unfixPoint;
+		this.fixedPoint = this.parseAttrValue(Gumby.selectAttr.apply(this.$el, ['fixed']));
 
-		// ensure unfix point is never reached if not set
-		if(!unfixPoint) {
-			unfixPoint = offset * 2;
+		// pin point is optional
+		this.pinPoint = Gumby.selectAttr.apply(this.$el, ['pin']) || false;
+
+		// offset from fixed point
+		this.offset = Number(Gumby.selectAttr.apply(this.$el, ['offset'])) || 0;
+
+		// offset from pin point
+		this.pinOffset = Number(Gumby.selectAttr.apply(this.$el, ['pinoffset'])) || 0;
+
+		// top position when fixed
+		this.top = Number(Gumby.selectAttr.apply(this.$el, ['top'])) || 0;
+
+		// constrain can be turned off
+		this.constrainEl = Gumby.selectAttr.apply(this.$el, ['constrain']) || true;
+		if(this.constrainEl === 'false') {
+			this.constrainEl = false;
 		}
 
-		// scrolled past fixed point and no fixed class present
-		if((offset >= fixedPoint) && (offset < unfixPoint)  && !this.$el.hasClass('fixed')) {
-			this.$el.addClass('fixed').trigger('gumby.onFixed');
+		// reference to the parent, row/column
+		this.$parent = this.$el.parents('.columns, .column, .row');
+		this.$parent = this.$parent.length ? this.$parent.first() : false;
+		this.parentRow = this.$parent ? !!this.$parent.hasClass('row') : false;
 
-		// before fixed point, pass 0 to onUnfixed event
-		} else if((offset <= fixedPoint) && this.$el.hasClass('fixed')) {
-			this.$el.removeClass('fixed').trigger('gumby.onUnfixed', 0);
+		// if optional pin point set then parse now
+		if(this.pinPoint) {
+			this.pinPoint = this.parseAttrValue(this.pinPoint);
 		}
 
-		// after unfix point, pass 1 to onUnfixed event
-		// separate conditional as should override
-		if(unfixPoint && (offset >= unfixPoint) && this.$el.hasClass('fixed')) {
-			this.$el.removeClass('fixed').trigger('gumby.onUnfixed', 1);
+		// if we have a parent constrain dimenions
+		if(this.$parent && this.constrainEl) {
+			// measure up
+			this.measure();
+			// and on resize reset measurement
+			$(window).resize(function() {
+				if(scope.state) {
+					scope.measure();
+					scope.constrain();
+				}
+			});
+		}
+	};
+
+	// monitor scroll and trigger changes based on position
+	Fixed.prototype.monitorScroll = function() {
+		var scrollAmount = $(window).scrollTop(),
+			// recalculate selector attributes as position may have changed
+			fixedPoint = this.fixedPoint instanceof jQuery ? this.fixedPoint.offset().top : this.fixedPoint,
+			pinPoint = false;
+
+		// if a pin point is set recalculate
+		if(this.pinPoint) {
+			pinPoint = this.pinPoint instanceof jQuery ? this.pinPoint.offset().top : this.pinPoint;
+		}
+
+		// apply offsets
+		if(this.offset) { fixedPoint -= this.offset; }
+		if(this.pinOffset) { pinPoint -= this.pinOffset; }
+
+		// fix it
+		if((scrollAmount >= fixedPoint) && this.state !== 'fixed') {
+			if(!pinPoint || scrollAmount < pinPoint) {
+				this.fix();
+			}
+		// unfix it
+		} else if(scrollAmount < fixedPoint && this.state === 'fixed') {
+			this.unfix();
+
+		// pin it
+		} else if(pinPoint && scrollAmount >= pinPoint && this.state !== 'pinned') {
+			this.pin();
+		}
+	};
+
+	// fix the element and update state
+	Fixed.prototype.fix = function() {
+		this.state = 'fixed';
+		this.$el.css({
+			'top' : 0 + this.top
+		}).addClass('fixed').removeClass('unfixed pinned').trigger('gumby.onFixed');
+
+		// if we have a parent constrain dimenions
+		if(this.$parent) {
+			this.constrain();
+		}
+	};
+
+	// unfix the element and update state
+	Fixed.prototype.unfix = function() {
+		this.state = 'unfixed';
+		this.$el.addClass('unfixed').removeClass('fixed pinned').trigger('gumby.onUnfixed');
+	};
+
+	// pin the element in position
+	Fixed.prototype.pin = function() {
+		this.state = 'pinned';
+		this.$el.css({
+			'top' : this.$el.offset().top
+		}).addClass('pinned fixed').removeClass('unfixed').trigger('gumby.onPinned');
+	};
+
+	// constrain elements dimensions to match width/height
+	Fixed.prototype.constrain = function() {
+		this.$el.css({
+			left: this.measurements.left,
+			width: this.measurements.width
+		});
+	};
+
+	// measure up the parent for constraining
+	Fixed.prototype.measure = function() {
+		var offsets = this.$parent.offset(), parentPadding;
+
+		this.measurements.left = offsets.left;
+		this.measurements.width = this.$parent.width();
+
+		// if element has a parent row then need to consider padding
+		if(this.parentRow) {
+			parentPadding = Number(this.$parent.css('paddingLeft').replace(/px/, ''));
+			if(parentPadding) {
+				this.measurements.left += parentPadding;
+			}
 		}
 	};
 
@@ -82,7 +177,7 @@
 		// selector specified
 		} else {
 			var $el = $(attr);
-			return $el.length ? $el : false;
+			return $el;
 		}
 	};
 

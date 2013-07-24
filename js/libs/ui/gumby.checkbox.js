@@ -8,11 +8,29 @@
 	function Checkbox($el) {
 
 		this.$el = $el;
+		this.$input = this.$el.find('input[type=checkbox]');
+
 		var scope = this;
 
 		// listen for click event and custom gumby check/uncheck events
 		this.$el.on(Gumby.click, function(e) {
-			scope.click(e);
+			// prevent propagation
+			e.stopImmediatePropagation();
+
+			// prevent checkbox checking, we'll do that manually
+			e.preventDefault();
+
+			// do nothing if checkbox is disabled
+            if(scope.$input.is('[disabled]')) {
+                return;
+            }
+
+			// check/uncheck
+			if(scope.$el.hasClass('checked')) {
+				scope.update(false);
+			} else {
+				scope.update(true);
+			}
 		}).on('gumby.check', function() {
 			scope.update(true);
 		}).on('gumby.uncheck', function() {
@@ -25,37 +43,23 @@
 		}
 	}
 
-	// handle checkbox click event
-	Checkbox.prototype.click = function(e) {
-
-		// element responsible for event trigger
-		var $target = $(e.target);
-
-		// prevent propagation
-		e.stopPropagation();
-
-		// prevent checkbox checking, we'll do that manually
-		e.preventDefault();
-
-		// check/uncheck
-		if(this.$el.hasClass('checked')) {
-			this.update(false);
-		} else {
-			this.update(true);
-		}
-	};
-
 	// update checkbox, check equals true/false to sepcify check/uncheck
 	Checkbox.prototype.update = function(check) {
+
+		var $span = this.$el.find('span');
+
 		// check checkbox - check input, add checked class, append <i>
 		if(check) {
-			this.$el.find('input').prop('checked', true).end()
-				.addClass('checked').append('<i class="icon-check" />')
+
+			$span.append('<i class="icon-check" />');
+
+			this.$input.prop('checked', true).end()
+				.addClass('checked')
 				.trigger('gumby.onCheck').trigger('gumby.onChange');
 
 		// uncheck checkbox - uncheck input, remove checked class, remove <i>
 		} else {
-			this.$el.find('input').prop('checked', false).end()
+			this.$input.prop('checked', false).end()
 				.find('i').remove().end()
 				.removeClass('checked').trigger('gumby.onUncheck').trigger('gumby.onChange');
 		}
