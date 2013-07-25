@@ -26,12 +26,16 @@
 
     &+.navbar-fix {
       height: 60px;
-      @include repsond(portrait-tablets) { display: none; }
+      @include respond(portrait-tablets) {
+        display: none;
+      }
     }
   }
 
+
   a.toggle {
     display: none;
+  }
 
   // Navigation Toggle Mobile styles
   @include respond(all-phones) {

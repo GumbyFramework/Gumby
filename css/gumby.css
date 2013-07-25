@@ -1,20 +1,36 @@
 /*
-Syntax error: Invalid CSS after "}": expected "}", was ""
-        on line 427 of /Users/russo/Sites/Gumby/sass/ui/_navbar.scss
-        from line 1 of /Users/russo/Sites/Gumby/sass/ui/_all.scss
+Syntax error: Invalid CSS after "...1efe514c087349f": expected "{", was "}"
+        on line 61 of /Users/russo/Sites/Gumby/sass/ui/_tabs.scss
+        from line 6 of /Users/russo/Sites/Gumby/sass/ui/_all.scss
         from line 35 of /Users/russo/Sites/Gumby/sass/gumby.scss
 
 Backtrace:
-/Users/russo/Sites/Gumby/sass/ui/_navbar.scss:427
-/Users/russo/Sites/Gumby/sass/ui/_all.scss:1
+/Users/russo/Sites/Gumby/sass/ui/_tabs.scss:61
+/Users/russo/Sites/Gumby/sass/ui/_all.scss:6
 /Users/russo/Sites/Gumby/sass/gumby.scss:35
 /Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:1148:in `expected'
 /Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:1084:in `expected'
 /Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:1079:in `tok!'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:536:in `block'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:534:in `block'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:529:in `ruleset'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:591:in `declaration_or_ruleset'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:1122:in `call'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:1122:in `rethrow'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:592:in `declaration_or_ruleset'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:554:in `block_child'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:546:in `block_contents'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:535:in `block'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:529:in `ruleset'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:591:in `declaration_or_ruleset'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:1122:in `call'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:1122:in `rethrow'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:592:in `declaration_or_ruleset'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:554:in `block_child'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:546:in `block_contents'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:535:in `block'
 /Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:529:in `ruleset'
 /Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:553:in `block_child'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:543:in `block_contents'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:546:in `block_contents'
 /Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:82:in `stylesheet'
 /Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:27:in `parse'
 /Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/engine.rb:342:in `_to_tree'
@@ -91,4 +107,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 427 of /Users/russo/Sites/Gumby/sass/ui/_navbar.scss\A         from line 1 of /Users/russo/Sites/Gumby/sass/ui/_all.scss\A         from line 35 of /Users/russo/Sites/Gumby/sass/gumby.scss"; }
+  content: "Syntax error: Invalid CSS after \"...1efe514c087349f\": expected \"{\", was \"}\"\A         on line 61 of /Users/russo/Sites/Gumby/sass/ui/_tabs.scss\A         from line 6 of /Users/russo/Sites/Gumby/sass/ui/_all.scss\A         from line 35 of /Users/russo/Sites/Gumby/sass/gumby.scss"; }
