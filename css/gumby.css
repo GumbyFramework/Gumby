@@ -1,55 +1,25 @@
 /*
-Syntax error: Undefined mixin 'repsond'.
-        on line 29 of /Users/russo/Sites/Gumby/sass/ui/_navbar.scss, in `repsond'
-        from line 29 of /Users/russo/Sites/Gumby/sass/ui/_navbar.scss
+Syntax error: Invalid CSS after "}": expected "}", was ""
+        on line 427 of /Users/russo/Sites/Gumby/sass/ui/_navbar.scss
         from line 1 of /Users/russo/Sites/Gumby/sass/ui/_all.scss
         from line 35 of /Users/russo/Sites/Gumby/sass/gumby.scss
 
 Backtrace:
-/Users/russo/Sites/Gumby/sass/ui/_navbar.scss:29:in `repsond'
-/Users/russo/Sites/Gumby/sass/ui/_navbar.scss:29
+/Users/russo/Sites/Gumby/sass/ui/_navbar.scss:427
 /Users/russo/Sites/Gumby/sass/ui/_all.scss:1
 /Users/russo/Sites/Gumby/sass/gumby.scss:35
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:253:in `visit_mixin'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:109:in `visit_children'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:121:in `with_environment'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:108:in `visit_children'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:109:in `visit_children'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:121:in `with_environment'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:108:in `visit_children'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:109:in `visit_children'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:121:in `with_environment'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:108:in `visit_children'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:227:in `visit_import'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:227:in `map'
-/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:227:in `visit_import'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:1148:in `expected'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:1084:in `expected'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:1079:in `tok!'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:536:in `block'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:529:in `ruleset'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:553:in `block_child'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:543:in `block_contents'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:82:in `stylesheet'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/scss/parser.rb:27:in `parse'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/engine.rb:342:in `_to_tree'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/engine.rb:274:in `to_tree'
+/Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:225:in `visit_import'
 /Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
 /Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
 /Users/russo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.6/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
@@ -121,4 +91,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'repsond'.\A         on line 29 of /Users/russo/Sites/Gumby/sass/ui/_navbar.scss, in `repsond'\A         from line 29 of /Users/russo/Sites/Gumby/sass/ui/_navbar.scss\A         from line 1 of /Users/russo/Sites/Gumby/sass/ui/_all.scss\A         from line 35 of /Users/russo/Sites/Gumby/sass/gumby.scss"; }
+  content: "Syntax error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 427 of /Users/russo/Sites/Gumby/sass/ui/_navbar.scss\A         from line 1 of /Users/russo/Sites/Gumby/sass/ui/_all.scss\A         from line 35 of /Users/russo/Sites/Gumby/sass/gumby.scss"; }

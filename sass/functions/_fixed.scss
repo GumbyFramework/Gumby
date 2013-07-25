@@ -1,0 +1,19 @@
+@mixin fixed() {
+  .fixed {
+    position: fixed;
+    &.pinned {
+      position: absolute;
+    }
+    @include respond(portrait-tablets) {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+    }
+  }
+
+  .unfixed {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+  }
+}
