@@ -167,8 +167,8 @@ abbr { text-transform: none; }
  ==================================================*/
 /*.container { padding: 0px $gutter-in-px;
 }*/
-.row { width: 100%; max-width: 980px; min-width: 320px; margin: 0 auto; padding: 0 20px; }
-.row .row { min-width: 0px; padding: 0; }
+.row { width: 100%; max-width: 980px; min-width: 320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
+.row .row { min-width: 0px; padding-left: 0; padding-right: 0; }
 
 /* To fix the grid into a different size, set max-width to your desired width */
 .column, .columns { margin-left: 2.12766%; float: left; min-height: 1px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }

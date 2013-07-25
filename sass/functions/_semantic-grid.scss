@@ -7,17 +7,15 @@
 
 @mixin row($nested: false) {
   @if $nested == nested {
-    width: auto;
-    min-width: 0px;
-    max-width: none;
-    @extend %clearfix;
+    @include nestedRow();
   }
   @else {
     width: 100%;
     max-width: $row-max-width + 40px;
     min-width: $min-device-width;
     margin: 0 auto;
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     @extend %clearfix;
   }
   > *:first-child {
@@ -37,6 +35,8 @@
   width: auto;
   min-width: 0px;
   max-width: none;
+  padding-left: 0;
+  padding-right: 0;
   @extend %clearfix;
 }
 
