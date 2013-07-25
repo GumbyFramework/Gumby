@@ -14,16 +14,14 @@
   }
   @else {
     width: 100%;
-    max-width: $row-max-width;
+    max-width: $row-max-width + 40px;
     min-width: $min-device-width;
     margin: 0 auto;
+    padding: 0 20px;
     @extend %clearfix;
   }
   > *:first-child {
     margin-left: 0px;
-  }
-  @include respond(document-width) {
-    padding: 0 20px;
   }
   @include respond(all-phones) {
     width: auto;

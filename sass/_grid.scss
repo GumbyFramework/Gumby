@@ -19,17 +19,13 @@
 
 .row {
   width: 100%;
-  max-width: $row-max-width;
+  max-width: $row-max-width + 40px;
   min-width: $min-device-width;
   margin: 0 auto;
-  @include respond(document-width) {
-    padding: 0 $gutter-in-px;
-  }
+  padding: 0 20px;
   .row {
     min-width: 0px;
-    @include respond(document-width) {
-      padding: 0;
-    }
+    padding: 0;
   }
 }
 
