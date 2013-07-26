@@ -1,0 +1,10 @@
+{
+    "evil": false, // Make sure to warn about eval
+    "regexdash": true,
+    "browser": true,
+    "jquery": true,
+    "trailing": false,
+    "sub": true,
+    "multistr": true,
+    "expr": true
+}
