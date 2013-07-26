@@ -1,11 +1,11 @@
 language: node_js
 node_js:
-- '0.10'
+  - '0.10'
 before_install:
-- npm install -g jshint
+  - npm install -g jshint
 script:
-- jshint .
+  - jshint .
 notifications:
   email:
     recipients:
-      secure: UNJgPUfNuTgI0jTwwZ/rpt6kQWnxnN/7fESCA9h2fSdYjE0vej+hyfN4E0iRz7CKtkHZFskeCuYurSp8CAEl0kyCFCUI1QmAm4PwGkKVyvKjxO2e1SFk/kaoupLHh6jmUwcDbTTW1WCWT/dONRjLwOag2g4HswprUyY3AwgNLqk=
+      - secure: NYyWrnOzCZC5VrrZiVaBt1BMb3LAvDb/v0gtXnZyXJz4D8kpV4D+FMDcpc44cId5hx2NMfvv26bIKtCj9N8PHBgM2rlztH8rhlI5uC2d2WK4tl2+Do1NCp/MbJKkhDiRDQGukEf+QBoKv/f/xsbuJIHTvPfwNbpiqw1iwGKxzoo=
