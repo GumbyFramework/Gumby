@@ -7,3 +7,6 @@ before_install:
 #  - gem install sass compass modular-scale
 script:
   - "jshint ."
+notifications:
+  email:
+    - ac@digitalsurgeons.com
