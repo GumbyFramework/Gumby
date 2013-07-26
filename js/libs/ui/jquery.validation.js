@@ -115,21 +115,21 @@
 					// passed
 					if(!failed) {
 						// if submit method present call that otherwise submit form
-				  		if(settings.submit && typeof settings.submit === 'function') {
-				  			settings.submit($this.serializeArray());
-				  			return;
-				  		}
+						if(settings.submit && typeof settings.submit === 'function') {
+							settings.submit($this.serializeArray());
+							return;
+						}
 
-				  		// store passed bool and re-submit
-				  		$this.data('passed', true).submit();
+						// store passed bool and re-submit
+						$this.data('passed', true).submit();
 
-				  	// failed
-					} else {
+						// failed
+						} else {
 						// call fail method if present
 						if(settings.fail && typeof settings.fail === 'function') {
-				  			settings.fail();
-				  			return;
-				  		}
+							settings.fail();
+							return;
+						}
 					}
 				}
 			});
