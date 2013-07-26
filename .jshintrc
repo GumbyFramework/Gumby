@@ -6,5 +6,5 @@
     "trailing": false,
     "sub": true,
     "multistr": true,
-    "immed": false
+    "expr": false
 }
