@@ -11,7 +11,7 @@
 		this.retinaSrc = this.fetchRetinaImage();
 		this.$retinaImg = $(new Image());
 
-		var scope = this
+		var scope = this;
 
 		// image src not valid
 		if(!this.retinaSrc) {
