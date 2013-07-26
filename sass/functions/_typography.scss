@@ -1,5 +1,16 @@
 // Typography mixins
 
+// Convert pixels to ems
+@function px-to-em($size-in-px, $context: 16) {
+  @if not unitless($size-in-px) {
+      $size-in-px: strip-units($size-in-px);
+  }
+  @if not unitless($base) {
+      $parent: strip-units($context);
+  }
+  @return ($size-in-px / $context) * 1em;
+}
+
 // Fonts in rems with px fallback
 
 @mixin font-size($size, $is-important: false) {
@@ -12,4 +23,17 @@
     font-size: $size + px;
     font-size: ($size / strip-units($base-font-size)) + rem;
   }
+}
+
+// Align Text Left or Right
+@mixin text-align($alignment) {
+	@if $alignment == center {
+	  text-align: center;
+	}
+	@if $alignment == left {
+	  text-align: left;
+	}
+	@if $alignment == right {
+	  text-align: right;
+	}
 }
