@@ -348,8 +348,6 @@ img { -ms-interpolation-mode: bicubic; }
 @media only screen and (max-width: 767px) { .navbar { position: relative; border: none; }
   .navbar .column, .navbar .columns { min-height: 0; } }
 .navbar.fixed { top: 0; left: 0; z-index: 99999; }
-.navbar.fixed + .navbar-fix { height: 60px; }
-@media only screen and (max-width: 768px) { .navbar.fixed + .navbar-fix { display: none; } }
 .navbar a.toggle { display: none; }
 @media only screen and (max-width: 767px) { .navbar a.toggle { top: 18%; right: 4%; width: 46px; position: absolute; text-align: center; display: inline-block; color: white; background: #4a4d50; height: 40px; line-height: 38px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; font-size: 30px; font-size: 1.875rem; }
   .navbar a.toggle:hover { background: #565a5d; }
@@ -380,6 +378,9 @@ img { -ms-interpolation-mode: bicubic; }
   .navbar ul li.active .dropdown ul li a:hover { color: #d04526; } }
 @media only screen and (min-width: 768px) and (max-width: 939px) { .navbar > ul > li > .btn a { padding: 0 10px 0 10px !important; }
   .navbar ul > li .dropdown ul li.active .dropdown { left: -320px; } }
+
+.navcontain { height: 80px; }
+@media only screen and (max-width: 768px) { .navcontain { height: auto; } }
 
 /**** Navbar positioning for Microsoft's browser who deserves not to be mentioned ****/
 .ie7 .navbar > ul { width: auto; }

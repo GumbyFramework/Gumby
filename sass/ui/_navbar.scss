@@ -23,13 +23,6 @@
     top: 0;
     left: 0;
     z-index: 99999;
-
-    &+.navbar-fix {
-      height: 60px;
-      @include respond(portrait-tablets) {
-        display: none;
-      }
-    }
   }
   a.toggle {
     display: none;
@@ -214,7 +207,13 @@
       left: -$min-device-width;
     }
   }
+}
 
+.navcontain {
+  height: 80px;
+  @include respond(portrait-tablets) {
+    height: auto;
+  }
 }
 
 

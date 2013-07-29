@@ -1,0 +1,99 @@
+/* Tooltips */
+
+@mixin tooltip($tt-min-width, $tt-bgcolor, $tt-position) {
+	position: relative;
+
+	&:after {
+		display: block;
+		background: $tt-bgcolor;
+		border: 1px solid $tt-bgcolor;
+		border-bottom: 0;
+		@include border-radius(3px);
+		padding: .5rem .75rem;
+		width: auto;
+		min-width: $tt-min-width;
+		max-width: 500px;
+		position: absolute;
+		@if $tt-position == "bottom" {
+			left: 0;
+			top: 100%;
+			margin-top: 8px;
+		}	@else if $tt-position == "left" {
+			right: 100%;
+			top: -35%;
+			margin-right: 8px;
+		} @else if $tt-position == "right" {
+			left: 100%;
+			top: -35%;
+			margin-left: 8px;
+		}	@else if $tt-position == "top" {
+			left: 0;
+			bottom: 100%;
+			margin-bottom: 8px;
+		}
+		@if $tt-textalign == "right" {
+			text-align: right;
+		} @else if $tt-textalign == "left" {
+			text-align: left;
+		}
+
+		color: #fff;
+		content: attr(data-tooltip);
+		line-height: 1.5;
+		font-size: .9rem;
+
+		@include transition(all 0.1s ease);
+		@include opacity(0);
+		pointer-events: none;
+
+		@if $tt-pretty != "no" {
+			@include background-image(linear-gradient($tt-position, lighten($tt-bgcolor, 10%), $tt-bgcolor));
+			@include box-shadow(0 0 5px 0 rgba($tt-bgcolor,.25));
+		}
+	}
+
+	&:before {
+		content: " ";
+		width: 0;
+		height: 0;
+		position: absolute;
+		@if $tt-position == "bottom" {
+			top: 100%;
+			left: 8px;
+			border-bottom: 8px solid $tt-bgcolor !important;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+		}	@else if $tt-position == "left" {
+			top: 5px;
+			right: 100%;
+			border-left: 8px solid $tt-bgcolor !important;
+			border-top: 8px solid transparent;
+			border-bottom: 8px solid transparent;
+		} @else if $tt-position == "right" {
+			top: 5px;
+			left: 100%;
+			border-right: 8px solid $tt-bgcolor !important;
+			border-top: 8px solid transparent;
+			border-bottom: 8px solid transparent;
+		}	@else if $tt-position == "top" {
+			bottom: 100%;
+			left: 8px;
+			border-top: 8px solid $tt-bgcolor !important;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+		}
+		@include transition(all 0.1s ease);
+		@include opacity(0);
+		pointer-events: none;
+	}
+
+	&:hover:after,
+	&:hover:before {
+		@include transition(all 0.1s ease);
+		@include opacity(1);
+	}
+}
+
+.ttip {
+	@include tooltip($tt-min-width, $tt-bgcolor, $tt-position);
+}
