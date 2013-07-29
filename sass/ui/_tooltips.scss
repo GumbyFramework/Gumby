@@ -16,19 +16,19 @@
 		position: absolute;
 		@if $tt-position == "bottom" {
 			left: 0;
-			top: 100%;
+			top: 101%;
 			margin-top: 8px;
 		}	@else if $tt-position == "left" {
-			right: 100%;
+			right: 101%;
 			top: -35%;
 			margin-right: 8px;
 		} @else if $tt-position == "right" {
-			left: 100%;
+			left: 101%;
 			top: -35%;
 			margin-left: 8px;
 		}	@else if $tt-position == "top" {
 			left: 0;
-			bottom: 100%;
+			bottom: 101%;
 			margin-bottom: 8px;
 		}
 		@if $tt-textalign == "right" {
@@ -58,25 +58,25 @@
 		height: 0;
 		position: absolute;
 		@if $tt-position == "bottom" {
-			top: 100%;
+			top: 101%;
 			left: 8px;
 			border-bottom: 8px solid $tt-bgcolor !important;
 			border-left: 8px solid transparent;
 			border-right: 8px solid transparent;
 		}	@else if $tt-position == "left" {
-			top: 5px;
-			right: 100%;
+			top: 3px;
+			right: 101%;
 			border-left: 8px solid $tt-bgcolor !important;
 			border-top: 8px solid transparent;
 			border-bottom: 8px solid transparent;
 		} @else if $tt-position == "right" {
-			top: 5px;
-			left: 100%;
+			top: 3px;
+			left: 101%;
 			border-right: 8px solid $tt-bgcolor !important;
 			border-top: 8px solid transparent;
 			border-bottom: 8px solid transparent;
 		}	@else if $tt-position == "top" {
-			bottom: 100%;
+			bottom: 101%;
 			left: 8px;
 			border-top: 8px solid $tt-bgcolor !important;
 			border-left: 8px solid transparent;
