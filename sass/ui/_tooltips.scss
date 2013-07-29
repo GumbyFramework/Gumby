@@ -47,7 +47,7 @@
 		pointer-events: none;
 
 		@if $tt-pretty != "no" {
-			@include background-image(linear-gradient($tt-position, lighten($tt-bgcolor, 10%), $tt-bgcolor));
+			@include background-image(linear-gradient($tt-position, lighten($tt-bgcolor, 12.5%), $tt-bgcolor));
 			@include box-shadow(0 0 5px 0 rgba($tt-bgcolor,.25));
 		}
 	}
