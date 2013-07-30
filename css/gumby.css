@@ -324,8 +324,7 @@ img { -ms-interpolation-mode: bicubic; }
 .row:after { clear: both; }
 
 .valign { display: table; width: 100%; }
-.valign > div { display: table-cell; vertical-align: middle; }
-.valign ​ > article { display: table-cell; vertical-align: middle; }
+.valign > div, .valign > article, .valign > section, .valign > figure { display: table-cell; vertical-align: middle; }
 
 /* Mobile */
 @media only screen and (max-width: 767px) { body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; }
