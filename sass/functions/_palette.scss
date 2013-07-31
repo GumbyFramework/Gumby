@@ -1,0 +1,32 @@
+// Color Pallete
+
+@mixin palette() {
+	@each $shade in $ui-coloring {
+    &.#{nth($shade, 1)} {
+      background: nth($shade, 2);
+      border: 1px solid nth($shade, 2);
+      &:hover {
+        background: lighten(nth($shade, 2), 10%);
+      }
+      &:active {
+        background: darken(nth($shade, 2), 10%);
+      }
+      @if nth($shade, 1) == default {
+        color: darken(nth($shade, 2), 61.5%);
+        border: 1px solid nth($shade, 2);
+        &:hover {
+          border: 1px solid darken(nth($shade, 2), 5%);
+        }
+        a, input, button {
+          color: darken(nth($shade, 2), 61.5%);
+        }
+      }
+      @if nth($shade, 1) == warning {
+        color: darken(nth($shade, 2), 40%);
+        a, input, button {
+          color: darken(nth($shade, 2), 40%);
+        }
+      }
+    }
+  }
+}

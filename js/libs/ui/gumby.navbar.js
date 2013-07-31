@@ -5,19 +5,10 @@
 
 	'use strict';
 
-	var $html = Gumby.$dom.find('html');
-
 	// define and init module on touch enabled devices only
-	// when we are at tablet size or smaller
-	if(!Modernizr.touch || $(window).width() > Gumby.breakpoint) {
-
-		// add Gumby no touch class
-		$html.addClass('gumby-no-touch');
+	if(!Gumby.$html.hasClass('gumby-touch')) {
 		return;
 	}
-
-	// add Gumby touch class
-	$html.addClass('gumby-touch');
 
 	function Navbar($el) {
 		this.$el = $el;

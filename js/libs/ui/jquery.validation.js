@@ -67,11 +67,11 @@
 
 		var // extend params with defaults
 			settings = $.extend({
-		      		submit : false,
-		      		fail: false,
-		      		required : []
-		    }, options),
-		    // store validation objects
+				submit : false,
+				fail: false,
+				required : []
+			}, options),
+			// store validation objects
 			validations = [];
 
 		// init each form plugin is called on

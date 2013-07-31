@@ -25,13 +25,6 @@ html, body {
   height: 100%;
 }
 
-.ie9 {
-  font-family: $font-family;
-  * {
-    font-family: $font-family;
-  }
-}
-
 .hide {
   display: none;
 }
@@ -40,32 +33,18 @@ html, body {
   display: block;
 }
 
-.fixed {
-  position: fixed;
-  &.pinned {
-    position: absolute;
-  }
-  @include respond(portrait-tablets) {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-  }
-}
-
-.unfixed {
-  position: relative !important;
-  top: auto !important;
-  left: auto !important;
-}
+// .fixed elements will be static at supplied breakpoint
+// set arg to false for permanent .fixed elements
+@include fixed(portrait-tablets);
 
 .text-center {
-  text-align: center;
+  @include text-align(center);
 }
 
 .text-left {
-  text-align: left;
+  @include text-align(left);
 }
 
 .text-right {
-  text-align: right;
+  @include text-align(right);
 }

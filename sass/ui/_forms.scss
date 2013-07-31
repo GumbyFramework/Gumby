@@ -3,7 +3,7 @@
 @import "../functions/forms";
 
 
-form { 
+form {
   margin: 0 0 18px;
   label {
     display: block;
@@ -35,7 +35,7 @@ form {
     }
   }
 }
-  
+
 .field {
   position: relative;
   max-width: 100%;
@@ -43,6 +43,7 @@ form {
   vertical-align: middle;
   // Font-size 16px for weird form style error
   font-size: 16px;
+  overflow: hidden;
   &.metro, .metro {
     @include border-radius(0);
   }
@@ -59,12 +60,6 @@ form {
     font-weight: $font-weight-light;
     @include font-size($norm);
     @include box-shadow(none);
-  }
-  .radio, .checkbox {
-    position: relative;
-  }
-  .radio input[type="radio"], .checkbox input[type="checkbox"] {
-    display: none;
   }
   .input {
     position: relative;
@@ -279,8 +274,29 @@ form {
       }
     }
   }
-  
-  .radio, & .checkbox {
+}
+
+.field .text input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+// checkboxes/radio buttons only styled where JS supported
+.no-js {
+  .radio input {
+    -webkit-appearance: radio;
+    margin-left: 1px;
+  }
+  .checkbox input {
+    -webkit-appearance: checkbox;
+  }
+  .radio input, .checkbox input {
+    display: inline-block;
+    width: 16px;
+  }
+}
+
+.js .field {
+  .radio, .checkbox {
     @each $error in danger $danger-color, warning $warning-color, success $success-color {
       &.#{nth($error, 1)} {
         color: nth($error, 2);
@@ -296,16 +312,25 @@ form {
         }
       }
     }
-  }
-
-  .radio span, & .checkbox span {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
     position: relative;
-    top: 2px;
-    border: solid 1px #ccc;
-    background: #fefefe;
+    &.checked i {
+      position: absolute;
+      top: -1px;
+      left: -8px;
+      line-height: 16px;
+    }
+    span {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      position: relative;
+      top: 2px;
+      border: solid 1px #ccc;
+      background: #fefefe;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      display: none;
+    }
   }
   .radio span {
     @include border-radius(8px);
@@ -313,21 +338,11 @@ form {
   .checkbox span {
     @include border-radius(3px);
   }
-  .radio.checked i, .checkbox.checked i {
-    position: absolute;
-    top: -1px;
-    left: -8px;
-    line-height: 16px;
-  }
 }
-  
-.field .text input[type="search"] {
-  -webkit-appearance: textfield;
-}
-  
+
 
 /* Form Picker Element (<select>) */
-  
+
 .picker {
   position: relative;
   width: auto;

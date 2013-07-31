@@ -1,0 +1,11 @@
+/* Tooltips */
+
+.ttip {
+	@include tooltip($tt-min-width, $tt-bgcolor, $tt-position);
+}
+
+.ttip:after, .ttip:before {
+	@include respond(portrait-tablets) {
+		display: none;
+	}
+}
