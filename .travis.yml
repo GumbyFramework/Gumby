@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '0.10'
+before_install:
+- npm install -g jshint
+- gem install sass compass modular-scale
+script:
+- jshint .
+- compass compile
+notifications:
+  email:
+    recipients:
+    - secure: NYyWrnOzCZC5VrrZiVaBt1BMb3LAvDb/v0gtXnZyXJz4D8kpV4D+FMDcpc44cId5hx2NMfvv26bIKtCj9N8PHBgM2rlztH8rhlI5uC2d2WK4tl2+Do1NCp/MbJKkhDiRDQGukEf+QBoKv/f/xsbuJIHTvPfwNbpiqw1iwGKxzoo=
+  campfire:
+    secure: KMTupKSaR1ThG0rW8RpsXcyVCTPfFKvNhU/TJh1QwVx9mPEfU8oeYh65gSiw5IUYy65yL0cB3jAmzJt6pCpujKj/vdy3l6fq4WAzvVLuPOoGK2QYnAPrB3y3CkDH/rG/tfaktyhJ6DntEHqnwJ+GvTU5M5StPHaL1YnweU87FUE=

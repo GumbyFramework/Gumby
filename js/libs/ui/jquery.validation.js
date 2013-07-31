@@ -67,11 +67,11 @@
 
 		var // extend params with defaults
 			settings = $.extend({
-		      		submit : false,
-		      		fail: false,
-		      		required : []
-		    }, options),
-		    // store validation objects
+				submit : false,
+				fail: false,
+				required : []
+			}, options),
+			// store validation objects
 			validations = [];
 
 		// init each form plugin is called on
@@ -115,21 +115,21 @@
 					// passed
 					if(!failed) {
 						// if submit method present call that otherwise submit form
-				  		if(settings.submit && typeof settings.submit === 'function') {
-				  			settings.submit($this.serializeArray());
-				  			return;
-				  		}
+						if(settings.submit && typeof settings.submit === 'function') {
+							settings.submit($this.serializeArray());
+							return;
+						}
 
-				  		// store passed bool and re-submit
-				  		$this.data('passed', true).submit();
+						// store passed bool and re-submit
+						$this.data('passed', true).submit();
 
-				  	// failed
-					} else {
+						// failed
+						} else {
 						// call fail method if present
 						if(settings.fail && typeof settings.fail === 'function') {
-				  			settings.fail();
-				  			return;
-				  		}
+							settings.fail();
+							return;
+						}
 					}
 				}
 			});
