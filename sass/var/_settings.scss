@@ -145,7 +145,7 @@ $table-stripe-bgcolor: #e5e5e5;
 
 // Tooltips
 $tt-min-width: 150px;
-$tt-bgcolor: #666;
+$tt-bgcolor: $primary-color;
 $tt-position: top;					// position: top / bottom / left / right
 $tt-align: right;						// text and caret alignment: left / right
 $tt-pretty: yes;							// yes = pretty / no = flat
