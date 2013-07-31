@@ -31,9 +31,9 @@
 			bottom: 101%;
 			margin-bottom: 8px;
 		}
-		@if $tt-textalign == "right" {
+		@if $tt-align == "right" {
 			text-align: right;
-		} @else if $tt-textalign == "left" {
+		} @else if $tt-align == "left" {
 			text-align: left;
 		}
 
