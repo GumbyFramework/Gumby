@@ -21,7 +21,8 @@
 
 	function Gumby() {
 		this.$dom = $(document);
-		this.isOldie = !!this.$dom.find('html').hasClass('oldie');
+		this.$html = this.$dom.find('html');
+		this.isOldie = !!this.$html.hasClass('oldie');
 		this.click = 'click';
 		this.onReady = this.onOldie = this.onTouch = false;
 		this.uiModules = {};
@@ -31,7 +32,15 @@
 		this.path = $('script[gumby-path]').attr('gumby-path') || 'js/libs';
 
 		// check and set breakpoint with 1024 default
-		this.breakpoint = Number($('script[gumby-breakpoint]').attr('gumby-breakpoint')) || 1024;
+		this.breakpoint = Number($('script[gumby-breakpoint]').attr('gumby-breakpoint')) || 768;
+
+		// add gumby-touch/gumby-no-touch classes
+		// gumby touch == touch enabled && smaller than defined breakpoint
+		if(Modernizr.touch && $(window).width() < this.breakpoint) {
+			this.$html.addClass('gumby-touch');
+		} else {
+			this.$html.addClass('gumby-no-touch');
+		}
 	}
 
 	// initialize Gumby
