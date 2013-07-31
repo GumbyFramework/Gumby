@@ -37,8 +37,8 @@
 			scope.update(false);
 		});
 
-		// update any .checked checkboxes on load
-		if(this.$input.prop('checked') || scope.$el.hasClass('checked')) {
+		// update any prechecked on load
+		if(this.$input.prop('checked') || this.$el.hasClass('checked')) {
 			scope.update(true);
 		}
 	}
