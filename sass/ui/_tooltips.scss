@@ -15,10 +15,14 @@
 		max-width: 500px;
 		position: absolute;
 		@if $tt-position == "bottom" {
-			left: 0;
+			@if $tt-align == "right" { right: 0 } @else { left: 0; }
 			top: 101%;
 			margin-top: 8px;
-		}	@else if $tt-position == "left" {
+		} @else if $tt-position == "top" {
+			@if $tt-align == "right" { right: 0 } @else { left: 0; }
+			bottom: 101%;
+			margin-bottom: 8px;
+		} @else if $tt-position == "left" {
 			right: 101%;
 			top: -35%;
 			margin-right: 8px;
@@ -26,11 +30,8 @@
 			left: 101%;
 			top: -35%;
 			margin-left: 8px;
-		}	@else if $tt-position == "top" {
-			left: 0;
-			bottom: 101%;
-			margin-bottom: 8px;
 		}
+
 		@if $tt-align == "right" {
 			text-align: right;
 		} @else if $tt-align == "left" {
@@ -59,8 +60,14 @@
 		position: absolute;
 		@if $tt-position == "bottom" {
 			top: 101%;
-			left: 8px;
+			@if $tt-align == "right" { right: 8px } @else { left: 8px; }
 			border-bottom: 8px solid $tt-bgcolor !important;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+		}	@else if $tt-position == "top" {
+			bottom: 101%;
+			@if $tt-align == "right" { right: 8px } @else { left: 8px; }
+			border-top: 8px solid $tt-bgcolor !important;
 			border-left: 8px solid transparent;
 			border-right: 8px solid transparent;
 		}	@else if $tt-position == "left" {
@@ -75,12 +82,6 @@
 			border-right: 8px solid $tt-bgcolor !important;
 			border-top: 8px solid transparent;
 			border-bottom: 8px solid transparent;
-		}	@else if $tt-position == "top" {
-			bottom: 101%;
-			left: 8px;
-			border-top: 8px solid $tt-bgcolor !important;
-			border-left: 8px solid transparent;
-			border-right: 8px solid transparent;
 		}
 		@include transition(all 0.1s ease);
 		@include opacity(0);
@@ -96,7 +97,6 @@
 
 .ttip {
 	@include tooltip($tt-min-width, $tt-bgcolor, $tt-position);
-	@include palette();
 }
 
 .ttip:after, .ttip:before {
