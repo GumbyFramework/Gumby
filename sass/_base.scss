@@ -33,7 +33,9 @@ html, body {
   display: block;
 }
 
-@include fixed();
+// .fixed elements will be static at supplied breakpoint
+// set arg to false for permanent .fixed elements
+@include fixed(portrait-tablets);
 
 .text-center {
   @include text-align(center);
