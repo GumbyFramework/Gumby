@@ -97,7 +97,7 @@
 
 .ttip {
 	@include tooltip($tt-min-width, $tt-bgcolor, $tt-position);
-	//@include palette($tt-bgcolor);
+	@include palette();
 }
 
 .ttip:after, .ttip:before {
