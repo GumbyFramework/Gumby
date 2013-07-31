@@ -51,7 +51,7 @@
 		// check this radio button - check input, add checked class, append <i>
 		this.$input.prop('checked', true);
 		$span.append('<i class="icon-dot" />');
-		this.$el.addClass('checked').trigger('gumby.onChange');
+		this.$el.addClass('checked').trigger('gumby.onCheck');
 	};
 
 	// add initialisation
