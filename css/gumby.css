@@ -1715,6 +1715,7 @@ form fieldset legend { padding: 5px 10px; }
 .field .adjoined:first-child { margin-left: 0 !important; }
 .field.append .adjoined, .field.append .btn { margin-left: -1px; }
 .field.append *:last-child { -webkit-border-radius: 0px 4px 4px 0; -moz-border-radius: 0px 4px 4px 0; -ms-border-radius: 0px 4px 4px 0; -o-border-radius: 0px 4px 4px 0; border-radius: 0px 4px 4px 0; }
+.field.append button, .field.prepend button { display: inline-block; }
 .field.append input:first-child { margin-right: 0; }
 .field.double input, .field.double .input { width: 50% !important; }
 .field.double input:last-child, .field.double .input:last-child { margin-left: -1px; }
