@@ -200,6 +200,10 @@ form {
     @include border-radius(0px 4px 4px 0);
   }
 
+  &.append button, &.prepend button {
+    display: inline-block;
+  }
+
   &.append input:first-child {
     margin-right: 0;
   }
@@ -338,6 +342,10 @@ form {
   .checkbox span {
     @include border-radius(3px);
   }
+}
+
+.field .text input[type="search"] {
+  -webkit-appearance: textfield;
 }
 
 
