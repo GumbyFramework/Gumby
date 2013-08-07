@@ -12,7 +12,6 @@
   margin-bottom: 20px;
   background: $navbar-color; // Change this color in settings to change the navbar color
   @include respond(all-phones) {
-    position: relative;
     border: none;
     .column, .columns {
       min-height: 0;

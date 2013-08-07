@@ -33,25 +33,9 @@ html, body {
   display: block;
 }
 
-.fixed {
-  position: fixed;
-  @include respond(portrait-tablets) {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-  }
-  // Pins the fixed element in place based 
-  // on the presence of the gumby-pin attribute
-  &.pinned {
-    position: absolute;
-  }
-}
-
-.unfixed {
-  position: relative !important;
-  top: auto !important;
-  left: auto !important;
-}
+// .fixed elements will be static at supplied breakpoint
+// set arg to false for permanent .fixed elements
+@include fixed(portrait-tablets);
 
 .text-center { @extend %text-center; }
 .text-left { @extend %text-left; }

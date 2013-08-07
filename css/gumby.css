@@ -54,8 +54,8 @@ html, body { height: 100%; }
 .hide.active, .show { display: block; }
 
 .fixed { position: fixed; }
-@media only screen and (max-width: 768px) { .fixed { position: relative !important; top: auto !important; left: auto !important; } }
 .fixed.pinned { position: absolute; }
+@media only screen and (max-width: 768px) { .fixed { position: relative !important; top: auto !important; left: auto !important; } }
 
 .unfixed { position: relative !important; top: auto !important; left: auto !important; }
 
@@ -342,7 +342,7 @@ img { -ms-interpolation-mode: bicubic; }
  Navigation (with dropdowns)
  ======================================================*/
 .navbar { width: 100%; min-height: 60px; display: block; margin-bottom: 20px; background: #4a4d50; }
-@media only screen and (max-width: 767px) { .navbar { position: relative; border: none; }
+@media only screen and (max-width: 767px) { .navbar { border: none; }
   .navbar .column, .navbar .columns { min-height: 0; } }
 .navbar.fixed { top: 0; left: 0; z-index: 99999; }
 .navbar a.toggle { display: none; }
@@ -1693,8 +1693,6 @@ form fieldset legend { padding: 5px 10px; }
 .field { position: relative; max-width: 100%; margin-bottom: 10px; vertical-align: middle; font-size: 16px; overflow: hidden; /* remove inline-block white-space — A 0px font-size = 0px of white space */ }
 .field.metro, .field .metro { -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
 .field input, .field input[type="*"], .field textarea { max-width: 100%; width: 100%; padding: 0; margin: 0; border: none; outline: none; resize: none; -webkit-appearance: none; font-family: "Open Sans"; font-weight: 300; font-size: 16px; font-size: 1rem; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
-.field .radio, .field .checkbox { position: relative; }
-.field .radio input[type="radio"], .field .checkbox input[type="checkbox"] { display: none; }
 .field .input { position: relative; padding: 0 10px; background: #fff; border: 1px solid #d8d8d8; height: 36px; line-height: 34px; font-size: 16px; font-size: 1rem; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
 .field .input.search { height: 36px; line-height: 34px; -webkit-border-radius: 1000px; -moz-border-radius: 1000px; -ms-border-radius: 1000px; -o-border-radius: 1000px; border-radius: 1000px; padding-right: 0; }
 .field .input.textarea { height: auto; }
@@ -1726,6 +1724,7 @@ form fieldset legend { padding: 5px 10px; }
 .field .adjoined:first-child { margin-left: 0 !important; }
 .field.append .adjoined, .field.append .btn { margin-left: -1px; }
 .field.append *:last-child { -webkit-border-radius: 0px 4px 4px 0; -moz-border-radius: 0px 4px 4px 0; -ms-border-radius: 0px 4px 4px 0; -o-border-radius: 0px 4px 4px 0; border-radius: 0px 4px 4px 0; }
+.field.append button, .field.prepend button { display: inline-block; }
 .field.append input:first-child { margin-right: 0; }
 .field.double input, .field.double .input { width: 50% !important; }
 .field.double input:last-child, .field.double .input:last-child { margin-left: -1px; }
@@ -1756,17 +1755,26 @@ form fieldset legend { padding: 5px 10px; }
 .field .picker.warning select, .field .picker.warning:after { color: #f6b83f; }
 .field .picker.success { border-color: #58c026; color: #58c026; background: #c0eeaa; -webkit-transition-duration: 0.2s; -moz-transition-duration: 0.2s; -o-transition-duration: 0.2s; transition-duration: 0.2s; }
 .field .picker.success select, .field .picker.success:after { color: #58c026; }
-.field .radio.danger, .field .checkbox.danger { color: #ca3838; }
-.field .radio.danger span, .field .checkbox.danger span { border-color: #ca3838; color: #ca3838; background: #f0c5c5; -webkit-transition-duration: 0.2s; -moz-transition-duration: 0.2s; -o-transition-duration: 0.2s; transition-duration: 0.2s; }
-.field .radio.warning, .field .checkbox.warning { color: #f6b83f; }
-.field .radio.warning span, .field .checkbox.warning span { border-color: #f6b83f; color: #f6b83f; background: #fef7ea; -webkit-transition-duration: 0.2s; -moz-transition-duration: 0.2s; -o-transition-duration: 0.2s; transition-duration: 0.2s; }
-.field .radio.success, .field .checkbox.success { color: #58c026; color: #555555; }
-.field .radio.success i, .field .checkbox.success i { color: #58c026; }
-.field .radio.success span, .field .checkbox.success span { border-color: #58c026; color: #58c026; background: #c0eeaa; -webkit-transition-duration: 0.2s; -moz-transition-duration: 0.2s; -o-transition-duration: 0.2s; transition-duration: 0.2s; }
-.field .radio span, .field .checkbox span { display: inline-block; width: 16px; height: 16px; position: relative; top: 2px; border: solid 1px #ccc; background: #fefefe; }
-.field .radio span { -webkit-border-radius: 8px; -moz-border-radius: 8px; -ms-border-radius: 8px; -o-border-radius: 8px; border-radius: 8px; }
-.field .checkbox span { -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
-.field .radio.checked i, .field .checkbox.checked i { position: absolute; top: -1px; left: -8px; line-height: 16px; }
+
+.field .text input[type="search"] { -webkit-appearance: textfield; }
+
+.no-js .radio input { -webkit-appearance: radio; margin-left: 1px; }
+.no-js .checkbox input { -webkit-appearance: checkbox; }
+.no-js .radio input, .no-js .checkbox input { display: inline-block; width: 16px; }
+
+.js .field .radio, .js .field .checkbox { position: relative; }
+.js .field .radio.danger, .js .field .checkbox.danger { color: #ca3838; }
+.js .field .radio.danger span, .js .field .checkbox.danger span { border-color: #ca3838; color: #ca3838; background: #f0c5c5; -webkit-transition-duration: 0.2s; -moz-transition-duration: 0.2s; -o-transition-duration: 0.2s; transition-duration: 0.2s; }
+.js .field .radio.warning, .js .field .checkbox.warning { color: #f6b83f; }
+.js .field .radio.warning span, .js .field .checkbox.warning span { border-color: #f6b83f; color: #f6b83f; background: #fef7ea; -webkit-transition-duration: 0.2s; -moz-transition-duration: 0.2s; -o-transition-duration: 0.2s; transition-duration: 0.2s; }
+.js .field .radio.success, .js .field .checkbox.success { color: #58c026; color: #555555; }
+.js .field .radio.success i, .js .field .checkbox.success i { color: #58c026; }
+.js .field .radio.success span, .js .field .checkbox.success span { border-color: #58c026; color: #58c026; background: #c0eeaa; -webkit-transition-duration: 0.2s; -moz-transition-duration: 0.2s; -o-transition-duration: 0.2s; transition-duration: 0.2s; }
+.js .field .radio.checked i, .js .field .checkbox.checked i { position: absolute; top: -1px; left: -8px; line-height: 16px; }
+.js .field .radio span, .js .field .checkbox span { display: inline-block; width: 16px; height: 16px; position: relative; top: 2px; border: solid 1px #ccc; background: #fefefe; }
+.js .field .radio input[type="radio"], .js .field .radio input[type="checkbox"], .js .field .checkbox input[type="radio"], .js .field .checkbox input[type="checkbox"] { display: none; }
+.js .field .radio span { -webkit-border-radius: 8px; -moz-border-radius: 8px; -ms-border-radius: 8px; -o-border-radius: 8px; border-radius: 8px; }
+.js .field .checkbox span { -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
 
 .field .text input[type="search"] { -webkit-appearance: textfield; }
 
@@ -1899,3 +1907,11 @@ table.rounded caption + thead tr:first-child th:last-child, table.rounded captio
 table.rounded thead ~ tr:last-child td:last-child, table.rounded tbody tr:last-child td:last-child { border-bottom-right-radius: 4px; }
 table.rounded thead ~ tr:last-child td:first-child, table.rounded tbody tr:last-child td:first-child { border-bottom-left-radius: 4px; }
 table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr:first-child td, table.rounded > tbody:first-child tr:first-child td { border-top: 0; }
+
+/* Tooltips */
+.ttip { position: relative; }
+.ttip:after { display: block; background: #3085d6; border: 1px solid #3085d6; border-bottom: 0; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; padding: .5rem .75rem; width: auto; min-width: 150px; max-width: 500px; position: absolute; right: 0; bottom: 101%; margin-bottom: 8px; text-align: right; color: #fff; content: attr(data-tooltip); line-height: 1.5; font-size: .9rem; -webkit-transition: all 0.1s ease; -moz-transition: all 0.1s ease; -o-transition: all 0.1s ease; transition: all 0.1s ease; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; pointer-events: none; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #65a4e1), color-stop(100%, #3085d6)); background-image: -webkit-linear-gradient(top, #65a4e1, #3085d6); background-image: -moz-linear-gradient(top, #65a4e1, #3085d6); background-image: -o-linear-gradient(top, #65a4e1, #3085d6); background-image: linear-gradient(top, #65a4e1, #3085d6); -webkit-box-shadow: 0 0 5px 0 rgba(48, 133, 214, 0.25); -moz-box-shadow: 0 0 5px 0 rgba(48, 133, 214, 0.25); box-shadow: 0 0 5px 0 rgba(48, 133, 214, 0.25); }
+.ttip:before { content: " "; width: 0; height: 0; position: absolute; bottom: 101%; right: 8px; border-top: 8px solid #3085d6 !important; border-left: 8px solid transparent; border-right: 8px solid transparent; -webkit-transition: all 0.1s ease; -moz-transition: all 0.1s ease; -o-transition: all 0.1s ease; transition: all 0.1s ease; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; pointer-events: none; }
+.ttip:hover:after, .ttip:hover:before { -webkit-transition: all 0.1s ease; -moz-transition: all 0.1s ease; -o-transition: all 0.1s ease; transition: all 0.1s ease; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
+
+@media only screen and (max-width: 768px) { .ttip:after, .ttip:before { display: none; } }
