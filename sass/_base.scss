@@ -33,16 +33,31 @@ html, body {
   display: block;
 }
 
-@include fixed();
-
-.text-center {
-  @include text-align(center);
+.fixed {
+  position: fixed;
+  @include respond(portrait-tablets) {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+  }
+  // Pins the fixed element in place based 
+  // on the presence of the gumby-pin attribute
+  &.pinned {
+    position: absolute;
+  }
 }
 
-.text-left {
-  @include text-align(left);
+.unfixed {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
 }
 
-.text-right {
-  @include text-align(right);
-}
+.text-center { @extend %text-center; }
+.text-left { @extend %text-left; }
+.text-right { @extend %text-right; }
+
+// Partial to align Text Left or Right
+%text-center { text-align: center; }
+%text-left { text-align: left; }
+%text-right { text-align: right; }
