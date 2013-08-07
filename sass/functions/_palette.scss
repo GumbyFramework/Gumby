@@ -15,9 +15,14 @@
   @return false;
 }
 
-@mixin palette($shade) {
+@mixin palette($shade, $palette-text-color:false) {
   @if $shade == getColor($shade) {
-    color: lighten(getColor($shade, default), 80%);
+    @if $palette-text-color != false  {
+      color: $palette-text-color;
+    }
+    @else {
+      color: lighten(getColor($shade, default), 80%);
+    }
     background: getColor($shade, default);
     border: 1px solid getColor($shade, default);
     &:hover {
@@ -30,18 +35,33 @@
     }
 
     @if $shade == default {
-      color: darken(getColor($shade, default), 61.5%);
+      @if $palette-text-color != false  {
+        color: $palette-text-color;
+      }
+      @else {
+        color: darken(getColor($shade, default), 61.5%);
+      }
       border: 1px solid getColor($shade, default);
       &:hover {
         border: 1px solid darken(getColor($shade, hover), 5%);
       }
     }
     @if $shade == warning {
-      color: darken(getColor($shade, hover), 40%);
+      @if $palette-text-color != false  {
+        color: $palette-text-color;
+      }
+      @else {
+        color: darken(getColor($shade, hover), 40%);
+      }
     }
   }
   @else {
-    color: lighten($shade, 80%);
+    @if $palette-text-color != false {
+      color: $palette-text-color;
+    }
+    @else {
+      color: lighten($shade, 80%);
+    }
     background: $shade;
     border: 1px solid $shade;
     &:hover {

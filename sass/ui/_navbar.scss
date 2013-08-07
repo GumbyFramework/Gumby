@@ -58,7 +58,7 @@
   @include line-and-height(height-calc($larger - 3));
   a {
     display: block;
-    padding: 0 0 0 $norm;
+    padding: 0;
     overflow: hidden;
     @include line-and-height(height-calc($larger - 3));
   }

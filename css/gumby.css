@@ -54,8 +54,8 @@ html, body { height: 100%; }
 .hide.active, .show { display: block; }
 
 .fixed { position: fixed; }
-.fixed.pinned { position: absolute; }
 @media only screen and (max-width: 768px) { .fixed { position: relative !important; top: auto !important; left: auto !important; } }
+.fixed.pinned { position: absolute; }
 
 .unfixed { position: relative !important; top: auto !important; left: auto !important; }
 
@@ -352,7 +352,7 @@ img { -ms-interpolation-mode: bicubic; }
   .navbar a.toggle:active, .navbar a.toggle.active { background: #3e4043; } }
 
 .navbar .logo { display: inline-block; margin: 0 2.12766% 0 0; padding: 0; height: 60px; line-height: 58px; }
-.navbar .logo a { display: block; padding: 0 0 0 16px; overflow: hidden; height: 60px; line-height: 58px; }
+.navbar .logo a { display: block; padding: 0; overflow: hidden; height: 60px; line-height: 58px; }
 @media only screen and (max-width: 767px) { .navbar .logo { float: left; display: inline; }
   .navbar .logo a { padding: 0; }
   .navbar .logo a img { width: auto; height: auto; max-width: 100%; } }
@@ -469,9 +469,9 @@ img { -ms-interpolation-mode: bicubic; }
 .btn.small.icon-right a, .skiplink.small.icon-right a { padding-right: 23px; }
 .btn.small.icon-right a:after, .skiplink.small.icon-right a:after { right: 6.66667px; }
 .btn.small a, .skiplink.small a { padding: 0 10px; }
-.btn.oval, .skiplink.oval { -webkit-border-radius: 1000px; -moz-border-radius: 1000px; -ms-border-radius: 1000px; -o-border-radius: 1000px; border-radius: 1000px; }
+.btn.oval, .skiplink.oval { -webkit-border-radius: 1000px; -moz-border-radius: 1000px; -ms-border-radius: 1000px; -o-border-radius: 1000px; border-radius: 1000px; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
 .btn.pill-left, .skiplink.pill-left { -webkit-border-radius: 1000px; -moz-border-radius: 1000px; -ms-border-radius: 1000px; -o-border-radius: 1000px; border-radius: 1000px; -webkit-border-radius: 500px 0 0 500px; -moz-border-radius: 500px 0 0 500px; -ms-border-radius: 500px 0 0 500px; -o-border-radius: 500px 0 0 500px; border-radius: 500px 0 0 500px; -webkit-border-radius: 0 500px 500px 0; -moz-border-radius: 0 500px 500px 0; -ms-border-radius: 0 500px 500px 0; -o-border-radius: 0 500px 500px 0; border-radius: 0 500px 500px 0; }
-.btn.pill-right, .skiplink.pill-right { -webkit-border-radius: 1000px; -moz-border-radius: 1000px; -ms-border-radius: 1000px; -o-border-radius: 1000px; border-radius: 1000px; }
+.btn.pill-right, .skiplink.pill-right { -webkit-border-radius: 1000px; -moz-border-radius: 1000px; -ms-border-radius: 1000px; -o-border-radius: 1000px; border-radius: 1000px; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
 
 .btn.primary, .skiplink.primary { background: #3085d6; border: 1px solid #3085d6; }
 .btn.primary:hover, .skiplink.primary:hover { background: #5b9ede; }
@@ -1885,18 +1885,3 @@ table.rounded caption + thead tr:first-child th:last-child, table.rounded captio
 table.rounded thead ~ tr:last-child td:last-child, table.rounded tbody tr:last-child td:last-child { border-bottom-right-radius: 4px; }
 table.rounded thead ~ tr:last-child td:first-child, table.rounded tbody tr:last-child td:first-child { border-bottom-left-radius: 4px; }
 table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr:first-child td, table.rounded > tbody:first-child tr:first-child td { border-top: 0; }
-
-.myembaseddiv { max-width: 58.75em; background: #3085d6; position: relative; padding-right: 2.1875em; }
-.myembaseddiv:after { content: "\e714"; font-family: entypo; position: absolute; font-size: 200px; z-index: -1; display: none; }
-@media only screen and (max-width: 38.75em) { .myembaseddiv { background: #f6b83f; } }
-@media only screen and (max-width: 31.25em) { .myembaseddiv { width: 100%; background: #42a35a; padding-top: 300px; padding-right: 0; }
-  .myembaseddiv:after { z-index: 999; display: block; left: 0; width: 100%; text-align: center; top: 120px; color: #fff; } }
-@media only screen and (max-width: 31.25em) { .myembaseddiv h2 { background: #42a35a; text-align: center; color: #fff; } }
-
-.special { color: white; background: #58c026; border: 1px solid #58c026; }
-.special:hover { background: #66d92f; border: 1px solid #5ed226; }
-.special:active { background: #44951e; border: 1px solid #44951e; }
-
-.nestedemdiv { font-size: 14px; }
-.nestedemdiv .morenestedemdiv { width: 17.85714em; background-color: #f6b83f; }
-@media only screen and (max-width: 767px) { .nestedemdiv .morenestedemdiv p { font-size: 1.14286em; } }
