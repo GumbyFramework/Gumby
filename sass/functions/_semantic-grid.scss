@@ -7,23 +7,19 @@
 
 @mixin row($nested: false) {
   @if $nested == nested {
-    width: auto;
-    min-width: 0px;
-    max-width: none;
-    @extend %clearfix;
+    @include nestedRow();
   }
   @else {
     width: 100%;
-    max-width: $row-max-width;
+    max-width: $row-max-width + 40px;
     min-width: $min-device-width;
     margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
     @extend %clearfix;
   }
   > *:first-child {
     margin-left: 0px;
-  }
-  @include respond(document-width) {
-    padding: 0 20px;
   }
   @include respond(all-phones) {
     width: auto;
@@ -39,6 +35,8 @@
   width: auto;
   min-width: 0px;
   max-width: none;
+  padding-left: 0;
+  padding-right: 0;
   @extend %clearfix;
 }
 

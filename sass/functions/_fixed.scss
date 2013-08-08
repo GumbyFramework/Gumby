@@ -1,0 +1,21 @@
+@mixin fixed($removal-breakpoint) {
+  .fixed {
+    position: fixed;
+    &.pinned {
+      position: absolute;
+    }
+    @if $removal-breakpoint != false {
+      @include respond($removal-breakpoint) {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+      }
+    }
+  }
+
+  .unfixed {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+  }
+}

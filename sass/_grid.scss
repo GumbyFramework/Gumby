@@ -19,17 +19,15 @@
 
 .row {
   width: 100%;
-  max-width: $row-max-width;
+  max-width: $row-max-width + 40px;
   min-width: $min-device-width;
   margin: 0 auto;
-  @include respond(document-width) {
-    padding: 0 $gutter-in-px;
-  }
+  padding-left: 20px;
+  padding-right: 20px;
   .row {
     min-width: 0px;
-    @include respond(document-width) {
-      padding: 0;
-    }
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -134,9 +132,9 @@
   }
 }
 
-.pull_right { float: right; }
+.pull_right { @include pull(right); }
 
-.pull_left { float: left; }
+.pull_left { @include pull(left); }
 
 img, object, embed {
   max-width: 100%;
@@ -205,15 +203,15 @@ img {
 .valign {
   display: table;
   width: 100%;
-  > div {
+  > div, > article, > section, > figure {
     display: table-cell;
     vertical-align: middle;
   }​
   > article {
-    display: table-cell;
-    vertical-align: middle;
+    
   }
 }
+
 
 /* Mobile */
 
