@@ -30,6 +30,9 @@
 			.on('tap', this.openLink);
 		}
 
+		// override with childlinks
+		this.$dropDowns.find('.dropdown li:not(:has(.dropdown)) a[href]').on('tap', this.openLink);
+
 		// on mousemove and touchstart toggle modernizr classes and disable/enable this module
 		// workaround for Pixel and other multi input devices
 		$(window).on('mousemove touchstart', function(e) {
@@ -60,7 +63,7 @@
 		e.preventDefault();
 
 		var $this = $(this),
-			$el, href;
+			$el = $this, href;
 
 		// tapped icon
 		if($this.is('i')) {

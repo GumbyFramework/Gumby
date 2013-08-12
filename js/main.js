@@ -20,6 +20,8 @@ Gumby.touch(function() {
 
 // Document ready
 $(function() {
-
+	$('#skip-switch').on('gumby.onComplete', function() {
+		$(this).trigger('gumby.trigger');
+	});
 });
 
