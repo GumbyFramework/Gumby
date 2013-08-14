@@ -1,15 +1,11 @@
-// Typography mixins
+// Convert pixels to ems
 
-// Fonts in rems with px fallback
-
-@mixin font-size($size, $is-important: false) {
-  $size: if(unitless($size), $size, $size / 1px);
-
-  @if $is-important {
-    font-size: $size + px !important;
-    font-size: ($size / strip-units($base-font-size)) + rem !important;
-  } @else {
-    font-size: $size + px;
-    font-size: ($size / strip-units($base-font-size)) + rem;
+@function em($size-in-px, $context: 16) {
+  @if not unitless($size-in-px) {
+      $size-in-px: strip-units($size-in-px);
   }
+  @if not unitless($base) {
+      $parent: strip-units($context);
+  }
+  @return ($size-in-px / $context) * 1em;
 }
