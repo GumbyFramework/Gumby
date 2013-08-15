@@ -66,6 +66,12 @@
     transition-duration: .3s;
   }
 
+  .colgrid-image .column,
+  .colgrid-image .columns {
+    background: transparent;
+    border-color: black;
+  }
+
   .row {
     margin-bottom: 25px;
     text-align: center;
@@ -306,6 +312,36 @@
     </div>
     <div class="six columns">
       <p>460px</p>
+    </div>
+  </div>
+
+  <!-- Visible column grid -->
+  <div class="row">
+    <div class="twelve columns special">
+      <p>Visible column grid</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="colgrid-visible">
+      <div class="row">
+        <div class="four columns">
+          Four columns
+        </div>
+        <div class="eight columns">
+          Eight columns
+        </div>
+      </div>
+      <div class="row">
+        <div class="two columns">
+          Two columns
+        </div>
+        <div class="eight columns">
+          Eight columns
+        </div>
+        <div class="two columns">
+          Two columns
+        </div>
+      </div>
     </div>
   </div>
 

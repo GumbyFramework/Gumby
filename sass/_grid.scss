@@ -32,6 +32,17 @@
   }
 }
 
+.colgrid-image {
+  background-image: -webkit-linear-gradient(left, $visible-grid-column-color oneColAndGutter(), $visible-grid-gutter-color oneColAndGutter());
+  background-image: linear-gradient(90deg, $visible-grid-column-color oneColAndGutter(), $visible-grid-gutter-color oneColAndGutter());
+  background-size: oneCol() + $gutter;
+  @include clearfix();
+
+  @include respond(all-phones) {
+    background-image: none;
+  }
+}
+
 /* To fix the grid into a different size, set max-width to your desired width */
 
 .column, .columns {
