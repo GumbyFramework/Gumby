@@ -68,15 +68,36 @@
   }
 }
 
-/* Push Classes */
+/* Push and Pull Classes */
 
-// Generate Push Classes
+// Generate Push and Pull Classes
 .row {
   @for $i from 1 through $cols - 1 {
     .push_#{number-as-word($i)} {
       margin-left: push_x($i);
         &:first-child {
         margin-left: push_x($i, true);
+      }
+    }
+    .pull_#{number-as-word($i)} {
+      // pull classes need to know the width of the container being pulled
+      @for $j from 1 through $cols - 1 {
+        @if $j == 1 {
+          &.one.column {
+            margin-left: pull_x($i, $j);
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
+        @else {
+          &.#{number-as-word($j)}.columns {
+            margin-left: pull_x($i, $j);
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
       }
     }
   }
@@ -109,7 +130,7 @@
   }
 }
 
-/* Hybrid Push Classes */
+/* Hybrid Push and Pull Classes */
 
 // Generate Hybrid Push Classes
 .#{number-as-word($hybrid)}.colgrid .row {
@@ -118,6 +139,27 @@
       margin-left: push_x($i, false, true);
         &:first-child {
         margin-left: push_x($i, true, true);
+      }
+    }
+    .pull_#{number-as-word($i)} {
+      // pull classes need to know the width of the container being pulled
+      @for $j from 1 through $hybrid - 1 {
+        @if $j == 1 {
+          &.one.column {
+            margin-left: pull_x($i, $j, true);
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
+        @else {
+          &.#{number-as-word($j)}.columns {
+            margin-left: pull_x($i, $j, true);
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
       }
     }
   }
@@ -267,7 +309,9 @@ img {
     }
   }
   [class^="push_"],
-  [class*="push_"] {
+  [class*="push_"],
+  [class^="pull_"],
+  [class*="pull_"] {
     margin-left: 0 !important;
   }
 }
