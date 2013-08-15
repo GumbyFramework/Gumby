@@ -4,6 +4,7 @@
 @import "strip-units";
 @import "grid-calc";
 @import "em";
+@import "even";
 
 // Global Gumby Mixins
 
@@ -19,3 +20,4 @@
 @import "semantic-grid";
 @import "tooltips";
 @import "visibility";
+@import "shift-columns";

@@ -1,0 +1,10 @@
+// test for even numbers, do something with the result
+
+@function even($number) {
+  @if ($number % 2 == 0) {
+    @return true;
+  }
+  @else {
+    @return false;
+  }
+}
