@@ -23,10 +23,5 @@ $(function() {
 	$('#skip-switch').on('gumby.onComplete', function() {
 		$(this).trigger('gumby.trigger');
 	});
-
-	$('#tabs').on('gumby.onChange', function() {
-		console.log("IN");
-		$(this).find('.fittext').trigger('gumby.initialize');
-	});
 });
 
