@@ -33,6 +33,7 @@
 		// reinitialize event listener
 		this.$el.on('gumby.initialize', function() {
 			scope.setup();
+			scope.monitorScroll();
 		});
 	}
 
@@ -182,13 +183,22 @@
 	};
 
 	// add initialisation
-	Gumby.addInitalisation('fixed', function() {
+	Gumby.addInitalisation('fixed', function(all) {
 		$('[data-fixed],[gumby-fixed],[fixed]').each(function() {
 			var $this = $(this);
+
 			// this element has already been initialized
-			if($this.data('isFixed')) {
+			// and we're only initializing new modules
+			if($this.data('isFixed') && !all) {
+				return true;
+
+			// this element has already been initialized
+			// and we need to reinitialize it
+			} else if($this.data('isFixed') && all) {
+				$this.trigger('gumby.initialize');
 				return true;
 			}
+
 			// mark element as initialized
 			$this.data('isFixed', true);
 			new Fixed($this);
