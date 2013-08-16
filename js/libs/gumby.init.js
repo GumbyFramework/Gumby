@@ -2,6 +2,14 @@
 * Gumby Init
 */
 
+// initialize Gumby object
+Gumby.init();
+
+// if AMD return Gumby object to define
+if(typeof define == "function" && define.amd) {
+	define(window.Gumby);
+}
+
 // test for touch event support
 Modernizr.load({
 	test: Modernizr.touch,
@@ -12,16 +20,6 @@ Modernizr.load({
 		// check jQuery mobile has successfully loaded before using tap events
 		if($.mobile) {
 			window.Gumby.click += ' tap';
-		}
-	},
-
-	// either way initialize Gumby
-	complete: function() {
-		window.Gumby.init();
-
-		// if AMD return Gumby object to define
-		if(typeof define == "function" && define.amd) {
-			define(window.Gumby);
 		}
 	}
 });
