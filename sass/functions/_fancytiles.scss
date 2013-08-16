@@ -1,0 +1,80 @@
+@function divide-cols($colnum) {
+  @return 100%/$colnum;
+}
+
+
+@mixin fancytiles($desktop-columns, $tablet-columns: $desktop-columns, $mobile-columns: 1) {
+
+  // These styles apply to all shift-columns
+  width: divide-cols($desktop-columns);
+  display: inline-block;
+  float: left;
+  padding-left: $gutter;
+  &:first-child { padding-left: 0; }
+
+  @include respond("min-width: #{$tablet-device-width + 1}") {
+    
+    // Remove padding from appropriate desktop columns
+    $d: $desktop-columns + 1;
+    @for $d from 1 through 20 {
+      &:nth-child(#{($d * $desktop-columns + 1)}) {
+        padding-left: 0;
+      }
+    }
+    @if $desktop-columns == 1 {
+      padding-left: 0;
+    }
+
+  }
+
+
+  @include respond(portrait-tablets) {
+    width: divide-cols($tablet-columns);
+    
+    // Add padding back to those elements who lost
+    // their padding on desktop
+    @for $d from 1 through 20 {
+      &:nth-child(#{($d * $desktop-columns + 1)}) {
+        padding-left: $gutter;
+      }
+    }
+
+    // Remove padding from appropriate tablet columns
+    $t: $tablet-columns + 1;
+    @for $t from 1 through 20 {
+      &:nth-child(#{($t * $tablet-columns + 1)}) {
+        padding-left: 0;
+      }
+    }
+    @if $tablet-columns == 1 {
+      padding-left: 0;
+    }
+
+  }
+
+
+  @include respond(all-phones) {
+    width: divide-cols($mobile-columns);
+
+    // Add padding back to those elements who lost
+    // their padding on tablets
+    @for $t from 1 through 20 {
+      &:nth-child(#{($t * $tablet-columns + 1)}) {
+        padding-left: $gutter;
+      }
+    }
+    
+    // Remove padding from appropriate mobile columns
+    $m: $mobile-columns + 1;
+    @for $m from 1 through 20 {
+      &:nth-child(#{($m * $mobile-columns + 1)}) {
+        padding-left: 0;
+      }
+    }
+    @if $mobile-columns == 1 {
+      padding-left: 0;
+    }
+  }
+
+
+}
