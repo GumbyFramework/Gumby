@@ -22,6 +22,7 @@
 		// re-initialize module
 		this.$el.on('gumby.initialize', function() {
 			scope.setup();
+			scope.resize();
 		});
 
 		// lets go
