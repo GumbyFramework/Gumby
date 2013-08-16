@@ -32,9 +32,8 @@
   }
 }
 
-.colgrid-image {
-  background-image: -webkit-linear-gradient(left, $visible-grid-column-color oneColAndGutter(), $visible-grid-gutter-color oneColAndGutter());
-  background-image: linear-gradient(90deg, $visible-grid-column-color oneColAndGutter(), $visible-grid-gutter-color oneColAndGutter());
+.colgrid-image { 
+  @include background-image(linear-gradient(left, $visible-grid-column-color oneColAndGutter(), $visible-grid-gutter-color oneColAndGutter()));
   background-size: oneCol() + $gutter;
   @include clearfix();
 
