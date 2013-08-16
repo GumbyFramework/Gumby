@@ -41,13 +41,13 @@
 }
 
 
-@mixin column($columns:$columns, $alignment: false, $behavior: false) {
+@mixin column($columns:$columns, $alignment: false, $behavior: false, $hybrid: false) {
+  @extend %columnconfig;
   @if $alignment == center   {
-    @extend %columnconfig;
     float: none;
     margin-left: auto !important;
     margin-right: auto !important;
-    width: columns($columns);
+    width: columns($columns, $hybrid);
     @include respond(all-phones) {
       float: left;
       margin-left: 0;
@@ -55,17 +55,15 @@
     }
   }
   @else if $behavior == collapse {
-    @extend %columnconfig;
     @extend %collapse;
-    width: columns($columns);
+    width: columns($columns, $hybrid);
     @include respond(all-phones) {
       float: left;
       width: 100%;
     }
   }
   @else {
-    @extend %columnconfig;
-    width: columns($columns);
+    width: columns($columns, $hybrid);
     @include respond(all-phones) {
       float: left;
       margin-left: 0;
@@ -75,36 +73,7 @@
 }
 
 @mixin hybrid($columns:$columns, $alignment: false, $behavior: false) {
-  @if $alignment == center   {
-    @extend %columnconfig;
-    float: none;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: columns($columns, true);
-    @include respond(all-phones) {
-      float: left;
-      margin-left: 0;
-      width: 100%;
-    }
-  }
-  @else if $behavior == collapse {
-    @extend %columnconfig;
-    @extend %collapse;
-    width: columns($columns, true);
-    @include respond(all-phones) {
-      float: left;
-      width: 100%;
-    }
-  }
-  @else {
-    @extend %columnconfig;
-    width: columns($columns, true);
-    @include respond(all-phones) {
-      float: left;
-      margin-left: 0;
-      width: 100%;
-    }
-  }
+  @include column($columns, $alignment, $behavior, true);
 }
 
 @mixin push($columns, $hybrid-grid: false) {
@@ -134,9 +103,23 @@
   }
 }
 
-@mixin pull($direction:false) {
+@mixin pull($direction: false, $columns: 0, $width: 0, $hybrid-grid: false) {
   @if $direction == left {
     @extend %pull-left;
+    @if ($columns > 0 and $width > 0) {
+      @if ($hybrid-grid == hybrid) {
+        margin-left: pull_x($columns, $width, true);
+        &:first-child {
+          margin-left: 0;
+        }  
+      }
+      @else {
+        margin-left: pull_x($columns, $width);
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
   }
   @elseif $direction == none {
     @extend %pull-none;
