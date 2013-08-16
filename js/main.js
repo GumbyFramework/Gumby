@@ -23,5 +23,7 @@ $(function() {
 	$('#skip-switch').on('gumby.onComplete', function() {
 		$(this).trigger('gumby.trigger');
 	});
+
+	$('#nav3').attr('gumby-top', '100').trigger('gumby.initialize');
 });
 
