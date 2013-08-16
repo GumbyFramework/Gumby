@@ -33,6 +33,7 @@
 		// reinitialize event listener
 		this.$el.on('gumby.initialize', function() {
 			scope.setup();
+			scope.monitorScroll();
 		});
 	}
 
