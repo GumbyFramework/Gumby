@@ -3,10 +3,12 @@
 
 
 // Grid Settings
-$row-max-width: 940px !default;    				// 940px
-$gutter-in-px: 20px !default;      				// 20px
-$cols: 12 !default;              				// 12 Column Default Grid
-$hybrid: 16 !default;							// 16 Column Default Hybrid Grid
+$row-max-width: 940px !default;    						// 940px
+$gutter-in-px: 20px !default;      						// 20px
+$cols: 12 !default;              						// 12 Column Default Grid
+$hybrid: 16 !default;									// 16 Column Default Hybrid Grid
+$visible-grid-column-color: rgba(255, 0, 0, 0.25);
+$visible-grid-gutter-color: rgba(255, 243, 54, 0.25);
 
 // Responsiveness Settings
 $min-device-width: 320px; 						// iPhone Portrait

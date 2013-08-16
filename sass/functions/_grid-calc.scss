@@ -21,6 +21,10 @@ $gutter: percentage($gutter-in-px / $row-max-width); // 2.1276596
   }
 }
 
+// Return single column width as a percentage of single column and single gutter
+@function oneColRatio() {
+  @return percentage( (oneCol()) / (oneCol() + $gutter) );
+}
 
 // Calculate Push Class Margins
 @function push_x($num, $first-child: false, $is-hybrid: false) {

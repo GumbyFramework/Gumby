@@ -23,5 +23,6 @@ $(function() {
 	$('#skip-switch').on('gumby.onComplete', function() {
 		$(this).trigger('gumby.trigger');
 	});
+	$('.colgrid-visible').wrapInner('<div class="colgrid-image" />');
 });
 

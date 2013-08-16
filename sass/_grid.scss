@@ -32,6 +32,16 @@
   }
 }
 
+.colgrid-image { 
+  @include background-image(linear-gradient(left, $visible-grid-column-color oneColRatio(), $visible-grid-gutter-color oneColRatio()));
+  background-size: oneCol() + $gutter;
+  @include clearfix();
+
+  @include respond(all-phones) {
+    background-image: none;
+  }
+}
+
 /* To fix the grid into a different size, set max-width to your desired width */
 
 .column, .columns {

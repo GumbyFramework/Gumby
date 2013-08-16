@@ -170,6 +170,11 @@ abbr { text-transform: none; }
 .row { width: 100%; max-width: 980px; min-width: 320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; position: relative; }
 .row .row { min-width: 0px; padding-left: 0; padding-right: 0; }
 
+.colgrid-image { background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(75.0%, rgba(255, 0, 0, 0.25)), color-stop(75.0%, rgba(255, 243, 54, 0.25))); background-image: -webkit-linear-gradient(left, rgba(255, 0, 0, 0.25) 75.0%, rgba(255, 243, 54, 0.25) 75.0%); background-image: -moz-linear-gradient(left, rgba(255, 0, 0, 0.25) 75.0%, rgba(255, 243, 54, 0.25) 75.0%); background-image: -o-linear-gradient(left, rgba(255, 0, 0, 0.25) 75.0%, rgba(255, 243, 54, 0.25) 75.0%); background-image: linear-gradient(left, rgba(255, 0, 0, 0.25) 75.0%, rgba(255, 243, 54, 0.25) 75.0%); background-size: 8.51064%; *zoom: 1; }
+.colgrid-image:before, .colgrid-image:after { content: ""; display: table; }
+.colgrid-image:after { clear: both; }
+@media only screen and (max-width: 767px) { .colgrid-image { background-image: none; } }
+
 /* To fix the grid into a different size, set max-width to your desired width */
 .column, .columns { margin-left: 2.12766%; float: left; min-height: 1px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
