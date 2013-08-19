@@ -31,6 +31,12 @@
 		// check and set path with js/libs default
 		this.path = $('script[gumby-path]').attr('gumby-path') || 'js/libs';
 
+		// boolean to indicate jQuery mobile usage
+		this.touch = true;
+		if($('script[gumby-touch]').attr('gumby-touch') === 'false') {
+			this.touch = false;
+		}
+
 		// check and set breakpoint with 1024 default
 		this.breakpoint = Number($('script[gumby-breakpoint]').attr('gumby-breakpoint')) || 768;
 

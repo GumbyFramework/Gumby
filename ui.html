@@ -620,7 +620,7 @@
 		<h1 class="lead">Tabs</h1>
 		<div class="row">
 			<div class="six columns">
-				<section class="tabs">
+				<section class="tabs" id="tabs">
 					<h4 class="lead">Basic Tabs</h4>
 					<ul class="tab-nav">
 						<li><a href="#">Tab 1</a></li>
@@ -1281,8 +1281,8 @@
 	</script>
 
 	<!--
-	Include gumby.js followed by UI modules.
-	Or concatenate and minify into a single file
+	Include gumby.js followed by UI modules followed by gumby.init.js
+	Or concatenate and minify into a single file -->
 	<script src="js/libs/gumby.js"></script>
 	<script src="js/libs/ui/gumby.retina.js"></script>
 	<script src="js/libs/ui/gumby.fixed.js"></script>
@@ -1294,9 +1294,11 @@
 	<script src="js/libs/ui/gumby.navbar.js"></script>
 	<script src="js/libs/ui/gumby.fittext.js"></script>
 	<script src="js/libs/ui/jquery.validation.js"></script>
-	<script src="js/libs/gumby.init.js"></script> -->
+	<script src="js/libs/gumby.init.js"></script>
 
-	<script src="js/libs/gumby.min.js"></script>
+	<!--
+	gumby.min.js contains gumby.js, all UI modules and gumby.init.js
+	<script src="js/libs/gumby.min.js"></script> -->
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
 
