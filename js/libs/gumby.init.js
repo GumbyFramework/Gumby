@@ -11,7 +11,7 @@ if(typeof define == "function" && define.amd) {
 }
 
 // test for touch event support and load jQuery if present
-if(Gumby.touch) {
+if(Gumby.touchEvents) {
 	Modernizr.load({
 		test: Modernizr.touch,
 

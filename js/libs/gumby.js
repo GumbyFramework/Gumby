@@ -32,9 +32,9 @@
 		this.path = $('script[gumby-path]').attr('gumby-path') || 'js/libs';
 
 		// boolean to indicate jQuery mobile usage
-		this.touch = true;
+		this.touchEvents = true;
 		if($('script[gumby-touch]').attr('gumby-touch') === 'false') {
-			this.touch = false;
+			this.touchEvents = false;
 		}
 
 		// check and set breakpoint with 1024 default
