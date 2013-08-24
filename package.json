@@ -1,0 +1,11 @@
+{
+  "name": "Gumby",
+  "version": "2.4.6",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-contrib-compass": "~0.4.1",
+    "grunt-contrib-connect": "~0.3.0"
+  }
+}
