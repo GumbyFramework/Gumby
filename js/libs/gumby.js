@@ -84,6 +84,8 @@
 				scope.onTouch();
 			}
 		});
+
+		return this;
 	};
 
 	// public helper - set Gumby ready callback
@@ -91,6 +93,8 @@
 		if(code && typeof code === 'function') {
 			this.onReady = code;
 		}
+
+		return this;
 	};
 
 	// public helper - set oldie callback
@@ -98,6 +102,8 @@
 		if(code && typeof code === 'function') {
 			this.onOldie = code;
 		}
+
+		return this;
 	};
 
 	// public helper - set touch callback
@@ -105,6 +111,8 @@
 		if(code && typeof code === 'function') {
 			this.onTouch = code;
 		}
+
+		return this;
 	};
 
 	// public helper - return debuggin object including uiModules object
