@@ -6,15 +6,13 @@ Gumby.ready(function() {
 	if(Gumby.isOldie || Gumby.$dom.find('html').hasClass('ie9')) {
 		$('input, textarea').placeholder();
 	}
-});
 
 // Oldie document loaded
-Gumby.oldie(function() {
+}).oldie(function() {
 	console.log("This is an oldie browser...");
-});
 
 // Touch devices loaded
-Gumby.touch(function() {
+}).touch(function() {
 	console.log("This is a touch enabled device...");
 });
 
