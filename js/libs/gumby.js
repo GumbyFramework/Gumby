@@ -25,10 +25,11 @@
 		this.isOldie = !!this.$html.hasClass('oldie');
 		this.click = 'click';
 		this.onReady = this.onOldie = this.onTouch = false;
-		this.uiModules = {};
-		this.inits = {};
+		this.autoInit = $('script[gumby-init]').attr('gumby-init') === 'false' ? false : true,
 		this.touchEvents = 'js/libs';
 		this.breakpoint = '';
+		this.uiModules = {};
+		this.inits = {};
 
 		// jQuery mobile touch events
 		var touch = $('script[gumby-touch]').attr('gumby-touch'),
