@@ -16,7 +16,7 @@ if(Gumby.touchEvents) {
 		test: Modernizr.touch,
 
 		// if present load custom jQuery mobile build and update Gumby.click
-		yep: Gumby.path+'/jquery.mobile.custom.min.js',
+		yep: Gumby.touchEvents+'/jquery.mobile.custom.min.js',
 		callback: function(url, result, key) {
 			// check jQuery mobile has successfully loaded before using tap events
 			if($.mobile) {

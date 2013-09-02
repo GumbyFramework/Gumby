@@ -27,17 +27,28 @@
 		this.onReady = this.onOldie = this.onTouch = false;
 		this.uiModules = {};
 		this.inits = {};
+		this.touchEvents = 'js/libs';
+		this.breakpoint = '';
 
-		// check and set path with js/libs default
-		this.path = $('script[gumby-path]').attr('gumby-path') || 'js/libs';
+		// jQuery mobile touch events
+		var touch = $('script[gumby-touch]').attr('gumby-touch'),
+			path = $('script[gumby-path]').attr('gumby-path');
 
-		// boolean to indicate jQuery mobile usage
-		this.touchEvents = true;
-		if($('script[gumby-touch]').attr('gumby-touch') === 'false') {
+		// do not use touch events
+		if(touch === 'false') {
 			this.touchEvents = false;
+
+		// set path to jQuery mobile
+		// support touch/path attrs for backwards compatibility
+		} else {
+			if(touch) {
+				this.touchEvents = touch;
+			} else if(path) {
+				this.touchEvents = path;
+			}
 		}
 
-		// check and set breakpoint with 1024 default
+		// check and set breakpoint with 768 default
 		this.breakpoint = Number($('script[gumby-breakpoint]').attr('gumby-breakpoint')) || 768;
 
 		// add gumby-touch/gumby-no-touch classes
