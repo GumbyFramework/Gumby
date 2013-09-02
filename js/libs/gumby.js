@@ -62,13 +62,15 @@
 	}
 
 	// initialize Gumby
-	Gumby.prototype.init = function() {
+	Gumby.prototype.init = function(opts) {
 		var scope = this;
 
 		// call ready() code when dom is ready
 		this.$dom.ready(function() {
+
 			// init UI modules
-			scope.initUIModules();
+			var mods = opts && opts.uiModules ? opts.uiModules : false;
+			scope.initUIModules(mods);
 
 			if(scope.onReady) {
 				scope.onReady();
@@ -173,10 +175,18 @@
 	};
 
 	// loop round and init all UI modules
-	Gumby.prototype.initUIModules = function() {
-		var x;
-		for(x in this.uiModules) {
-			this.uiModules[x].init();
+	Gumby.prototype.initUIModules = function(mods) {
+		var x, m, arr = this.uiModules;
+
+		// only initialise specified modules
+		if(mods) {
+			arr = mods;
+		}
+
+		// initialise everything
+		for(x in arr) {
+			m = mods ? arr[x] : x;
+			this.uiModules[m].init();
 		}
 	};
 
