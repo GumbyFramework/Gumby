@@ -29,6 +29,6 @@
     @media print { @content; }
   }
   @else {
-    @media only screen and ($media) { @content; }
+    @media only screen and ('#{$media}') { @content; }
   }
 }

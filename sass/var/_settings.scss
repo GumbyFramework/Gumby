@@ -116,8 +116,21 @@ $default-button-padding: $med;
 // Height
 $default-button-height: 36px;
 
+// Form Elements
+$form-text-input-stroke: #ccc;
+$form-text-input-background: $white;
+$form-text-input-placeholder-color: $default-color;
+$form-text-input-color: #555;
+
+$form-select-stroke: #ccc;
+$form-select-background: $white;
+$form-select-color: #555;
+
 // Tabs
 $tab-height: 42px;
+
+// Navigation
+$navcontain-height: 80px; // makes space at the top of a document for when using a fixed nav
 
 // Drawers & Modals
 $modal-overlay-color: rgba(0, 0, 0, 0.8);
@@ -142,6 +155,13 @@ $table-cell-border-style: solid;
 $table-border-radius: 4px;
 // .striped
 $table-stripe-bgcolor: #e5e5e5;
+
+// Tooltips
+$tt-min-width: 130px;
+$tt-bgcolor: $primary-color;
+$tt-position: top;					// position: top / bottom / left / right
+$tt-align: left;					// text and caret alignment: left / right
+$tt-pretty: yes;					// yes = pretty / no = flat
 
 // Floats
 $default-float: left;

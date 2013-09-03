@@ -5,19 +5,10 @@
 
 	'use strict';
 
-	var $html = Gumby.$dom.find('html');
-
 	// define and init module on touch enabled devices only
-	// when we are at tablet size or smaller
-	if(!Modernizr.touch || $(window).width() > Gumby.breakpoint) {
-
-		// add Gumby no touch class
-		$html.addClass('gumby-no-touch');
+	if(!Gumby.$html.hasClass('gumby-touch')) {
 		return;
 	}
-
-	// add Gumby touch class
-	$html.addClass('gumby-touch');
 
 	function Navbar($el) {
 		this.$el = $el;
@@ -27,7 +18,7 @@
 		// when navbar items
 		this.$dropDowns
 		// are tapped hide/show dropdowns
-		.on('tap', this.toggleDropdown)
+		.on(Gumby.click, this.toggleDropdown)
 		// are swiped right open link
 		.on('swiperight', this.openLink);
 
@@ -36,11 +27,11 @@
 			// append an icon
 			this.$dropDowns.children('a').append('<i class="icon-popup"></i>').children('i')
 			// and bind to click event to open link
-			.on('tap', this.openLink);
+			.on(Gumby.click, this.openLink);
 		}
 
 		// override with childlinks
-		this.$dropDowns.find('.dropdown li:not(:has(.dropdown)) a[href]').on('tap', this.openLink);
+		this.$dropDowns.find('.dropdown li:not(:has(.dropdown)) a[href]').on(Gumby.click, this.openLink);
 
 		// on mousemove and touchstart toggle modernizr classes and disable/enable this module
 		// workaround for Pixel and other multi input devices

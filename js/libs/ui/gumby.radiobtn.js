@@ -31,9 +31,9 @@
 			scope.update();
 		});
 
-		// update any .checked checkboxes on load
-		if(scope.$el.hasClass('checked')) {
-			scope.update();
+		// update any prechecked on load
+		if(this.$input.prop('checked') || this.$el.hasClass('checked')) {
+			scope.update(true);
 		}
 	}
 
@@ -51,7 +51,7 @@
 		// check this radio button - check input, add checked class, append <i>
 		this.$input.prop('checked', true);
 		$span.append('<i class="icon-dot" />');
-		this.$el.addClass('checked').trigger('gumby.onChange');
+		this.$el.addClass('checked').trigger('gumby.onCheck');
 	};
 
 	// add initialisation

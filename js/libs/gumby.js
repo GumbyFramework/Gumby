@@ -21,27 +21,56 @@
 
 	function Gumby() {
 		this.$dom = $(document);
-		this.isOldie = !!this.$dom.find('html').hasClass('oldie');
+		this.$html = this.$dom.find('html');
+		this.isOldie = !!this.$html.hasClass('oldie');
 		this.click = 'click';
 		this.onReady = this.onOldie = this.onTouch = false;
+		this.autoInit = $('script[gumby-init]').attr('gumby-init') === 'false' ? false : true,
+		this.touchEvents = 'js/libs';
+		this.breakpoint = '';
 		this.uiModules = {};
 		this.inits = {};
 
-		// check and set path with js/libs default
-		this.path = $('script[gumby-path]').attr('gumby-path') || 'js/libs';
+		// jQuery mobile touch events
+		var touch = $('script[gumby-touch]').attr('gumby-touch'),
+			path = $('script[gumby-path]').attr('gumby-path');
 
-		// check and set breakpoint with 1024 default
-		this.breakpoint = Number($('script[gumby-breakpoint]').attr('gumby-breakpoint')) || 1024;
+		// do not use touch events
+		if(touch === 'false') {
+			this.touchEvents = false;
+
+		// set path to jQuery mobile
+		// support touch/path attrs for backwards compatibility
+		} else {
+			if(touch) {
+				this.touchEvents = touch;
+			} else if(path) {
+				this.touchEvents = path;
+			}
+		}
+
+		// check and set breakpoint with 768 default
+		this.breakpoint = Number($('script[gumby-breakpoint]').attr('gumby-breakpoint')) || 768;
+
+		// add gumby-touch/gumby-no-touch classes
+		// gumby touch == touch enabled && smaller than defined breakpoint
+		if(Modernizr.touch && $(window).width() < this.breakpoint) {
+			this.$html.addClass('gumby-touch');
+		} else {
+			this.$html.addClass('gumby-no-touch');
+		}
 	}
 
 	// initialize Gumby
-	Gumby.prototype.init = function() {
+	Gumby.prototype.init = function(opts) {
 		var scope = this;
 
 		// call ready() code when dom is ready
 		this.$dom.ready(function() {
+
 			// init UI modules
-			scope.initUIModules();
+			var mods = opts && opts.uiModules ? opts.uiModules : false;
+			scope.initUIModules(mods);
 
 			if(scope.onReady) {
 				scope.onReady();
@@ -57,6 +86,8 @@
 				scope.onTouch();
 			}
 		});
+
+		return this;
 	};
 
 	// public helper - set Gumby ready callback
@@ -64,6 +95,8 @@
 		if(code && typeof code === 'function') {
 			this.onReady = code;
 		}
+
+		return this;
 	};
 
 	// public helper - set oldie callback
@@ -71,6 +104,8 @@
 		if(code && typeof code === 'function') {
 			this.onOldie = code;
 		}
+
+		return this;
 	};
 
 	// public helper - set touch callback
@@ -78,6 +113,8 @@
 		if(code && typeof code === 'function') {
 			this.onTouch = code;
 		}
+
+		return this;
 	};
 
 	// public helper - return debuggin object including uiModules object
@@ -138,10 +175,18 @@
 	};
 
 	// loop round and init all UI modules
-	Gumby.prototype.initUIModules = function() {
-		var x;
-		for(x in this.uiModules) {
-			this.uiModules[x].init();
+	Gumby.prototype.initUIModules = function(mods) {
+		var x, m, arr = this.uiModules;
+
+		// only initialise specified modules
+		if(mods) {
+			arr = mods;
+		}
+
+		// initialise everything
+		for(x in arr) {
+			m = mods ? arr[x] : x;
+			this.uiModules[m].init();
 		}
 	};
 
