@@ -2475,6 +2475,7 @@ form fieldset legend { padding: 5px 10px; }
 .picker:after { content: "\25BE"; z-index: 0; position: absolute; right: 8%; top: 50%; margin-top: -12px; color: #555555; }
 .picker:first-child { margin-left: 0; }
 .picker select { position: relative; display: block; min-width: 100%; width: 135%; height: 34px; padding: 6px 45px 6px 15px; color: #555555; border: none; background: transparent; outline: none; -webkit-appearance: none; z-index: 99; cursor: pointer; font-size: 16px; font-size: 1rem; }
+.picker select::-ms-expand {display: none;} 
 
 .ie9 .radio.checked i, .ie9 .checkbox.checked i { top: 0px; }
 

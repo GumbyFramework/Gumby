@@ -391,6 +391,9 @@ form {
         cursor: pointer;
     @include font-size($norm);
   }
+  select::-ms-expand {
+    display: none;
+  }
 }
 
 // IE9 fix - seems no other way around this :(
