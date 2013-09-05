@@ -36,6 +36,7 @@
 				scope.skipTo();
 			}
 		}).on('gumby.initialize', function() {
+			Gumby.debug('Re-initializing Skiplink', scope.$el);
 			scope.setup();
 		});
 	}
@@ -84,6 +85,9 @@
 
 	// animate body, html scrollTop value to target px point
 	SkipLink.prototype.skipTo = function() {
+		
+		Gumby.debug('Skipping to target', scope.$el);
+
 		var scope = this;
 
 		// slide to position of target
