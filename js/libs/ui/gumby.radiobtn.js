@@ -41,6 +41,14 @@
 
 	// check radio button, uncheck all others in name group
 	RadioBtn.prototype.update = function() {
+
+		// already checked so no need to update
+		if(this.$el.hasClass('checked') && this.$input.prop('checked') && this.$el.find('i.icon-dot').length) {
+			return;
+		}
+
+		Gumby.debug('Updating Radio Button group', this.$el);
+
 		var $span = this.$el.find('span'),
 			// the group of radio buttons
 			group = 'input[name="'+this.$input.attr('name')+'"]';
