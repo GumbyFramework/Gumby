@@ -53,6 +53,7 @@
 			scope.trigger(scope.triggered);
 		// re-initialize module
 		}).on('gumby.initialize', function() {
+			Gumby.debug('Re-initializing '+scope.constructor, $el);
 			scope.setup();
 		});
 	};
@@ -98,6 +99,9 @@
 
 	// Toggle specific trigger method
 	Toggle.prototype.trigger = function(cb) {
+
+		Gumby.debug('Triggering Toggle', this.$el);
+
 		// no targets just toggle active class on toggle
 		if(!this.targets) {
 			this.$el.toggleClass(this.className);
@@ -126,6 +130,9 @@
 
 	// Switch specific trigger method
 	Switch.prototype.trigger = function(cb) {
+
+		Gumby.debug('Triggering Switch', this.$el);
+
 		// no targets just add active class to switch
 		if(!this.targets) {
 			this.$el.addClass(this.className);

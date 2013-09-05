@@ -86,7 +86,7 @@
 	// animate body, html scrollTop value to target px point
 	SkipLink.prototype.skipTo = function() {
 		
-		Gumby.debug('Skipping to target', scope.$el);
+		Gumby.debug('Skipping to target', this.$el);
 
 		var scope = this;
 
