@@ -11,6 +11,9 @@
 	}
 
 	function Navbar($el) {
+
+		Gumby.debug('Initializing Navbar', $el);
+
 		this.$el = $el;
 		this.$dropDowns = this.$el.find('li:has(.dropdown)');
 		var scope = this;

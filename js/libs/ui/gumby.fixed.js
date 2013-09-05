@@ -6,6 +6,9 @@
 	'use strict';
 
 	function Fixed($el) {
+
+		Gumby.debug('Initializing Fixed Position', $el);
+
 		this.$el = $el;
 
 		this.fixedPoint = '';
@@ -118,6 +121,9 @@
 
 	// fix the element and update state
 	Fixed.prototype.fix = function() {
+		
+		Gumby.debug('Element has been fixed', this.$el);
+
 		this.state = 'fixed';
 		this.$el.css({
 			'top' : 0 + this.top
@@ -131,12 +137,14 @@
 
 	// unfix the element and update state
 	Fixed.prototype.unfix = function() {
+		Gumby.debug('Element has been unfixed', this.$el);
 		this.state = 'unfixed';
 		this.$el.addClass('unfixed').removeClass('fixed pinned').trigger('gumby.onUnfixed');
 	};
 
 	// pin the element in position
 	Fixed.prototype.pin = function() {
+		Gumby.debug('Element has been pinned', this.$el);
 		this.state = 'pinned';
 		this.$el.css({
 			'top' : this.$el.offset().top

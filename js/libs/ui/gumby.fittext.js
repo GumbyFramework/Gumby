@@ -9,6 +9,9 @@
 	'use strict';
 
 	function FitText($el) {
+
+		Gumby.debug('Initializing FitText', $el);
+
 		this.$el = $el;
 
 		this.rate = 0;

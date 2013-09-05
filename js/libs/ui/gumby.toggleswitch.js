@@ -12,6 +12,7 @@
 		this.on = '';
 
 		if(this.$el.length) {
+			Gumby.debug('Initializing Toggle', $el);
 			this.init();
 		}
 	}
@@ -23,6 +24,7 @@
 		this.on = '';
 
 		if(this.$el.length) {
+			Gumby.debug('Initializing Switch', $el);
 			this.init();
 		}
 	}

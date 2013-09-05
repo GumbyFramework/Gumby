@@ -7,6 +7,8 @@
 
 	function RadioBtn($el) {
 
+		Gumby.debug('Initializing Radio Button', $el);
+
 		this.$el = $el;
 		this.$input = this.$el.find('input[type=radio]');
 

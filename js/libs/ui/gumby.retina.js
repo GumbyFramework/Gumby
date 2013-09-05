@@ -6,6 +6,9 @@
 	'use strict';
 
 	function Retina($el) {
+		
+		Gumby.debug('Initializing Retina', $el);
+
 		this.$el = $el;
 		this.imageSrc = this.$el.attr('src');
 		this.retinaSrc = this.fetchRetinaImage();

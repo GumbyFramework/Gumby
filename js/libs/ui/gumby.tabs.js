@@ -7,6 +7,8 @@
 
 	function Tabs($el) {
 
+		Gumby.debug('Initializing Tabs', $el);
+
 		this.$el = $el;
 		this.$nav = this.$el.find('ul.tab-nav > li');
 		this.$content = this.$el.find('.tab-content');

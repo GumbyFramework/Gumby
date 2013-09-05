@@ -130,7 +130,6 @@
 	
 	// pass args onto console method for output
 	Gumby.prototype.log = function() { this.console('log', arguments); };
-	Gumby.prototype.info = function() { this.console('info', arguments); };
 	Gumby.prototype.debug = function() { this.console('debug', arguments); };
 	Gumby.prototype.warn = function() { this.console('warn', arguments); };
 	Gumby.prototype.error = function() { this.console('error', arguments); };

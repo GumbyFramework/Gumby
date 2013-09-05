@@ -6,6 +6,9 @@
 	'use strict';
 
 	function SkipLink($el) {
+
+		Gumby.debug('Initializing Skiplink', $el);
+
 		this.$el = $el;
 		this.targetPos = 0;
 		this.duration = 0;

@@ -7,6 +7,8 @@
 
 	function Validation($this, req) {
 
+		Gumby.debug('Initializing Checkbox', $el);
+
 		// input and holder .field
 		this.$this = $this;
 		this.$field = this.$this.parents('.field');

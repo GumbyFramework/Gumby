@@ -7,6 +7,8 @@
 
 	function Checkbox($el) {
 
+		Gumby.debug('Initializing Checkbox', $el);
+
 		this.$el = $el;
 		this.$input = this.$el.find('input[type=checkbox]');
 
