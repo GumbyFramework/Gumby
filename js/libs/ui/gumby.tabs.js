@@ -33,6 +33,12 @@
 		// index of item to activate
 		var index = $this.parent().index();
 
+		if(this.$nav.eq(index).add(this.$content.eq(index)).hasClass('active')) {
+			return;
+		}
+
+		Gumby.debug('Setting active tab to '+index, this.$el);
+
 		// deactivate other tab navigation and content
 		this.$nav.add(this.$content).removeClass('active');
 
