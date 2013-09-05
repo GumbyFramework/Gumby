@@ -1,6 +1,6 @@
 // Gumby is ready to go
 Gumby.ready(function() {
-	console.log('Gumby is ready to go...', Gumby.debug());
+	console.log('Gumby is ready to go...', Gumby.dump());
 
 	// placeholder polyfil
 	if(Gumby.isOldie || Gumby.$dom.find('html').hasClass('ie9')) {

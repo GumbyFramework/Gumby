@@ -71,6 +71,10 @@
 				scope.debugMode = true;
 			}
 
+			if(scope.debugMode) {
+				scope.debug("Gumby is in debug mode...");
+			}
+
 			// init UI modules
 			var mods = opts.uiModules ? opts.uiModules : false;
 			scope.initUIModules(mods);
@@ -123,17 +127,18 @@
 	// print to console if available and we're in debug mode
 	Gumby.prototype.console = function(type, data) {
 		if(!this.debugMode || !window.console) { return; }
-		console[console[type] ? type : 'log'](Array.prototype.slice.call(data));
+		console[console[type] ? type : 'log'](data.length > 1 ? Array.prototype.slice.call(data) : data[0]);
 	};
 	
 	// pass args onto console method for output
 	Gumby.prototype.log = function() { this.console('log', arguments); };
 	Gumby.prototype.info = function() { this.console('info', arguments); };
+	Gumby.prototype.debug = function() { this.console('debug', arguments); };
 	Gumby.prototype.warn = function() { this.console('warn', arguments); };
 	Gumby.prototype.error = function() { this.console('error', arguments); };
 
 	// public helper - return debuggin object including uiModules object
-	Gumby.prototype.debug = function() {
+	Gumby.prototype.dump = function() {
 		return {
 			$dom: this.$dom,
 			isOldie: this.isOldie,
