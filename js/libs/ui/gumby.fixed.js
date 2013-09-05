@@ -35,6 +35,7 @@
 
 		// reinitialize event listener
 		this.$el.on('gumby.initialize', function() {
+			Gumby.debug('Re-initializing Fixed Position', $el);
 			scope.setup();
 			scope.monitorScroll();
 		});
@@ -153,6 +154,7 @@
 
 	// constrain elements dimensions to match width/height
 	Fixed.prototype.constrain = function() {
+		Gumby.debug("Constraining element", this.$el);
 		this.$el.css({
 			left: this.measurements.left,
 			width: this.measurements.width
