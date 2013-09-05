@@ -43,6 +43,7 @@
 
 	// once retina image loaded swap original src
 	Retina.prototype.retinaImageLoaded = function() {
+		Gumby.debug('Swapping image for retina version', $el);
 		this.$el.attr('src', this.$retinaImg.attr('src')).trigger('gumby.onRetina');
 	};
 
