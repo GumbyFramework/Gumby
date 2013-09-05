@@ -71,9 +71,7 @@
 				scope.debugMode = true;
 			}
 
-			if(scope.debugMode) {
-				scope.debug("Gumby is in debug mode...");
-			}
+			scope.debug("Gumby is in debug mode...");
 
 			// init UI modules
 			var mods = opts.uiModules ? opts.uiModules : false;
