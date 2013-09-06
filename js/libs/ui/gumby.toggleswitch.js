@@ -50,6 +50,7 @@
 
 		// listen for gumby.trigger to dynamically trigger toggle/switch
 		}).on('gumby.trigger', function() {
+			Gumby.debug('Trigger event triggered', scope.$el);
 			scope.trigger(scope.triggered);
 		// re-initialize module
 		}).on('gumby.initialize', function() {
@@ -91,6 +92,7 @@
 	// call triggered event and pass target data
 	Toggle.prototype.triggered = function() {
 		// trigger gumby.onTrigger event and pass array of target status data
+		Gumby.debug('Triggering onTrigger event', scope.$el);
 		this.$el.trigger('gumby.onTrigger', [this.$el.hasClass(this.className)]);
 	};
 
@@ -202,7 +204,7 @@
 	// register UI module
 	Gumby.UIModule({
 		module: 'toggleswitch',
-		events: ['trigger', 'onTrigger'],
+		events: ['initialize', 'trigger', 'onTrigger'],
 		init: function() {
 			// Run initialize methods
 			Gumby.initialize('switches');
