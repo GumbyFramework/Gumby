@@ -181,11 +181,25 @@
 		this.inits[ref] = code;
 	};
 
-	// initialize a uiModule
+	// initialize a uiModule, single / array of module refs 
 	Gumby.prototype.initialize = function(ref, all) {
-		if(this.inits[ref] && typeof this.inits[ref] === 'function') {
+		if(typeof ref === 'object') {
+			var i = 0;
+			for(i; i < ref.length; i++) {
+				if(!this.inits[ref[i]] || typeof this.inits[ref[i]] !== 'function') {
+					this.error('Error initializing module: '+ref[i]);
+					continue;
+				}
+
+				this.inits[ref[i]](all);
+			}	
+		} else if(this.inits[ref] && typeof this.inits[ref] === 'function') {
 			this.inits[ref](all);
+		} else {
+			this.error('Error initializing module: '+ref);
 		}
+
+		return this;
 	};
 
 	// store a UI module
