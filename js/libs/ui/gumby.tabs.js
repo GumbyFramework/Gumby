@@ -24,6 +24,7 @@
 
 		// listen for gumby.set value for dynamically set tabs
 		this.$el.on('gumby.set', function(e, index) {
+			Gumby.debug('Set event triggered', scope.$el);
 			scope.set(e, index);
 		});
 	}
@@ -46,6 +47,7 @@
 		this.$nav.eq(index).add(this.$content.eq(index)).addClass('active');
 
 		// trigger gumby.change event and pass current active tab index
+		Gumby.debug('Triggering onChange event', scope.$el);
 		this.$el.trigger('gumby.onChange', index);
 	};
 
