@@ -7,7 +7,9 @@
 
 	function Validation($this, req) {
 
-		Gumby.debug('Initializing Validation', $el);
+		if(Gumby) {
+			Gumby.debug('Initializing Validation', $this);
+		}
 
 		// input and holder .field
 		this.$this = $this;
