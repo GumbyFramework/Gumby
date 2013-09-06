@@ -34,8 +34,10 @@
 				scope.update(true);
 			}
 		}).on('gumby.check', function() {
+			Gumby.debug('Check event triggered', scope.$el);
 			scope.update(true);
 		}).on('gumby.uncheck', function() {
+			Gumby.debug('Uncheck event triggered', scope.$el);
 			scope.update(false);
 		});
 
@@ -55,19 +57,25 @@
 			Gumby.debug('Checking Checkbox', this.$el);
 
 			$span.append('<i class="icon-check" />');
+			this.$input.prop('checked', true);
 
-			this.$input.prop('checked', true).end()
-				.addClass('checked')
-				.trigger('gumby.onCheck').trigger('gumby.onChange');
+			Gumby.debug('Triggering onCheck event', this.$el);
+			Gumby.debug('Triggering onChange event', this.$el);
+
+			this.$el.addClass('checked').trigger('gumby.onCheck').trigger('gumby.onChange');
 
 		// uncheck checkbox - uncheck input, remove checked class, remove <i>
 		} else {
 			
 			Gumby.debug('Unchecking Checkbox', this.$el);
 
-			this.$input.prop('checked', false).end()
-				.find('i').remove().end()
-				.removeClass('checked').trigger('gumby.onUncheck').trigger('gumby.onChange');
+			this.$input.prop('checked', false);
+			$span.find('i').remove();
+
+			Gumby.debug('Triggering onUncheck event', this.$el);
+			Gumby.debug('Triggering onChange event', this.$el);
+
+			this.$el.removeClass('checked').trigger('gumby.onUncheck').trigger('gumby.onChange');
 		}
 	};
 
