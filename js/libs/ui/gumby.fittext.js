@@ -106,7 +106,7 @@
 	// register UI module
 	Gumby.UIModule({
 		module: 'fittext',
-		events: [],
+		events: ['initialize'],
 		init: function() {
 			Gumby.initialize('fittext');
 		}
