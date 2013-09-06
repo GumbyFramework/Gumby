@@ -22,6 +22,6 @@ $(function() {
 	// when the skip link completes, trigger the switch
 	$('#skip-switch').on('gumby.onComplete', function() {
 		$(this).trigger('gumby.trigger');
-	});
+	}).trigger('gumby.skip');
 });
 

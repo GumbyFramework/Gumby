@@ -27,6 +27,10 @@
 			e.stopImmediatePropagation();
 			e.preventDefault();
 
+			if(e.namespace === 'skip') {
+				Gumby.debug('Skip event triggered', scope.$el);
+			}
+
 			// calculate target on each click if update var set to true
 			if(scope.update) {
 				scope.calculateTarget(scope.skipTo);
@@ -94,6 +98,8 @@
 		$('html,body').animate({
 			'scrollTop' : this.calculateOffset()
 		}, this.duration, this.easing).promise().done(function() {
+
+			Gumby.debug('Triggering onComplete event', scope.$el);
 			scope.$el.trigger('gumby.onComplete');
 		});
 	};
@@ -144,7 +150,7 @@
 	// register UI module
 	Gumby.UIModule({
 		module: 'skiplink',
-		events: ['onComplete', 'skip'],
+		events: ['initialize', 'onComplete', 'skip'],
 		init: function() {
 			Gumby.initialize('skiplinks');
 		}
