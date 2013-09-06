@@ -47,7 +47,7 @@
 		this.$nav.eq(index).add(this.$content.eq(index)).addClass('active');
 
 		// trigger gumby.change event and pass current active tab index
-		Gumby.debug('Triggering onChange event', scope.$el);
+		Gumby.debug('Triggering onChange event', this.$el);
 		this.$el.trigger('gumby.onChange', index);
 	};
 
