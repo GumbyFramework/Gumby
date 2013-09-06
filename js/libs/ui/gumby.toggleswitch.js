@@ -92,7 +92,7 @@
 	// call triggered event and pass target data
 	Toggle.prototype.triggered = function() {
 		// trigger gumby.onTrigger event and pass array of target status data
-		Gumby.debug('Triggering onTrigger event', scope.$el);
+		Gumby.debug('Triggering onTrigger event', this.$el);
 		this.$el.trigger('gumby.onTrigger', [this.$el.hasClass(this.className)]);
 	};
 
