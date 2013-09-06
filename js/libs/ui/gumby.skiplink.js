@@ -125,7 +125,7 @@
 	};
 
 	// add initialisation
-	Gumby.addInitalisation('skiplinks', function(all) {
+	Gumby.addInitalisation('skiplink', function(all) {
 		$('.skiplink > a, .skip').each(function() {
 			var $this = $(this);
 
@@ -152,7 +152,7 @@
 		module: 'skiplink',
 		events: ['initialize', 'onComplete', 'skip'],
 		init: function() {
-			Gumby.initialize('skiplinks');
+			Gumby.initialize('skiplink');
 		}
 	});
 }();

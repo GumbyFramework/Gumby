@@ -90,7 +90,7 @@
 	};
 
 	// add initialisation
-	Gumby.addInitalisation('navbars', function() {
+	Gumby.addInitalisation('navbar', function() {
 		$('.navbar').each(function() {
 			var $this = $(this);
 			// this element has already been initialized
@@ -108,7 +108,7 @@
 		module: 'navbar',
 		events: [],
 		init: function() {
-			Gumby.initialize('navbars');
+			Gumby.initialize('navbar');
 		}
 	});
 }();

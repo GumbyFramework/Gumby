@@ -80,7 +80,7 @@
 	};
 
 	// add initialisation
-	Gumby.addInitalisation('checkboxes', function() {
+	Gumby.addInitalisation('checkbox', function() {
 		$('.checkbox').each(function() {
 			var $this = $(this);
 			// this element has already been initialized
@@ -98,7 +98,7 @@
 		module: 'checkbox',
 		events: ['onCheck', 'onUncheck', 'onChange', 'check', 'uncheck'],
 		init: function() {
-			Gumby.initialize('checkboxes');
+			Gumby.initialize('checkbox');
 		}
 	});
 }();

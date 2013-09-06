@@ -69,7 +69,7 @@
 	};
 
 	// add initialisation
-	Gumby.addInitalisation('radiobtns', function() {
+	Gumby.addInitalisation('radiobtn', function() {
 		$('.radio').each(function() {
 			var $this = $(this);
 			// this element has already been initialized
@@ -87,7 +87,7 @@
 		module: 'radiobtn',
 		events: ['onChange', 'check'],
 		init: function() {
-			Gumby.initialize('radiobtns');
+			Gumby.initialize('radiobtn');
 		}
 	});
 }();
