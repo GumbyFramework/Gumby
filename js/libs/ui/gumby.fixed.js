@@ -122,8 +122,8 @@
 
 	// fix the element and update state
 	Fixed.prototype.fix = function() {
-		
 		Gumby.debug('Element has been fixed', this.$el);
+		Gumby.debug('Triggering onFixed event', this.$el);
 
 		this.state = 'fixed';
 		this.$el.css({
@@ -139,6 +139,8 @@
 	// unfix the element and update state
 	Fixed.prototype.unfix = function() {
 		Gumby.debug('Element has been unfixed', this.$el);
+		Gumby.debug('Triggering onUnfixed event', this.$el);
+
 		this.state = 'unfixed';
 		this.$el.addClass('unfixed').removeClass('fixed pinned').trigger('gumby.onUnfixed');
 	};
@@ -146,6 +148,7 @@
 	// pin the element in position
 	Fixed.prototype.pin = function() {
 		Gumby.debug('Element has been pinned', this.$el);
+		Gumby.debug('Triggering onPinned event', this.$el);
 		this.state = 'pinned';
 		this.$el.css({
 			'top' : this.$el.offset().top
@@ -218,7 +221,7 @@
 	// register UI module
 	Gumby.UIModule({
 		module: 'fixed',
-		events: ['onFixed', 'onUnfixed'],
+		events: ['initialize', 'onFixed', 'onUnfixed'],
 		init: function() {
 			Gumby.initialize('fixed');
 		}
