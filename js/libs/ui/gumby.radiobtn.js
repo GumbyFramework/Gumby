@@ -30,6 +30,7 @@
 			// check radio button
 			scope.update();
 		}).on('gumby.check', function() {
+			Gumby.debug('Check event triggered', scope.$el);
 			scope.update();
 		});
 
@@ -61,6 +62,9 @@
 		// check this radio button - check input, add checked class, append <i>
 		this.$input.prop('checked', true);
 		$span.append('<i class="icon-dot" />');
+
+		Gumby.debug('Triggering onCheck event', this.$el);
+
 		this.$el.addClass('checked').trigger('gumby.onCheck');
 	};
 
