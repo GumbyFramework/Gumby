@@ -3,7 +3,7 @@
 }
 
 
-@mixin fancytiles($desktop-columns, $tablet-columns: $desktop-columns, $mobile-columns: 1) {
+@mixin fancytiles($desktop-columns, $tablet-columns: $desktop-columns, $mobile-columns: 1, $small-break: $min-device-width, $medium-break: $tablet-device-width, $large-break: $row-max-width) {
 
   // These styles apply to all shift-columns
   display: inline-block;
@@ -11,15 +11,15 @@
   padding-left: $gutter / 2;
   padding-right: $gutter / 2;
 
-  @include respond("min-width: #{$min-device-width}") {
+  @include respond("min-width: #{$small-break}") {
     width: divide-cols($mobile-columns);
   }
 
-  @include respond("min-width: #{$tablet-device-width}") {
+  @include respond("min-width: #{$medium-break}") {
     width: divide-cols($tablet-columns);
   }
 
-  @include respond("min-width: #{$row-max-width}") {
+  @include respond("min-width: #{$large-break}") {
     width: divide-cols($desktop-columns);
   }
 
