@@ -6,6 +6,9 @@
 	'use strict';
 
 	function Fixed($el) {
+
+		Gumby.debug('Initializing Fixed Position', $el);
+
 		this.$el = $el;
 
 		this.fixedPoint = '';
@@ -32,6 +35,7 @@
 
 		// reinitialize event listener
 		this.$el.on('gumby.initialize', function() {
+			Gumby.debug('Re-initializing Fixed Position', $el);
 			scope.setup();
 			scope.monitorScroll();
 		});
@@ -118,6 +122,9 @@
 
 	// fix the element and update state
 	Fixed.prototype.fix = function() {
+		Gumby.debug('Element has been fixed', this.$el);
+		Gumby.debug('Triggering onFixed event', this.$el);
+
 		this.state = 'fixed';
 		this.$el.css({
 			'top' : 0 + this.top
@@ -131,12 +138,17 @@
 
 	// unfix the element and update state
 	Fixed.prototype.unfix = function() {
+		Gumby.debug('Element has been unfixed', this.$el);
+		Gumby.debug('Triggering onUnfixed event', this.$el);
+
 		this.state = 'unfixed';
 		this.$el.addClass('unfixed').removeClass('fixed pinned').trigger('gumby.onUnfixed');
 	};
 
 	// pin the element in position
 	Fixed.prototype.pin = function() {
+		Gumby.debug('Element has been pinned', this.$el);
+		Gumby.debug('Triggering onPinned event', this.$el);
 		this.state = 'pinned';
 		this.$el.css({
 			'top' : this.$el.offset().top
@@ -145,6 +157,7 @@
 
 	// constrain elements dimensions to match width/height
 	Fixed.prototype.constrain = function() {
+		Gumby.debug("Constraining element", this.$el);
 		this.$el.css({
 			left: this.measurements.left,
 			width: this.measurements.width
@@ -208,7 +221,7 @@
 	// register UI module
 	Gumby.UIModule({
 		module: 'fixed',
-		events: ['onFixed', 'onUnfixed'],
+		events: ['initialize', 'onFixed', 'onUnfixed'],
 		init: function() {
 			Gumby.initialize('fixed');
 		}

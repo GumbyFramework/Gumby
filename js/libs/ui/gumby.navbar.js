@@ -11,6 +11,9 @@
 	}
 
 	function Navbar($el) {
+
+		Gumby.debug('Initializing Navbar', $el);
+
 		this.$el = $el;
 		this.$dropDowns = this.$el.find('li:has(.dropdown)');
 		var scope = this;
@@ -51,8 +54,10 @@
 		var $this = $(this);
 
 		if($this.hasClass('active')) {
+			Gumby.debug('Opening Dropdown', $el);
 			$this.removeClass('active');
 		} else {
+			Gumby.debug('Closing Dropdown', $el);
 			$this.addClass('active');
 		}
 	};
@@ -85,7 +90,7 @@
 	};
 
 	// add initialisation
-	Gumby.addInitalisation('navbars', function() {
+	Gumby.addInitalisation('navbar', function() {
 		$('.navbar').each(function() {
 			var $this = $(this);
 			// this element has already been initialized
@@ -103,7 +108,7 @@
 		module: 'navbar',
 		events: [],
 		init: function() {
-			Gumby.initialize('navbars');
+			Gumby.initialize('navbar');
 		}
 	});
 }();

@@ -12,6 +12,7 @@
 		this.on = '';
 
 		if(this.$el.length) {
+			Gumby.debug('Initializing Toggle', $el);
 			this.init();
 		}
 	}
@@ -23,6 +24,7 @@
 		this.on = '';
 
 		if(this.$el.length) {
+			Gumby.debug('Initializing Switch', $el);
 			this.init();
 		}
 	}
@@ -48,9 +50,11 @@
 
 		// listen for gumby.trigger to dynamically trigger toggle/switch
 		}).on('gumby.trigger', function() {
+			Gumby.debug('Trigger event triggered', scope.$el);
 			scope.trigger(scope.triggered);
 		// re-initialize module
 		}).on('gumby.initialize', function() {
+			Gumby.debug('Re-initializing '+scope.constructor, $el);
 			scope.setup();
 		});
 	};
@@ -77,25 +81,49 @@
 
 		// no secondary targets specified so return single target
 		if(secondaryTargets === -1) {
+			if(!this.checkTargets([targetStr])) {
+				return false;
+			}
 			return [$(targetStr)];
 		}
 
 		// return array of both targets, split and return 0, 1
 		targets = targetStr.split('|');
+		if(!this.checkTargets(targets)) {
+			return false;
+		}
 		return targets.length > 1 ? [$(targets[0]), $(targets[1])] : [$(targets[0])];
+	};
+
+	Toggle.prototype.checkTargets = function(targets) {
+		var i = 0;
+
+		for(i; i < targets.length; i++) {
+			if(targets[i] && !$(targets[i]).length) {
+				Gumby.error('Cannot find '+this.constructor.name+' target: '+targets[i]);
+				return false;
+			}
+		}
+
+		return true;
 	};
 
 	// call triggered event and pass target data
 	Toggle.prototype.triggered = function() {
 		// trigger gumby.onTrigger event and pass array of target status data
+		Gumby.debug('Triggering onTrigger event', this.$el);
 		this.$el.trigger('gumby.onTrigger', [this.$el.hasClass(this.className)]);
 	};
 
 	// Switch object inherits from Toggle
 	Switch.prototype = new Toggle();
+	Switch.prototype.constructor = Switch;
 
 	// Toggle specific trigger method
 	Toggle.prototype.trigger = function(cb) {
+
+		Gumby.debug('Triggering Toggle', this.$el);
+
 		// no targets just toggle active class on toggle
 		if(!this.targets) {
 			this.$el.toggleClass(this.className);
@@ -124,6 +152,9 @@
 
 	// Switch specific trigger method
 	Switch.prototype.trigger = function(cb) {
+
+		Gumby.debug('Triggering Switch', this.$el);
+
 		// no targets just add active class to switch
 		if(!this.targets) {
 			this.$el.addClass(this.className);
@@ -193,7 +224,7 @@
 	// register UI module
 	Gumby.UIModule({
 		module: 'toggleswitch',
-		events: ['trigger', 'onTrigger'],
+		events: ['initialize', 'trigger', 'onTrigger'],
 		init: function() {
 			// Run initialize methods
 			Gumby.initialize('switches');

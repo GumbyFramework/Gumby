@@ -1,6 +1,6 @@
 // Gumby is ready to go
 Gumby.ready(function() {
-	console.log('Gumby is ready to go...', Gumby.debug());
+	Gumby.log('Gumby is ready to go...', Gumby.dump());
 
 	// placeholder polyfil
 	if(Gumby.isOldie || Gumby.$dom.find('html').hasClass('ie9')) {
@@ -9,15 +9,17 @@ Gumby.ready(function() {
 
 // Oldie document loaded
 }).oldie(function() {
-	console.log("This is an oldie browser...");
+	Gumby.warn("This is an oldie browser...");
 
 // Touch devices loaded
 }).touch(function() {
-	console.log("This is a touch enabled device...");
+	Gumby.log("This is a touch enabled device...");
 });
 
 // Document ready
 $(function() {
+	// skip link and toggle on one element
+	// when the skip link completes, trigger the switch
 	$('#skip-switch').on('gumby.onComplete', function() {
 		$(this).trigger('gumby.trigger');
 	});

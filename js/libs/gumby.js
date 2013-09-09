@@ -25,9 +25,10 @@
 		this.isOldie = !!this.$html.hasClass('oldie');
 		this.click = 'click';
 		this.onReady = this.onOldie = this.onTouch = false;
-		this.autoInit = $('script[gumby-init]').attr('gumby-init') === 'false' ? false : true,
+		this.autoInit = $('script[gumby-init]').attr('gumby-init') === 'false' ? false : true;
+		this.debugMode = Boolean($('script[gumby-debug]').length),
 		this.touchEvents = 'js/libs';
-		this.breakpoint = '';
+		this.breakpoint = Number($('script[gumby-breakpoint]').attr('gumby-breakpoint')) || 768;
 		this.uiModules = {};
 		this.inits = {};
 
@@ -49,9 +50,6 @@
 			}
 		}
 
-		// check and set breakpoint with 768 default
-		this.breakpoint = Number($('script[gumby-breakpoint]').attr('gumby-breakpoint')) || 768;
-
 		// add gumby-touch/gumby-no-touch classes
 		// gumby touch == touch enabled && smaller than defined breakpoint
 		if(Modernizr.touch && $(window).width() < this.breakpoint) {
@@ -62,14 +60,21 @@
 	}
 
 	// initialize Gumby
-	Gumby.prototype.init = function(opts) {
-		var scope = this;
+	Gumby.prototype.init = function(options) {
+		var scope = this,
+			opts = options ? options : {};
 
 		// call ready() code when dom is ready
 		this.$dom.ready(function() {
 
+			if(opts.debug) {
+				scope.debugMode = true;
+			}
+
+			scope.debug("Gumby is in debug mode...");
+
 			// init UI modules
-			var mods = opts && opts.uiModules ? opts.uiModules : false;
+			var mods = opts.uiModules ? opts.uiModules : false;
 			scope.initUIModules(mods);
 
 			if(scope.onReady) {
@@ -117,11 +122,26 @@
 		return this;
 	};
 
+	// print to console if available and we're in debug mode
+	Gumby.prototype.console = function(type, data) {
+		if(!this.debugMode || !window.console) { return; }
+		console[console[type] ? type : 'log'](data.length > 1 ? Array.prototype.slice.call(data) : data[0]);
+	};
+	
+	// pass args onto console method for output
+	Gumby.prototype.log = function() { this.console('log', arguments); };
+	Gumby.prototype.debug = function() { this.console('debug', arguments); };
+	Gumby.prototype.warn = function() { this.console('warn', arguments); };
+	Gumby.prototype.error = function() { this.console('error', arguments); };
+
 	// public helper - return debuggin object including uiModules object
-	Gumby.prototype.debug = function() {
+	Gumby.prototype.dump = function() {
 		return {
 			$dom: this.$dom,
 			isOldie: this.isOldie,
+			touchEvents: this.touchEvents,
+			debugMode: this.debugMode,
+			autoInit: this.autoInit,
 			uiModules: this.uiModules,
 			click: this.click
 		};
@@ -161,11 +181,25 @@
 		this.inits[ref] = code;
 	};
 
-	// initialize a uiModule
+	// initialize a uiModule, single / array of module refs 
 	Gumby.prototype.initialize = function(ref, all) {
-		if(this.inits[ref] && typeof this.inits[ref] === 'function') {
+		if(typeof ref === 'object') {
+			var i = 0;
+			for(i; i < ref.length; i++) {
+				if(!this.inits[ref[i]] || typeof this.inits[ref[i]] !== 'function') {
+					this.error('Error initializing module: '+ref[i]);
+					continue;
+				}
+
+				this.inits[ref[i]](all);
+			}	
+		} else if(this.inits[ref] && typeof this.inits[ref] === 'function') {
 			this.inits[ref](all);
+		} else {
+			this.error('Error initializing module: '+ref);
 		}
+
+		return this;
 	};
 
 	// store a UI module

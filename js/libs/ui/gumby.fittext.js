@@ -9,6 +9,9 @@
 	'use strict';
 
 	function FitText($el) {
+
+		Gumby.debug('Initializing FitText', $el);
+
 		this.$el = $el;
 
 		this.rate = 0;
@@ -21,6 +24,7 @@
 
 		// re-initialize module
 		this.$el.on('gumby.initialize', function() {
+			Gumby.debug('Re-initializing FitText', scope.$el);
 			scope.setup();
 			scope.resize();
 		});
@@ -41,7 +45,9 @@
 
 	// apply the resizing
 	FitText.prototype.resize = function() {
-		this.$el.css('font-size', this.calculateSize());
+		var size = this.calculateSize();
+		Gumby.debug('Updating font size to '+size+'px', this.$el);
+		this.$el.css('font-size', size);
 	};
 
 	// calculate the font size
@@ -100,7 +106,7 @@
 	// register UI module
 	Gumby.UIModule({
 		module: 'fittext',
-		events: [],
+		events: ['initialize'],
 		init: function() {
 			Gumby.initialize('fittext');
 		}
