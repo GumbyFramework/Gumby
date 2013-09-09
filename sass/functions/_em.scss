@@ -4,7 +4,7 @@
   @if not unitless($size-in-px) {
       $size-in-px: strip-units($size-in-px);
   }
-  @if not unitless($base) {
+  @if not unitless($context) {
       $parent: strip-units($context);
   }
   @return ($size-in-px / $context) * 1em;
