@@ -191,6 +191,10 @@
 		// selector specified
 		} else {
 			var $el = $(attr);
+			if(!$el.length) {
+				Gumby.error('Cannot find Fixed target: '+attr);
+				return false;
+			}
 			return $el;
 		}
 	};
