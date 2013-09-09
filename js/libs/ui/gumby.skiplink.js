@@ -75,7 +75,8 @@
 			$target = $(target);
 
 			// target does not exist, we need a target
-			if(!$target) {
+			if(!$target.length) {
+				Gumby.error('Cannot find skiplink target: '+target);
 				return false;
 			}
 

@@ -81,12 +81,31 @@
 
 		// no secondary targets specified so return single target
 		if(secondaryTargets === -1) {
+			if(!this.checkTargets([targetStr])) {
+				return false;
+			}
 			return [$(targetStr)];
 		}
 
 		// return array of both targets, split and return 0, 1
 		targets = targetStr.split('|');
+		if(!this.checkTargets(targets)) {
+			return false;
+		}
 		return targets.length > 1 ? [$(targets[0]), $(targets[1])] : [$(targets[0])];
+	};
+
+	Toggle.prototype.checkTargets = function(targets) {
+		var i = 0;
+
+		for(i; i < targets.length; i++) {
+			if(targets[i] && !$(targets[i]).length) {
+				Gumby.error('Cannot find '+this.constructor.name+' target: '+targets[i]);
+				return false;
+			}
+		}
+
+		return true;
 	};
 
 	// call triggered event and pass target data
@@ -98,6 +117,7 @@
 
 	// Switch object inherits from Toggle
 	Switch.prototype = new Toggle();
+	Switch.prototype.constructor = Switch;
 
 	// Toggle specific trigger method
 	Toggle.prototype.trigger = function(cb) {
