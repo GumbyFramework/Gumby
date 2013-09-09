@@ -24,6 +24,8 @@
 		// load retina image
 		this.$retinaImg.attr('src', this.retinaSrc).load(function() {
 			scope.retinaImageLoaded();
+		}).error(function() {
+			Gumby.error('Couln\'t load retina image: '+scope.retinaSrc);
 		});
 	}
 
