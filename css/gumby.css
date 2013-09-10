@@ -42,7 +42,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html { font-size: 16px; line-height: 1.625em; }
 
-html * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 body { background: white; font-family: "Open Sans"; font-weight: 400; color: #555555; position: relative; -webkit-font-smoothing: antialiased; }
 @media only screen and (max-width: 767px) { body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; } }
