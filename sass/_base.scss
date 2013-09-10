@@ -2,7 +2,7 @@
 
 @include establish-baseline;
 
-html * {
+* {
 	@include box-sizing(border-box);
 }
 
