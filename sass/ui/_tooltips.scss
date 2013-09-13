@@ -2,6 +2,7 @@
 
 .ttip {
 	@include tooltip($tt-min-width, $tt-bgcolor, $tt-position);
+	cursor: pointer;
 }
 
 .ttip:after, .ttip:before {

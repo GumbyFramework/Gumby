@@ -365,6 +365,7 @@ form {
   @include background-image(linear-gradient(lighten($default-color, 20%), $default-color));
   &:after {
     content: "\25BE";
+    font-family: $icons;
     z-index: 0;
     position:absolute;
     right: 8%;
