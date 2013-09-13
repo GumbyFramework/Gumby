@@ -2608,10 +2608,9 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 @media only screen and (max-width: 768px) { .ttip:after, .ttip:before { display: none; } }
 
 /* shame */
+.ie8 { /* double input field fix */ /* warning message icon fix */ /* tooltip 'fade' fix */ }
 .ie8 .xxwide, .ie8 .xwide, .ie8 .wide, .ie8 .normal, .ie8 .narrow, .ie8 .xnarrow { display: inline; }
 .ie8 .xxwide + input, .ie8 .xwide + input, .ie8 .wide + input, .ie8 .normal + input, .ie8 .narrow + input, .ie8 .xnarrow + input { display: inline; margin: 0 0 0 -.25em; }
-
-.ie8 .field.success:after { border: 1px solid red !important; }
-
+.ie8 .field.success:after, .ie8 .field.warning:after, .ie8 .field.danger:after { display: block; height: 10px; width: 10px; border: 1px solid black; z-index: 2; }
 .ie8 .ttip:before, .ie8 .ttip:after { display: none; }
 .ie8 .ttip:hover:before, .ie8 .ttip:hover:after { display: block; }
