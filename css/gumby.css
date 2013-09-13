@@ -167,7 +167,7 @@ abbr { text-transform: none; }
  ==================================================*/
 /*.container { padding: 0px $gutter-in-px;
 }*/
-.row { width: 100%; max-width: 980px; min-width: 320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; position: relative; }
+.row { width: 100%; max-width: 980px; min-width: 320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
 .row .row { min-width: 0px; padding-left: 0; padding-right: 0; }
 
 /* To fix the grid into a different size, set max-width to your desired width */
@@ -1033,7 +1033,7 @@ img { -ms-interpolation-mode: bicubic; }
 /*=====================================================
  Navigation (with dropdowns)
  ======================================================*/
-.navbar { width: 100%; min-height: 60px; display: block; margin-bottom: 20px; background: #4a4d50; }
+.navbar { width: 100%; min-height: 60px; display: block; margin-bottom: 20px; background: #4a4d50; position: relative; }
 @media only screen and (max-width: 767px) { .navbar { border: none; }
   .navbar .column, .navbar .columns { min-height: 0; } }
 .navbar.fixed { top: 0; left: 0; z-index: 99999; }
