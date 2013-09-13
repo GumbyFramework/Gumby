@@ -12,3 +12,17 @@
 		margin: 0 0 0 -.25em;
 	}
 }
+.ie8 .field.success:after {
+	border: 1px solid red !important;
+}
+
+.ie8 .ttip {
+	&:before, &:after {
+		display: none;
+	}
+	&:hover {
+		&:before, &:after {
+			display: block;
+		}
+	}
+}

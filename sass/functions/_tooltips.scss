@@ -9,7 +9,7 @@
     border: 1px solid $tt-bgcolor;
     border-bottom: 0;
     @include border-radius(3px);
-    padding: .5rem .75rem;
+    padding:  em(8) em(12);
     width: auto;
     min-width: $tt-min-width;
     max-width: 500px;
@@ -41,7 +41,7 @@
     color: #fff;
     content: attr(data-tooltip);
     line-height: 1.5;
-    font-size: .9rem;
+    font-size: em(14.4);
 
     @include transition(all 0.1s ease);
     @include opacity(0);
