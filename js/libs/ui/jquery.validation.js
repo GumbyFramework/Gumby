@@ -7,6 +7,10 @@
 
 	function Validation($this, req) {
 
+		if(Gumby) {
+			Gumby.debug('Initializing Validation', $this);
+		}
+
 		// input and holder .field
 		this.$this = $this;
 		this.$field = this.$this.parents('.field');
@@ -67,11 +71,11 @@
 
 		var // extend params with defaults
 			settings = $.extend({
-		      		submit : false,
-		      		fail: false,
-		      		required : []
-		    }, options),
-		    // store validation objects
+				submit : false,
+				fail: false,
+				required : []
+			}, options),
+			// store validation objects
 			validations = [];
 
 		// init each form plugin is called on

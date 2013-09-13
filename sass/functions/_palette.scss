@@ -1,0 +1,76 @@
+// Color Pallete
+
+@function getColor($key, $state: false, $list: $ui-coloring) {
+  @each $color in $list {
+    @if $key == nth($color, 1) and $state == default {
+        @return nth($color, 2);
+    }
+    @else if $key == nth($color, 1) and $state == hover {
+        @return nth($color, 3);
+    }
+    @else if $key == nth($color, 1) {
+        @return nth($color, 1);
+    }
+  }
+  @return false;
+}
+
+@mixin palette($shade, $palette-text-color:false) {
+  @if $shade == getColor($shade) {
+    @if $palette-text-color != false  {
+      color: $palette-text-color;
+    }
+    @else {
+      color: lighten(getColor($shade, default), 80%);
+    }
+    background: getColor($shade, default);
+    border: 1px solid getColor($shade, default);
+    &:hover {
+      background: getColor($shade, hover);
+      border: 1px solid darken(getColor($shade, hover), 3%);
+    }
+    &:active {
+      background: darken(getColor($shade, default), 10%);
+      border: 1px solid darken(getColor($shade, default), 10%);
+    }
+
+    @if $shade == default {
+      @if $palette-text-color != false  {
+        color: $palette-text-color;
+      }
+      @else {
+        color: darken(getColor($shade, default), 61.5%);
+      }
+      border: 1px solid getColor($shade, default);
+      &:hover {
+        border: 1px solid darken(getColor($shade, hover), 5%);
+      }
+    }
+    @if $shade == warning {
+      @if $palette-text-color != false  {
+        color: $palette-text-color;
+      }
+      @else {
+        color: darken(getColor($shade, hover), 40%);
+      }
+    }
+  }
+  @else {
+    @if $palette-text-color != false {
+      color: $palette-text-color;
+    }
+    @else {
+      color: lighten($shade, 80%);
+    }
+    background: $shade;
+    border: 1px solid $shade;
+    &:hover {
+      background: lighten($shade, 30%);
+      border: 1px solid lighten($shade, 27%);
+    }
+    &:active {
+      background: darken($shade, 10%);
+      border: 1px solid darken($shade, 10%);
+    }
+  }
+}
