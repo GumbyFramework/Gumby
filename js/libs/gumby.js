@@ -57,6 +57,10 @@
 		} else {
 			this.$html.addClass('gumby-no-touch');
 		}
+
+		if(this.debugMode) {
+			this.debug('Gumby is in debug mode');
+		}
 	}
 
 	// initialize Gumby
@@ -71,7 +75,7 @@
 				scope.debugMode = true;
 			}
 
-			scope.debug("Gumby is in debug mode...");
+			scope.debug("Initializing Gumby");
 
 			// init UI modules
 			var mods = opts.uiModules ? opts.uiModules : false;
