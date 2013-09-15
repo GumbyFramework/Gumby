@@ -1,5 +1,8 @@
 // Gumby is ready to go
-Gumby.ready(function() {
+Gumby.init({
+	uiModules: ['skiplink'],
+	debugMode: true
+}).ready(function() {
 	Gumby.log('Gumby is ready to go...', Gumby.dump());
 
 	// placeholder polyfil
@@ -18,10 +21,12 @@ Gumby.ready(function() {
 
 // Document ready
 $(function() {
+	
 	// skip link and toggle on one element
 	// when the skip link completes, trigger the switch
 	$('#skip-switch').on('gumby.onComplete', function() {
 		$(this).trigger('gumby.trigger');
 	});
+
 });
 

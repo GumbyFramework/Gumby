@@ -6,7 +6,7 @@
 	'use strict';
 
 	// define and init module on touch enabled devices only
-	if(!Gumby.$html.hasClass('gumby-touch')) {
+	if(!Gumby.gumbyTouch) {
 		return;
 	}
 
