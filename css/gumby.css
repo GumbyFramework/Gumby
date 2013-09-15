@@ -1036,7 +1036,8 @@ img { -ms-interpolation-mode: bicubic; }
 .navbar { width: 100%; min-height: 60px; display: block; margin-bottom: 20px; background: #4a4d50; position: relative; }
 @media only screen and (max-width: 767px) { .navbar { border: none; }
   .navbar .column, .navbar .columns { min-height: 0; } }
-.navbar.fixed { top: 0; left: 0; z-index: 99999; }
+.navbar.fixed { position: fixed; z-index: 99999; }
+.navbar.pinned { position: absolute; }
 .navbar a.toggle { display: none; }
 @media only screen and (max-width: 767px) { .navbar a.toggle { top: 18%; right: 4%; width: 46px; position: absolute; text-align: center; display: inline-block; color: white; background: #4a4d50; height: 40px; line-height: 38px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; font-size: 30px; font-size: 1.875rem; }
   .navbar a.toggle:hover { background: #565a5d; }
