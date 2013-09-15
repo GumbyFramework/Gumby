@@ -53,7 +53,7 @@
 
 		// add gumby-touch/gumby-no-touch classes
 		// gumby touch == touch enabled && smaller than defined breakpoint
-		if(Modernizr.touch && $(window).width() < this.breakpoint) {
+		if((Modernizr.touch || window.navigator.userAgent.indexOf("Windows Phone") > 0) && $(window).width() < this.breakpoint) {
 			this.$html.addClass('gumby-touch');
 			this.gumbyTouch = true;
 		} else {
