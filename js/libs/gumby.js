@@ -26,7 +26,8 @@
 		this.click = 'click';
 		this.onReady = this.onOldie = this.onTouch = false;
 		this.autoInit = $('script[gumby-init]').attr('gumby-init') === 'false' ? false : true;
-		this.debugMode = Boolean($('script[gumby-debug]').length),
+		this.debugMode = Boolean($('script[gumby-debug]').length);
+		this.touchDevice = !!(Modernizr.touch || window.navigator.userAgent.indexOf("Windows Phone") > 0);
 		this.gumbyTouch = false;
 		this.touchEvents = 'js/libs';
 		this.breakpoint = Number($('script[gumby-breakpoint]').attr('gumby-breakpoint')) || 768;
@@ -53,7 +54,7 @@
 
 		// add gumby-touch/gumby-no-touch classes
 		// gumby touch == touch enabled && smaller than defined breakpoint
-		if((Modernizr.touch || window.navigator.userAgent.indexOf("Windows Phone") > 0) && $(window).width() < this.breakpoint) {
+		if(this.touchDevice && $(window).width() < this.breakpoint) {
 			this.$html.addClass('gumby-touch');
 			this.gumbyTouch = true;
 		} else {
