@@ -7,7 +7,7 @@
 	@if $shape == pill-left {
     @include border-radius(500px 0 0 500px);
  	}
-	@if $shape == pill-left {
+	@if $shape == pill-right {
     @include border-radius(0 500px 500px 0);
   }
   @if $shape-radius != false {
