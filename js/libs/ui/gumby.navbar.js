@@ -6,7 +6,7 @@
 	'use strict';
 
 	// define and init module on touch enabled devices only
-	if(!Gumby.$html.hasClass('gumby-touch')) {
+	if(!Gumby.gumbyTouch) {
 		return;
 	}
 
@@ -54,10 +54,8 @@
 		var $this = $(this);
 
 		if($this.hasClass('active')) {
-			Gumby.debug('Opening Dropdown', $el);
 			$this.removeClass('active');
 		} else {
-			Gumby.debug('Closing Dropdown', $el);
 			$this.addClass('active');
 		}
 	};

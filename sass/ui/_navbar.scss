@@ -20,9 +20,11 @@
   }
 
   &.fixed {
-    top: 0;
-    left: 0;
+    position: fixed;
     z-index: 99999;
+  }
+  &.pinned {
+    position: absolute;
   }
   a.toggle {
     display: none;
