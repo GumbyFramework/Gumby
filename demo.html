@@ -457,6 +457,62 @@
     </div>
   </div>
 
+  <!-- Offset Tests -->
+  <div class="row">
+    <div class="twelve columns special">
+      <p>Columns pushed and pulled by 'x'</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="one column push_eleven">
+      <p>1</p>
+    </div>
+    <div class="eleven columns pull_one">
+      <p>11 Columns Pull 1</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="two columns push_ten">
+      <p>2 Columns</p>
+    </div>
+    <div class="ten columns pull_two">
+      <p>10 Columns Pull 2</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="three columns push_nine">
+      <p>3 Columns Push 9</p>
+    </div>
+    <div class="nine columns pull_three">
+      <p>9 Columns Pull 3</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="four columns push_eight">
+      <p>4 Columns Push 8</p>
+    </div>
+    <div class="eight columns pull_four">
+      <p>8 Columns Pull 4</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="five columns push_seven">
+      <p>5 Columns Push 7</p>
+    </div>
+    <div class="seven columns pull_five">
+      <p>7 Columns Pull 5</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="six columns push_six">
+      <p>6 Columns Push 6</p>
+    </div>
+    <div class="six columns pull_six">
+      <p>6 Columns Pull 6</p>
+    </div>
+  </div>
+  
+
   <!-- Centering tests -->
   <div class="row">
     <div class="twelve columns special">
@@ -960,6 +1016,76 @@
       </div>
     </div>
 
+    <!-- Offset Tests -->
+    <div class="row">
+      <div class="sixteen columns special">
+        <p>Columns pushed and pulled by 'x'</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="one column push_fifteen">
+        <p>1</p>
+      </div>
+      <div class="fifteen columns pull_one">
+        <p>15 Columns Pull 1</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="two columns push_fourteen">
+        <p>2 Col</p>
+      </div>
+      <div class="fourteen columns pull_two">
+        <p>14 Columns Pull 2</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="three columns push_thirteen">
+        <p>3 Col Push 13</p>
+      </div>
+      <div class="thirteen columns pull_three">
+        <p>13 Columns Pull 3</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="four columns push_twelve">
+        <p>4 Columns Push 12</p>
+      </div>
+      <div class="twelve columns pull_four">
+        <p>12 Columns Pull 4</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="five columns push_eleven">
+        <p>5 Columns Push 11</p>
+      </div>
+      <div class="eleven columns pull_five">
+        <p>11 Columns Pull 5</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns push_ten">
+        <p>6 Columns Push 10</p>
+      </div>
+      <div class="ten columns pull_six">
+        <p>10 Columns Pull 6</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="seven columns push_nine">
+        <p>7 Columns Push 9</p>
+      </div>
+      <div class="nine columns pull_seven">
+        <p>9 Columns Pull 7</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="eight columns push_eight">
+        <p>8 Columns Push 8</p>
+      </div>
+      <div class="eight columns pull_eight">
+        <p>8 Columns Pull 8</p>
+      </div>
+    </div>
 
     <!-- Centering tests -->
     <div class="row">
@@ -1082,9 +1208,9 @@
   </script>
 
   <!--
-  Include gumby.js followed by UI modules.
-  Or concatenate and minify into a single file
-  <script src="js/libs/gumby.js"></script>
+  Include gumby.js followed by UI modules followed by gumby.init.js
+  Or concatenate and minify into a single file -->
+  <script gumby-touch="js/libs" src="js/libs/gumby.js"></script>
   <script src="js/libs/ui/gumby.retina.js"></script>
   <script src="js/libs/ui/gumby.fixed.js"></script>
   <script src="js/libs/ui/gumby.skiplink.js"></script>
@@ -1095,9 +1221,11 @@
   <script src="js/libs/ui/gumby.navbar.js"></script>
   <script src="js/libs/ui/gumby.fittext.js"></script>
   <script src="js/libs/ui/jquery.validation.js"></script>
-  <script src="js/libs/gumby.init.js"></script>-->
+  <script src="js/libs/gumby.init.js"></script>
 
-  <script src="js/libs/gumby.min.js"></script>
+  <!--
+  gumby.min.js contains gumby.js, all UI modules and gumby.init.js
+  <script src="js/libs/gumby.min.js"></script> -->
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 

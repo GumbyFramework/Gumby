@@ -3,13 +3,21 @@
 @import "breakpoints";
 @import "strip-units";
 @import "grid-calc";
+@import "em";
+@import "even";
 
 // Global Gumby Mixins
 
 @import "clearfix";
 @import "typography";
+@import "fixed";
+@import "palette";
+@import "shapes";
+@import "palette";
 @import "responsivity";
 @import "line-and-height";
 @import "height-calc";
 @import "semantic-grid";
+@import "tooltips";
 @import "visibility";
+@import "fancytiles";

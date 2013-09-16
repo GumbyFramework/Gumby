@@ -6,6 +6,9 @@
 	'use strict';
 
 	function Fixed($el) {
+
+		Gumby.debug('Initializing Fixed Position', $el);
+
 		this.$el = $el;
 
 		this.fixedPoint = '';
@@ -32,7 +35,9 @@
 
 		// reinitialize event listener
 		this.$el.on('gumby.initialize', function() {
+			Gumby.debug('Re-initializing Fixed Position', $el);
 			scope.setup();
+			scope.monitorScroll();
 		});
 	}
 
@@ -117,6 +122,9 @@
 
 	// fix the element and update state
 	Fixed.prototype.fix = function() {
+		Gumby.debug('Element has been fixed', this.$el);
+		Gumby.debug('Triggering onFixed event', this.$el);
+
 		this.state = 'fixed';
 		this.$el.css({
 			'top' : 0 + this.top
@@ -130,12 +138,17 @@
 
 	// unfix the element and update state
 	Fixed.prototype.unfix = function() {
+		Gumby.debug('Element has been unfixed', this.$el);
+		Gumby.debug('Triggering onUnfixed event', this.$el);
+
 		this.state = 'unfixed';
 		this.$el.addClass('unfixed').removeClass('fixed pinned').trigger('gumby.onUnfixed');
 	};
 
 	// pin the element in position
 	Fixed.prototype.pin = function() {
+		Gumby.debug('Element has been pinned', this.$el);
+		Gumby.debug('Triggering onPinned event', this.$el);
 		this.state = 'pinned';
 		this.$el.css({
 			'top' : this.$el.offset().top
@@ -144,6 +157,7 @@
 
 	// constrain elements dimensions to match width/height
 	Fixed.prototype.constrain = function() {
+		Gumby.debug("Constraining element", this.$el);
 		this.$el.css({
 			left: this.measurements.left,
 			width: this.measurements.width
@@ -177,18 +191,31 @@
 		// selector specified
 		} else {
 			var $el = $(attr);
+			if(!$el.length) {
+				Gumby.error('Cannot find Fixed target: '+attr);
+				return false;
+			}
 			return $el;
 		}
 	};
 
 	// add initialisation
-	Gumby.addInitalisation('fixed', function() {
+	Gumby.addInitalisation('fixed', function(all) {
 		$('[data-fixed],[gumby-fixed],[fixed]').each(function() {
 			var $this = $(this);
+
 			// this element has already been initialized
-			if($this.data('isFixed')) {
+			// and we're only initializing new modules
+			if($this.data('isFixed') && !all) {
+				return true;
+
+			// this element has already been initialized
+			// and we need to reinitialize it
+			} else if($this.data('isFixed') && all) {
+				$this.trigger('gumby.initialize');
 				return true;
 			}
+
 			// mark element as initialized
 			$this.data('isFixed', true);
 			new Fixed($this);
@@ -198,7 +225,7 @@
 	// register UI module
 	Gumby.UIModule({
 		module: 'fixed',
-		events: ['onFixed', 'onUnfixed'],
+		events: ['initialize', 'onFixed', 'onUnfixed'],
 		init: function() {
 			Gumby.initialize('fixed');
 		}

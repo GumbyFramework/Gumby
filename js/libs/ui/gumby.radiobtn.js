@@ -7,6 +7,8 @@
 
 	function RadioBtn($el) {
 
+		Gumby.debug('Initializing Radio Button', $el);
+
 		this.$el = $el;
 		this.$input = this.$el.find('input[type=radio]');
 
@@ -28,17 +30,26 @@
 			// check radio button
 			scope.update();
 		}).on('gumby.check', function() {
+			Gumby.debug('Check event triggered', scope.$el);
 			scope.update();
 		});
 
-		// update any .checked checkboxes on load
-		if(scope.$el.hasClass('checked')) {
-			scope.update();
+		// update any prechecked on load
+		if(this.$input.prop('checked') || this.$el.hasClass('checked')) {
+			scope.update(true);
 		}
 	}
 
 	// check radio button, uncheck all others in name group
 	RadioBtn.prototype.update = function() {
+
+		// already checked so no need to update
+		if(this.$el.hasClass('checked') && this.$input.prop('checked') && this.$el.find('i.icon-dot').length) {
+			return;
+		}
+
+		Gumby.debug('Updating Radio Button group', this.$el);
+
 		var $span = this.$el.find('span'),
 			// the group of radio buttons
 			group = 'input[name="'+this.$input.attr('name')+'"]';
@@ -51,11 +62,14 @@
 		// check this radio button - check input, add checked class, append <i>
 		this.$input.prop('checked', true);
 		$span.append('<i class="icon-dot" />');
-		this.$el.addClass('checked').trigger('gumby.onChange');
+
+		Gumby.debug('Triggering onCheck event', this.$el);
+
+		this.$el.addClass('checked').trigger('gumby.onCheck');
 	};
 
 	// add initialisation
-	Gumby.addInitalisation('radiobtns', function() {
+	Gumby.addInitalisation('radiobtn', function() {
 		$('.radio').each(function() {
 			var $this = $(this);
 			// this element has already been initialized
@@ -73,7 +87,7 @@
 		module: 'radiobtn',
 		events: ['onChange', 'check'],
 		init: function() {
-			Gumby.initialize('radiobtns');
+			Gumby.initialize('radiobtn');
 		}
 	});
 }();

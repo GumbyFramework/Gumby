@@ -1,0 +1,12 @@
+/* Tooltips */
+
+.ttip {
+	@include tooltip($tt-min-width, $tt-bgcolor, $tt-position);
+	cursor: pointer;
+}
+
+.ttip:after, .ttip:before {
+	@include respond(portrait-tablets) {
+		display: none;
+	}
+}

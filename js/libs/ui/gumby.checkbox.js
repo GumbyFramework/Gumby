@@ -7,6 +7,8 @@
 
 	function Checkbox($el) {
 
+		Gumby.debug('Initializing Checkbox', $el);
+
 		this.$el = $el;
 		this.$input = this.$el.find('input[type=checkbox]');
 
@@ -32,41 +34,53 @@
 				scope.update(true);
 			}
 		}).on('gumby.check', function() {
+			Gumby.debug('Check event triggered', scope.$el);
 			scope.update(true);
 		}).on('gumby.uncheck', function() {
+			Gumby.debug('Uncheck event triggered', scope.$el);
 			scope.update(false);
 		});
 
-		// update any .checked checkboxes on load
-		if(scope.$el.hasClass('checked')) {
+		// update any prechecked on load
+		if(this.$input.prop('checked') || this.$el.hasClass('checked')) {
 			scope.update(true);
 		}
 	}
 
 	// update checkbox, check equals true/false to sepcify check/uncheck
 	Checkbox.prototype.update = function(check) {
-
 		var $span = this.$el.find('span');
 
 		// check checkbox - check input, add checked class, append <i>
 		if(check) {
 
-			$span.append('<i class="icon-check" />');
+			Gumby.debug('Checking Checkbox', this.$el);
 
-			this.$input.prop('checked', true).end()
-				.addClass('checked')
-				.trigger('gumby.onCheck').trigger('gumby.onChange');
+			$span.append('<i class="icon-check" />');
+			this.$input.prop('checked', true);
+
+			Gumby.debug('Triggering onCheck event', this.$el);
+			Gumby.debug('Triggering onChange event', this.$el);
+
+			this.$el.addClass('checked').trigger('gumby.onCheck').trigger('gumby.onChange');
 
 		// uncheck checkbox - uncheck input, remove checked class, remove <i>
 		} else {
-			this.$input.prop('checked', false).end()
-				.find('i').remove().end()
-				.removeClass('checked').trigger('gumby.onUncheck').trigger('gumby.onChange');
+			
+			Gumby.debug('Unchecking Checkbox', this.$el);
+
+			this.$input.prop('checked', false);
+			$span.find('i').remove();
+
+			Gumby.debug('Triggering onUncheck event', this.$el);
+			Gumby.debug('Triggering onChange event', this.$el);
+
+			this.$el.removeClass('checked').trigger('gumby.onUncheck').trigger('gumby.onChange');
 		}
 	};
 
 	// add initialisation
-	Gumby.addInitalisation('checkboxes', function() {
+	Gumby.addInitalisation('checkbox', function() {
 		$('.checkbox').each(function() {
 			var $this = $(this);
 			// this element has already been initialized
@@ -84,7 +98,7 @@
 		module: 'checkbox',
 		events: ['onCheck', 'onUncheck', 'onChange', 'check', 'uncheck'],
 		init: function() {
-			Gumby.initialize('checkboxes');
+			Gumby.initialize('checkbox');
 		}
 	});
 }();
