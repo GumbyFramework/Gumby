@@ -397,10 +397,3 @@ form {
   }
 }
 
-// IE9 fix - seems no other way around this :(
-.ie9 {
-  .radio.checked i, .checkbox.checked i {
-    top: 0px;
-  }
-}
-

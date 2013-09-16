@@ -1,7 +1,7 @@
 /* shame */
 
 .ie8 {
-	/* double input field fix */
+	//double input field fix
 	.xxwide,
 	.xwide,
 	.wide,
@@ -15,7 +15,7 @@
 		}
 	}
 
-	/* tooltip 'fade' fix */
+	// tooltip 'fade' fix
 	.ttip {
 		&:before, &:after {
 			display: none;
@@ -25,5 +25,12 @@
 				display: block;
 			}
 		}
+	}
+}
+
+.ie9 {
+	// IE9 checkbox fix
+	.radio.checked i, .checkbox.checked i {
+		top: 0px;
 	}
 }
