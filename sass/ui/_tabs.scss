@@ -16,7 +16,6 @@
     cursor: default;
     top: 1px;
     @include box-shadow(0 1px 0 $white);
-    border-bottom: 1px solid darken($default-color, 5%);
     > li {
       display: inline-block;
       width: auto;
