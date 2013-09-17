@@ -1,6 +1,5 @@
 require 'compass'
-Compass::Frameworks.register('sassy-math', :path => File.expand_path("../.."))
-
+# require 'sassy-math'
 
 # This tells Compass what your Compass extension is called, and where to find
 #  its files
