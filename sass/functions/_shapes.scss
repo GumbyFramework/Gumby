@@ -4,7 +4,7 @@
 	@if $shape == oval {
     @include border-radius(1000px);
   }
-  @if $shape == circle {
+  @else if $shape == circle {
     @include border-radius(1000px);
   }
 	@else if $shape == pill-left {
