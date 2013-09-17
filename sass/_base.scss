@@ -2,7 +2,7 @@
 
 @include establish-baseline;
 
-html * {
+* {
 	@include box-sizing(border-box);
 }
 
@@ -19,18 +19,10 @@ body {
     width: 100%;
     min-width: 0;
   }
-  -webkit-backface-visibility:(hidden); // Fixes Chrome 1px shift rendering issue on CSS3 transitions.
 }
 
 html, body {
   height: 100%;
-}
-
-.ie9 {
-  font-family: $font-family;
-  * {
-    font-family: $font-family;
-  }
 }
 
 .hide {
@@ -41,13 +33,15 @@ html, body {
   display: block;
 }
 
-.fixed {
-  position: fixed;
-  @include respond(portrait-tablets) {
-    position: relative !important;
-  }
-}
+// .fixed elements will be static at supplied breakpoint
+// set arg to false for permanent .fixed elements
+@include fixed(portrait-tablets);
 
-.center-text {
-  text-align: center;
-}
+.text-center { @extend %text-center; }
+.text-left { @extend %text-left; }
+.text-right { @extend %text-right; }
+
+// Partial to align Text Left or Right
+%text-center { text-align: center; }
+%text-left { text-align: left; }
+%text-right { text-align: right; }

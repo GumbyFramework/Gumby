@@ -1,8 +1,9 @@
 /* Buttons */
 
 // Buttons
-@import "../functions/buttons";
+@import "../functions/button-size";
 
+// Button structure
 .btn, .skiplink {
   display: inline-block;
   width: auto;
@@ -31,7 +32,10 @@
     font-weight: $type-font-weight;
     @include appearance(none);
   }
+}
 
+// Button Shapes & Sizes
+.btn, .skiplink {
   &.xlarge {
     @include button-size(xlarge);
   }
@@ -50,19 +54,22 @@
       padding: 0 ms(-1);
     }
   }
-
+  
   &.oval {
-    @include border-radius(1000px);
+    @include shape(oval);
   }
 
   &.pill-left {
-    @include border-radius(500px 0 0 500px);
+    @include shape(pill-left);
   }
 
   &.pill-right {
-    @include border-radius(0 500px 500px 0);
+    @include shape(pill-right);
   }
+}
 
+// Button Colors & Styles
+.btn, .skiplink {
   @each $shade in $ui-coloring {
     &.#{nth($shade, 1)} {
       background: nth($shade, 2);
@@ -113,7 +120,10 @@
       }
     }
   }
+}
 
+// Buttons with Gradients
+.btn, .skiplink {
   &.pretty {
     @each $grade in $ui-coloring {
       &.#{nth($grade, 1)} {

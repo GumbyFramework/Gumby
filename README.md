@@ -1,4 +1,4 @@
-Gumby Framework
+Gumby Framework [![Build Status](https://travis-ci.org/GumbyFramework/Gumby.png?branch=master)](https://travis-ci.org/GumbyFramework/Gumby)
 =====================
 
 Gumby Framework is a flexible, responsive CSS Framework, Powered by SASS. Create rapid and logical page layout and app
@@ -7,6 +7,8 @@ prototypes with a flexible and responsive grid system and UI kit.
 Full documentation can be found at [http://gumbyframework.com](http://gumbyframework.com/docs).
 
 More information can be found in the [Wiki](https://github.com/GumbyFramework/Gumby/wiki).
+
+Our [Google Plus Community](https://plus.google.com/u/0/communities/108760896951473344451) is rapidly growing, we recommend heading over there with any questions you may have or to geek out and discuss the framework and rwd in general.
 
 Gumby is developed with love by your friends at [Digital Surgeons](http://www.digitalsurgeons.com).
 

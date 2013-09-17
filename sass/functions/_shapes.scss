@@ -1,0 +1,22 @@
+// Shapes
+
+@mixin shape($shape: square, $shape-radius: false) {
+	@if $shape == oval {
+    @include border-radius(1000px);
+  }
+  @else if $shape == circle {
+    @include border-radius(1000px);
+  }
+	@else if $shape == pill-left {
+    @include border-radius(500px 0 0 500px);
+ 	}
+	@else if $shape == pill-right {
+    @include border-radius(0 500px 500px 0);
+  }
+  @else if $shape-radius != false {
+    @include border-radius($shape-radius);
+  }
+  @else {
+    @include border-radius(0);
+  }
+}

@@ -54,14 +54,16 @@
       top: 10px;
       right: 10px;
       cursor: pointer;
+      z-index: 3;
     }
   }
   &, > .content {
     @include opacity(0);
-    @include transition-duration(.3s);
   }
  	&.active {
  		z-index: 999999;
+    @include transition-property(opacity);
+    @include transition-duration(.3s);
     &, > .content {
       @include opacity(1);
     }

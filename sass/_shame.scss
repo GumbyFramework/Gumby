@@ -1,0 +1,36 @@
+/* shame */
+
+.ie8 {
+	//double input field fix
+	.xxwide,
+	.xwide,
+	.wide,
+	.normal,
+	.narrow,
+	.xnarrow {
+		display: inline;
+		&+input {
+			display: inline;
+			margin: 0 0 0 -.25em;
+		}
+	}
+
+	// tooltip 'fade' fix
+	.ttip {
+		&:before, &:after {
+			display: none;
+		}
+		&:hover {
+			&:before, &:after {
+				display: block;
+			}
+		}
+	}
+}
+
+.ie9 {
+	// IE9 checkbox fix
+	.radio.checked i, .checkbox.checked i {
+		top: 0px;
+	}
+}
