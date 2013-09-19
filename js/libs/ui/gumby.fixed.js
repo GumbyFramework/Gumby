@@ -1,7 +1,7 @@
 /**
 * Gumby Fixed
 */
-!function() {
+!function($) {
 
 	'use strict';
 
@@ -230,4 +230,4 @@
 			Gumby.initialize('fixed');
 		}
 	});
-}();
+}(jQuery);

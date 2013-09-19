@@ -1,8 +1,5 @@
 // Gumby is ready to go
-Gumby.init({
-	uiModules: ['skiplink'],
-	debugMode: true
-}).ready(function() {
+Gumby.ready(function() {
 	Gumby.log('Gumby is ready to go...', Gumby.dump());
 
 	// placeholder polyfil
