@@ -1,7 +1,7 @@
 /**
 * Gumby Toggles/Switches
 */
-!function() {
+!function($) {
 
 	'use strict';
 
@@ -231,4 +231,4 @@
 			Gumby.initialize('toggles');
 		}
 	});
-}();
+}(jQuery);

@@ -15,7 +15,7 @@
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
-!function() {
+!function($) {
 
 	'use strict';
 
@@ -233,4 +233,4 @@
 
 	window.Gumby = new Gumby();
 
-}();
+}(jQuery);
