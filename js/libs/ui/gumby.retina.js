@@ -1,7 +1,7 @@
 /**
 * Gumby Retina
 */
-!function() {
+!function($) {
 
 	'use strict';
 
@@ -78,4 +78,4 @@
 			Gumby.initialize('retina');
 		}
 	});
-}();
+}(jQuery);

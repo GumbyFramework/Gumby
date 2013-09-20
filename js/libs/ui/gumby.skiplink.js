@@ -1,7 +1,7 @@
 /**
 * Gumby SkipLink
 */
-!function() {
+!function($) {
 
 	'use strict';
 
@@ -156,4 +156,4 @@
 			Gumby.initialize('skiplink');
 		}
 	});
-}();
+}(jQuery);
