@@ -1,7 +1,7 @@
 /**
 * Gumby RadioBtn
 */
-!function() {
+!function($) {
 
 	'use strict';
 
@@ -90,4 +90,4 @@
 			Gumby.initialize('radiobtn');
 		}
 	});
-}();
+}(jQuery);

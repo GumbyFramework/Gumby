@@ -1,7 +1,7 @@
 /**
 * Gumby Tabs
 */
-!function() {
+!function($) {
 
 	'use strict';
 
@@ -78,4 +78,4 @@
 			Gumby.initialize('tabs');
 		}
 	});
-}();
+}(jQuery);

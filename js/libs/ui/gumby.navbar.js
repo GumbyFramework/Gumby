@@ -1,7 +1,7 @@
 /**
 * Gumby Navbar
 */
-!function() {
+!function($) {
 
 	'use strict';
 
@@ -109,4 +109,4 @@
 			Gumby.initialize('navbar');
 		}
 	});
-}();
+}(jQuery);
