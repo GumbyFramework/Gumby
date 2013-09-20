@@ -41,7 +41,9 @@
     color: #fff;
     content: attr(data-tooltip);
     line-height: 1.5;
-    font-size: em(14.4);
+    font-size: $norm;
+    font-weight: normal;
+    font-style: normal;
 
     @include transition(all 0.1s ease);
     @include opacity(0);

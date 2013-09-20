@@ -842,11 +842,14 @@
 	<div class="row" id="tooltips">
 		<h1 class="lead">Tooltips</h1>
 		<div class="row">
-			<div class="twelve columns">
-				<p>To add a CSS tooltip to an element you will need to do two things. First add the class '.ttip' to, then add a 'data-tooltip' attribute. Configuration options for alignment, position, width, and fanciness are all in the _settings.scss file. These are hidden on tablets and smaller devices since most of them do not use hovers.</p>
-				<p>Tooltips can be added to <a href="#" class="ttip" data-tooltip="Hello, I'm a tooltip!">inline elements</a> as well as&#133;</p>
-				<div class="ttip example" data-tooltip="You get the idea?">&#133;on block elements</div>
-			</div>
+			<article class="three columns">
+				<div class="image photo ttip" data-tooltip="Silence will fall.">
+					<img src="img/img_silence_demo.jpg" alt="">
+				</div>
+			</article>
+			<article class="nine columns">
+				<h3>Mauris <a href="#" class="ttip" data-tooltip="Tooltip on a link">eleifend</a> est et turpis.</h3>
+				<p>Proin elit arcu, <em class="ttip" data-tooltip="Another tooltip!">rutrum</em> commodo, vehicula tempus, commodo a, risus.</p>
 		</div>
 	</div>
 	<div class="row" id="video_stuff">
