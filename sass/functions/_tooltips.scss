@@ -61,27 +61,27 @@
     @if $tt-position == "bottom" {
       top: 101%;
       @if $tt-align == "right" { right: 8px } @else { left: 8px; }
-      border-bottom: 8px solid $tt-bgcolor !important;
-      border-left: 8px solid transparent;
-      border-right: 8px solid transparent;
+      border-bottom: 9px solid $tt-bgcolor !important;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
     } @else if $tt-position == "top" {
       bottom: 101%;
       @if $tt-align == "right" { right: 8px } @else { left: 8px; }
-      border-top: 8px solid $tt-bgcolor !important;
-      border-left: 8px solid transparent;
-      border-right: 8px solid transparent;
+      border-top: 9px solid $tt-bgcolor !important;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
     } @else if $tt-position == "left" {
       top: 3px;
       right: 101%;
-      border-left: 8px solid $tt-bgcolor !important;
-      border-top: 8px solid transparent;
-      border-bottom: 8px solid transparent;
+      border-left: 9px solid $tt-bgcolor !important;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
     } @else if $tt-position == "right" {
       top: 3px;
       left: 101%;
-      border-right: 8px solid $tt-bgcolor !important;
-      border-top: 8px solid transparent;
-      border-bottom: 8px solid transparent;
+      border-right: 9px solid $tt-bgcolor !important;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
     }
     @include transition(all 0.1s ease);
     @include opacity(0);
