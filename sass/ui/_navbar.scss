@@ -159,7 +159,7 @@
     }
     .dropdown {
       width: auto;
-      min-width: 0px;
+      min-width: 0;
       max-width: $min-device-width;
       height: 0;
       position: absolute;
@@ -269,7 +269,7 @@
 
 .navbar li .dropdown {
   width: auto;
-  min-width: 0px;
+  min-width: 0;
   max-width: $min-device-width;
   height: 0;
   position: absolute;

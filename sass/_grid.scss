@@ -14,7 +14,7 @@
 // breakpoint.
 
 /*.container {
-  padding: 0px $gutter-in-px;
+  padding: 0 $gutter-in-px;
 }*/
 
 .row {
@@ -25,7 +25,7 @@
   padding-left: 20px;
   padding-right: 20px;
   .row {
-    min-width: 0px;
+    min-width: 0;
     padding-left: 0;
     padding-right: 0;
   }
@@ -41,7 +41,7 @@
 }
 
 .column:first-child, .columns:first-child, .alpha {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 .column.omega, .columns.omega {
