@@ -1,7 +1,7 @@
 /**
 * Gumby Checkbox
 */
-!function() {
+!function($) {
 
 	'use strict';
 
@@ -101,4 +101,4 @@
 			Gumby.initialize('checkbox');
 		}
 	});
-}();
+}(jQuery);

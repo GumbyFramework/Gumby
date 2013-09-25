@@ -1,7 +1,7 @@
 /**
 * Gumby RadioBtn
 */
-!function() {
+!function($) {
 
 	'use strict';
 
@@ -85,9 +85,9 @@
 	// register UI module
 	Gumby.UIModule({
 		module: 'radiobtn',
-		events: ['onChange', 'check'],
+		events: ['onCheck', 'check'],
 		init: function() {
 			Gumby.initialize('radiobtn');
 		}
 	});
-}();
+}(jQuery);

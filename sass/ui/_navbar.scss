@@ -103,7 +103,7 @@
     &.active {
       height: auto;
       max-height: 600px;
-      z-index: 999999;
+      z-index: 999998;
       @include transition-duration(.5s);
       @include box-shadow(0 2px 2px darken($navbar-color, 15%));
     }
@@ -159,7 +159,7 @@
     }
     .dropdown {
       width: auto;
-      min-width: 0px;
+      min-width: 0;
       max-width: $min-device-width;
       height: 0;
       position: absolute;
@@ -269,7 +269,7 @@
 
 .navbar li .dropdown {
   width: auto;
-  min-width: 0px;
+  min-width: 0;
   max-width: $min-device-width;
   height: 0;
   position: absolute;
