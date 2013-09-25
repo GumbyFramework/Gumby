@@ -1,7 +1,4 @@
 /* Icons */
-
-@import "../var/icons/entypo";
-
 [class^="icon-"] a:before,
 [class*=" icon-"] a:before,
 [class^="icon-"] a:after,
@@ -23,39 +20,3 @@ i[class*=" icon-"] {
   text-align: center;
 }
 
-/* @each $icon in $entypo-icons {
-  .#{nth($icon, 1)} {
-    &.icon-left a:before, &.icon-right a:after {
-      content: "#{nth($icon, 2)}";
-      height: inherit;
-    }
-  }
-  i.#{nth($icon, 1)}:before {
-    content: "#{nth($icon, 2)}";
-    height: inherit;
-  }
-} */
-
-@function match($list, $icon) {
-    @each $item in $list {
-        $index: index($item, $icon);
-        @if $index { 
-            $return: if($index == 1, 2, $index);
-            @return nth($item, $return); 
-        }
-    }
-    @return false;
-}
-
-@mixin icon($icon) {
-    .#{$icon} {
-        &.icon-left a:before, &.icon-right a:after {
-            content: "#{match($entypo-icons, $icon)}";
-            height: inherit;
-        }
-    }
-    i.#{$icon}:before {
-        content: "#{match($entypo-icons, $icon)}";
-        height: inherit;
-    }
-}
