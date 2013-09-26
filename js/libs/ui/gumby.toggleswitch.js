@@ -10,6 +10,8 @@
 		this.$el = $($el);
 		this.targets = [];
 		this.on = '';
+		this.className = '';
+		this.self = false;
 
 		if(this.$el.length) {
 			Gumby.debug('Initializing Toggle', $el);
@@ -22,6 +24,8 @@
 		this.$el = $($el);
 		this.targets = [];
 		this.on = '';
+		this.className = '';
+		this.self = false;
 
 		if(this.$el.length) {
 			Gumby.debug('Initializing Switch', $el);
@@ -64,7 +68,9 @@
 		this.targets = this.parseTargets();
 		this.on = Gumby.selectAttr.apply(this.$el, ['on']) || Gumby.click;
 		this.className = Gumby.selectAttr.apply(this.$el, ['classname']) || 'active';
-		this.self = !!Gumby.selectAttr.apply(this.$el, ['self']) === 'false';
+		this.self = Gumby.selectAttr.apply(this.$el, ['self']) === 'false';
+
+		console.log(this.self);
 	};
 
 	// parse data-for attribute, switches will inherit method
@@ -143,7 +149,7 @@
 				
 				// add this element to it unless gumby-self set
 				if(!this.self) {
-					$target.add(this.$el);
+					$target = $target.add(this.$el);
 				}
 
 				$target.removeClass(this.className);
@@ -153,7 +159,7 @@
 				
 				// add this element to it unless gumby-self set
 				if(!this.self) {
-					$target.add(this.$el);
+					$target = $target.add(this.$el);
 				}
 
 				$target.addClass(this.className);
@@ -184,7 +190,7 @@
 				
 			// add this element to it unless gumby-self set
 			if(!this.self) {
-				$target.add(this.$el);
+				$target = $target.add(this.$el);
 			}
 
 			$target.addClass(this.className);
@@ -196,7 +202,7 @@
 				
 			// add this element to it unless gumby-self set
 			if(!this.self) {
-				$target.add(this.$el);
+				$target = $target.add(this.$el);
 			}
 
 			$target.addClass(this.className);
