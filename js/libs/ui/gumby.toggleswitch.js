@@ -64,6 +64,7 @@
 		this.targets = this.parseTargets();
 		this.on = Gumby.selectAttr.apply(this.$el, ['on']) || Gumby.click;
 		this.className = Gumby.selectAttr.apply(this.$el, ['classname']) || 'active';
+		this.self = !!Gumby.selectAttr.apply(this.$el, ['self']) === 'false';
 	};
 
 	// parse data-for attribute, switches will inherit method
@@ -124,6 +125,8 @@
 
 		Gumby.debug('Triggering Toggle', this.$el);
 
+		var $target;
+
 		// no targets just toggle active class on toggle
 		if(!this.targets) {
 			this.$el.toggleClass(this.className);
@@ -136,11 +139,25 @@
 		// always combine toggle and first target
 		} else if(this.targets.length > 1) {
 			if(this.targets[0].hasClass(this.className)) {
-				this.$el.add(this.targets[0]).removeClass(this.className);
+				$target = this.targets[0];
+				
+				// add this element to it unless gumby-self set
+				if(!this.self) {
+					$target.add(this.$el);
+				}
+
+				$target.removeClass(this.className);
 				this.targets[1].addClass(this.className);
 			} else {
+				$target = this.targets[0];
+				
+				// add this element to it unless gumby-self set
+				if(!this.self) {
+					$target.add(this.$el);
+				}
+
+				$target.addClass(this.className);
 				this.targets[1].removeClass(this.className);
-				this.$el.add(this.targets[0]).addClass(this.className);
 			}
 		}
 
