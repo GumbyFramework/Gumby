@@ -172,18 +172,34 @@
 
 		Gumby.debug('Triggering Switch', this.$el);
 
+		var $target;
+
 		// no targets just add active class to switch
 		if(!this.targets) {
 			this.$el.addClass(this.className);
 
 		// combine single target with switch and add active class
 		} else if(this.targets.length == 1) {
-			this.$el.add(this.targets[0]).addClass(this.className);
+			$target = this.targets[0];
+				
+			// add this element to it unless gumby-self set
+			if(!this.self) {
+				$target.add(this.$el);
+			}
+
+			$target.addClass(this.className);
 
 		// if two targets check active state of first
 		// always combine switch and first target
 		} else if(this.targets.length > 1) {
-			this.$el.add(this.targets[0]).addClass(this.className);
+			$target = this.targets[0];
+				
+			// add this element to it unless gumby-self set
+			if(!this.self) {
+				$target.add(this.$el);
+			}
+
+			$target.addClass(this.className);
 			this.targets[1].removeClass(this.className);
 		}
 
