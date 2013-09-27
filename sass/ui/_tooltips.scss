@@ -1,7 +1,7 @@
 /* Tooltips */
 
 .ttip {
-	@include tooltip($tt-min-width, $tt-bgcolor, $tt-position);
+	@include tooltip($tt-min-width, $tt-bgcolor, $tt-position, $tt-align);
 	cursor: pointer;
 }
 
