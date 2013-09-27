@@ -1,2 +1,3 @@
-*.min.js
+js/libs/*.min.js
+js/*.min.js
 js/plugins.js
