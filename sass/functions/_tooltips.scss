@@ -1,6 +1,6 @@
 // CSS Tooltips
 
-@mixin tooltip($tt-min-width, $tt-bgcolor, $tt-position) {
+@mixin tooltip($tt-min-width, $tt-bgcolor, $tt-position, $tt-align) {
   position: relative;
 
   &:after {
@@ -45,7 +45,7 @@
     font-weight: normal;
     font-style: normal;
 
-    @include transition(all 0.1s ease);
+    @include transition(opacity 0.1s ease);
     @include opacity(0);
     pointer-events: none;
 
@@ -85,14 +85,14 @@
       border-top: 9px solid transparent;
       border-bottom: 9px solid transparent;
     }
-    @include transition(all 0.1s ease);
+    @include transition(opacity 0.1s ease);
     @include opacity(0);
     pointer-events: none;
   }
 
   &:hover:after,
   &:hover:before {
-    @include transition(all 0.1s ease);
+    @include transition(opacity 0.1s ease);
     @include opacity(1);
   }
 }
