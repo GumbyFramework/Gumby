@@ -31,6 +31,8 @@
 		this.gumbyTouch = false;
 		this.touchEvents = 'js/libs';
 		this.breakpoint = Number($('script[gumby-breakpoint]').attr('gumby-breakpoint')) || 768;
+		this.touchEventsLoaded = false;
+		this.uiModulesReady = false;
 		this.uiModules = {};
 		this.inits = {};
 
@@ -50,6 +52,11 @@
 			} else if(path) {
 				this.touchEvents = path;
 			}
+		}
+
+		// update click property to bind to click/tap
+		if(this.touchDevice) {
+			this.click += ' tap';
 		}
 
 		// add gumby-touch/gumby-no-touch classes
@@ -84,22 +91,32 @@
 			var mods = opts.uiModules ? opts.uiModules : false;
 			scope.initUIModules(mods);
 
-			if(scope.onReady) {
-				scope.onReady();
-			}
-
-			// call oldie() callback if applicable
-			if(scope.isOldie && scope.onOldie) {
-				scope.onOldie();
-			}
-
-			// call touch() callback if applicable
-			if(Modernizr.touch && scope.onTouch) {
-				scope.onTouch();
+			// if touch events are loaded fire helpers
+			if(scope.touchEventsLoaded) {
+				scope.helpers();
+			// inform gumby.init to fire helpers once loaded
+			} else {
+				scope.uiModulesReady = true;
 			}
 		});
 
 		return this;
+	};
+
+	Gumby.prototype.helpers = function() {
+		if(this.onReady) {
+			this.onReady();
+		}
+
+		// call oldie() callback if applicable
+		if(this.isOldie && this.onOldie) {
+			this.onOldie();
+		}
+
+		// call touch() callback if applicable
+		if(Modernizr.touch && this.onTouch) {
+			this.onTouch();
+		}
 	};
 
 	// public helper - set Gumby ready callback

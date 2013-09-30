@@ -33,6 +33,9 @@ html, body {
   display: block;
 }
 
+// include all entypo icon classes
+@include icon(all);
+
 // .fixed elements will be static at supplied breakpoint
 // set arg to false for permanent .fixed elements
 @include fixed(portrait-tablets);
