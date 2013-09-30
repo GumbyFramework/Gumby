@@ -23,8 +23,6 @@
 
 		// skip to target element on click or trigger of gumby.skipTo event
 		this.$el.on(Gumby.click+' gumby.skip', function(e) {
-
-			e.stopImmediatePropagation();
 			e.preventDefault();
 
 			if(e.namespace === 'skip') {

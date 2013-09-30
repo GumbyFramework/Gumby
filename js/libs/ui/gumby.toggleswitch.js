@@ -42,14 +42,7 @@
 
 		// bind to specified event and trigger
 		this.$el.on(this.on, function(e) {
-			// stop propagation
-			e.stopImmediatePropagation();
-
-			// only disable default if <a>
-			if($(this).prop('tagName') === 'A') {
-				e.preventDefault();
-			}
-
+			e.preventDefault();
 			scope.trigger(scope.triggered);
 
 		// listen for gumby.trigger to dynamically trigger toggle/switch

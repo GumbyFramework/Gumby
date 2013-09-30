@@ -47,8 +47,6 @@
 	}
 
 	Navbar.prototype.toggleDropdown = function(e) {
-		// prevent click from triggering here too
-		e.stopImmediatePropagation();
 		e.preventDefault();
 
 		var $this = $(this);
@@ -62,7 +60,6 @@
 
 	// handle opening list item link 
 	Navbar.prototype.openLink = function(e) {
-		e.stopImmediatePropagation();
 		e.preventDefault();
 
 		var $this = $(this),
