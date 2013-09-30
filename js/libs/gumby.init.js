@@ -6,13 +6,12 @@
 
 	'use strict';
 
-	// no touch events so auto initialize here
-	if(!Gumby.touchEvents && Gumby.autoInit) {
-		Gumby.debug('Gumby auto initialization');
+	// not touch device or no touch events required so auto initialize here
+	if((!Gumby.touchDevice || !Gumby.touchEvents) && Gumby.autoInit) {
 		window.Gumby.init();
 
 	// load jQuery mobile touch events 
-	} else if(Gumby.touchEvents) {
+	} else if(Gumby.touchEvents && Gumby.touchDevice) {
 		Gumby.debug('Loading jQuery mobile touch events');
 		// set timeout to 1sec
 		yepnope.errorTimeout = 1000;
