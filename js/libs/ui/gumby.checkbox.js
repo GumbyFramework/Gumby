@@ -16,9 +16,6 @@
 
 		// listen for click event and custom gumby check/uncheck events
 		this.$el.on(Gumby.click, function(e) {
-			// prevent propagation
-			e.stopImmediatePropagation();
-
 			// prevent checkbox checking, we'll do that manually
 			e.preventDefault();
 
