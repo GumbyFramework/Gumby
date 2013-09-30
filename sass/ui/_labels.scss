@@ -14,11 +14,11 @@
   @each $shade in $ui-coloring {
     &.#{nth($shade, 1)} {
       background: nth($shade, 2);
+      border: 1px solid nth($shade, 2);
       @if nth($shade, 1) == default {
         color: darken(nth($shade, 2), 61.5%);
-        border: 1px solid nth($shade, 2);
         &:hover {
-          border: 1px solid darken(nth($shade, 2), 5%);
+          border-color: darken(nth($shade, 2), 5%);
         }
         a {
           color: darken(nth($shade, 2), 61.5%);
@@ -31,17 +31,18 @@
         }
       }
     }
-    &.light {
-      background: #fff;
-      color: $body-font-color;
-      border: 1px solid $default-color;
-      a {
-        color: $body-link-color;
-      }
+  }
+  &.light {
+    background: #fff;
+    color: $body-font-color;
+    border: 1px solid $default-color;
+    a {
+      color: $body-link-color;
     }
-    &.dark {
-      background: #212121;
-    }
+  }
+  &.dark {
+    background: #212121;
+    border: 1px solid #212121;
   }
 }
 
