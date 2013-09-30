@@ -69,8 +69,6 @@
 		this.on = Gumby.selectAttr.apply(this.$el, ['on']) || Gumby.click;
 		this.className = Gumby.selectAttr.apply(this.$el, ['classname']) || 'active';
 		this.self = Gumby.selectAttr.apply(this.$el, ['self']) === 'false';
-
-		console.log(this.self);
 	};
 
 	// parse data-for attribute, switches will inherit method
