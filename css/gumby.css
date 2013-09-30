@@ -2468,37 +2468,19 @@ form fieldset legend { padding: 5px 10px; }
 /* Labels */
 .badge, .label { height: 20px; display: inline-block; font-family: Helvetica, arial, verdana, sans-serif; font-weight: bold; line-height: 20px; text-align: center; color: #fff; }
 .badge a, .label a { color: #fff; }
-.badge.primary, .label.primary { background: #3085d6; }
-.badge.light, .label.light { background: #fff; color: #555555; border: 1px solid #f2f2f2; }
-.badge.light a, .label.light a { color: #d04526; }
-.badge.dark, .label.dark { background: #212121; }
-.badge.secondary, .label.secondary { background: #42a35a; }
-.badge.light, .label.light { background: #fff; color: #555555; border: 1px solid #f2f2f2; }
-.badge.light a, .label.light a { color: #d04526; }
-.badge.dark, .label.dark { background: #212121; }
-.badge.default, .label.default { background: #f2f2f2; color: #555555; border: 1px solid #f2f2f2; }
-.badge.default:hover, .label.default:hover { border: 1px solid #e5e5e5; }
+.badge.primary, .label.primary { background: #3085d6; border: 1px solid #3085d6; }
+.badge.secondary, .label.secondary { background: #42a35a; border: 1px solid #42a35a; }
+.badge.default, .label.default { background: #f2f2f2; border: 1px solid #f2f2f2; color: #555555; }
+.badge.default:hover, .label.default:hover { border-color: #e5e5e5; }
 .badge.default a, .label.default a { color: #555555; }
-.badge.light, .label.light { background: #fff; color: #555555; border: 1px solid #f2f2f2; }
-.badge.light a, .label.light a { color: #d04526; }
-.badge.dark, .label.dark { background: #212121; }
-.badge.info, .label.info { background: #4a4d50; }
-.badge.light, .label.light { background: #fff; color: #555555; border: 1px solid #f2f2f2; }
-.badge.light a, .label.light a { color: #d04526; }
-.badge.dark, .label.dark { background: #212121; }
-.badge.danger, .label.danger { background: #ca3838; }
-.badge.light, .label.light { background: #fff; color: #555555; border: 1px solid #f2f2f2; }
-.badge.light a, .label.light a { color: #d04526; }
-.badge.dark, .label.dark { background: #212121; }
-.badge.warning, .label.warning { background: #f6b83f; color: #644405; }
+.badge.info, .label.info { background: #4a4d50; border: 1px solid #4a4d50; }
+.badge.danger, .label.danger { background: #ca3838; border: 1px solid #ca3838; }
+.badge.warning, .label.warning { background: #f6b83f; border: 1px solid #f6b83f; color: #644405; }
 .badge.warning a, .label.warning a { color: #644405; }
+.badge.success, .label.success { background: #58c026; border: 1px solid #58c026; }
 .badge.light, .label.light { background: #fff; color: #555555; border: 1px solid #f2f2f2; }
 .badge.light a, .label.light a { color: #d04526; }
-.badge.dark, .label.dark { background: #212121; }
-.badge.success, .label.success { background: #58c026; }
-.badge.light, .label.light { background: #fff; color: #555555; border: 1px solid #f2f2f2; }
-.badge.light a, .label.light a { color: #d04526; }
-.badge.dark, .label.dark { background: #212121; }
+.badge.dark, .label.dark { background: #212121; border: 1px solid #212121; }
 
 .badge { padding: 0 10px; font-size: 14px; font-size: 0.875rem; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; }
 

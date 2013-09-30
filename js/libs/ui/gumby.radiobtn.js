@@ -16,9 +16,6 @@
 
 		// listen for click event and custom gumby check event
 		this.$el.on(Gumby.click, function(e) {
-			// prevent propagation
-			e.stopImmediatePropagation();
-
 			// prevent radio button checking, we'll do that manually
 			e.preventDefault();
 
