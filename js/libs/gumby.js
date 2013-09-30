@@ -92,7 +92,7 @@
 			scope.initUIModules(mods);
 
 			// if touch events are loaded fire helpers
-			if(scope.touchEventsLoaded) {
+			if(scope.touchEventsLoaded || !scope.touchDevice) {
 				scope.helpers();
 			// inform gumby.init to fire helpers once loaded
 			} else {
