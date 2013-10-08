@@ -17,7 +17,7 @@
   .metro & { @extend .metro.btn; }
 
   > a, input, button {
-    display: block;
+    display: inline-block;
     padding: 0 $default-button-padding;
     color: $white;
     height: 100%;
