@@ -9,3 +9,36 @@
   }
   @return ($size-in-px / $context) * 1em;
 }
+
+// REM Support
+// Use: @include rem('font-size', 20px);
+
+@mixin rem($property, $px_values, $baseline_px: 16px) {
+	$baseline_rem: ($baseline_px / 1rem);
+	
+	#{$property}: $px_values;
+	
+	@if type-of($px_values) == 'number' {
+		#{$property}: $px_values / $baseline_rem;
+	}
+	
+	@else {
+		$rem_values: ();
+		@each $value in $px_values {
+ 
+			@if $value == 0 { 
+				$rem_values: append($rem_values, $value); 
+			}
+			
+			@else if $value == 'auto' {
+			    $rem_values: append($rem_values, $value);
+			}
+
+			@else {
+				$rem_values: append($rem_values, ($value / $baseline_rem) );
+			}
+		}
+
+		#{$property}: $rem_values;
+	}
+}
