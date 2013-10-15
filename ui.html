@@ -1282,7 +1282,7 @@
 
 	<!--
 	Include gumby.js followed by UI modules followed by gumby.init.js
-	Or concatenate and minify into a single file -->
+	Or concatenate and minify into a single file
 	<script gumby-touch="js/libs" src="js/libs/gumby.js"></script>
 	<script src="js/libs/ui/gumby.retina.js"></script>
 	<script src="js/libs/ui/gumby.fixed.js"></script>
@@ -1293,11 +1293,22 @@
 	<script src="js/libs/ui/gumby.tabs.js"></script>
 	<script src="js/libs/ui/gumby.navbar.js"></script>
 	<script src="js/libs/ui/jquery.validation.js"></script>
-	<script src="js/libs/gumby.init.js"></script>
+	<script src="js/libs/gumby.init.js"></script> -->
 
-	<!--
-	gumby.min.js contains gumby.js, all UI modules and gumby.init.js
-	<script src="js/libs/gumby.min.js"></script> -->
+	<!-- gumby.min.js contains gumby.js, all UI modules and gumby.init.js -->
+	<script type="text/javascript">
+	function downloadJSAtOnload() {
+	var element = document.createElement("script");
+	element.src = "js/libs/gumby.min.js";
+	document.body.appendChild(element);
+	}
+	if (window.addEventListener)
+	window.addEventListener("load", downloadJSAtOnload, false);
+	else if (window.attachEvent)
+	window.attachEvent("onload", downloadJSAtOnload);
+	else window.onload = downloadJSAtOnload;
+	</script>
+
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
 
