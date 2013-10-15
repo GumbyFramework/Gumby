@@ -36,12 +36,14 @@
 		// override with childlinks
 		this.$dropDowns.find('.dropdown li:not(:has(.dropdown)) a[href]').on(Gumby.click, this.openLink);
 
-		// on mousemove and touchstart toggle modernizr classes and disable/enable this module
+		// on mousemove bind drop down toggle to mouse over / out
 		// workaround for Pixel and other multi input devices
 		$(window).on('mousemove touchstart', function(e) {
-			e.stopImmediatePropagation();
+			e.preventDefault();
 			if(e.type === 'mousemove') {
 				scope.$dropDowns.on('mouseover mouseout', scope.toggleDropdown);
+			} else {
+				scope.$dropDowns.off('mouseover mouseout');
 			}
 		});
 	}
@@ -58,7 +60,7 @@
 		}
 	};
 
-	// handle opening list item link 
+	// handle opening list item link
 	Navbar.prototype.openLink = function(e) {
 		e.preventDefault();
 
