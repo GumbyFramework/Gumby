@@ -35,17 +35,6 @@
 
 		// override with childlinks
 		this.$dropDowns.find('.dropdown li:not(:has(.dropdown)) a[href]').on(Gumby.click, this.openLink);
-
-		// on mousemove bind drop down toggle to mouse over / out
-		// workaround for Pixel and other multi input devices
-		$(window).on('mousemove touchstart', function(e) {
-			e.preventDefault();
-			if(e.type === 'mousemove') {
-				scope.$dropDowns.on('mouseover mouseout', scope.toggleDropdown);
-			} else {
-				scope.$dropDowns.off('mouseover mouseout');
-			}
-		});
 	}
 
 	Navbar.prototype.toggleDropdown = function(e) {
