@@ -1276,6 +1276,12 @@
 	<!--
 	Google's recommended deferred loading of JS
 	gumby.min.js contains gumby.js, all UI modules and gumby.init.js
+
+	Note: If you opt to use this method of defered loading,
+	ensure that any javascript essential to the initial
+	display of the page is included separately in a normal
+	script tag.
+
 	<script type="text/javascript">
 	function downloadJSAtOnload() {
 	var element = document.createElement("script");
