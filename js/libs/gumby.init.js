@@ -10,7 +10,7 @@
 	if((!Gumby.touchDevice || !Gumby.touchEvents) && Gumby.autoInit) {
 		window.Gumby.init();
 
-	// load jQuery mobile touch events 
+	// load jQuery mobile touch events
 	} else if(Gumby.touchEvents && Gumby.touchDevice) {
 		Gumby.debug('Loading jQuery mobile touch events');
 		// set timeout to 2sec
@@ -18,13 +18,13 @@
 		Modernizr.load({
 			test: Modernizr.touch,
 			yep: Gumby.touchEvents+'/jquery.mobile.custom.min.js',
-			callback: function(url, result, key) {
+			complete: function() {
 				// error loading jQuery mobile
 				if(!$.mobile) {
 					Gumby.error('Error loading jQuery mobile touch events');
 				}
 
-				// if not auto initializing 
+				// if not auto initializing
 				// this will allow helpers to fire when initialized
 				Gumby.touchEventsLoaded = true;
 
@@ -32,7 +32,7 @@
 				if(Gumby.autoInit) {
 					window.Gumby.init();
 
-				// if already manually initialized then fire helpers 
+				// if already manually initialized then fire helpers
 				} else if(Gumby.uiModulesReady) {
 					Gumby.helpers();
 				}
