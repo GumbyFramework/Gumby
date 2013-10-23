@@ -75,25 +75,35 @@
 
 	// initialize Gumby
 	Gumby.prototype.init = function(options) {
-		var opts = options ? options : {};
+		var scope = this,
+			opts = options ? options : {};
 
-		if(opts.debug) {
-			this.debugMode = true;
-		}
+		// call ready() code when dom is ready
+		this.$dom.ready(function() {
+			if(opts.debug) {
+				scope.debugMode = true;
+			}
 
-		this.debug("Initializing Gumby");
+			scope.debug("Initializing Gumby");
 
-		// init UI modules
-		var mods = opts.uiModules ? opts.uiModules : false;
-		this.initUIModules(mods);
+			// init UI modules
+			var mods = opts.uiModules ? opts.uiModules : false;
+			scope.initUIModules(mods);
 
-		// if touch events are loaded fire helpers
-		if(this.touchEventsLoaded || !this.touchDevice) {
-			this.helpers();
-		// inform gumby.init to fire helpers once loaded
-		} else {
-			this.uiModulesReady = true;
-		}
+			if(scope.onReady) {
+				scope.onReady();
+			}
+
+			// call oldie() callback if applicable
+			if(scope.isOldie && scope.onOldie) {
+				scope.onOldie();
+			}
+
+			// call touch() callback if applicable
+			if(Modernizr.touch && scope.onTouch) {
+				scope.onTouch();
+			}
+		});
 
 		return this;
 	};
