@@ -10,7 +10,7 @@
 		Gumby.debug('Initializing Tabs', $el);
 
 		this.$el = $el;
-		this.$nav = this.$el.find('ul.tab-nav:not(follow-href-path) > li');
+		this.$nav = this.$el.find('ul.tab-nav:not(.follow-href-path) > li');
 		this.$content = this.$el.find('.tab-content');
 
 		var scope = this;
