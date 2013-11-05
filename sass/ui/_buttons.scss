@@ -98,29 +98,22 @@
       }
     }
   }
-
-  @each $style in $styling {
-    &.#{nth($style, 1)} {
-      @include border-radius(nth($style, 2));
-      &:hover {
-        @extend .btn.#{nth($style, 1)}
-      }
-      &:active {
-        @extend .btn.#{nth($style, 1)}
-      }
-      @if nth($style, 1) == metro {
-        &.rounded {
-          @include border-radius($button-radius);
-        }
-      }
-      @if nth($style, 1) == pretty {
-        &.squared {
-          @include border-radius($metro-radius);
-        }
-      }
-    }
-  }
 }
+
+.btn.metro,
+.skiplink.metro,
+.btn.pretty.squared,
+.pretty .btn.squared {
+  @include border-radius(0);
+}
+
+.btn.pretty,
+.skiplink.pretty,
+.btn.metro.rounded,
+.metro .btn.rounded {
+  @include border-radius($button-radius);
+}
+
 
 // Buttons with Gradients
 .btn, .skiplink {

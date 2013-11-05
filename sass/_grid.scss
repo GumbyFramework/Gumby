@@ -1,4 +1,6 @@
-
+%zero-margin-left {
+  margin-left: 0;
+}
 
 
 /*=================================================
@@ -84,7 +86,7 @@
           &.one.column {
             margin-left: pull_x($i, $j);
             &:first-child {
-              margin-left: 0;
+              @extend %zero-margin-left;
             }
           }
         }
@@ -92,7 +94,7 @@
           &.#{number-as-word($j)}.columns {
             margin-left: pull_x($i, $j);
             &:first-child {
-              margin-left: 0;
+              @extend %zero-margin-left;
             }
           }
         }
@@ -146,7 +148,7 @@
           &.one.column {
             margin-left: pull_x($i, $j, true);
             &:first-child {
-              margin-left: 0;
+              @extend %zero-margin-left;
             }
           }
         }
@@ -154,13 +156,19 @@
           &.#{number-as-word($j)}.columns {
             margin-left: pull_x($i, $j, true);
             &:first-child {
-              margin-left: 0;
+              @extend %zero-margin-left;
             }
           }
         }
       }
     }
   }
+}
+
+// helper placeholder to condense the repeated
+// need for resetting first-child margins to zero
+%zero-margin-left {
+  margin-left: 0;
 }
 
 /* Hybrid Centered Classes */
