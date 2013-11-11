@@ -1299,9 +1299,13 @@ abbr { text-transform: none; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; } }
 /*=================================================
- +++ LE GRID +++ A Responsive Grid -- Gumby defaults to a standard 960 grid, but you can change it to whatever you'd like.
+
+	+++ LE GRID +++
+	A Responsive Grid -- Gumby defaults to a standard 960 grid,
+	but you can change it to whatever you'd like.
  ==================================================*/
-/*.container { padding: 0 $gutter-in-px;
+/*.container {
+	padding: 0 $gutter-in-px;
 }*/
 .row { width: 100%; max-width: 980px; min-width: 320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
 .row .row { min-width: 0; padding-left: 0; padding-right: 0; }
@@ -2151,8 +2155,8 @@ img { -ms-interpolation-mode: bicubic; }
 .row:before, .row:after { content: ""; display: table; }
 .row:after { clear: both; }
 
-.valign { display: table; width: 100%; }
-.valign > div, .valign > article, .valign > section, .valign > figure { display: table-cell; vertical-align: middle; }
+.valign:before { content: ' '; display: inline-block; height: 400px; vertical-align: middle; margin-right: -0.25em; }
+.valign > div, .valign > article, .valign > section, .valign > figure { display: inline-block; vertical-align: middle; }
 
 /* Mobile */
 @media only screen and (max-width: 767px) { body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; }
