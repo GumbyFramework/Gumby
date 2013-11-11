@@ -42,14 +42,7 @@
 
 		// bind to specified event and trigger
 		this.$el.on(this.on, function(e) {
-			// stop propagation
-			e.stopImmediatePropagation();
-
-			// only disable default if <a>
-			if($(this).prop('tagName') === 'A') {
-				e.preventDefault();
-			}
-
+			e.preventDefault();
 			scope.trigger(scope.triggered);
 
 		// listen for gumby.trigger to dynamically trigger toggle/switch
@@ -69,8 +62,6 @@
 		this.on = Gumby.selectAttr.apply(this.$el, ['on']) || Gumby.click;
 		this.className = Gumby.selectAttr.apply(this.$el, ['classname']) || 'active';
 		this.self = Gumby.selectAttr.apply(this.$el, ['self']) === 'false';
-
-		console.log(this.self);
 	};
 
 	// parse data-for attribute, switches will inherit method

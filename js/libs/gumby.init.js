@@ -3,34 +3,45 @@
 */
 
 !function($) {
-	// initialize Gumby
-	if(Gumby.autoInit) {
-		Gumby.debug('Gumby auto initialization');
+
+	'use strict';
+
+	// not touch device or no touch events required so auto initialize here
+	if((!Gumby.touchDevice || !Gumby.touchEvents) && Gumby.autoInit) {
 		window.Gumby.init();
+
+	// load jQuery mobile touch events
+	} else if(Gumby.touchEvents && Gumby.touchDevice) {
+		Gumby.debug('Loading jQuery mobile touch events');
+		// set timeout to 2sec
+		yepnope.errorTimeout = 2000;
+		Modernizr.load({
+			test: Modernizr.touch,
+			yep: Gumby.touchEvents+'/jquery.mobile.custom.min.js',
+			complete: function() {
+				// error loading jQuery mobile
+				if(!$.mobile) {
+					Gumby.error('Error loading jQuery mobile touch events');
+				}
+
+				// if not auto initializing
+				// this will allow helpers to fire when initialized
+				Gumby.touchEventsLoaded = true;
+
+				// auto initialize
+				if(Gumby.autoInit) {
+					window.Gumby.init();
+
+				// if already manually initialized then fire helpers
+				} else if(Gumby.uiModulesReady) {
+					Gumby.helpers();
+				}
+			}
+		});
 	}
 
 	// if AMD return Gumby object to define
 	if(typeof define == "function" && define.amd) {
 		define(window.Gumby);
-	}
-
-	// test for touch event support and load jQuery if present
-	if(Gumby.touchEvents) {
-		Gumby.debug('Loading jQuery mobile touch events');
-		Modernizr.load({
-			test: Modernizr.touch,
-
-			// if present load custom jQuery mobile build and update Gumby.click
-			yep: Gumby.touchEvents+'/jquery.mobile.custom.min.js',
-			callback: function(url, result, key) {
-				// check jQuery mobile has successfully loaded before using tap events
-				if(!$.mobile) {
-					Gumby.error('Error loading jQuery mobile touch events');
-					return;
-				}
-
-				window.Gumby.click += ' tap';
-			}
-		});
 	}
 }(jQuery);

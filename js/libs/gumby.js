@@ -31,6 +31,8 @@
 		this.gumbyTouch = false;
 		this.touchEvents = 'js/libs';
 		this.breakpoint = Number($('script[gumby-breakpoint]').attr('gumby-breakpoint')) || 768;
+		this.touchEventsLoaded = false;
+		this.uiModulesReady = false;
 		this.uiModules = {};
 		this.inits = {};
 
@@ -50,6 +52,11 @@
 			} else if(path) {
 				this.touchEvents = path;
 			}
+		}
+
+		// update click property to bind to click/tap
+		if(this.touchDevice) {
+			this.click += ' tap';
 		}
 
 		// add gumby-touch/gumby-no-touch classes
@@ -73,7 +80,6 @@
 
 		// call ready() code when dom is ready
 		this.$dom.ready(function() {
-
 			if(opts.debug) {
 				scope.debugMode = true;
 			}
@@ -100,6 +106,22 @@
 		});
 
 		return this;
+	};
+
+	Gumby.prototype.helpers = function() {
+		if(this.onReady) {
+			this.onReady();
+		}
+
+		// call oldie() callback if applicable
+		if(this.isOldie && this.onOldie) {
+			this.onOldie();
+		}
+
+		// call touch() callback if applicable
+		if(Modernizr.touch && this.onTouch) {
+			this.onTouch();
+		}
 	};
 
 	// public helper - set Gumby ready callback
@@ -134,7 +156,7 @@
 		if(!this.debugMode || !window.console) { return; }
 		console[console[type] ? type : 'log'](data.length > 1 ? Array.prototype.slice.call(data) : data[0]);
 	};
-	
+
 	// pass args onto console method for output
 	Gumby.prototype.log = function() { this.console('log', arguments); };
 	Gumby.prototype.debug = function() { this.console('debug', arguments); };
@@ -188,7 +210,7 @@
 		this.inits[ref] = code;
 	};
 
-	// initialize a uiModule, single / array of module refs 
+	// initialize a uiModule, single / array of module refs
 	Gumby.prototype.initialize = function(ref, all) {
 		if(typeof ref === 'object') {
 			var i = 0;
@@ -199,7 +221,7 @@
 				}
 
 				this.inits[ref[i]](all);
-			}	
+			}
 		} else if(this.inits[ref] && typeof this.inits[ref] === 'function') {
 			this.inits[ref](all);
 		} else {
