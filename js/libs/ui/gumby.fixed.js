@@ -11,8 +11,11 @@
 
 		this.$el = $el;
 
+		this.$window = $(window);
 		this.fixedPoint = '';
 		this.pinPoint = false;
+		this.fixedPointjQ = false;
+		this.pinPointjQ = false;
 		this.offset = 0;
 		this.pinOffset = 0;
 		this.top = 0;
@@ -29,7 +32,7 @@
 		var scope = this;
 
 		// monitor scroll and update fixed elements accordingly
-		$(window).on('scroll load', function() {
+		this.$window.on('scroll load', function() {
 			scope.monitorScroll();
 		});
 
@@ -75,12 +78,15 @@
 			this.pinPoint = this.parseAttrValue(this.pinPoint);
 		}
 
+		this.fixedPointjQ = this.fixedPoint instanceof jQuery;
+		this.pinPointjQ = this.pinPoint instanceof jQuery;
+
 		// if we have a parent constrain dimenions
 		if(this.$parent && this.constrainEl) {
 			// measure up
 			this.measure();
 			// and on resize reset measurement
-			$(window).resize(function() {
+			this.$window.resize(function() {
 				if(scope.state) {
 					scope.measure();
 					scope.constrain();
@@ -91,14 +97,15 @@
 
 	// monitor scroll and trigger changes based on position
 	Fixed.prototype.monitorScroll = function() {
-		var scrollAmount = $(window).scrollTop(),
+		var scrollAmount = this.$window.scrollTop(),
 			// recalculate selector attributes as position may have changed
-			fixedPoint = this.fixedPoint instanceof jQuery ? this.fixedPoint.offset().top : this.fixedPoint,
-			pinPoint = false;
+			fixedPoint = this.fixedPointjQ ? this.fixedPoint.offset().top : this.fixedPoint,
+			pinPoint = false,
+			timer;
 
 		// if a pin point is set recalculate
 		if(this.pinPoint) {
-			pinPoint = this.pinPoint instanceof jQuery ? this.pinPoint.offset().top : this.pinPoint;
+			pinPoint = this.pinPointjQ ? this.pinPoint.offset().top : this.pinPoint;
 		}
 
 		// apply offsets
@@ -127,7 +134,7 @@
 
 		this.state = 'fixed';
 		this.$el.css({
-			'top' : 0 + this.top
+			'top' : this.top
 		}).addClass('fixed').removeClass('unfixed pinned').trigger('gumby.onFixed');
 
 		// if we have a parent constrain dimenions
@@ -166,9 +173,9 @@
 
 	// measure up the parent for constraining
 	Fixed.prototype.measure = function() {
-		var offsets = this.$parent.offset(), parentPadding;
+		var parentPadding;
 
-		this.measurements.left = offsets.left;
+		this.measurements.left = this.$parent.offset().left;
 		this.measurements.width = this.$parent.width();
 
 		// if element has a parent row then need to consider padding
