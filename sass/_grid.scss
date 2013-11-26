@@ -82,7 +82,12 @@
     .pull_#{number-as-word($i)} {
       // pull classes need to know the width of the container being pulled
       @for $j from 1 through $cols - 1 {
-        @if $j == 1 {
+        @if $i + $j == $cols {
+          &.#{number-as-word($j)}.columns {
+            @extend %pull-100-percent;
+          }
+        }
+        @elseif $j == 1 {
           &.one.column {
             margin-left: pull_x($i, $j);
             &:first-child {
@@ -144,7 +149,12 @@
     .pull_#{number-as-word($i)} {
       // pull classes need to know the width of the container being pulled
       @for $j from 1 through $hybrid - 1 {
-        @if $j == 1 {
+        @if $i + $j == $hybrid {
+          &.#{number-as-word($j)}.columns {
+            @extend %pull-100-percent;
+          }
+        }
+        @elseif $j == 1 {
           &.one.column {
             margin-left: pull_x($i, $j, true);
             &:first-child {
@@ -169,6 +179,10 @@
 // need for resetting first-child margins to zero
 %zero-margin-left {
   margin-left: 0;
+}
+
+%pull-100-percent {
+  margin-left: -100%;
 }
 
 /* Hybrid Centered Classes */

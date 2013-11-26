@@ -23,7 +23,8 @@
     @each $i in $icon {
       @include i($i);
     }
-  } @elseif ($icon == all) {
+  }
+  @elseif ($icon == all) {
     @each $icon in $entypo-icons {
       .#{nth($icon, 1)}.icon-left a:before,
       .#{nth($icon, 1)}.icon-right a:after,
@@ -32,9 +33,8 @@
         height: inherit;
       }
     }
-  } @else {
+  }
+  @else {
     @include i($icon);
   }
 }
-
-
