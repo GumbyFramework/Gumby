@@ -1,3 +1,4 @@
+/* Typography */
 
 h1,h2,h3,h4,h5,h6 {
   font-family: $font-family;
@@ -239,9 +240,6 @@ abbr {
   }
   abbr[title]:after {
     content: " (" attr(title) ")";
-  }
-  .ir a:after {
-    content: "";
   }
   a {
     &[href^="javascript:"]:after, &[href^="#"]:after {
