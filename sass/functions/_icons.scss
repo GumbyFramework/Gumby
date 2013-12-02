@@ -1,9 +1,9 @@
 @function match($list, $icon) {
   @each $item in $list {
     $index: index($item, $icon);
-      @if $index { 
+      @if $index {
         $return: if($index == 1, 2, $index);
-        @return nth($item, $return); 
+        @return nth($item, $return);
       }
     }
   @return false;
@@ -12,7 +12,7 @@
 @mixin i($icon) {
   .#{$icon}.icon-left a:before,
   .#{$icon}.icon-right a:after,
-  .#{$icon}:before {
+  i.#{$icon}:before {
     content: "#{match($entypo-icons, $icon)}";
     height: inherit;
   }
@@ -26,12 +26,7 @@
   }
   @elseif ($icon == all) {
     @each $icon in $entypo-icons {
-      .#{nth($icon, 1)}.icon-left a:before,
-      .#{nth($icon, 1)}.icon-right a:after,
-      .#{nth($icon, 1)}:before {
-        content: "#{nth($icon, 2)}";
-        height: inherit;
-      }
+      @include i(nth($icon, 1));
     }
   }
   @else {
