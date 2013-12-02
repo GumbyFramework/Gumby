@@ -1204,14 +1204,14 @@ img { -ms-interpolation-mode: bicubic; }
 
 /* Tile Grid */
 .tiles { display: block; overflow: hidden; }
-.tiles > li { display: block; height: auto; float: left; padding-bottom: 0; }
+.tiles > li, .tiles > .tile { display: block; height: auto; float: left; padding-bottom: 0; }
 .tiles.two_up { margin-left: -4%; }
-.tiles.two_up > li { margin-left: 4%; width: 46%; }
+.tiles.two_up > li, .tiles.two_up > .tile { margin-left: 4%; width: 46%; }
 .tiles.three_up, .tiles.four_up { margin-left: -2%; }
-.tiles.three_up > li { margin-left: 2%; width: 31.3%; }
-.tiles.four_up > li { margin-left: 2%; width: 23%; }
+.tiles.three_up > li, .tiles.three_up > .tile { margin-left: 2%; width: 31.3%; }
+.tiles.four_up > li, .tiles.four_up > .tile { margin-left: 2%; width: 23%; }
 .tiles.five_up { margin-left: -1.5%; }
-.tiles.five_up > li { margin-left: 1.5%; width: 18.5%; }
+.tiles.five_up > li, .tiles.five_up > .tile { margin-left: 1.5%; width: 18.5%; }
 
 /* Nicolas Gallagher's micro clearfix */
 .clearfix { *zoom: 1; }

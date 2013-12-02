@@ -218,7 +218,7 @@ img {
 .tiles {
 	display: block;
 	overflow: hidden;
-	> li {
+	> li, > .tile {
 		display: block;
 		height: auto;
 		float: left;
@@ -226,7 +226,7 @@ img {
 	}
 	&.two_up {
 		margin-left: -4%;
-		> li {
+		> li, > .tile {
 			margin-left: 4%;
 			width: 46%;
 		}
@@ -234,17 +234,17 @@ img {
 	&.three_up, &.four_up {
 		margin-left: -2%;
 	}
-	&.three_up > li {
+	&.three_up > li, &.three_up > .tile {
 		margin-left: 2%;
 		width: 31.3%;
 	}
-	&.four_up > li {
+	&.four_up > li, &.four_up > .tile {
 		margin-left: 2%;
 		width: 23%;
 	}
 	&.five_up {
 		margin-left: -1.5%;
-		> li {
+		> li, > .tile {
 			margin-left: 1.5%;
 			width: 18.5%;
 		}
