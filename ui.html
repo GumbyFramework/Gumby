@@ -317,8 +317,8 @@
 				<div class="medium danger btn"><a href="#">Danger</a></div>
 				<div class="medium warning btn"><a href="#">Warning</a></div>
 				<div class="medium success btn"><a href="#">Success</a></div>
-				<div class="medium info btn icon-left entypo icon-mail"><a href="#">Icon Left</a></div>
-				<div class="medium default btn icon-right entypo icon-camera"><a href="#">Icon Right</a></div>
+				<div class="medium info btn icon-left icon-mail"><a href="#">Icon Left</a></div>
+				<div class="medium default btn icon-right icon-camera"><a href="#">Icon Right</a></div>
 				<div class="medium default btn"><input type="submit" value="Submit" /></div>
 				<div class="medium info btn"><button>Button</button></div>
 			</div>
@@ -852,28 +852,6 @@
 				<p>Proin elit arcu, <em class="ttip" data-tooltip="Another tooltip!">rutrum</em> commodo, vehicula tempus, commodo a, risus.</p>
 		</div>
 	</div>
-	<div class="row" id="video_stuff">
-		<h1 class="lead">Intrinsic Ratio Video Embed</h1>
-		<div class="row" style="margin-bottom: 30px">
-			<div class="six columns">
-				<article class="youtube video">
-					<iframe width="560" height="315" src="http://www.youtube.com/embed/N0IDkzhBQMg" frameborder="0" allowfullscreen></iframe>
-				</article>
-			</div>
-			<div class="six columns">
-				<article class="vimeo video">
-					<iframe src="http://player.vimeo.com/video/50650297" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-				</article>
-			</div>
-		</div>
-		<div class="row">
-			<div class="six columns">
-				<article class="twitch video">
-					<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=riotgames" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel=riotgames&auto_play=false&start_volume=25" /></object>
-				</article>
-			</div>
-		</div>
-	</div>
 	<div class="row" id="icon_map">
 		<div class="row">
 			<h1 class="lead">Icon Map</h1>
@@ -1296,11 +1274,29 @@
 	<script src="js/libs/gumby.init.js"></script>
 
 	<!--
+	Google's recommended deferred loading of JS
 	gumby.min.js contains gumby.js, all UI modules and gumby.init.js
-	<script src="js/libs/gumby.min.js"></script> -->
+
+	Note: If you opt to use this method of defered loading,
+	ensure that any javascript essential to the initial
+	display of the page is included separately in a normal
+	script tag.
+
+	<script type="text/javascript">
+	function downloadJSAtOnload() {
+	var element = document.createElement("script");
+	element.src = "js/libs/gumby.min.js";
+	document.body.appendChild(element);
+	}
+	if (window.addEventListener)
+	window.addEventListener("load", downloadJSAtOnload, false);
+	else if (window.attachEvent)
+	window.attachEvent("onload", downloadJSAtOnload);
+	else window.onload = downloadJSAtOnload;
+	</script> -->
+
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
-
 
 	<!-- Change UA-XXXXX-X to be your site's ID -->
 	<!--<script>

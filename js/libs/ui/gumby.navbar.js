@@ -18,6 +18,13 @@
 		this.$dropDowns = this.$el.find('li:has(.dropdown)');
 		var scope = this;
 
+		var persist = this.$el.attr('gumby-persist');
+		if(typeof persist === 'undefined' && persist !== 'false') {
+			this.$el.find('li:not(:has(.dropdown)) a').on(Gumby.click, function() {
+				scope.$el.find('ul').removeClass('active');
+			});
+		}
+
 		// when navbar items
 		this.$dropDowns
 		// are tapped hide/show dropdowns
@@ -39,6 +46,10 @@
 
 	Navbar.prototype.toggleDropdown = function(e) {
 		e.preventDefault();
+
+		if($(e.target).is('i')) {
+			return;
+		}
 
 		var $this = $(this);
 

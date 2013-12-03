@@ -1,3 +1,4 @@
+/* Toggles */
 
 .drawer {
   position: relative;
@@ -23,7 +24,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: -999999;
+	z-index: 999999;
   background: rgb(0, 0, 0);
   background: $modal-overlay-color;
  	> .content {
@@ -58,13 +59,14 @@
     }
   }
   &, > .content {
+    visibility: hidden;
     @include opacity(0);
   }
  	&.active {
- 		z-index: 999999;
     @include transition-property(opacity);
     @include transition-duration(.3s);
     &, > .content {
+      visibility: visible;
       @include opacity(1);
     }
  	}

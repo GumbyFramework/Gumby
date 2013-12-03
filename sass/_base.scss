@@ -1,10 +1,9 @@
-@import "compass/typography/vertical_rhythm";
+/* Base Styles */
 
+@import "compass/typography/vertical_rhythm";
 @include establish-baseline;
 
-* {
-	@include box-sizing(border-box);
-}
+* { @include box-sizing(border-box); }
 
 body {
   background: $global-bg-color;
@@ -13,6 +12,7 @@ body {
   color: $body-font-color;
   position: relative;
   -webkit-font-smoothing: $font-smoothing;
+  -moz-osx-font-smoothing: grayscale;
   @include respond(all-phones) {
     -webkit-text-size-adjust: none;
     -ms-text-size-adjust: none;
@@ -43,7 +43,6 @@ html, body {
 .text-center { @extend %text-center; }
 .text-left { @extend %text-left; }
 .text-right { @extend %text-right; }
-
 // Partial to align Text Left or Right
 %text-center { text-align: center; }
 %text-left { text-align: left; }

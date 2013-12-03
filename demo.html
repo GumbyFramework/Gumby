@@ -511,7 +511,7 @@
       <p>6 Columns Pull 6</p>
     </div>
   </div>
-  
+
 
   <!-- Centering tests -->
   <div class="row">
@@ -1223,8 +1223,21 @@
   <script src="js/libs/gumby.init.js"></script>
 
   <!--
+  Google's recommended deferred loading of JS
   gumby.min.js contains gumby.js, all UI modules and gumby.init.js
-  <script src="js/libs/gumby.min.js"></script> -->
+  <script type="text/javascript">
+  function downloadJSAtOnload() {
+  var element = document.createElement("script");
+  element.src = "js/libs/gumby.min.js";
+  document.body.appendChild(element);
+  }
+  if (window.addEventListener)
+  window.addEventListener("load", downloadJSAtOnload, false);
+  else if (window.attachEvent)
+  window.attachEvent("onload", downloadJSAtOnload);
+  else window.onload = downloadJSAtOnload;
+  </script> -->
+
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 

@@ -71,150 +71,144 @@ form {
     @include border-radius(4px);
     &.search {
       @include line-and-height(height-calc($norm));
-      @include border-radius(1000px);
+      @include shape(oval);
       padding-right: 0;
     }
   }
   .input.textarea {
     height: auto;
   }
+}
 
+input, .input {
   @each $width in $field-sizes {
-    .#{nth($width, 1)} {
-      @include input-size(#{nth($width, 1)})
-    }
-  }
-
-  @include input-sizes-list() {
-    margin:0;
-    &:last-child {
-      margin-left: -4px;
-    }
-    &:first-child {
-      margin-right: 3.94%;
-      margin-left: 0;
-    }
-    &:first-child:last-child {
-      margin: 0;
-    }
-  }
-
-  label + {
-    @include input-sizes-list() {
+    &.#{nth($width, 1)} {
+      @include input-size(#{nth($width, 1)});
+      margin:0;
       &:last-child {
+        margin-left: -4px;
+      }
+      &:first-child {
+        margin-right: 3.94%;
         margin-left: 0;
+      }
+      &:first-child:last-child {
+        margin: 0;
       }
     }
   }
+}
 
-  @include respond(document-width) {
-
-    .xxwide:first-child, .xxwide:last-child {
-      margin-right: 0%;
-    }
-
-  }
-
-  /* remove inline-block white-space — A 0px font-size = 0px of white space */
-  &.prepend, &.append {
-    font-size: 0;
-    white-space: nowrap;
-    padding-bottom: 3.5px;
-  }
-
-  &.prepend input,
-  &.prepend .input,
-  &.append input,
-  &.append .input {
-    display: inline-block;
-    max-width: 100%;
-  }
-
-  &.prepend input,
-  &.prepend .input {
-    @include border-radius(0px 4px 4px 0);
-  }
-
-  &.append input,
-  &.append .input {
-    @include border-radius(4px 0 0 4px);
-  }
-
-  &.prepend.append input {
-    @include border-radius(0);
-  }
-
-  &.prepend.append input:first-child {
-    @include border-radius(4px 0 0 4px);
-  }
-
-  &.prepend.append input:last-child {
-    margin-left: -1px;
-    @include border-radius(0px 4px 4px 0);
-  }
-
-  &.prepend .adjoined, &.append .adjoined, &.prepend .btn, &.append .btn {
-    position: relative;
-    display: inline-block;
-    margin-bottom:0;
-    z-index: 99;
-  }
-  &.prepend .btn, &.append .btn {
-    a, input, button {
-      padding: 0 12px;
-    }
-  }
-
-  &.prepend .adjoined, &.append .adjoined  {
-    padding: 0 10px 0 10px;
-    background: $default-color;
-    border: 1px solid darken($default-color, 10%);
-    font-family: $font-family;
-    font-weight: $font-weight-semibold;
-    color: $body-font-color;
-    @include font-size($norm);
-    @include line-and-height(height-calc($norm));
-  }
-
-  &.prepend *:first-child {
-    @include border-radius(4px 0 0 4px);
-  }
-
-  &.prepend input:first-child {
-    margin-right: 0;
-  }
-
-  &.prepend .adjoined, &.prepend .btn {
-    margin-right: -1px;
-  }
-
-  .adjoined:first-child {
-    margin-left: 0 !important;
-  }
-
-  &.append .adjoined, &.append .btn {
-    margin-left: -1px;
-  }
-
-  &.append *:last-child {
-    @include border-radius(0px 4px 4px 0);
-  }
-
-  &.append button, &.prepend button {
-    display: inline-block;
-  }
-
-  &.append input:first-child {
-    margin-right: 0;
-  }
-
-  &.double input, &.double .input {
-    width: 50% !important;
+label + {
+  @include input-sizes-list() {
     &:last-child {
-      margin-left: -1px;
+      margin-left: 0;
     }
   }
+}
 
+@include respond(document-width) {
+  .xxwide:first-child, .xxwide:last-child {
+    margin-right: 0%;
+  }
+}
+
+/* remove inline-block white-space — A 0px font-size = 0px of white space */
+.prepend, .append {
+  font-size: 0;
+  white-space: nowrap;
+  padding-bottom: 3.5px;
+}
+
+.prepend input,
+.prepend .input,
+.append input,
+.append .input {
+  display: inline-block;
+  max-width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.prepend input,
+.prepend .input,
+.prepend.append input:last-child,
+.append *:last-child {
+  @include border-radius(0px $button-radius $button-radius 0);
+}
+
+.append input,
+.append .input,
+.prepend.append input:first-child,
+.prepend *:first-child {
+  @include border-radius($button-radius 0 0 $button-radius);
+}
+
+.prepend.append input {
+  @include border-radius(0);
+}
+
+.prepend.append input:last-child {
+  margin-left: -1px;
+}
+
+.prepend .adjoined, .append .adjoined, .prepend .btn, .append .btn {
+  position: relative;
+  display: inline-block;
+  margin-bottom:0;
+  z-index: 99;
+}
+.prepend .btn, .append .btn {
+  a, input, button {
+    padding: 0 12px;
+  }
+}
+
+.prepend .adjoined, .append .adjoined  {
+  padding: 0 10px 0 10px;
+  background: $default-color;
+  border: 1px solid darken($default-color, 10%);
+  font-family: $font-family;
+  font-weight: $font-weight-semibold;
+  color: $body-font-color;
+  @include font-size($norm);
+  @include line-and-height(height-calc($norm));
+}
+
+.prepend .adjoined, .prepend .btn {
+  margin-right: -1px;
+}
+
+.adjoined:first-child {
+  margin-left: 0 !important;
+}
+
+.append .adjoined, .append .btn {
+  margin-left: -1px;
+}
+
+.append button, .prepend button {
+  display: inline-block;
+}
+
+.prepend input:first-child,
+.append input:first-child,
+.prepend .input:first-child,
+.append .input:first-child {
+  margin-right: 0;
+}
+
+.double input, .double .input {
+  width: 50% !important;
+  &:last-child {
+    margin-left: -1px;
+  }
+}
+
+.field {
+  input, .input, textarea, .textarea, .radio span, .checkbox span, .picker {
+    @include transition-duration(.2s);
+  }
   @each $error in danger $danger-color, warning $warning-color, success $success-color {
     &.#{nth($error, 1)} {
       &:after {
@@ -251,19 +245,17 @@ form {
       }
       input, .input, textarea, .textarea, .radio span, .checkbox span, .picker {
         border-color: nth($error, 2);
-        color: nth($error, 2);
         background: lighten(nth($error, 2), 35%);
-        @include transition-duration(.2s);
       }
 
+      input, .input, textarea, .textarea,
+      .radio span, .checkbox span, .picker,
+      input::-webkit-input-placeholder,
+      textarea::-webkit-input-placeholder,
+      input:-moz-placeholder,
+      textarea:-moz-placeholder
       textarea { color: nth($error, 2); }
 
-      input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-        color: nth($error, 2);
-      }
-      input:-moz-placeholder, textarea:-moz-placeholder {
-        color: nth($error, 2);
-      }
     }
   }
 
@@ -279,6 +271,7 @@ form {
     }
   }
 }
+
 
 .field .text input[type="search"] {
   -webkit-appearance: textfield;

@@ -1,0 +1,20 @@
+// Fade Mixin
+
+$fade-duration: .6s;
+
+@mixin fade($direction: out, $duration: $fade-duration) {
+
+  @if $direction != out {
+    visibility: visible;
+    @include opacity(1);
+  }
+
+  @else {
+    visibility: hidden;
+    @include opacity(0);
+  }
+
+  @include transition-property(opacity);
+  @include transition-duration($fade-duration);
+
+}
