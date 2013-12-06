@@ -1,0 +1,1 @@
+Please see [our wiki](https://github.com/GumbyFramework/Gumby/wiki/Changelog) for the changelog, and release announcements in [our Google+ community](https://plus.google.com/u/0/communities/108760896951473344451) for more detailed information on what's new.
