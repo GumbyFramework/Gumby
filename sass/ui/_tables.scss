@@ -87,3 +87,94 @@ table {
 		}
 	}
 }
+
+/* Mobile first styles: Begin with the stacked presentation at narrow widths */ 
+@media only all {
+	.reflow {
+		/* Hide the table headers */ 
+		thead {
+			td, th {
+				display: none;
+			}
+		}
+
+		/* Show the table cells as a block level element */ 
+		td, th {
+			text-align: left;
+			display: block;
+			@include font-size($norm);
+
+			/* Make the label elements a percentage width */
+			b.ui-table-cell-label {
+				padding: .4em; 
+				min-width: 30%; 
+				display: inline-block;
+				margin: -.4em 1em -.4em -.4em;
+				font-weight: bold;
+				@include font-size($med);
+			}
+
+			/* For grouped headers, have a different style to visually separate the levels by classing the first label in each col group */ 
+			b.ui-table-cell-label-top {
+				display: block;
+				padding: .4em 0;
+				margin: .4em 0;
+				text-transform: uppercase;
+				@include font-size($large);
+				font-weight: normal;
+			}
+		}
+
+		/* Add a fair amount of top margin to visually separate each row when stacked */
+		tbody {
+			th {
+				margin-top: 3em;
+			}
+		}
+	}
+}
+
+@media ( min-width: $table-reflow-breakpoint ) {
+	.reflow {
+		display: table-row-group;
+
+		@mixin showheaderrows() {
+			display: table-cell;
+			margin: 0;
+
+			.ui-table-cell-label {
+				display: none;
+			}
+		}
+
+		td, th {
+			@include showheaderrows();
+		}
+
+		tbody {
+			td, th {
+				@include showheaderrows();
+			}
+		}
+
+		thead {
+			td, th {
+				@include showheaderrows();
+			}
+		}
+	}
+}
+
+
+/* Hack to make IE9 and WP7.5 treat cells like block level elements, scoped to ui-responsive class */ 
+/* Applied in a max-width media query up to the table layout breakpoint so we don't need to negate this*/ 
+@media ( max-width: $table-reflow-breakpoint ) {
+	.ui-table-reflow {
+		td, th {
+			width: 100%;
+			@include box-sizing(border-box);
+			float: left;
+			clear: left;
+		}
+	}
+}
