@@ -102,6 +102,7 @@ table {
 		td, th {
 			text-align: left;
 			display: block;
+			@include font-size($norm);
 
 			/* Make the label elements a percentage width */
 			b.ui-table-cell-label {
@@ -109,6 +110,8 @@ table {
 				min-width: 30%; 
 				display: inline-block;
 				margin: -.4em 1em -.4em -.4em;
+				font-weight: bold;
+				@include font-size($med);
 			}
 
 			/* For grouped headers, have a different style to visually separate the levels by classing the first label in each col group */ 
@@ -117,7 +120,7 @@ table {
 				padding: .4em 0;
 				margin: .4em 0;
 				text-transform: uppercase;
-				font-size: .9em;
+				@include font-size($large);
 				font-weight: normal;
 			}
 		}
