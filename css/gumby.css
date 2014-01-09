@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "CP850";
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 /**
 * Gumby Framework
@@ -1666,6 +1666,23 @@ table.rounded thead ~ tr:last-child td:last-child, table.rounded tbody tr:last-c
 table.rounded thead ~ tr:last-child td:first-child, table.rounded tbody tr:last-child td:first-child { border-bottom-left-radius: 4px; }
 table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr:first-child td, table.rounded > tbody:first-child tr:first-child td { border-top: 0; }
 
+/* Mobile first styles: Begin with the stacked presentation at narrow widths */
+@media only all { .reflow { /* Hide the table headers */ /* Show the table cells as a block level element */ /* Add a fair amount of top margin to visually separate each row when stacked */ }
+  .reflow thead td, .reflow thead th { display: none; }
+  .reflow td, .reflow th { text-align: left; display: block; font-size: 16px; font-size: 1rem; /* Make the label elements a percentage width */ /* For grouped headers, have a different style to visually separate the levels by classing the first label in each col group */ }
+  .reflow td b.ui-table-cell-label, .reflow th b.ui-table-cell-label { padding: .4em; min-width: 30%; display: inline-block; margin: -.4em 1em -.4em -.4em; font-weight: bold; font-size: 18px; font-size: 1.125rem; }
+  .reflow td b.ui-table-cell-label-top, .reflow th b.ui-table-cell-label-top { display: block; padding: .4em 0; margin: .4em 0; text-transform: uppercase; font-size: 26px; font-size: 1.625rem; font-weight: normal; }
+  .reflow tbody th { margin-top: 3em; } }
+@media (min-width: 730px) { .reflow { display: table-row-group; }
+  .reflow td, .reflow th { display: table-cell; margin: 0; }
+  .reflow td .ui-table-cell-label, .reflow th .ui-table-cell-label { display: none; }
+  .reflow tbody td, .reflow tbody th { display: table-cell; margin: 0; }
+  .reflow tbody td .ui-table-cell-label, .reflow tbody th .ui-table-cell-label { display: none; }
+  .reflow thead td, .reflow thead th { display: table-cell; margin: 0; }
+  .reflow thead td .ui-table-cell-label, .reflow thead th .ui-table-cell-label { display: none; } }
+/* Hack to make IE9 and WP7.5 treat cells like block level elements, scoped to ui-responsive class */
+/* Applied in a max-width media query up to the table layout breakpoint so we don't need to negate this*/
+@media (max-width: 730px) { .ui-table-reflow td, .ui-table-reflow th { width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: left; clear: left; } }
 /* Tooltips */
 .ttip { position: relative; cursor: pointer; }
 .ttip:after { display: block; background: #3085d6; border: 1px solid #3085d6; border-bottom: 0; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; padding: 0.5em 0.75em; width: auto; min-width: 130px; max-width: 500px; position: absolute; left: 0; bottom: 101%; margin-bottom: 8px; text-align: left; color: #fff; content: attr(data-tooltip); line-height: 1.5; font-size: 16px; font-weight: normal; font-style: normal; -webkit-transition: opacity 0.1s ease; -moz-transition: opacity 0.1s ease; -o-transition: opacity 0.1s ease; transition: opacity 0.1s ease; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; pointer-events: none; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #65a4e1), color-stop(100%, #3085d6)); background-image: -webkit-linear-gradient(top, #65a4e1, #3085d6); background-image: -moz-linear-gradient(top, #65a4e1, #3085d6); background-image: -o-linear-gradient(top, #65a4e1, #3085d6); background-image: linear-gradient(top, #65a4e1, #3085d6); -webkit-box-shadow: 0 0 5px 0 rgba(48, 133, 214, 0.25); -moz-box-shadow: 0 0 5px 0 rgba(48, 133, 214, 0.25); box-shadow: 0 0 5px 0 rgba(48, 133, 214, 0.25); }
