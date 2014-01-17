@@ -49,7 +49,7 @@
       }
       &.active > a {
         @include line-and-height($tab-height + 1);
-        background: $white;
+        background: lighten($default-color, 5%);
         cursor: default;
       }
       &:last-child {
@@ -83,13 +83,13 @@
     background: lighten($default-color, 1%);
   }
   &:active {
-    background: darken($default-color, 2%);
+    background: lighten($default-color, 25%);
   }
 }
 
 .tab-nav > li.active > a {
   @include line-and-height($tab-height + 1);
-  background: $white;
+  background: lighten($default-color, 25%);
 }
 
 .tabs.pill .tab-nav {
