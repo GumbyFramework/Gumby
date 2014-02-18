@@ -47,6 +47,10 @@
 	Navbar.prototype.toggleDropdown = function(e) {
 		e.preventDefault();
 
+		if($(this).parents('.dropdown')) {
+			e.stopImmediatePropagation();
+		}
+
 		if($(e.target).is('i')) {
 			return;
 		}
