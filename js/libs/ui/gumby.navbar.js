@@ -41,7 +41,7 @@
 		}
 
 		// override with childlinks
-		this.$dropDowns.find('.dropdown li:not(:has(.dropdown)) a[href]').on(Gumby.click, this.openLink);
+		this.$el.find('li:not(:has(.dropdown)) a[href]').on(Gumby.click, this.openLink);
 	}
 
 	Navbar.prototype.toggleDropdown = function(e) {
