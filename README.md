@@ -6,7 +6,7 @@ prototypes with a flexible and responsive grid system and UI kit.
 
 Full documentation can be found at [http://gumbyframework.com](http://gumbyframework.com/docs).
 
-More information can be found in the [Wiki](https://github.com/GumbyFramework/Gumby/wiki).
+More information, including our changelog, can be found in the [Wiki](https://github.com/GumbyFramework/Gumby/wiki).
 
 Our [Google Plus Community](https://plus.google.com/u/0/communities/108760896951473344451) is rapidly growing, we recommend heading over there with any questions you may have or to geek out and discuss the framework and rwd in general.
 
