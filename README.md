@@ -16,7 +16,7 @@ Gumby has a few dependencies. Big thank you to the innovative geniuses behind th
 
 - [Sass](https://github.com/nex3/sass) - Nathan Weizenbaum
 - [Compass](https://github.com/chriseppstein/compass) - Chris Eppstein
-- [Modular Scale](https://github.com/Team-Sass/modular-scale) - Scott Kellum
+- [Modular Scale](https://github.com/Team-Sass/modular-scale) - Scott Kellum  *Note: Please use modular scale 1.0.6, 2.x has not been integrated yet*
 - [FitText](http://fittextjs.com/) - Paravel
 - [jQuery](http://jquery.com/)
 - [Modernizr](http://modernizr.com/)
