@@ -58,11 +58,11 @@ html, body { height: 100%; }
 
 .icon-note-beamed.icon-left a:before, .icon-note-beamed.icon-right a:after, i.icon-note-beamed:before { content: "\266b"; height: inherit; }
 
-.icon-music.icon-left a:before, .icon-music.icon-right a:after, i.icon-music:before { content: "🎵"; height: inherit; }
+.icon-music.icon-left a:before, .icon-music.icon-right a:after, i.icon-music:before { content: "\1f3b5"; height: inherit; }
 
-.icon-search.icon-left a:before, .icon-search.icon-right a:after, i.icon-search:before { content: "🔍"; height: inherit; }
+.icon-search.icon-left a:before, .icon-search.icon-right a:after, i.icon-search:before { content: "\1f50d"; height: inherit; }
 
-.icon-flashlight.icon-left a:before, .icon-flashlight.icon-right a:after, i.icon-flashlight:before { content: "🔦"; height: inherit; }
+.icon-flashlight.icon-left a:before, .icon-flashlight.icon-right a:after, i.icon-flashlight:before { content: "\1f526"; height: inherit; }
 
 .icon-mail.icon-left a:before, .icon-mail.icon-right a:after, i.icon-mail:before { content: "\2709"; height: inherit; }
 
@@ -74,17 +74,17 @@ html, body { height: 100%; }
 
 .icon-star-empty.icon-left a:before, .icon-star-empty.icon-right a:after, i.icon-star-empty:before { content: "\2606"; height: inherit; }
 
-.icon-user.icon-left a:before, .icon-user.icon-right a:after, i.icon-user:before { content: "👤"; height: inherit; }
+.icon-user.icon-left a:before, .icon-user.icon-right a:after, i.icon-user:before { content: "\1f464"; height: inherit; }
 
-.icon-users.icon-left a:before, .icon-users.icon-right a:after, i.icon-users:before { content: "👥"; height: inherit; }
+.icon-users.icon-left a:before, .icon-users.icon-right a:after, i.icon-users:before { content: "\1f465"; height: inherit; }
 
 .icon-user-add.icon-left a:before, .icon-user-add.icon-right a:after, i.icon-user-add:before { content: "\e700"; height: inherit; }
 
-.icon-video.icon-left a:before, .icon-video.icon-right a:after, i.icon-video:before { content: "🎬"; height: inherit; }
+.icon-video.icon-left a:before, .icon-video.icon-right a:after, i.icon-video:before { content: "\1f3ac"; height: inherit; }
 
-.icon-picture.icon-left a:before, .icon-picture.icon-right a:after, i.icon-picture:before { content: "🌄"; height: inherit; }
+.icon-picture.icon-left a:before, .icon-picture.icon-right a:after, i.icon-picture:before { content: "\1f304"; height: inherit; }
 
-.icon-camera.icon-left a:before, .icon-camera.icon-right a:after, i.icon-camera:before { content: "📷"; height: inherit; }
+.icon-camera.icon-left a:before, .icon-camera.icon-right a:after, i.icon-camera:before { content: "\1f4f7"; height: inherit; }
 
 .icon-layout.icon-left a:before, .icon-layout.icon-right a:after, i.icon-layout:before { content: "\268f"; height: inherit; }
 
@@ -118,35 +118,35 @@ html, body { height: 100%; }
 
 .icon-info-circled.icon-left a:before, .icon-info-circled.icon-right a:after, i.icon-info-circled:before { content: "\e705"; height: inherit; }
 
-.icon-back.icon-left a:before, .icon-back.icon-right a:after, i.icon-back:before { content: "🔙"; height: inherit; }
+.icon-back.icon-left a:before, .icon-back.icon-right a:after, i.icon-back:before { content: "\1f519"; height: inherit; }
 
 .icon-home.icon-left a:before, .icon-home.icon-right a:after, i.icon-home:before { content: "\2302"; height: inherit; }
 
-.icon-link.icon-left a:before, .icon-link.icon-right a:after, i.icon-link:before { content: "🔗"; height: inherit; }
+.icon-link.icon-left a:before, .icon-link.icon-right a:after, i.icon-link:before { content: "\1f517"; height: inherit; }
 
-.icon-attach.icon-left a:before, .icon-attach.icon-right a:after, i.icon-attach:before { content: "📎"; height: inherit; }
+.icon-attach.icon-left a:before, .icon-attach.icon-right a:after, i.icon-attach:before { content: "\1f4ce"; height: inherit; }
 
-.icon-lock.icon-left a:before, .icon-lock.icon-right a:after, i.icon-lock:before { content: "🔒"; height: inherit; }
+.icon-lock.icon-left a:before, .icon-lock.icon-right a:after, i.icon-lock:before { content: "\1f512"; height: inherit; }
 
-.icon-lock-open.icon-left a:before, .icon-lock-open.icon-right a:after, i.icon-lock-open:before { content: "🔓"; height: inherit; }
+.icon-lock-open.icon-left a:before, .icon-lock-open.icon-right a:after, i.icon-lock-open:before { content: "\1f513"; height: inherit; }
 
 .icon-eye.icon-left a:before, .icon-eye.icon-right a:after, i.icon-eye:before { content: "\e70a"; height: inherit; }
 
 .icon-tag.icon-left a:before, .icon-tag.icon-right a:after, i.icon-tag:before { content: "\e70c"; height: inherit; }
 
-.icon-bookmark.icon-left a:before, .icon-bookmark.icon-right a:after, i.icon-bookmark:before { content: "🔖"; height: inherit; }
+.icon-bookmark.icon-left a:before, .icon-bookmark.icon-right a:after, i.icon-bookmark:before { content: "\1f516"; height: inherit; }
 
-.icon-bookmarks.icon-left a:before, .icon-bookmarks.icon-right a:after, i.icon-bookmarks:before { content: "📑"; height: inherit; }
+.icon-bookmarks.icon-left a:before, .icon-bookmarks.icon-right a:after, i.icon-bookmarks:before { content: "\1f4d1"; height: inherit; }
 
 .icon-flag.icon-left a:before, .icon-flag.icon-right a:after, i.icon-flag:before { content: "\2691"; height: inherit; }
 
-.icon-thumbs-up.icon-left a:before, .icon-thumbs-up.icon-right a:after, i.icon-thumbs-up:before { content: "👍"; height: inherit; }
+.icon-thumbs-up.icon-left a:before, .icon-thumbs-up.icon-right a:after, i.icon-thumbs-up:before { content: "\1f44d"; height: inherit; }
 
-.icon-thumbs-down.icon-left a:before, .icon-thumbs-down.icon-right a:after, i.icon-thumbs-down:before { content: "👎"; height: inherit; }
+.icon-thumbs-down.icon-left a:before, .icon-thumbs-down.icon-right a:after, i.icon-thumbs-down:before { content: "\1f44e"; height: inherit; }
 
-.icon-download.icon-left a:before, .icon-download.icon-right a:after, i.icon-download:before { content: "📥"; height: inherit; }
+.icon-download.icon-left a:before, .icon-download.icon-right a:after, i.icon-download:before { content: "\1f4e5"; height: inherit; }
 
-.icon-upload.icon-left a:before, .icon-upload.icon-right a:after, i.icon-upload:before { content: "📤"; height: inherit; }
+.icon-upload.icon-left a:before, .icon-upload.icon-right a:after, i.icon-upload:before { content: "\1f4e4"; height: inherit; }
 
 .icon-upload-cloud.icon-left a:before, .icon-upload-cloud.icon-right a:after, i.icon-upload-cloud:before { content: "\e711"; height: inherit; }
 
@@ -176,11 +176,11 @@ html, body { height: 100%; }
 
 .icon-chat.icon-left a:before, .icon-chat.icon-right a:after, i.icon-chat:before { content: "\e720"; height: inherit; }
 
-.icon-bell.icon-left a:before, .icon-bell.icon-right a:after, i.icon-bell:before { content: "🔔"; height: inherit; }
+.icon-bell.icon-left a:before, .icon-bell.icon-right a:after, i.icon-bell:before { content: "\1f514"; height: inherit; }
 
 .icon-attention.icon-left a:before, .icon-attention.icon-right a:after, i.icon-attention:before { content: "\26a0"; height: inherit; }
 
-.icon-alert.icon-left a:before, .icon-alert.icon-right a:after, i.icon-alert:before { content: "💥"; height: inherit; }
+.icon-alert.icon-left a:before, .icon-alert.icon-right a:after, i.icon-alert:before { content: "\1f4a5"; height: inherit; }
 
 .icon-vcard.icon-left a:before, .icon-vcard.icon-right a:after, i.icon-vcard:before { content: "\e722"; height: inherit; }
 
@@ -204,25 +204,25 @@ html, body { height: 100%; }
 
 .icon-doc-landscape.icon-left a:before, .icon-doc-landscape.icon-right a:after, i.icon-doc-landscape:before { content: "\e737"; height: inherit; }
 
-.icon-doc-text.icon-left a:before, .icon-doc-text.icon-right a:after, i.icon-doc-text:before { content: "📄"; height: inherit; }
+.icon-doc-text.icon-left a:before, .icon-doc-text.icon-right a:after, i.icon-doc-text:before { content: "\1f4c4"; height: inherit; }
 
 .icon-doc-text-inv.icon-left a:before, .icon-doc-text-inv.icon-right a:after, i.icon-doc-text-inv:before { content: "\e731"; height: inherit; }
 
-.icon-newspaper.icon-left a:before, .icon-newspaper.icon-right a:after, i.icon-newspaper:before { content: "📰"; height: inherit; }
+.icon-newspaper.icon-left a:before, .icon-newspaper.icon-right a:after, i.icon-newspaper:before { content: "\1f4f0"; height: inherit; }
 
-.icon-book-open.icon-left a:before, .icon-book-open.icon-right a:after, i.icon-book-open:before { content: "📖"; height: inherit; }
+.icon-book-open.icon-left a:before, .icon-book-open.icon-right a:after, i.icon-book-open:before { content: "\1f4d6"; height: inherit; }
 
-.icon-book.icon-left a:before, .icon-book.icon-right a:after, i.icon-book:before { content: "📕"; height: inherit; }
+.icon-book.icon-left a:before, .icon-book.icon-right a:after, i.icon-book:before { content: "\1f4d5"; height: inherit; }
 
-.icon-folder.icon-left a:before, .icon-folder.icon-right a:after, i.icon-folder:before { content: "📁"; height: inherit; }
+.icon-folder.icon-left a:before, .icon-folder.icon-right a:after, i.icon-folder:before { content: "\1f4c1"; height: inherit; }
 
 .icon-archive.icon-left a:before, .icon-archive.icon-right a:after, i.icon-archive:before { content: "\e738"; height: inherit; }
 
-.icon-box.icon-left a:before, .icon-box.icon-right a:after, i.icon-box:before { content: "📦"; height: inherit; }
+.icon-box.icon-left a:before, .icon-box.icon-right a:after, i.icon-box:before { content: "\1f4e6"; height: inherit; }
 
 .icon-rss.icon-left a:before, .icon-rss.icon-right a:after, i.icon-rss:before { content: "\e73a"; height: inherit; }
 
-.icon-phone.icon-left a:before, .icon-phone.icon-right a:after, i.icon-phone:before { content: "📞"; height: inherit; }
+.icon-phone.icon-left a:before, .icon-phone.icon-right a:after, i.icon-phone:before { content: "\1f4de"; height: inherit; }
 
 .icon-cog.icon-left a:before, .icon-cog.icon-right a:after, i.icon-cog:before { content: "\2699"; height: inherit; }
 
@@ -234,35 +234,35 @@ html, body { height: 100%; }
 
 .icon-basket.icon-left a:before, .icon-basket.icon-right a:after, i.icon-basket:before { content: "\e73d"; height: inherit; }
 
-.icon-bag.icon-left a:before, .icon-bag.icon-right a:after, i.icon-bag:before { content: "👜"; height: inherit; }
+.icon-bag.icon-left a:before, .icon-bag.icon-right a:after, i.icon-bag:before { content: "\1f45c"; height: inherit; }
 
-.icon-calendar.icon-left a:before, .icon-calendar.icon-right a:after, i.icon-calendar:before { content: "📅"; height: inherit; }
+.icon-calendar.icon-left a:before, .icon-calendar.icon-right a:after, i.icon-calendar:before { content: "\1f4c5"; height: inherit; }
 
 .icon-login.icon-left a:before, .icon-login.icon-right a:after, i.icon-login:before { content: "\e740"; height: inherit; }
 
 .icon-logout.icon-left a:before, .icon-logout.icon-right a:after, i.icon-logout:before { content: "\e741"; height: inherit; }
 
-.icon-mic.icon-left a:before, .icon-mic.icon-right a:after, i.icon-mic:before { content: "🎤"; height: inherit; }
+.icon-mic.icon-left a:before, .icon-mic.icon-right a:after, i.icon-mic:before { content: "\1f3a4"; height: inherit; }
 
-.icon-mute.icon-left a:before, .icon-mute.icon-right a:after, i.icon-mute:before { content: "🔇"; height: inherit; }
+.icon-mute.icon-left a:before, .icon-mute.icon-right a:after, i.icon-mute:before { content: "\1f507"; height: inherit; }
 
-.icon-sound.icon-left a:before, .icon-sound.icon-right a:after, i.icon-sound:before { content: "🔊"; height: inherit; }
+.icon-sound.icon-left a:before, .icon-sound.icon-right a:after, i.icon-sound:before { content: "\1f50a"; height: inherit; }
 
 .icon-volume.icon-left a:before, .icon-volume.icon-right a:after, i.icon-volume:before { content: "\e742"; height: inherit; }
 
-.icon-clock.icon-left a:before, .icon-clock.icon-right a:after, i.icon-clock:before { content: "🕔"; height: inherit; }
+.icon-clock.icon-left a:before, .icon-clock.icon-right a:after, i.icon-clock:before { content: "\1f554"; height: inherit; }
 
 .icon-hourglass.icon-left a:before, .icon-hourglass.icon-right a:after, i.icon-hourglass:before { content: "\23f3"; height: inherit; }
 
-.icon-lamp.icon-left a:before, .icon-lamp.icon-right a:after, i.icon-lamp:before { content: "💡"; height: inherit; }
+.icon-lamp.icon-left a:before, .icon-lamp.icon-right a:after, i.icon-lamp:before { content: "\1f4a1"; height: inherit; }
 
-.icon-light-down.icon-left a:before, .icon-light-down.icon-right a:after, i.icon-light-down:before { content: "🔅"; height: inherit; }
+.icon-light-down.icon-left a:before, .icon-light-down.icon-right a:after, i.icon-light-down:before { content: "\1f505"; height: inherit; }
 
-.icon-light-up.icon-left a:before, .icon-light-up.icon-right a:after, i.icon-light-up:before { content: "🔆"; height: inherit; }
+.icon-light-up.icon-left a:before, .icon-light-up.icon-right a:after, i.icon-light-up:before { content: "\1f506"; height: inherit; }
 
 .icon-adjust.icon-left a:before, .icon-adjust.icon-right a:after, i.icon-adjust:before { content: "\25d1"; height: inherit; }
 
-.icon-block.icon-left a:before, .icon-block.icon-right a:after, i.icon-block:before { content: "🚫"; height: inherit; }
+.icon-block.icon-left a:before, .icon-block.icon-right a:after, i.icon-block:before { content: "\1f6ab"; height: inherit; }
 
 .icon-resize-full.icon-left a:before, .icon-resize-full.icon-right a:after, i.icon-resize-full:before { content: "\e744"; height: inherit; }
 
@@ -344,15 +344,15 @@ html, body { height: 100%; }
 
 .icon-cw.icon-left a:before, .icon-cw.icon-right a:after, i.icon-cw:before { content: "\27f3"; height: inherit; }
 
-.icon-arrows-ccw.icon-left a:before, .icon-arrows-ccw.icon-right a:after, i.icon-arrows-ccw:before { content: "🔄"; height: inherit; }
+.icon-arrows-ccw.icon-left a:before, .icon-arrows-ccw.icon-right a:after, i.icon-arrows-ccw:before { content: "\1f504"; height: inherit; }
 
 .icon-level-down.icon-left a:before, .icon-level-down.icon-right a:after, i.icon-level-down:before { content: "\21b3"; height: inherit; }
 
 .icon-level-up.icon-left a:before, .icon-level-up.icon-right a:after, i.icon-level-up:before { content: "\21b0"; height: inherit; }
 
-.icon-shuffle.icon-left a:before, .icon-shuffle.icon-right a:after, i.icon-shuffle:before { content: "🔀"; height: inherit; }
+.icon-shuffle.icon-left a:before, .icon-shuffle.icon-right a:after, i.icon-shuffle:before { content: "\1f500"; height: inherit; }
 
-.icon-loop.icon-left a:before, .icon-loop.icon-right a:after, i.icon-loop:before { content: "🔁"; height: inherit; }
+.icon-loop.icon-left a:before, .icon-loop.icon-right a:after, i.icon-loop:before { content: "\1f501"; height: inherit; }
 
 .icon-switch.icon-left a:before, .icon-switch.icon-right a:after, i.icon-switch:before { content: "\21c6"; height: inherit; }
 
@@ -380,35 +380,35 @@ html, body { height: 100%; }
 
 .icon-progress-3.icon-left a:before, .icon-progress-3.icon-right a:after, i.icon-progress-3:before { content: "\e76b"; height: inherit; }
 
-.icon-target.icon-left a:before, .icon-target.icon-right a:after, i.icon-target:before { content: "🎯"; height: inherit; }
+.icon-target.icon-left a:before, .icon-target.icon-right a:after, i.icon-target:before { content: "\1f3af"; height: inherit; }
 
-.icon-palette.icon-left a:before, .icon-palette.icon-right a:after, i.icon-palette:before { content: "🎨"; height: inherit; }
+.icon-palette.icon-left a:before, .icon-palette.icon-right a:after, i.icon-palette:before { content: "\1f3a8"; height: inherit; }
 
 .icon-list.icon-left a:before, .icon-list.icon-right a:after, i.icon-list:before { content: "\e005"; height: inherit; }
 
 .icon-list-add.icon-left a:before, .icon-list-add.icon-right a:after, i.icon-list-add:before { content: "\e003"; height: inherit; }
 
-.icon-signal.icon-left a:before, .icon-signal.icon-right a:after, i.icon-signal:before { content: "📶"; height: inherit; }
+.icon-signal.icon-left a:before, .icon-signal.icon-right a:after, i.icon-signal:before { content: "\1f4f6"; height: inherit; }
 
-.icon-trophy.icon-left a:before, .icon-trophy.icon-right a:after, i.icon-trophy:before { content: "🏆"; height: inherit; }
+.icon-trophy.icon-left a:before, .icon-trophy.icon-right a:after, i.icon-trophy:before { content: "\1f3c6"; height: inherit; }
 
-.icon-battery.icon-left a:before, .icon-battery.icon-right a:after, i.icon-battery:before { content: "🔋"; height: inherit; }
+.icon-battery.icon-left a:before, .icon-battery.icon-right a:after, i.icon-battery:before { content: "\1f50b"; height: inherit; }
 
 .icon-back-in-time.icon-left a:before, .icon-back-in-time.icon-right a:after, i.icon-back-in-time:before { content: "\e771"; height: inherit; }
 
-.icon-monitor.icon-left a:before, .icon-monitor.icon-right a:after, i.icon-monitor:before { content: "💻"; height: inherit; }
+.icon-monitor.icon-left a:before, .icon-monitor.icon-right a:after, i.icon-monitor:before { content: "\1f4bb"; height: inherit; }
 
-.icon-mobile.icon-left a:before, .icon-mobile.icon-right a:after, i.icon-mobile:before { content: "📱"; height: inherit; }
+.icon-mobile.icon-left a:before, .icon-mobile.icon-right a:after, i.icon-mobile:before { content: "\1f4f1"; height: inherit; }
 
 .icon-network.icon-left a:before, .icon-network.icon-right a:after, i.icon-network:before { content: "\e776"; height: inherit; }
 
-.icon-cd.icon-left a:before, .icon-cd.icon-right a:after, i.icon-cd:before { content: "💿"; height: inherit; }
+.icon-cd.icon-left a:before, .icon-cd.icon-right a:after, i.icon-cd:before { content: "\1f4bf"; height: inherit; }
 
 .icon-inbox.icon-left a:before, .icon-inbox.icon-right a:after, i.icon-inbox:before { content: "\e777"; height: inherit; }
 
 .icon-install.icon-left a:before, .icon-install.icon-right a:after, i.icon-install:before { content: "\e778"; height: inherit; }
 
-.icon-globe.icon-left a:before, .icon-globe.icon-right a:after, i.icon-globe:before { content: "🌎"; height: inherit; }
+.icon-globe.icon-left a:before, .icon-globe.icon-right a:after, i.icon-globe:before { content: "\1f30e"; height: inherit; }
 
 .icon-cloud.icon-left a:before, .icon-cloud.icon-right a:after, i.icon-cloud:before { content: "\2601"; height: inherit; }
 
@@ -422,13 +422,13 @@ html, body { height: 100%; }
 
 .icon-paper-plane.icon-left a:before, .icon-paper-plane.icon-right a:after, i.icon-paper-plane:before { content: "\e79b"; height: inherit; }
 
-.icon-leaf.icon-left a:before, .icon-leaf.icon-right a:after, i.icon-leaf:before { content: "🍂"; height: inherit; }
+.icon-leaf.icon-left a:before, .icon-leaf.icon-right a:after, i.icon-leaf:before { content: "\1f342"; height: inherit; }
 
 .icon-lifebuoy.icon-left a:before, .icon-lifebuoy.icon-right a:after, i.icon-lifebuoy:before { content: "\e788"; height: inherit; }
 
 .icon-mouse.icon-left a:before, .icon-mouse.icon-right a:after, i.icon-mouse:before { content: "\e789"; height: inherit; }
 
-.icon-briefcase.icon-left a:before, .icon-briefcase.icon-right a:after, i.icon-briefcase:before { content: "💼"; height: inherit; }
+.icon-briefcase.icon-left a:before, .icon-briefcase.icon-right a:after, i.icon-briefcase:before { content: "\1f4bc"; height: inherit; }
 
 .icon-suitcase.icon-left a:before, .icon-suitcase.icon-right a:after, i.icon-suitcase:before { content: "\e78e"; height: inherit; }
 
@@ -448,33 +448,33 @@ html, body { height: 100%; }
 
 .icon-chart-pie.icon-left a:before, .icon-chart-pie.icon-right a:after, i.icon-chart-pie:before { content: "\e751"; height: inherit; }
 
-.icon-chart-line.icon-left a:before, .icon-chart-line.icon-right a:after, i.icon-chart-line:before { content: "📈"; height: inherit; }
+.icon-chart-line.icon-left a:before, .icon-chart-line.icon-right a:after, i.icon-chart-line:before { content: "\1f4c8"; height: inherit; }
 
-.icon-chart-bar.icon-left a:before, .icon-chart-bar.icon-right a:after, i.icon-chart-bar:before { content: "📊"; height: inherit; }
+.icon-chart-bar.icon-left a:before, .icon-chart-bar.icon-right a:after, i.icon-chart-bar:before { content: "\1f4ca"; height: inherit; }
 
-.icon-chart-area.icon-left a:before, .icon-chart-area.icon-right a:after, i.icon-chart-area:before { content: "🔾"; height: inherit; }
+.icon-chart-area.icon-left a:before, .icon-chart-area.icon-right a:after, i.icon-chart-area:before { content: "\1f53e"; height: inherit; }
 
 .icon-tape.icon-left a:before, .icon-tape.icon-right a:after, i.icon-tape:before { content: "\2707"; height: inherit; }
 
-.icon-graduation-cap.icon-left a:before, .icon-graduation-cap.icon-right a:after, i.icon-graduation-cap:before { content: "🎓"; height: inherit; }
+.icon-graduation-cap.icon-left a:before, .icon-graduation-cap.icon-right a:after, i.icon-graduation-cap:before { content: "\1f393"; height: inherit; }
 
 .icon-language.icon-left a:before, .icon-language.icon-right a:after, i.icon-language:before { content: "\e752"; height: inherit; }
 
-.icon-ticket.icon-left a:before, .icon-ticket.icon-right a:after, i.icon-ticket:before { content: "🎫"; height: inherit; }
+.icon-ticket.icon-left a:before, .icon-ticket.icon-right a:after, i.icon-ticket:before { content: "\1f3ab"; height: inherit; }
 
-.icon-water.icon-left a:before, .icon-water.icon-right a:after, i.icon-water:before { content: "💦"; height: inherit; }
+.icon-water.icon-left a:before, .icon-water.icon-right a:after, i.icon-water:before { content: "\1f4a6"; height: inherit; }
 
-.icon-droplet.icon-left a:before, .icon-droplet.icon-right a:after, i.icon-droplet:before { content: "💧"; height: inherit; }
+.icon-droplet.icon-left a:before, .icon-droplet.icon-right a:after, i.icon-droplet:before { content: "\1f4a7"; height: inherit; }
 
 .icon-air.icon-left a:before, .icon-air.icon-right a:after, i.icon-air:before { content: "\e753"; height: inherit; }
 
-.icon-credit-card.icon-left a:before, .icon-credit-card.icon-right a:after, i.icon-credit-card:before { content: "💳"; height: inherit; }
+.icon-credit-card.icon-left a:before, .icon-credit-card.icon-right a:after, i.icon-credit-card:before { content: "\1f4b3"; height: inherit; }
 
-.icon-floppy.icon-left a:before, .icon-floppy.icon-right a:after, i.icon-floppy:before { content: "💾"; height: inherit; }
+.icon-floppy.icon-left a:before, .icon-floppy.icon-right a:after, i.icon-floppy:before { content: "\1f4be"; height: inherit; }
 
-.icon-clipboard.icon-left a:before, .icon-clipboard.icon-right a:after, i.icon-clipboard:before { content: "📋"; height: inherit; }
+.icon-clipboard.icon-left a:before, .icon-clipboard.icon-right a:after, i.icon-clipboard:before { content: "\1f4cb"; height: inherit; }
 
-.icon-megaphone.icon-left a:before, .icon-megaphone.icon-right a:after, i.icon-megaphone:before { content: "📣"; height: inherit; }
+.icon-megaphone.icon-left a:before, .icon-megaphone.icon-right a:after, i.icon-megaphone:before { content: "\1f4e3"; height: inherit; }
 
 .icon-database.icon-left a:before, .icon-database.icon-right a:after, i.icon-database:before { content: "\e754"; height: inherit; }
 
@@ -484,7 +484,7 @@ html, body { height: 100%; }
 
 .icon-thermometer.icon-left a:before, .icon-thermometer.icon-right a:after, i.icon-thermometer:before { content: "\e757"; height: inherit; }
 
-.icon-key.icon-left a:before, .icon-key.icon-right a:after, i.icon-key:before { content: "🔑"; height: inherit; }
+.icon-key.icon-left a:before, .icon-key.icon-right a:after, i.icon-key:before { content: "\1f511"; height: inherit; }
 
 .icon-flow-cascade.icon-left a:before, .icon-flow-cascade.icon-right a:after, i.icon-flow-cascade:before { content: "\e790"; height: inherit; }
 
@@ -496,7 +496,7 @@ html, body { height: 100%; }
 
 .icon-flow-parallel.icon-left a:before, .icon-flow-parallel.icon-right a:after, i.icon-flow-parallel:before { content: "\e794"; height: inherit; }
 
-.icon-rocket.icon-left a:before, .icon-rocket.icon-right a:after, i.icon-rocket:before { content: "🚀"; height: inherit; }
+.icon-rocket.icon-left a:before, .icon-rocket.icon-right a:after, i.icon-rocket:before { content: "\1f680"; height: inherit; }
 
 .icon-gauge.icon-left a:before, .icon-gauge.icon-right a:after, i.icon-gauge:before { content: "\e7a2"; height: inherit; }
 
