@@ -10,8 +10,8 @@
 		Gumby.debug('Initializing Tabs', $el);
 
 		this.$el = $el;
-		this.$nav = this.$el.find('ul.tab-nav > li');
-		this.$content = this.$el.find('.tab-content');
+		this.$nav = this.$el.find('> ul.tab-nav > li');
+		this.$content = this.$el.children('.tab-content');
 
 		var scope = this;
 
