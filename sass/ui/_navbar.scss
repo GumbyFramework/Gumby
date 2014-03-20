@@ -314,7 +314,7 @@
     float: left;
     text-align: left;
     height: auto;
-    @include border-radius(none);
+    @include border-radius(0);
     @include respond(tablets) {
       max-width: $min-device-width;
       word-wrap: break-word;
