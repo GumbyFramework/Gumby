@@ -13,7 +13,7 @@
     $n: $small-button-font-size;
   }
   $button-font-size: $n;
-  $button-height: ms($ratio, $button-font-size) + 1;
+  $button-height: ms($ms-ratio, $button-font-size) + 1;
   $line-height: $button-height - 2;
 
   @include font-size($button-font-size);
