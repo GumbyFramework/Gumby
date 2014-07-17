@@ -54,573 +54,573 @@ html, body { height: 100%; }
 
 .hide.active, .show { display: block; }
 
-.icon-note.icon-left a:before, .icon-note.icon-right a:after, i.icon-note:before { content: "\266a"; height: inherit; }
+.icon-note.icon-left a:before, .icon-note.icon-right a:after, i.icon-note:before { content: "\e633"; height: inherit; }
 
-.icon-note-beamed.icon-left a:before, .icon-note-beamed.icon-right a:after, i.icon-note-beamed:before { content: "\266b"; height: inherit; }
+.icon-note-beamed.icon-left a:before, .icon-note-beamed.icon-right a:after, i.icon-note-beamed:before { content: "\e634"; height: inherit; }
 
-.icon-music.icon-left a:before, .icon-music.icon-right a:after, i.icon-music:before { content: "\1f3b5"; height: inherit; }
+.icon-music.icon-left a:before, .icon-music.icon-right a:after, i.icon-music:before { content: "\e69e"; height: inherit; }
 
-.icon-search.icon-left a:before, .icon-search.icon-right a:after, i.icon-search:before { content: "\1f50d"; height: inherit; }
+.icon-search.icon-left a:before, .icon-search.icon-right a:after, i.icon-search:before { content: "\e624"; height: inherit; }
 
-.icon-flashlight.icon-left a:before, .icon-flashlight.icon-right a:after, i.icon-flashlight:before { content: "\1f526"; height: inherit; }
+.icon-flashlight.icon-left a:before, .icon-flashlight.icon-right a:after, i.icon-flashlight:before { content: "\e625"; height: inherit; }
 
-.icon-mail.icon-left a:before, .icon-mail.icon-right a:after, i.icon-mail:before { content: "\2709"; height: inherit; }
+.icon-mail.icon-left a:before, .icon-mail.icon-right a:after, i.icon-mail:before { content: "\e604"; height: inherit; }
 
-.icon-heart.icon-left a:before, .icon-heart.icon-right a:after, i.icon-heart:before { content: "\2665"; height: inherit; }
+.icon-heart.icon-left a:before, .icon-heart.icon-right a:after, i.icon-heart:before { content: "\e619"; height: inherit; }
 
-.icon-heart-empty.icon-left a:before, .icon-heart-empty.icon-right a:after, i.icon-heart-empty:before { content: "\2661"; height: inherit; }
+.icon-heart-empty.icon-left a:before, .icon-heart-empty.icon-right a:after, i.icon-heart-empty:before { content: "\e61a"; height: inherit; }
 
-.icon-star.icon-left a:before, .icon-star.icon-right a:after, i.icon-star:before { content: "\2605"; height: inherit; }
+.icon-star.icon-left a:before, .icon-star.icon-right a:after, i.icon-star:before { content: "\e61b"; height: inherit; }
 
-.icon-star-empty.icon-left a:before, .icon-star-empty.icon-right a:after, i.icon-star-empty:before { content: "\2606"; height: inherit; }
+.icon-star-empty.icon-left a:before, .icon-star-empty.icon-right a:after, i.icon-star-empty:before { content: "\e61c"; height: inherit; }
 
-.icon-user.icon-left a:before, .icon-user.icon-right a:after, i.icon-user:before { content: "\1f464"; height: inherit; }
+.icon-user.icon-left a:before, .icon-user.icon-right a:after, i.icon-user:before { content: "\e60d"; height: inherit; }
 
-.icon-users.icon-left a:before, .icon-users.icon-right a:after, i.icon-users:before { content: "\1f465"; height: inherit; }
+.icon-users.icon-left a:before, .icon-users.icon-right a:after, i.icon-users:before { content: "\e60e"; height: inherit; }
 
-.icon-user-add.icon-left a:before, .icon-user-add.icon-right a:after, i.icon-user-add:before { content: "\e700"; height: inherit; }
+.icon-user-add.icon-left a:before, .icon-user-add.icon-right a:after, i.icon-user-add:before { content: "\e60f"; height: inherit; }
 
-.icon-video.icon-left a:before, .icon-video.icon-right a:after, i.icon-video:before { content: "\1f3ac"; height: inherit; }
+.icon-video.icon-left a:before, .icon-video.icon-right a:after, i.icon-video:before { content: "\e69d"; height: inherit; }
 
-.icon-picture.icon-left a:before, .icon-picture.icon-right a:after, i.icon-picture:before { content: "\1f304"; height: inherit; }
+.icon-picture.icon-left a:before, .icon-picture.icon-right a:after, i.icon-picture:before { content: "\e69c"; height: inherit; }
 
-.icon-camera.icon-left a:before, .icon-camera.icon-right a:after, i.icon-camera:before { content: "\1f4f7"; height: inherit; }
+.icon-camera.icon-left a:before, .icon-camera.icon-right a:after, i.icon-camera:before { content: "\e62e"; height: inherit; }
 
-.icon-layout.icon-left a:before, .icon-layout.icon-right a:after, i.icon-layout:before { content: "\268f"; height: inherit; }
+.icon-layout.icon-left a:before, .icon-layout.icon-right a:after, i.icon-layout:before { content: "\e695"; height: inherit; }
 
-.icon-menu.icon-left a:before, .icon-menu.icon-right a:after, i.icon-menu:before { content: "\2630"; height: inherit; }
+.icon-menu.icon-left a:before, .icon-menu.icon-right a:after, i.icon-menu:before { content: "\e696"; height: inherit; }
 
-.icon-check.icon-left a:before, .icon-check.icon-right a:after, i.icon-check:before { content: "\2713"; height: inherit; }
+.icon-check.icon-left a:before, .icon-check.icon-right a:after, i.icon-check:before { content: "\e677"; height: inherit; }
 
-.icon-cancel.icon-left a:before, .icon-cancel.icon-right a:after, i.icon-cancel:before { content: "\2715"; height: inherit; }
+.icon-cancel.icon-left a:before, .icon-cancel.icon-right a:after, i.icon-cancel:before { content: "\e678"; height: inherit; }
 
-.icon-cancel-circled.icon-left a:before, .icon-cancel-circled.icon-right a:after, i.icon-cancel-circled:before { content: "\2716"; height: inherit; }
+.icon-cancel-circled.icon-left a:before, .icon-cancel-circled.icon-right a:after, i.icon-cancel-circled:before { content: "\e67e"; height: inherit; }
 
-.icon-cancel-squared.icon-left a:before, .icon-cancel-squared.icon-right a:after, i.icon-cancel-squared:before { content: "\274e"; height: inherit; }
+.icon-cancel-squared.icon-left a:before, .icon-cancel-squared.icon-right a:after, i.icon-cancel-squared:before { content: "\e67b"; height: inherit; }
 
-.icon-plus.icon-left a:before, .icon-plus.icon-right a:after, i.icon-plus:before { content: "\2b"; height: inherit; }
+.icon-plus.icon-left a:before, .icon-plus.icon-right a:after, i.icon-plus:before { content: "\e680"; height: inherit; }
 
-.icon-plus-circled.icon-left a:before, .icon-plus-circled.icon-right a:after, i.icon-plus-circled:before { content: "\2795"; height: inherit; }
+.icon-plus-circled.icon-left a:before, .icon-plus-circled.icon-right a:after, i.icon-plus-circled:before { content: "\e67d"; height: inherit; }
 
-.icon-plus-squared.icon-left a:before, .icon-plus-squared.icon-right a:after, i.icon-plus-squared:before { content: "\229e"; height: inherit; }
+.icon-plus-squared.icon-left a:before, .icon-plus-squared.icon-right a:after, i.icon-plus-squared:before { content: "\e67a"; height: inherit; }
 
-.icon-minus.icon-left a:before, .icon-minus.icon-right a:after, i.icon-minus:before { content: "\2d"; height: inherit; }
+.icon-minus.icon-left a:before, .icon-minus.icon-right a:after, i.icon-minus:before { content: "\e67f"; height: inherit; }
 
-.icon-minus-circled.icon-left a:before, .icon-minus-circled.icon-right a:after, i.icon-minus-circled:before { content: "\2796"; height: inherit; }
+.icon-minus-circled.icon-left a:before, .icon-minus-circled.icon-right a:after, i.icon-minus-circled:before { content: "\e67c"; height: inherit; }
 
-.icon-minus-squared.icon-left a:before, .icon-minus-squared.icon-right a:after, i.icon-minus-squared:before { content: "\229f"; height: inherit; }
+.icon-minus-squared.icon-left a:before, .icon-minus-squared.icon-right a:after, i.icon-minus-squared:before { content: "\e679"; height: inherit; }
 
-.icon-help.icon-left a:before, .icon-help.icon-right a:after, i.icon-help:before { content: "\2753"; height: inherit; }
+.icon-help.icon-left a:before, .icon-help.icon-right a:after, i.icon-help:before { content: "\e685"; height: inherit; }
 
-.icon-help-circled.icon-left a:before, .icon-help-circled.icon-right a:after, i.icon-help-circled:before { content: "\e704"; height: inherit; }
+.icon-help-circled.icon-left a:before, .icon-help-circled.icon-right a:after, i.icon-help-circled:before { content: "\e686"; height: inherit; }
 
-.icon-info.icon-left a:before, .icon-info.icon-right a:after, i.icon-info:before { content: "\2139"; height: inherit; }
+.icon-info.icon-left a:before, .icon-info.icon-right a:after, i.icon-info:before { content: "\e683"; height: inherit; }
 
-.icon-info-circled.icon-left a:before, .icon-info-circled.icon-right a:after, i.icon-info-circled:before { content: "\e705"; height: inherit; }
+.icon-info-circled.icon-left a:before, .icon-info-circled.icon-right a:after, i.icon-info-circled:before { content: "\e684"; height: inherit; }
 
-.icon-back.icon-left a:before, .icon-back.icon-right a:after, i.icon-back:before { content: "\1f519"; height: inherit; }
+.icon-back.icon-left a:before, .icon-back.icon-right a:after, i.icon-back:before { content: "\e68c"; height: inherit; }
 
-.icon-home.icon-left a:before, .icon-home.icon-right a:after, i.icon-home:before { content: "\2302"; height: inherit; }
+.icon-home.icon-left a:before, .icon-home.icon-right a:after, i.icon-home:before { content: "\e622"; height: inherit; }
 
-.icon-link.icon-left a:before, .icon-link.icon-right a:after, i.icon-link:before { content: "\1f517"; height: inherit; }
+.icon-link.icon-left a:before, .icon-link.icon-right a:after, i.icon-link:before { content: "\e628"; height: inherit; }
 
-.icon-attach.icon-left a:before, .icon-attach.icon-right a:after, i.icon-attach:before { content: "\1f4ce"; height: inherit; }
+.icon-attach.icon-left a:before, .icon-attach.icon-right a:after, i.icon-attach:before { content: "\e608"; height: inherit; }
 
-.icon-lock.icon-left a:before, .icon-lock.icon-right a:after, i.icon-lock:before { content: "\1f512"; height: inherit; }
+.icon-lock.icon-left a:before, .icon-lock.icon-right a:after, i.icon-lock:before { content: "\e673"; height: inherit; }
 
-.icon-lock-open.icon-left a:before, .icon-lock-open.icon-right a:after, i.icon-lock-open:before { content: "\1f513"; height: inherit; }
+.icon-lock-open.icon-left a:before, .icon-lock-open.icon-right a:after, i.icon-lock-open:before { content: "\e674"; height: inherit; }
 
-.icon-eye.icon-left a:before, .icon-eye.icon-right a:after, i.icon-eye:before { content: "\e70a"; height: inherit; }
+.icon-eye.icon-left a:before, .icon-eye.icon-right a:after, i.icon-eye:before { content: "\e63c"; height: inherit; }
 
-.icon-tag.icon-left a:before, .icon-tag.icon-right a:after, i.icon-tag:before { content: "\e70c"; height: inherit; }
+.icon-tag.icon-left a:before, .icon-tag.icon-right a:after, i.icon-tag:before { content: "\e62d"; height: inherit; }
 
-.icon-bookmark.icon-left a:before, .icon-bookmark.icon-right a:after, i.icon-bookmark:before { content: "\1f516"; height: inherit; }
+.icon-bookmark.icon-left a:before, .icon-bookmark.icon-right a:after, i.icon-bookmark:before { content: "\e6a8"; height: inherit; }
 
-.icon-bookmarks.icon-left a:before, .icon-bookmarks.icon-right a:after, i.icon-bookmarks:before { content: "\1f4d1"; height: inherit; }
+.icon-bookmarks.icon-left a:before, .icon-bookmarks.icon-right a:after, i.icon-bookmarks:before { content: "\e6a9"; height: inherit; }
 
-.icon-flag.icon-left a:before, .icon-flag.icon-right a:after, i.icon-flag:before { content: "\2691"; height: inherit; }
+.icon-flag.icon-left a:before, .icon-flag.icon-right a:after, i.icon-flag:before { content: "\e629"; height: inherit; }
 
-.icon-thumbs-up.icon-left a:before, .icon-thumbs-up.icon-right a:after, i.icon-thumbs-up:before { content: "\1f44d"; height: inherit; }
+.icon-thumbs-up.icon-left a:before, .icon-thumbs-up.icon-right a:after, i.icon-thumbs-up:before { content: "\e61d"; height: inherit; }
 
-.icon-thumbs-down.icon-left a:before, .icon-thumbs-down.icon-right a:after, i.icon-thumbs-down:before { content: "\1f44e"; height: inherit; }
+.icon-thumbs-down.icon-left a:before, .icon-thumbs-down.icon-right a:after, i.icon-thumbs-down:before { content: "\e61e"; height: inherit; }
 
-.icon-download.icon-left a:before, .icon-download.icon-right a:after, i.icon-download:before { content: "\1f4e5"; height: inherit; }
+.icon-download.icon-left a:before, .icon-download.icon-right a:after, i.icon-download:before { content: "\e6a3"; height: inherit; }
 
-.icon-upload.icon-left a:before, .icon-upload.icon-right a:after, i.icon-upload:before { content: "\1f4e4"; height: inherit; }
+.icon-upload.icon-left a:before, .icon-upload.icon-right a:after, i.icon-upload:before { content: "\e6a2"; height: inherit; }
 
-.icon-upload-cloud.icon-left a:before, .icon-upload-cloud.icon-right a:after, i.icon-upload-cloud:before { content: "\e711"; height: inherit; }
+.icon-upload-cloud.icon-left a:before, .icon-upload-cloud.icon-right a:after, i.icon-upload-cloud:before { content: "\e6a7"; height: inherit; }
 
-.icon-reply.icon-left a:before, .icon-reply.icon-right a:after, i.icon-reply:before { content: "\e712"; height: inherit; }
+.icon-reply.icon-left a:before, .icon-reply.icon-right a:after, i.icon-reply:before { content: "\e60a"; height: inherit; }
 
-.icon-reply-all.icon-left a:before, .icon-reply-all.icon-right a:after, i.icon-reply-all:before { content: "\e713"; height: inherit; }
+.icon-reply-all.icon-left a:before, .icon-reply-all.icon-right a:after, i.icon-reply-all:before { content: "\e60b"; height: inherit; }
 
-.icon-forward.icon-left a:before, .icon-forward.icon-right a:after, i.icon-forward:before { content: "\27a6"; height: inherit; }
+.icon-forward.icon-left a:before, .icon-forward.icon-right a:after, i.icon-forward:before { content: "\e60c"; height: inherit; }
 
-.icon-quote.icon-left a:before, .icon-quote.icon-right a:after, i.icon-quote:before { content: "\275e"; height: inherit; }
+.icon-quote.icon-left a:before, .icon-quote.icon-right a:after, i.icon-quote:before { content: "\e621"; height: inherit; }
 
-.icon-code.icon-left a:before, .icon-code.icon-right a:after, i.icon-code:before { content: "\e714"; height: inherit; }
+.icon-code.icon-left a:before, .icon-code.icon-right a:after, i.icon-code:before { content: "\e65f"; height: inherit; }
 
-.icon-export.icon-left a:before, .icon-export.icon-right a:after, i.icon-export:before { content: "\e715"; height: inherit; }
+.icon-export.icon-left a:before, .icon-export.icon-right a:after, i.icon-export:before { content: "\e611"; height: inherit; }
 
-.icon-pencil.icon-left a:before, .icon-pencil.icon-right a:after, i.icon-pencil:before { content: "\270e"; height: inherit; }
+.icon-pencil.icon-left a:before, .icon-pencil.icon-right a:after, i.icon-pencil:before { content: "\e606"; height: inherit; }
 
-.icon-feather.icon-left a:before, .icon-feather.icon-right a:after, i.icon-feather:before { content: "\2712"; height: inherit; }
+.icon-feather.icon-left a:before, .icon-feather.icon-right a:after, i.icon-feather:before { content: "\e607"; height: inherit; }
 
-.icon-print.icon-left a:before, .icon-print.icon-right a:after, i.icon-print:before { content: "\e716"; height: inherit; }
+.icon-print.icon-left a:before, .icon-print.icon-right a:after, i.icon-print:before { content: "\e626"; height: inherit; }
 
-.icon-retweet.icon-left a:before, .icon-retweet.icon-right a:after, i.icon-retweet:before { content: "\e717"; height: inherit; }
+.icon-retweet.icon-left a:before, .icon-retweet.icon-right a:after, i.icon-retweet:before { content: "\e68e"; height: inherit; }
 
-.icon-keyboard.icon-left a:before, .icon-keyboard.icon-right a:after, i.icon-keyboard:before { content: "\2328"; height: inherit; }
+.icon-keyboard.icon-left a:before, .icon-keyboard.icon-right a:after, i.icon-keyboard:before { content: "\e655"; height: inherit; }
 
-.icon-comment.icon-left a:before, .icon-comment.icon-right a:after, i.icon-comment:before { content: "\e718"; height: inherit; }
+.icon-comment.icon-left a:before, .icon-comment.icon-right a:after, i.icon-comment:before { content: "\e620"; height: inherit; }
 
-.icon-chat.icon-left a:before, .icon-chat.icon-right a:after, i.icon-chat:before { content: "\e720"; height: inherit; }
+.icon-chat.icon-left a:before, .icon-chat.icon-right a:after, i.icon-chat:before { content: "\e61f"; height: inherit; }
 
-.icon-bell.icon-left a:before, .icon-bell.icon-right a:after, i.icon-bell:before { content: "\1f514"; height: inherit; }
+.icon-bell.icon-left a:before, .icon-bell.icon-right a:after, i.icon-bell:before { content: "\e627"; height: inherit; }
 
-.icon-attention.icon-left a:before, .icon-attention.icon-right a:after, i.icon-attention:before { content: "\26a0"; height: inherit; }
+.icon-attention.icon-left a:before, .icon-attention.icon-right a:after, i.icon-attention:before { content: "\e687"; height: inherit; }
 
-.icon-alert.icon-left a:before, .icon-alert.icon-right a:after, i.icon-alert:before { content: "\1f4a5"; height: inherit; }
+.icon-alert.icon-left a:before, .icon-alert.icon-right a:after, i.icon-alert:before { content: "\e635"; height: inherit; }
 
-.icon-vcard.icon-left a:before, .icon-vcard.icon-right a:after, i.icon-vcard:before { content: "\e722"; height: inherit; }
+.icon-vcard.icon-left a:before, .icon-vcard.icon-right a:after, i.icon-vcard:before { content: "\e610"; height: inherit; }
 
-.icon-address.icon-left a:before, .icon-address.icon-right a:after, i.icon-address:before { content: "\e723"; height: inherit; }
+.icon-address.icon-left a:before, .icon-address.icon-right a:after, i.icon-address:before { content: "\e603"; height: inherit; }
 
-.icon-location.icon-left a:before, .icon-location.icon-right a:after, i.icon-location:before { content: "\e724"; height: inherit; }
+.icon-location.icon-left a:before, .icon-location.icon-right a:after, i.icon-location:before { content: "\e612"; height: inherit; }
 
-.icon-map.icon-left a:before, .icon-map.icon-right a:after, i.icon-map:before { content: "\e727"; height: inherit; }
+.icon-map.icon-left a:before, .icon-map.icon-right a:after, i.icon-map:before { content: "\e613"; height: inherit; }
 
-.icon-direction.icon-left a:before, .icon-direction.icon-right a:after, i.icon-direction:before { content: "\27a2"; height: inherit; }
+.icon-direction.icon-left a:before, .icon-direction.icon-right a:after, i.icon-direction:before { content: "\e615"; height: inherit; }
 
-.icon-compass.icon-left a:before, .icon-compass.icon-right a:after, i.icon-compass:before { content: "\e728"; height: inherit; }
+.icon-compass.icon-left a:before, .icon-compass.icon-right a:after, i.icon-compass:before { content: "\e614"; height: inherit; }
 
-.icon-cup.icon-left a:before, .icon-cup.icon-right a:after, i.icon-cup:before { content: "\2615"; height: inherit; }
+.icon-cup.icon-left a:before, .icon-cup.icon-right a:after, i.icon-cup:before { content: "\e64f"; height: inherit; }
 
-.icon-trash.icon-left a:before, .icon-trash.icon-right a:after, i.icon-trash:before { content: "\e729"; height: inherit; }
+.icon-trash.icon-left a:before, .icon-trash.icon-right a:after, i.icon-trash:before { content: "\e6a1"; height: inherit; }
 
-.icon-doc.icon-left a:before, .icon-doc.icon-right a:after, i.icon-doc:before { content: "\e730"; height: inherit; }
+.icon-doc.icon-left a:before, .icon-doc.icon-right a:after, i.icon-doc:before { content: "\e699"; height: inherit; }
 
-.icon-docs.icon-left a:before, .icon-docs.icon-right a:after, i.icon-docs:before { content: "\e736"; height: inherit; }
+.icon-docs.icon-left a:before, .icon-docs.icon-right a:after, i.icon-docs:before { content: "\e69a"; height: inherit; }
 
-.icon-doc-landscape.icon-left a:before, .icon-doc-landscape.icon-right a:after, i.icon-doc-landscape:before { content: "\e737"; height: inherit; }
+.icon-doc-landscape.icon-left a:before, .icon-doc-landscape.icon-right a:after, i.icon-doc-landscape:before { content: "\e69b"; height: inherit; }
 
-.icon-doc-text.icon-left a:before, .icon-doc-text.icon-right a:after, i.icon-doc-text:before { content: "\1f4c4"; height: inherit; }
+.icon-doc-text.icon-left a:before, .icon-doc-text.icon-right a:after, i.icon-doc-text:before { content: "\e697"; height: inherit; }
 
-.icon-doc-text-inv.icon-left a:before, .icon-doc-text-inv.icon-right a:after, i.icon-doc-text-inv:before { content: "\e731"; height: inherit; }
+.icon-doc-text-inv.icon-left a:before, .icon-doc-text-inv.icon-right a:after, i.icon-doc-text-inv:before { content: "\e698"; height: inherit; }
 
-.icon-newspaper.icon-left a:before, .icon-newspaper.icon-right a:after, i.icon-newspaper:before { content: "\1f4f0"; height: inherit; }
+.icon-newspaper.icon-left a:before, .icon-newspaper.icon-right a:after, i.icon-newspaper:before { content: "\e638"; height: inherit; }
 
-.icon-book-open.icon-left a:before, .icon-book-open.icon-right a:after, i.icon-book-open:before { content: "\1f4d6"; height: inherit; }
+.icon-book-open.icon-left a:before, .icon-book-open.icon-right a:after, i.icon-book-open:before { content: "\e6aa"; height: inherit; }
 
-.icon-book.icon-left a:before, .icon-book.icon-right a:after, i.icon-book:before { content: "\1f4d5"; height: inherit; }
+.icon-book.icon-left a:before, .icon-book.icon-right a:after, i.icon-book:before { content: "\e637"; height: inherit; }
 
-.icon-folder.icon-left a:before, .icon-folder.icon-right a:after, i.icon-folder:before { content: "\1f4c1"; height: inherit; }
+.icon-folder.icon-left a:before, .icon-folder.icon-right a:after, i.icon-folder:before { content: "\e69f"; height: inherit; }
 
-.icon-archive.icon-left a:before, .icon-archive.icon-right a:after, i.icon-archive:before { content: "\e738"; height: inherit; }
+.icon-archive.icon-left a:before, .icon-archive.icon-right a:after, i.icon-archive:before { content: "\e6a0"; height: inherit; }
 
-.icon-box.icon-left a:before, .icon-box.icon-right a:after, i.icon-box:before { content: "\1f4e6"; height: inherit; }
+.icon-box.icon-left a:before, .icon-box.icon-right a:after, i.icon-box:before { content: "\e668"; height: inherit; }
 
-.icon-rss.icon-left a:before, .icon-rss.icon-right a:after, i.icon-rss:before { content: "\e73a"; height: inherit; }
+.icon-rss.icon-left a:before, .icon-rss.icon-right a:after, i.icon-rss:before { content: "\e66a"; height: inherit; }
 
-.icon-phone.icon-left a:before, .icon-phone.icon-right a:after, i.icon-phone:before { content: "\1f4de"; height: inherit; }
+.icon-phone.icon-left a:before, .icon-phone.icon-right a:after, i.icon-phone:before { content: "\e600"; height: inherit; }
 
-.icon-cog.icon-left a:before, .icon-cog.icon-right a:after, i.icon-cog:before { content: "\2699"; height: inherit; }
+.icon-cog.icon-left a:before, .icon-cog.icon-right a:after, i.icon-cog:before { content: "\e62a"; height: inherit; }
 
-.icon-tools.icon-left a:before, .icon-tools.icon-right a:after, i.icon-tools:before { content: "\2692"; height: inherit; }
+.icon-tools.icon-left a:before, .icon-tools.icon-right a:after, i.icon-tools:before { content: "\e62b"; height: inherit; }
 
-.icon-share.icon-left a:before, .icon-share.icon-right a:after, i.icon-share:before { content: "\e73c"; height: inherit; }
+.icon-share.icon-left a:before, .icon-share.icon-right a:after, i.icon-share:before { content: "\e617"; height: inherit; }
 
-.icon-shareable.icon-left a:before, .icon-shareable.icon-right a:after, i.icon-shareable:before { content: "\e73e"; height: inherit; }
+.icon-shareable.icon-left a:before, .icon-shareable.icon-right a:after, i.icon-shareable:before { content: "\e618"; height: inherit; }
 
-.icon-basket.icon-left a:before, .icon-basket.icon-right a:after, i.icon-basket:before { content: "\e73d"; height: inherit; }
+.icon-basket.icon-left a:before, .icon-basket.icon-right a:after, i.icon-basket:before { content: "\e667"; height: inherit; }
 
-.icon-bag.icon-left a:before, .icon-bag.icon-right a:after, i.icon-bag:before { content: "\1f45c"; height: inherit; }
+.icon-bag.icon-left a:before, .icon-bag.icon-right a:after, i.icon-bag:before { content: "\e639"; height: inherit; }
 
-.icon-calendar.icon-left a:before, .icon-calendar.icon-right a:after, i.icon-calendar:before { content: "\1f4c5"; height: inherit; }
+.icon-calendar.icon-left a:before, .icon-calendar.icon-right a:after, i.icon-calendar:before { content: "\e63f"; height: inherit; }
 
-.icon-login.icon-left a:before, .icon-login.icon-right a:after, i.icon-login:before { content: "\e740"; height: inherit; }
+.icon-login.icon-left a:before, .icon-login.icon-right a:after, i.icon-login:before { content: "\e676"; height: inherit; }
 
-.icon-logout.icon-left a:before, .icon-logout.icon-right a:after, i.icon-logout:before { content: "\e741"; height: inherit; }
+.icon-logout.icon-left a:before, .icon-logout.icon-right a:after, i.icon-logout:before { content: "\e675"; height: inherit; }
 
-.icon-mic.icon-left a:before, .icon-mic.icon-right a:after, i.icon-mic:before { content: "\1f3a4"; height: inherit; }
+.icon-mic.icon-left a:before, .icon-mic.icon-right a:after, i.icon-mic:before { content: "\e63e"; height: inherit; }
 
-.icon-mute.icon-left a:before, .icon-mute.icon-right a:after, i.icon-mute:before { content: "\1f507"; height: inherit; }
+.icon-mute.icon-left a:before, .icon-mute.icon-right a:after, i.icon-mute:before { content: "\e6b7"; height: inherit; }
 
-.icon-sound.icon-left a:before, .icon-sound.icon-right a:after, i.icon-sound:before { content: "\1f50a"; height: inherit; }
+.icon-sound.icon-left a:before, .icon-sound.icon-right a:after, i.icon-sound:before { content: "\e6b6"; height: inherit; }
 
-.icon-volume.icon-left a:before, .icon-volume.icon-right a:after, i.icon-volume:before { content: "\e742"; height: inherit; }
+.icon-volume.icon-left a:before, .icon-volume.icon-right a:after, i.icon-volume:before { content: "\e6b5"; height: inherit; }
 
-.icon-clock.icon-left a:before, .icon-clock.icon-right a:after, i.icon-clock:before { content: "\1f554"; height: inherit; }
+.icon-clock.icon-left a:before, .icon-clock.icon-right a:after, i.icon-clock:before { content: "\e63d"; height: inherit; }
 
-.icon-hourglass.icon-left a:before, .icon-hourglass.icon-right a:after, i.icon-hourglass:before { content: "\23f3"; height: inherit; }
+.icon-hourglass.icon-left a:before, .icon-hourglass.icon-right a:after, i.icon-hourglass:before { content: "\e646"; height: inherit; }
 
-.icon-lamp.icon-left a:before, .icon-lamp.icon-right a:after, i.icon-lamp:before { content: "\1f4a1"; height: inherit; }
+.icon-lamp.icon-left a:before, .icon-lamp.icon-right a:after, i.icon-lamp:before { content: "\e662"; height: inherit; }
 
-.icon-light-down.icon-left a:before, .icon-light-down.icon-right a:after, i.icon-light-down:before { content: "\1f505"; height: inherit; }
+.icon-light-down.icon-left a:before, .icon-light-down.icon-right a:after, i.icon-light-down:before { content: "\e65c"; height: inherit; }
 
-.icon-light-up.icon-left a:before, .icon-light-up.icon-right a:after, i.icon-light-up:before { content: "\1f506"; height: inherit; }
+.icon-light-up.icon-left a:before, .icon-light-up.icon-right a:after, i.icon-light-up:before { content: "\e65d"; height: inherit; }
 
-.icon-adjust.icon-left a:before, .icon-adjust.icon-right a:after, i.icon-adjust:before { content: "\25d1"; height: inherit; }
+.icon-adjust.icon-left a:before, .icon-adjust.icon-right a:after, i.icon-adjust:before { content: "\e65e"; height: inherit; }
 
-.icon-block.icon-left a:before, .icon-block.icon-right a:after, i.icon-block:before { content: "\1f6ab"; height: inherit; }
+.icon-block.icon-left a:before, .icon-block.icon-right a:after, i.icon-block:before { content: "\e682"; height: inherit; }
 
-.icon-resize-full.icon-left a:before, .icon-resize-full.icon-right a:after, i.icon-resize-full:before { content: "\e744"; height: inherit; }
+.icon-resize-full.icon-left a:before, .icon-resize-full.icon-right a:after, i.icon-resize-full:before { content: "\e6b3"; height: inherit; }
 
-.icon-resize-small.icon-left a:before, .icon-resize-small.icon-right a:after, i.icon-resize-small:before { content: "\e746"; height: inherit; }
+.icon-resize-small.icon-left a:before, .icon-resize-small.icon-right a:after, i.icon-resize-small:before { content: "\e6b4"; height: inherit; }
 
-.icon-popup.icon-left a:before, .icon-popup.icon-right a:after, i.icon-popup:before { content: "\e74c"; height: inherit; }
+.icon-popup.icon-left a:before, .icon-popup.icon-right a:after, i.icon-popup:before { content: "\e623"; height: inherit; }
 
-.icon-publish.icon-left a:before, .icon-publish.icon-right a:after, i.icon-publish:before { content: "\e74d"; height: inherit; }
+.icon-publish.icon-left a:before, .icon-publish.icon-right a:after, i.icon-publish:before { content: "\e657"; height: inherit; }
 
-.icon-window.icon-left a:before, .icon-window.icon-right a:after, i.icon-window:before { content: "\e74e"; height: inherit; }
+.icon-window.icon-left a:before, .icon-window.icon-right a:after, i.icon-window:before { content: "\e656"; height: inherit; }
 
-.icon-arrow-combo.icon-left a:before, .icon-arrow-combo.icon-right a:after, i.icon-arrow-combo:before { content: "\e74f"; height: inherit; }
+.icon-arrow-combo.icon-left a:before, .icon-arrow-combo.icon-right a:after, i.icon-arrow-combo:before { content: "\e6dd"; height: inherit; }
 
-.icon-down-circled.icon-left a:before, .icon-down-circled.icon-right a:after, i.icon-down-circled:before { content: "\e758"; height: inherit; }
+.icon-down-circled.icon-left a:before, .icon-down-circled.icon-right a:after, i.icon-down-circled:before { content: "\e6c6"; height: inherit; }
 
-.icon-left-circled.icon-left a:before, .icon-left-circled.icon-right a:after, i.icon-left-circled:before { content: "\e759"; height: inherit; }
+.icon-left-circled.icon-left a:before, .icon-left-circled.icon-right a:after, i.icon-left-circled:before { content: "\e6c5"; height: inherit; }
 
-.icon-right-circled.icon-left a:before, .icon-right-circled.icon-right a:after, i.icon-right-circled:before { content: "\e75a"; height: inherit; }
+.icon-right-circled.icon-left a:before, .icon-right-circled.icon-right a:after, i.icon-right-circled:before { content: "\e6c8"; height: inherit; }
 
-.icon-up-circled.icon-left a:before, .icon-up-circled.icon-right a:after, i.icon-up-circled:before { content: "\e75b"; height: inherit; }
+.icon-up-circled.icon-left a:before, .icon-up-circled.icon-right a:after, i.icon-up-circled:before { content: "\e6c7"; height: inherit; }
 
-.icon-down-open.icon-left a:before, .icon-down-open.icon-right a:after, i.icon-down-open:before { content: "\e75c"; height: inherit; }
+.icon-down-open.icon-left a:before, .icon-down-open.icon-right a:after, i.icon-down-open:before { content: "\e6ce"; height: inherit; }
 
-.icon-left-open.icon-left a:before, .icon-left-open.icon-right a:after, i.icon-left-open:before { content: "\e75d"; height: inherit; }
+.icon-left-open.icon-left a:before, .icon-left-open.icon-right a:after, i.icon-left-open:before { content: "\e6cd"; height: inherit; }
 
-.icon-right-open.icon-left a:before, .icon-right-open.icon-right a:after, i.icon-right-open:before { content: "\e75e"; height: inherit; }
+.icon-right-open.icon-left a:before, .icon-right-open.icon-right a:after, i.icon-right-open:before { content: "\e6d0"; height: inherit; }
 
-.icon-up-open.icon-left a:before, .icon-up-open.icon-right a:after, i.icon-up-open:before { content: "\e75f"; height: inherit; }
+.icon-up-open.icon-left a:before, .icon-up-open.icon-right a:after, i.icon-up-open:before { content: "\e6cf"; height: inherit; }
 
-.icon-down-open-mini.icon-left a:before, .icon-down-open-mini.icon-right a:after, i.icon-down-open-mini:before { content: "\e760"; height: inherit; }
+.icon-down-open-mini.icon-left a:before, .icon-down-open-mini.icon-right a:after, i.icon-down-open-mini:before { content: "\e6d2"; height: inherit; }
 
-.icon-left-open-mini.icon-left a:before, .icon-left-open-mini.icon-right a:after, i.icon-left-open-mini:before { content: "\e761"; height: inherit; }
+.icon-left-open-mini.icon-left a:before, .icon-left-open-mini.icon-right a:after, i.icon-left-open-mini:before { content: "\e6d1"; height: inherit; }
 
-.icon-right-open-mini.icon-left a:before, .icon-right-open-mini.icon-right a:after, i.icon-right-open-mini:before { content: "\e762"; height: inherit; }
+.icon-right-open-mini.icon-left a:before, .icon-right-open-mini.icon-right a:after, i.icon-right-open-mini:before { content: "\e6d4"; height: inherit; }
 
-.icon-up-open-mini.icon-left a:before, .icon-up-open-mini.icon-right a:after, i.icon-up-open-mini:before { content: "\e763"; height: inherit; }
+.icon-up-open-mini.icon-left a:before, .icon-up-open-mini.icon-right a:after, i.icon-up-open-mini:before { content: "\e6d3"; height: inherit; }
 
-.icon-down-open-big.icon-left a:before, .icon-down-open-big.icon-right a:after, i.icon-down-open-big:before { content: "\e764"; height: inherit; }
+.icon-down-open-big.icon-left a:before, .icon-down-open-big.icon-right a:after, i.icon-down-open-big:before { content: "\e6d6"; height: inherit; }
 
-.icon-left-open-big.icon-left a:before, .icon-left-open-big.icon-right a:after, i.icon-left-open-big:before { content: "\e765"; height: inherit; }
+.icon-left-open-big.icon-left a:before, .icon-left-open-big.icon-right a:after, i.icon-left-open-big:before { content: "\e6d5"; height: inherit; }
 
-.icon-right-open-big.icon-left a:before, .icon-right-open-big.icon-right a:after, i.icon-right-open-big:before { content: "\e766"; height: inherit; }
+.icon-right-open-big.icon-left a:before, .icon-right-open-big.icon-right a:after, i.icon-right-open-big:before { content: "\e6d8"; height: inherit; }
 
-.icon-up-open-big.icon-left a:before, .icon-up-open-big.icon-right a:after, i.icon-up-open-big:before { content: "\e767"; height: inherit; }
+.icon-up-open-big.icon-left a:before, .icon-up-open-big.icon-right a:after, i.icon-up-open-big:before { content: "\e6d7"; height: inherit; }
 
-.icon-down.icon-left a:before, .icon-down.icon-right a:after, i.icon-down:before { content: "\2b07"; height: inherit; }
+.icon-down.icon-left a:before, .icon-down.icon-right a:after, i.icon-down:before { content: "\e6c2"; height: inherit; }
 
-.icon-arrow-left.icon-left a:before, .icon-arrow-left.icon-right a:after, i.icon-arrow-left:before { content: "\2b05"; height: inherit; }
+.icon-arrow-left.icon-left a:before, .icon-arrow-left.icon-right a:after, i.icon-arrow-left:before { content: "\e6c1"; height: inherit; }
 
-.icon-arrow-right.icon-left a:before, .icon-arrow-right.icon-right a:after, i.icon-arrow-right:before { content: "\27a1"; height: inherit; }
+.icon-arrow-right.icon-left a:before, .icon-arrow-right.icon-right a:after, i.icon-arrow-right:before { content: "\e6c4"; height: inherit; }
 
-.icon-up.icon-left a:before, .icon-up.icon-right a:after, i.icon-up:before { content: "\2b06"; height: inherit; }
+.icon-up.icon-left a:before, .icon-up.icon-right a:after, i.icon-up:before { content: "\e6c3"; height: inherit; }
 
-.icon-down-dir.icon-left a:before, .icon-down-dir.icon-right a:after, i.icon-down-dir:before { content: "\25be"; height: inherit; }
+.icon-down-dir.icon-left a:before, .icon-down-dir.icon-right a:after, i.icon-down-dir:before { content: "\e6ca"; height: inherit; }
 
-.icon-left-dir.icon-left a:before, .icon-left-dir.icon-right a:after, i.icon-left-dir:before { content: "\25c2"; height: inherit; }
+.icon-left-dir.icon-left a:before, .icon-left-dir.icon-right a:after, i.icon-left-dir:before { content: "\e6c9"; height: inherit; }
 
-.icon-right-dir.icon-left a:before, .icon-right-dir.icon-right a:after, i.icon-right-dir:before { content: "\25b8"; height: inherit; }
+.icon-right-dir.icon-left a:before, .icon-right-dir.icon-right a:after, i.icon-right-dir:before { content: "\e6cc"; height: inherit; }
 
-.icon-up-dir.icon-left a:before, .icon-up-dir.icon-right a:after, i.icon-up-dir:before { content: "\25b4"; height: inherit; }
+.icon-up-dir.icon-left a:before, .icon-up-dir.icon-right a:after, i.icon-up-dir:before { content: "\e6cb"; height: inherit; }
 
-.icon-down-bold.icon-left a:before, .icon-down-bold.icon-right a:after, i.icon-down-bold:before { content: "\e4b0"; height: inherit; }
+.icon-down-bold.icon-left a:before, .icon-down-bold.icon-right a:after, i.icon-down-bold:before { content: "\e6be"; height: inherit; }
 
-.icon-left-bold.icon-left a:before, .icon-left-bold.icon-right a:after, i.icon-left-bold:before { content: "\e4ad"; height: inherit; }
+.icon-left-bold.icon-left a:before, .icon-left-bold.icon-right a:after, i.icon-left-bold:before { content: "\e6bd"; height: inherit; }
 
-.icon-right-bold.icon-left a:before, .icon-right-bold.icon-right a:after, i.icon-right-bold:before { content: "\e4ae"; height: inherit; }
+.icon-right-bold.icon-left a:before, .icon-right-bold.icon-right a:after, i.icon-right-bold:before { content: "\e6c0"; height: inherit; }
 
-.icon-up-bold.icon-left a:before, .icon-up-bold.icon-right a:after, i.icon-up-bold:before { content: "\e4af"; height: inherit; }
+.icon-up-bold.icon-left a:before, .icon-up-bold.icon-right a:after, i.icon-up-bold:before { content: "\e6bf"; height: inherit; }
 
-.icon-down-thin.icon-left a:before, .icon-down-thin.icon-right a:after, i.icon-down-thin:before { content: "\2193"; height: inherit; }
+.icon-down-thin.icon-left a:before, .icon-down-thin.icon-right a:after, i.icon-down-thin:before { content: "\e6da"; height: inherit; }
 
-.icon-left-thin.icon-left a:before, .icon-left-thin.icon-right a:after, i.icon-left-thin:before { content: "\2190"; height: inherit; }
+.icon-left-thin.icon-left a:before, .icon-left-thin.icon-right a:after, i.icon-left-thin:before { content: "\e6d9"; height: inherit; }
 
-.icon-right-thin.icon-left a:before, .icon-right-thin.icon-right a:after, i.icon-right-thin:before { content: "\2192"; height: inherit; }
+.icon-right-thin.icon-left a:before, .icon-right-thin.icon-right a:after, i.icon-right-thin:before { content: "\e6dc"; height: inherit; }
 
-.icon-up-thin.icon-left a:before, .icon-up-thin.icon-right a:after, i.icon-up-thin:before { content: "\2191"; height: inherit; }
+.icon-up-thin.icon-left a:before, .icon-up-thin.icon-right a:after, i.icon-up-thin:before { content: "\e6db"; height: inherit; }
 
-.icon-ccw.icon-left a:before, .icon-ccw.icon-right a:after, i.icon-ccw:before { content: "\27f2"; height: inherit; }
+.icon-ccw.icon-left a:before, .icon-ccw.icon-right a:after, i.icon-ccw:before { content: "\e68a"; height: inherit; }
 
-.icon-cw.icon-left a:before, .icon-cw.icon-right a:after, i.icon-cw:before { content: "\27f3"; height: inherit; }
+.icon-cw.icon-left a:before, .icon-cw.icon-right a:after, i.icon-cw:before { content: "\e689"; height: inherit; }
 
-.icon-arrows-ccw.icon-left a:before, .icon-arrows-ccw.icon-right a:after, i.icon-arrows-ccw:before { content: "\1f504"; height: inherit; }
+.icon-arrows-ccw.icon-left a:before, .icon-arrows-ccw.icon-right a:after, i.icon-arrows-ccw:before { content: "\e688"; height: inherit; }
 
-.icon-level-down.icon-left a:before, .icon-level-down.icon-right a:after, i.icon-level-down:before { content: "\21b3"; height: inherit; }
+.icon-level-down.icon-left a:before, .icon-level-down.icon-right a:after, i.icon-level-down:before { content: "\e68d"; height: inherit; }
 
-.icon-level-up.icon-left a:before, .icon-level-up.icon-right a:after, i.icon-level-up:before { content: "\21b0"; height: inherit; }
+.icon-level-up.icon-left a:before, .icon-level-up.icon-right a:after, i.icon-level-up:before { content: "\e691"; height: inherit; }
 
-.icon-shuffle.icon-left a:before, .icon-shuffle.icon-right a:after, i.icon-shuffle:before { content: "\1f500"; height: inherit; }
+.icon-shuffle.icon-left a:before, .icon-shuffle.icon-right a:after, i.icon-shuffle:before { content: "\e68b"; height: inherit; }
 
-.icon-loop.icon-left a:before, .icon-loop.icon-right a:after, i.icon-loop:before { content: "\1f501"; height: inherit; }
+.icon-loop.icon-left a:before, .icon-loop.icon-right a:after, i.icon-loop:before { content: "\e68f"; height: inherit; }
 
-.icon-switch.icon-left a:before, .icon-switch.icon-right a:after, i.icon-switch:before { content: "\21c6"; height: inherit; }
+.icon-switch.icon-left a:before, .icon-switch.icon-right a:after, i.icon-switch:before { content: "\e692"; height: inherit; }
 
-.icon-play.icon-left a:before, .icon-play.icon-right a:after, i.icon-play:before { content: "\25b6"; height: inherit; }
+.icon-play.icon-left a:before, .icon-play.icon-right a:after, i.icon-play:before { content: "\e6ab"; height: inherit; }
 
-.icon-stop.icon-left a:before, .icon-stop.icon-right a:after, i.icon-stop:before { content: "\25a0"; height: inherit; }
+.icon-stop.icon-left a:before, .icon-stop.icon-right a:after, i.icon-stop:before { content: "\e6ae"; height: inherit; }
 
-.icon-pause.icon-left a:before, .icon-pause.icon-right a:after, i.icon-pause:before { content: "\2389"; height: inherit; }
+.icon-pause.icon-left a:before, .icon-pause.icon-right a:after, i.icon-pause:before { content: "\e6ac"; height: inherit; }
 
-.icon-record.icon-left a:before, .icon-record.icon-right a:after, i.icon-record:before { content: "\26ab"; height: inherit; }
+.icon-record.icon-left a:before, .icon-record.icon-right a:after, i.icon-record:before { content: "\e6ad"; height: inherit; }
 
-.icon-to-end.icon-left a:before, .icon-to-end.icon-right a:after, i.icon-to-end:before { content: "\23ed"; height: inherit; }
+.icon-to-end.icon-left a:before, .icon-to-end.icon-right a:after, i.icon-to-end:before { content: "\e6b2"; height: inherit; }
 
-.icon-to-start.icon-left a:before, .icon-to-start.icon-right a:after, i.icon-to-start:before { content: "\23ee"; height: inherit; }
+.icon-to-start.icon-left a:before, .icon-to-start.icon-right a:after, i.icon-to-start:before { content: "\e6b1"; height: inherit; }
 
-.icon-fast-forward.icon-left a:before, .icon-fast-forward.icon-right a:after, i.icon-fast-forward:before { content: "\23e9"; height: inherit; }
+.icon-fast-forward.icon-left a:before, .icon-fast-forward.icon-right a:after, i.icon-fast-forward:before { content: "\e6af"; height: inherit; }
 
-.icon-fast-backward.icon-left a:before, .icon-fast-backward.icon-right a:after, i.icon-fast-backward:before { content: "\23ea"; height: inherit; }
+.icon-fast-backward.icon-left a:before, .icon-fast-backward.icon-right a:after, i.icon-fast-backward:before { content: "\e6b0"; height: inherit; }
 
-.icon-progress-0.icon-left a:before, .icon-progress-0.icon-right a:after, i.icon-progress-0:before { content: "\e768"; height: inherit; }
+.icon-progress-0.icon-left a:before, .icon-progress-0.icon-right a:after, i.icon-progress-0:before { content: "\e65b"; height: inherit; }
 
-.icon-progress-1.icon-left a:before, .icon-progress-1.icon-right a:after, i.icon-progress-1:before { content: "\e769"; height: inherit; }
+.icon-progress-1.icon-left a:before, .icon-progress-1.icon-right a:after, i.icon-progress-1:before { content: "\e65a"; height: inherit; }
 
-.icon-progress-2.icon-left a:before, .icon-progress-2.icon-right a:after, i.icon-progress-2:before { content: "\e76a"; height: inherit; }
+.icon-progress-2.icon-left a:before, .icon-progress-2.icon-right a:after, i.icon-progress-2:before { content: "\e659"; height: inherit; }
 
-.icon-progress-3.icon-left a:before, .icon-progress-3.icon-right a:after, i.icon-progress-3:before { content: "\e76b"; height: inherit; }
+.icon-progress-3.icon-left a:before, .icon-progress-3.icon-right a:after, i.icon-progress-3:before { content: "\e658"; height: inherit; }
 
-.icon-target.icon-left a:before, .icon-target.icon-right a:after, i.icon-target:before { content: "\1f3af"; height: inherit; }
+.icon-target.icon-left a:before, .icon-target.icon-right a:after, i.icon-target:before { content: "\e616"; height: inherit; }
 
-.icon-palette.icon-left a:before, .icon-palette.icon-right a:after, i.icon-palette:before { content: "\1f3a8"; height: inherit; }
+.icon-palette.icon-left a:before, .icon-palette.icon-right a:after, i.icon-palette:before { content: "\e631"; height: inherit; }
 
-.icon-list.icon-left a:before, .icon-list.icon-right a:after, i.icon-list:before { content: "\e005"; height: inherit; }
+.icon-list.icon-left a:before, .icon-list.icon-right a:after, i.icon-list:before { content: "\e693"; height: inherit; }
 
-.icon-list-add.icon-left a:before, .icon-list-add.icon-right a:after, i.icon-list-add:before { content: "\e003"; height: inherit; }
+.icon-list-add.icon-left a:before, .icon-list-add.icon-right a:after, i.icon-list-add:before { content: "\e694"; height: inherit; }
 
-.icon-signal.icon-left a:before, .icon-signal.icon-right a:after, i.icon-signal:before { content: "\1f4f6"; height: inherit; }
+.icon-signal.icon-left a:before, .icon-signal.icon-right a:after, i.icon-signal:before { content: "\e66b"; height: inherit; }
 
-.icon-trophy.icon-left a:before, .icon-trophy.icon-right a:after, i.icon-trophy:before { content: "\1f3c6"; height: inherit; }
+.icon-trophy.icon-left a:before, .icon-trophy.icon-right a:after, i.icon-trophy:before { content: "\e62c"; height: inherit; }
 
-.icon-battery.icon-left a:before, .icon-battery.icon-right a:after, i.icon-battery:before { content: "\1f50b"; height: inherit; }
+.icon-battery.icon-left a:before, .icon-battery.icon-right a:after, i.icon-battery:before { content: "\e64b"; height: inherit; }
 
-.icon-back-in-time.icon-left a:before, .icon-back-in-time.icon-right a:after, i.icon-back-in-time:before { content: "\e771"; height: inherit; }
+.icon-back-in-time.icon-left a:before, .icon-back-in-time.icon-right a:after, i.icon-back-in-time:before { content: "\e608"; height: inherit; }
 
-.icon-monitor.icon-left a:before, .icon-monitor.icon-right a:after, i.icon-monitor:before { content: "\1f4bb"; height: inherit; }
+.icon-monitor.icon-left a:before, .icon-monitor.icon-right a:after, i.icon-monitor:before { content: "\e660"; height: inherit; }
 
-.icon-mobile.icon-left a:before, .icon-mobile.icon-right a:after, i.icon-mobile:before { content: "\1f4f1"; height: inherit; }
+.icon-mobile.icon-left a:before, .icon-mobile.icon-right a:after, i.icon-mobile:before { content: "\e601"; height: inherit; }
 
-.icon-network.icon-left a:before, .icon-network.icon-right a:after, i.icon-network:before { content: "\e776"; height: inherit; }
+.icon-network.icon-left a:before, .icon-network.icon-right a:after, i.icon-network:before { content: "\e649"; height: inherit; }
 
-.icon-cd.icon-left a:before, .icon-cd.icon-right a:after, i.icon-cd:before { content: "\1f4bf"; height: inherit; }
+.icon-cd.icon-left a:before, .icon-cd.icon-right a:after, i.icon-cd:before { content: "\e643"; height: inherit; }
 
-.icon-inbox.icon-left a:before, .icon-inbox.icon-right a:after, i.icon-inbox:before { content: "\e777"; height: inherit; }
+.icon-inbox.icon-left a:before, .icon-inbox.icon-right a:after, i.icon-inbox:before { content: "\e609"; height: inherit; }
 
-.icon-install.icon-left a:before, .icon-install.icon-right a:after, i.icon-install:before { content: "\e778"; height: inherit; }
+.icon-install.icon-left a:before, .icon-install.icon-right a:after, i.icon-install:before { content: "\e6a5"; height: inherit; }
 
-.icon-globe.icon-left a:before, .icon-globe.icon-right a:after, i.icon-globe:before { content: "\1f30e"; height: inherit; }
+.icon-globe.icon-left a:before, .icon-globe.icon-right a:after, i.icon-globe:before { content: "\e654"; height: inherit; }
 
-.icon-cloud.icon-left a:before, .icon-cloud.icon-right a:after, i.icon-cloud:before { content: "\2601"; height: inherit; }
+.icon-cloud.icon-left a:before, .icon-cloud.icon-right a:after, i.icon-cloud:before { content: "\e6a6"; height: inherit; }
 
-.icon-cloud-thunder.icon-left a:before, .icon-cloud-thunder.icon-right a:after, i.icon-cloud-thunder:before { content: "\26c8"; height: inherit; }
+.icon-cloud-thunder.icon-left a:before, .icon-cloud-thunder.icon-right a:after, i.icon-cloud-thunder:before { content: "\e641"; height: inherit; }
 
-.icon-flash.icon-left a:before, .icon-flash.icon-right a:after, i.icon-flash:before { content: "\26a1"; height: inherit; }
+.icon-flash.icon-left a:before, .icon-flash.icon-right a:after, i.icon-flash:before { content: "\e640"; height: inherit; }
 
-.icon-moon.icon-left a:before, .icon-moon.icon-right a:after, i.icon-moon:before { content: "\263d"; height: inherit; }
+.icon-moon.icon-left a:before, .icon-moon.icon-right a:after, i.icon-moon:before { content: "\e630"; height: inherit; }
 
-.icon-flight.icon-left a:before, .icon-flight.icon-right a:after, i.icon-flight:before { content: "\2708"; height: inherit; }
+.icon-flight.icon-left a:before, .icon-flight.icon-right a:after, i.icon-flight:before { content: "\e63a"; height: inherit; }
 
-.icon-paper-plane.icon-left a:before, .icon-paper-plane.icon-right a:after, i.icon-paper-plane:before { content: "\e79b"; height: inherit; }
+.icon-paper-plane.icon-left a:before, .icon-paper-plane.icon-right a:after, i.icon-paper-plane:before { content: "\e605"; height: inherit; }
 
-.icon-leaf.icon-left a:before, .icon-leaf.icon-right a:after, i.icon-leaf:before { content: "\1f342"; height: inherit; }
+.icon-leaf.icon-left a:before, .icon-leaf.icon-right a:after, i.icon-leaf:before { content: "\e632"; height: inherit; }
 
-.icon-lifebuoy.icon-left a:before, .icon-lifebuoy.icon-right a:after, i.icon-lifebuoy:before { content: "\e788"; height: inherit; }
+.icon-lifebuoy.icon-left a:before, .icon-lifebuoy.icon-right a:after, i.icon-lifebuoy:before { content: "\e63b"; height: inherit; }
 
-.icon-mouse.icon-left a:before, .icon-mouse.icon-right a:after, i.icon-mouse:before { content: "\e789"; height: inherit; }
+.icon-mouse.icon-left a:before, .icon-mouse.icon-right a:after, i.icon-mouse:before { content: "\e602"; height: inherit; }
 
-.icon-briefcase.icon-left a:before, .icon-briefcase.icon-right a:after, i.icon-briefcase:before { content: "\1f4bc"; height: inherit; }
+.icon-briefcase.icon-left a:before, .icon-briefcase.icon-right a:after, i.icon-briefcase:before { content: "\e644"; height: inherit; }
 
-.icon-suitcase.icon-left a:before, .icon-suitcase.icon-right a:after, i.icon-suitcase:before { content: "\e78e"; height: inherit; }
+.icon-suitcase.icon-left a:before, .icon-suitcase.icon-right a:after, i.icon-suitcase:before { content: "\e652"; height: inherit; }
 
-.icon-dot.icon-left a:before, .icon-dot.icon-right a:after, i.icon-dot:before { content: "\e78b"; height: inherit; }
+.icon-dot.icon-left a:before, .icon-dot.icon-right a:after, i.icon-dot:before { content: "\e6e0"; height: inherit; }
 
-.icon-dot-2.icon-left a:before, .icon-dot-2.icon-right a:after, i.icon-dot-2:before { content: "\e78c"; height: inherit; }
+.icon-dot-2.icon-left a:before, .icon-dot-2.icon-right a:after, i.icon-dot-2:before { content: "\e6df"; height: inherit; }
 
-.icon-dot-3.icon-left a:before, .icon-dot-3.icon-right a:after, i.icon-dot-3:before { content: "\e78d"; height: inherit; }
+.icon-dot-3.icon-left a:before, .icon-dot-3.icon-right a:after, i.icon-dot-3:before { content: "\e6de"; height: inherit; }
 
-.icon-brush.icon-left a:before, .icon-brush.icon-right a:after, i.icon-brush:before { content: "\e79a"; height: inherit; }
+.icon-brush.icon-left a:before, .icon-brush.icon-right a:after, i.icon-brush:before { content: "\e651"; height: inherit; }
 
-.icon-magnet.icon-left a:before, .icon-magnet.icon-right a:after, i.icon-magnet:before { content: "\e7a1"; height: inherit; }
+.icon-magnet.icon-left a:before, .icon-magnet.icon-right a:after, i.icon-magnet:before { content: "\e64d"; height: inherit; }
 
-.icon-infinity.icon-left a:before, .icon-infinity.icon-right a:after, i.icon-infinity:before { content: "\221e"; height: inherit; }
+.icon-infinity.icon-left a:before, .icon-infinity.icon-right a:after, i.icon-infinity:before { content: "\e661"; height: inherit; }
 
-.icon-erase.icon-left a:before, .icon-erase.icon-right a:after, i.icon-erase:before { content: "\232b"; height: inherit; }
+.icon-erase.icon-left a:before, .icon-erase.icon-right a:after, i.icon-erase:before { content: "\e681"; height: inherit; }
 
-.icon-chart-pie.icon-left a:before, .icon-chart-pie.icon-right a:after, i.icon-chart-pie:before { content: "\e751"; height: inherit; }
+.icon-chart-pie.icon-left a:before, .icon-chart-pie.icon-right a:after, i.icon-chart-pie:before { content: "\e670"; height: inherit; }
 
-.icon-chart-line.icon-left a:before, .icon-chart-line.icon-right a:after, i.icon-chart-line:before { content: "\1f4c8"; height: inherit; }
+.icon-chart-line.icon-left a:before, .icon-chart-line.icon-right a:after, i.icon-chart-line:before { content: "\e66f"; height: inherit; }
 
-.icon-chart-bar.icon-left a:before, .icon-chart-bar.icon-right a:after, i.icon-chart-bar:before { content: "\1f4ca"; height: inherit; }
+.icon-chart-bar.icon-left a:before, .icon-chart-bar.icon-right a:after, i.icon-chart-bar:before { content: "\e671"; height: inherit; }
 
-.icon-chart-area.icon-left a:before, .icon-chart-area.icon-right a:after, i.icon-chart-area:before { content: "\1f53e"; height: inherit; }
+.icon-chart-area.icon-left a:before, .icon-chart-area.icon-right a:after, i.icon-chart-area:before { content: "\e672"; height: inherit; }
 
-.icon-tape.icon-left a:before, .icon-tape.icon-right a:after, i.icon-tape:before { content: "\2707"; height: inherit; }
+.icon-tape.icon-left a:before, .icon-tape.icon-right a:after, i.icon-tape:before { content: "\e665"; height: inherit; }
 
-.icon-graduation-cap.icon-left a:before, .icon-graduation-cap.icon-right a:after, i.icon-graduation-cap:before { content: "\1f393"; height: inherit; }
+.icon-graduation-cap.icon-left a:before, .icon-graduation-cap.icon-right a:after, i.icon-graduation-cap:before { content: "\e636"; height: inherit; }
 
-.icon-language.icon-left a:before, .icon-language.icon-right a:after, i.icon-language:before { content: "\e752"; height: inherit; }
+.icon-language.icon-left a:before, .icon-language.icon-right a:after, i.icon-language:before { content: "\e648"; height: inherit; }
 
-.icon-ticket.icon-left a:before, .icon-ticket.icon-right a:after, i.icon-ticket:before { content: "\1f3ab"; height: inherit; }
+.icon-ticket.icon-left a:before, .icon-ticket.icon-right a:after, i.icon-ticket:before { content: "\e669"; height: inherit; }
 
-.icon-water.icon-left a:before, .icon-water.icon-right a:after, i.icon-water:before { content: "\1f4a6"; height: inherit; }
+.icon-water.icon-left a:before, .icon-water.icon-right a:after, i.icon-water:before { content: "\e66d"; height: inherit; }
 
-.icon-droplet.icon-left a:before, .icon-droplet.icon-right a:after, i.icon-droplet:before { content: "\1f4a7"; height: inherit; }
+.icon-droplet.icon-left a:before, .icon-droplet.icon-right a:after, i.icon-droplet:before { content: "\e642"; height: inherit; }
 
-.icon-air.icon-left a:before, .icon-air.icon-right a:after, i.icon-air:before { content: "\e753"; height: inherit; }
+.icon-air.icon-left a:before, .icon-air.icon-right a:after, i.icon-air:before { content: "\e645"; height: inherit; }
 
-.icon-credit-card.icon-left a:before, .icon-credit-card.icon-right a:after, i.icon-credit-card:before { content: "\1f4b3"; height: inherit; }
+.icon-credit-card.icon-left a:before, .icon-credit-card.icon-right a:after, i.icon-credit-card:before { content: "\e663"; height: inherit; }
 
-.icon-floppy.icon-left a:before, .icon-floppy.icon-right a:after, i.icon-floppy:before { content: "\1f4be"; height: inherit; }
+.icon-floppy.icon-left a:before, .icon-floppy.icon-right a:after, i.icon-floppy:before { content: "\e6a4"; height: inherit; }
 
-.icon-clipboard.icon-left a:before, .icon-clipboard.icon-right a:after, i.icon-clipboard:before { content: "\1f4cb"; height: inherit; }
+.icon-clipboard.icon-left a:before, .icon-clipboard.icon-right a:after, i.icon-clipboard:before { content: "\e666"; height: inherit; }
 
-.icon-megaphone.icon-left a:before, .icon-megaphone.icon-right a:after, i.icon-megaphone:before { content: "\1f4e3"; height: inherit; }
+.icon-megaphone.icon-left a:before, .icon-megaphone.icon-right a:after, i.icon-megaphone:before { content: "\e62f"; height: inherit; }
 
-.icon-database.icon-left a:before, .icon-database.icon-right a:after, i.icon-database:before { content: "\e754"; height: inherit; }
+.icon-database.icon-left a:before, .icon-database.icon-right a:after, i.icon-database:before { content: "\e664"; height: inherit; }
 
-.icon-drive.icon-left a:before, .icon-drive.icon-right a:after, i.icon-drive:before { content: "\e755"; height: inherit; }
+.icon-drive.icon-left a:before, .icon-drive.icon-right a:after, i.icon-drive:before { content: "\e64e"; height: inherit; }
 
-.icon-bucket.icon-left a:before, .icon-bucket.icon-right a:after, i.icon-bucket:before { content: "\e756"; height: inherit; }
+.icon-bucket.icon-left a:before, .icon-bucket.icon-right a:after, i.icon-bucket:before { content: "\e64c"; height: inherit; }
 
-.icon-thermometer.icon-left a:before, .icon-thermometer.icon-right a:after, i.icon-thermometer:before { content: "\e757"; height: inherit; }
+.icon-thermometer.icon-left a:before, .icon-thermometer.icon-right a:after, i.icon-thermometer:before { content: "\e66c"; height: inherit; }
 
-.icon-key.icon-left a:before, .icon-key.icon-right a:after, i.icon-key:before { content: "\1f511"; height: inherit; }
+.icon-key.icon-left a:before, .icon-key.icon-right a:after, i.icon-key:before { content: "\e64a"; height: inherit; }
 
-.icon-flow-cascade.icon-left a:before, .icon-flow-cascade.icon-right a:after, i.icon-flow-cascade:before { content: "\e790"; height: inherit; }
+.icon-flow-cascade.icon-left a:before, .icon-flow-cascade.icon-right a:after, i.icon-flow-cascade:before { content: "\e6b8"; height: inherit; }
 
-.icon-flow-branch.icon-left a:before, .icon-flow-branch.icon-right a:after, i.icon-flow-branch:before { content: "\e791"; height: inherit; }
+.icon-flow-branch.icon-left a:before, .icon-flow-branch.icon-right a:after, i.icon-flow-branch:before { content: "\e6b9"; height: inherit; }
 
-.icon-flow-tree.icon-left a:before, .icon-flow-tree.icon-right a:after, i.icon-flow-tree:before { content: "\e792"; height: inherit; }
+.icon-flow-tree.icon-left a:before, .icon-flow-tree.icon-right a:after, i.icon-flow-tree:before { content: "\e6ba"; height: inherit; }
 
-.icon-flow-line.icon-left a:before, .icon-flow-line.icon-right a:after, i.icon-flow-line:before { content: "\e793"; height: inherit; }
+.icon-flow-line.icon-left a:before, .icon-flow-line.icon-right a:after, i.icon-flow-line:before { content: "\e6bb"; height: inherit; }
 
-.icon-flow-parallel.icon-left a:before, .icon-flow-parallel.icon-right a:after, i.icon-flow-parallel:before { content: "\e794"; height: inherit; }
+.icon-flow-parallel.icon-left a:before, .icon-flow-parallel.icon-right a:after, i.icon-flow-parallel:before { content: "\e6bc"; height: inherit; }
 
-.icon-rocket.icon-left a:before, .icon-rocket.icon-right a:after, i.icon-rocket:before { content: "\1f680"; height: inherit; }
+.icon-rocket.icon-left a:before, .icon-rocket.icon-right a:after, i.icon-rocket:before { content: "\e650"; height: inherit; }
 
-.icon-gauge.icon-left a:before, .icon-gauge.icon-right a:after, i.icon-gauge:before { content: "\e7a2"; height: inherit; }
+.icon-gauge.icon-left a:before, .icon-gauge.icon-right a:after, i.icon-gauge:before { content: "\e647"; height: inherit; }
 
-.icon-traffic-cone.icon-left a:before, .icon-traffic-cone.icon-right a:after, i.icon-traffic-cone:before { content: "\e7a3"; height: inherit; }
+.icon-traffic-cone.icon-left a:before, .icon-traffic-cone.icon-right a:after, i.icon-traffic-cone:before { content: "\e653"; height: inherit; }
 
-.icon-cc.icon-left a:before, .icon-cc.icon-right a:after, i.icon-cc:before { content: "\e7a5"; height: inherit; }
+.icon-cc.icon-left a:before, .icon-cc.icon-right a:after, i.icon-cc:before { content: "\e6e1"; height: inherit; }
 
-.icon-cc-by.icon-left a:before, .icon-cc-by.icon-right a:after, i.icon-cc-by:before { content: "\e7a6"; height: inherit; }
+.icon-cc-by.icon-left a:before, .icon-cc-by.icon-right a:after, i.icon-cc-by:before { content: "\e6e2"; height: inherit; }
 
-.icon-cc-nc.icon-left a:before, .icon-cc-nc.icon-right a:after, i.icon-cc-nc:before { content: "\e7a7"; height: inherit; }
+.icon-cc-nc.icon-left a:before, .icon-cc-nc.icon-right a:after, i.icon-cc-nc:before { content: "\e6e3"; height: inherit; }
 
-.icon-cc-nc-eu.icon-left a:before, .icon-cc-nc-eu.icon-right a:after, i.icon-cc-nc-eu:before { content: "\e7a8"; height: inherit; }
+.icon-cc-nc-eu.icon-left a:before, .icon-cc-nc-eu.icon-right a:after, i.icon-cc-nc-eu:before { content: "\e6e4"; height: inherit; }
 
-.icon-cc-nc-jp.icon-left a:before, .icon-cc-nc-jp.icon-right a:after, i.icon-cc-nc-jp:before { content: "\e7a9"; height: inherit; }
+.icon-cc-nc-jp.icon-left a:before, .icon-cc-nc-jp.icon-right a:after, i.icon-cc-nc-jp:before { content: "\e6e5"; height: inherit; }
 
-.icon-cc-sa.icon-left a:before, .icon-cc-sa.icon-right a:after, i.icon-cc-sa:before { content: "\e7aa"; height: inherit; }
+.icon-cc-sa.icon-left a:before, .icon-cc-sa.icon-right a:after, i.icon-cc-sa:before { content: "\e6e6"; height: inherit; }
 
-.icon-cc-nd.icon-left a:before, .icon-cc-nd.icon-right a:after, i.icon-cc-nd:before { content: "\e7ab"; height: inherit; }
+.icon-cc-nd.icon-left a:before, .icon-cc-nd.icon-right a:after, i.icon-cc-nd:before { content: "\e6e7"; height: inherit; }
 
-.icon-cc-pd.icon-left a:before, .icon-cc-pd.icon-right a:after, i.icon-cc-pd:before { content: "\e7ac"; height: inherit; }
+.icon-cc-pd.icon-left a:before, .icon-cc-pd.icon-right a:after, i.icon-cc-pd:before { content: "\e6e8"; height: inherit; }
 
-.icon-cc-zero.icon-left a:before, .icon-cc-zero.icon-right a:after, i.icon-cc-zero:before { content: "\e7ad"; height: inherit; }
+.icon-cc-zero.icon-left a:before, .icon-cc-zero.icon-right a:after, i.icon-cc-zero:before { content: "\e6e9"; height: inherit; }
 
-.icon-cc-share.icon-left a:before, .icon-cc-share.icon-right a:after, i.icon-cc-share:before { content: "\e7ae"; height: inherit; }
+.icon-cc-share.icon-left a:before, .icon-cc-share.icon-right a:after, i.icon-cc-share:before { content: "\e6ea"; height: inherit; }
 
-.icon-cc-remix.icon-left a:before, .icon-cc-remix.icon-right a:after, i.icon-cc-remix:before { content: "\e7af"; height: inherit; }
+.icon-cc-remix.icon-left a:before, .icon-cc-remix.icon-right a:after, i.icon-cc-remix:before { content: "\e6eb"; height: inherit; }
 
-.icon-github.icon-left a:before, .icon-github.icon-right a:after, i.icon-github:before { content: "\f300"; height: inherit; }
+.icon-github.icon-left a:before, .icon-github.icon-right a:after, i.icon-github:before { content: "\e6ee"; height: inherit; }
 
-.icon-github-circled.icon-left a:before, .icon-github-circled.icon-right a:after, i.icon-github-circled:before { content: "\f301"; height: inherit; }
+.icon-github-circled.icon-left a:before, .icon-github-circled.icon-right a:after, i.icon-github-circled:before { content: "\e6ef"; height: inherit; }
 
-.icon-flickr.icon-left a:before, .icon-flickr.icon-right a:after, i.icon-flickr:before { content: "\f303"; height: inherit; }
+.icon-flickr.icon-left a:before, .icon-flickr.icon-right a:after, i.icon-flickr:before { content: "\e6f0"; height: inherit; }
 
-.icon-flickr-circled.icon-left a:before, .icon-flickr-circled.icon-right a:after, i.icon-flickr-circled:before { content: "\f304"; height: inherit; }
+.icon-flickr-circled.icon-left a:before, .icon-flickr-circled.icon-right a:after, i.icon-flickr-circled:before { content: "\e6f1"; height: inherit; }
 
-.icon-vimeo.icon-left a:before, .icon-vimeo.icon-right a:after, i.icon-vimeo:before { content: "\f306"; height: inherit; }
+.icon-vimeo.icon-left a:before, .icon-vimeo.icon-right a:after, i.icon-vimeo:before { content: "\e6f2"; height: inherit; }
 
-.icon-vimeo-circled.icon-left a:before, .icon-vimeo-circled.icon-right a:after, i.icon-vimeo-circled:before { content: "\f307"; height: inherit; }
+.icon-vimeo-circled.icon-left a:before, .icon-vimeo-circled.icon-right a:after, i.icon-vimeo-circled:before { content: "\e6f3"; height: inherit; }
 
-.icon-twitter.icon-left a:before, .icon-twitter.icon-right a:after, i.icon-twitter:before { content: "\f309"; height: inherit; }
+.icon-twitter.icon-left a:before, .icon-twitter.icon-right a:after, i.icon-twitter:before { content: "\e6f4"; height: inherit; }
 
-.icon-twitter-circled.icon-left a:before, .icon-twitter-circled.icon-right a:after, i.icon-twitter-circled:before { content: "\f30a"; height: inherit; }
+.icon-twitter-circled.icon-left a:before, .icon-twitter-circled.icon-right a:after, i.icon-twitter-circled:before { content: "\e6f5"; height: inherit; }
 
-.icon-facebook.icon-left a:before, .icon-facebook.icon-right a:after, i.icon-facebook:before { content: "\f30c"; height: inherit; }
+.icon-facebook.icon-left a:before, .icon-facebook.icon-right a:after, i.icon-facebook:before { content: "\e6f6"; height: inherit; }
 
-.icon-facebook-circled.icon-left a:before, .icon-facebook-circled.icon-right a:after, i.icon-facebook-circled:before { content: "\f30d"; height: inherit; }
+.icon-facebook-circled.icon-left a:before, .icon-facebook-circled.icon-right a:after, i.icon-facebook-circled:before { content: "\e6f7"; height: inherit; }
 
-.icon-facebook-squared.icon-left a:before, .icon-facebook-squared.icon-right a:after, i.icon-facebook-squared:before { content: "\f30e"; height: inherit; }
+.icon-facebook-squared.icon-left a:before, .icon-facebook-squared.icon-right a:after, i.icon-facebook-squared:before { content: "\e6f8"; height: inherit; }
 
-.icon-gplus.icon-left a:before, .icon-gplus.icon-right a:after, i.icon-gplus:before { content: "\f30f"; height: inherit; }
+.icon-gplus.icon-left a:before, .icon-gplus.icon-right a:after, i.icon-gplus:before { content: "\e6f9"; height: inherit; }
 
-.icon-gplus-circled.icon-left a:before, .icon-gplus-circled.icon-right a:after, i.icon-gplus-circled:before { content: "\f310"; height: inherit; }
+.icon-gplus-circled.icon-left a:before, .icon-gplus-circled.icon-right a:after, i.icon-gplus-circled:before { content: "\e6fa"; height: inherit; }
 
-.icon-pinterest.icon-left a:before, .icon-pinterest.icon-right a:after, i.icon-pinterest:before { content: "\f312"; height: inherit; }
+.icon-pinterest.icon-left a:before, .icon-pinterest.icon-right a:after, i.icon-pinterest:before { content: "\e6fb"; height: inherit; }
 
-.icon-pinterest-circled.icon-left a:before, .icon-pinterest-circled.icon-right a:after, i.icon-pinterest-circled:before { content: "\f313"; height: inherit; }
+.icon-pinterest-circled.icon-left a:before, .icon-pinterest-circled.icon-right a:after, i.icon-pinterest-circled:before { content: "\e6fc"; height: inherit; }
 
-.icon-tumblr.icon-left a:before, .icon-tumblr.icon-right a:after, i.icon-tumblr:before { content: "\f315"; height: inherit; }
+.icon-tumblr.icon-left a:before, .icon-tumblr.icon-right a:after, i.icon-tumblr:before { content: "\e6fd"; height: inherit; }
 
-.icon-tumblr-circled.icon-left a:before, .icon-tumblr-circled.icon-right a:after, i.icon-tumblr-circled:before { content: "\f316"; height: inherit; }
+.icon-tumblr-circled.icon-left a:before, .icon-tumblr-circled.icon-right a:after, i.icon-tumblr-circled:before { content: "\e6fe"; height: inherit; }
 
-.icon-linkedin.icon-left a:before, .icon-linkedin.icon-right a:after, i.icon-linkedin:before { content: "\f318"; height: inherit; }
+.icon-linkedin.icon-left a:before, .icon-linkedin.icon-right a:after, i.icon-linkedin:before { content: "\e6ff"; height: inherit; }
 
-.icon-linkedin-circled.icon-left a:before, .icon-linkedin-circled.icon-right a:after, i.icon-linkedin-circled:before { content: "\f319"; height: inherit; }
+.icon-linkedin-circled.icon-left a:before, .icon-linkedin-circled.icon-right a:after, i.icon-linkedin-circled:before { content: "\e700"; height: inherit; }
 
-.icon-dribbble.icon-left a:before, .icon-dribbble.icon-right a:after, i.icon-dribbble:before { content: "\f31b"; height: inherit; }
+.icon-dribbble.icon-left a:before, .icon-dribbble.icon-right a:after, i.icon-dribbble:before { content: "\e701"; height: inherit; }
 
-.icon-dribbble-circled.icon-left a:before, .icon-dribbble-circled.icon-right a:after, i.icon-dribbble-circled:before { content: "\f31c"; height: inherit; }
+.icon-dribbble-circled.icon-left a:before, .icon-dribbble-circled.icon-right a:after, i.icon-dribbble-circled:before { content: "\e702"; height: inherit; }
 
-.icon-stumbleupon.icon-left a:before, .icon-stumbleupon.icon-right a:after, i.icon-stumbleupon:before { content: "\f31e"; height: inherit; }
+.icon-stumbleupon.icon-left a:before, .icon-stumbleupon.icon-right a:after, i.icon-stumbleupon:before { content: "\e703"; height: inherit; }
 
-.icon-stumbleupon-circled.icon-left a:before, .icon-stumbleupon-circled.icon-right a:after, i.icon-stumbleupon-circled:before { content: "\f31f"; height: inherit; }
+.icon-stumbleupon-circled.icon-left a:before, .icon-stumbleupon-circled.icon-right a:after, i.icon-stumbleupon-circled:before { content: "\e704"; height: inherit; }
 
-.icon-lastfm.icon-left a:before, .icon-lastfm.icon-right a:after, i.icon-lastfm:before { content: "\f321"; height: inherit; }
+.icon-lastfm.icon-left a:before, .icon-lastfm.icon-right a:after, i.icon-lastfm:before { content: "\e705"; height: inherit; }
 
-.icon-lastfm-circled.icon-left a:before, .icon-lastfm-circled.icon-right a:after, i.icon-lastfm-circled:before { content: "\f322"; height: inherit; }
+.icon-lastfm-circled.icon-left a:before, .icon-lastfm-circled.icon-right a:after, i.icon-lastfm-circled:before { content: "\e706"; height: inherit; }
 
-.icon-rdio.icon-left a:before, .icon-rdio.icon-right a:after, i.icon-rdio:before { content: "\f324"; height: inherit; }
+.icon-rdio.icon-left a:before, .icon-rdio.icon-right a:after, i.icon-rdio:before { content: "\e707"; height: inherit; }
 
-.icon-rdio-circled.icon-left a:before, .icon-rdio-circled.icon-right a:after, i.icon-rdio-circled:before { content: "\f325"; height: inherit; }
+.icon-rdio-circled.icon-left a:before, .icon-rdio-circled.icon-right a:after, i.icon-rdio-circled:before { content: "\e708"; height: inherit; }
 
-.icon-spotify.icon-left a:before, .icon-spotify.icon-right a:after, i.icon-spotify:before { content: "\f327"; height: inherit; }
+.icon-spotify.icon-left a:before, .icon-spotify.icon-right a:after, i.icon-spotify:before { content: "\e709"; height: inherit; }
 
-.icon-spotify-circled.icon-left a:before, .icon-spotify-circled.icon-right a:after, i.icon-spotify-circled:before { content: "\f328"; height: inherit; }
+.icon-spotify-circled.icon-left a:before, .icon-spotify-circled.icon-right a:after, i.icon-spotify-circled:before { content: "\e70a"; height: inherit; }
 
-.icon-qq.icon-left a:before, .icon-qq.icon-right a:after, i.icon-qq:before { content: "\f32a"; height: inherit; }
+.icon-qq.icon-left a:before, .icon-qq.icon-right a:after, i.icon-qq:before { content: "\e70b"; height: inherit; }
 
-.icon-instagram.icon-left a:before, .icon-instagram.icon-right a:after, i.icon-instagram:before { content: "\f32d"; height: inherit; }
+.icon-instagram.icon-left a:before, .icon-instagram.icon-right a:after, i.icon-instagram:before { content: "\e70c"; height: inherit; }
 
-.icon-dropbox.icon-left a:before, .icon-dropbox.icon-right a:after, i.icon-dropbox:before { content: "\f330"; height: inherit; }
+.icon-dropbox.icon-left a:before, .icon-dropbox.icon-right a:after, i.icon-dropbox:before { content: "\e70d"; height: inherit; }
 
-.icon-evernote.icon-left a:before, .icon-evernote.icon-right a:after, i.icon-evernote:before { content: "\f333"; height: inherit; }
+.icon-evernote.icon-left a:before, .icon-evernote.icon-right a:after, i.icon-evernote:before { content: "\e70e"; height: inherit; }
 
-.icon-flattr.icon-left a:before, .icon-flattr.icon-right a:after, i.icon-flattr:before { content: "\f336"; height: inherit; }
+.icon-flattr.icon-left a:before, .icon-flattr.icon-right a:after, i.icon-flattr:before { content: "\e70f"; height: inherit; }
 
-.icon-skype.icon-left a:before, .icon-skype.icon-right a:after, i.icon-skype:before { content: "\f339"; height: inherit; }
+.icon-skype.icon-left a:before, .icon-skype.icon-right a:after, i.icon-skype:before { content: "\e710"; height: inherit; }
 
-.icon-skype-circled.icon-left a:before, .icon-skype-circled.icon-right a:after, i.icon-skype-circled:before { content: "\f33a"; height: inherit; }
+.icon-skype-circled.icon-left a:before, .icon-skype-circled.icon-right a:after, i.icon-skype-circled:before { content: "\e711"; height: inherit; }
 
-.icon-renren.icon-left a:before, .icon-renren.icon-right a:after, i.icon-renren:before { content: "\f33c"; height: inherit; }
+.icon-renren.icon-left a:before, .icon-renren.icon-right a:after, i.icon-renren:before { content: "\e712"; height: inherit; }
 
-.icon-sina-weibo.icon-left a:before, .icon-sina-weibo.icon-right a:after, i.icon-sina-weibo:before { content: "\f33f"; height: inherit; }
+.icon-sina-weibo.icon-left a:before, .icon-sina-weibo.icon-right a:after, i.icon-sina-weibo:before { content: "\e713"; height: inherit; }
 
-.icon-paypal.icon-left a:before, .icon-paypal.icon-right a:after, i.icon-paypal:before { content: "\f342"; height: inherit; }
+.icon-paypal.icon-left a:before, .icon-paypal.icon-right a:after, i.icon-paypal:before { content: "\e714"; height: inherit; }
 
-.icon-picasa.icon-left a:before, .icon-picasa.icon-right a:after, i.icon-picasa:before { content: "\f345"; height: inherit; }
+.icon-picasa.icon-left a:before, .icon-picasa.icon-right a:after, i.icon-picasa:before { content: "\e715"; height: inherit; }
 
-.icon-soundcloud.icon-left a:before, .icon-soundcloud.icon-right a:after, i.icon-soundcloud:before { content: "\f348"; height: inherit; }
+.icon-soundcloud.icon-left a:before, .icon-soundcloud.icon-right a:after, i.icon-soundcloud:before { content: "\e716"; height: inherit; }
 
-.icon-mixi.icon-left a:before, .icon-mixi.icon-right a:after, i.icon-mixi:before { content: "\f34b"; height: inherit; }
+.icon-mixi.icon-left a:before, .icon-mixi.icon-right a:after, i.icon-mixi:before { content: "\e717"; height: inherit; }
 
-.icon-behance.icon-left a:before, .icon-behance.icon-right a:after, i.icon-behance:before { content: "\f34e"; height: inherit; }
+.icon-behance.icon-left a:before, .icon-behance.icon-right a:after, i.icon-behance:before { content: "\e718"; height: inherit; }
 
-.icon-google-circles.icon-left a:before, .icon-google-circles.icon-right a:after, i.icon-google-circles:before { content: "\f351"; height: inherit; }
+.icon-google-circles.icon-left a:before, .icon-google-circles.icon-right a:after, i.icon-google-circles:before { content: "\e719"; height: inherit; }
 
-.icon-vkontakte.icon-left a:before, .icon-vkontakte.icon-right a:after, i.icon-vkontakte:before { content: "\f354"; height: inherit; }
+.icon-vkontakte.icon-left a:before, .icon-vkontakte.icon-right a:after, i.icon-vkontakte:before { content: "\e71a"; height: inherit; }
 
-.icon-smashing.icon-left a:before, .icon-smashing.icon-right a:after, i.icon-smashing:before { content: "\f357"; height: inherit; }
+.icon-smashing.icon-left a:before, .icon-smashing.icon-right a:after, i.icon-smashing:before { content: "\e71b"; height: inherit; }
 
-.icon-sweden.icon-left a:before, .icon-sweden.icon-right a:after, i.icon-sweden:before { content: "\f601"; height: inherit; }
+.icon-sweden.icon-left a:before, .icon-sweden.icon-right a:after, i.icon-sweden:before { content: "\e66e"; height: inherit; }
 
-.icon-db-shape.icon-left a:before, .icon-db-shape.icon-right a:after, i.icon-db-shape:before { content: "\f600"; height: inherit; }
+.icon-db-shape.icon-left a:before, .icon-db-shape.icon-right a:after, i.icon-db-shape:before { content: "\e6ed"; height: inherit; }
 
-.icon-logo-db.icon-left a:before, .icon-logo-db.icon-right a:after, i.icon-logo-db:before { content: "\f603"; height: inherit; }
+.icon-logo-db.icon-left a:before, .icon-logo-db.icon-right a:after, i.icon-logo-db:before { content: "\e6ec"; height: inherit; }
 
 .fixed { position: fixed; }
 .fixed.pinned { position: absolute; }
@@ -635,7 +635,7 @@ html, body { height: 100%; }
 .text-right { text-align: right; }
 
 /* Fonts */
-@font-face { font-family: "entypo"; font-style: normal; font-weight: 400; src: url(../fonts/icons/entypo.eot); src: url("../fonts/icons/entypo.eot?#iefix") format("ie9-skip-eot"), url("../fonts/icons/entypo.woff") format("woff"), url("../fonts/icons/entypo.ttf") format("truetype"); }
+@font-face { font-family: "entypo"; font-style: normal; font-weight: 400; src: url(../fonts/icons/entypo.eot); src: url("../fonts/icons/entypo.eot?#iefix") format("ie9-skip-eot"), url("../fonts/icons/entypo.woff") format("woff"), url("../fonts/icons/entypo.ttf") format("truetype"), url("../fonts/icons/entypo.svg?qov6qb#entypo") format("svg"); }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 { font-family: "Open Sans"; font-weight: 300; color: #444444; text-rendering: optimizeLegibility; padding-top: 0.273em; line-height: 1.15538em; padding-bottom: 0.273em; }
@@ -1507,17 +1507,17 @@ label + .xnarrow:last-child, label + .narrow:last-child, label + .normal:last-ch
 .double input:last-child, .double .input:last-child { margin-left: -1px; }
 
 .field input, .field .input, .field textarea, .field .textarea, .field .radio span, .field .checkbox span, .field .picker { -webkit-transition-duration: 0.2s; -moz-transition-duration: 0.2s; -o-transition-duration: 0.2s; transition-duration: 0.2s; }
-.field.danger:after { font-family: "entypo"; content: "\2716"; font-size: 16px; position: absolute; top: 14%; right: 15px; z-index: 999; color: #ca3838; }
+.field.danger:after { font-family: "entypo"; content: "\e67e"; font-size: 16px; position: absolute; top: 14%; right: 15px; z-index: 999; color: #ca3838; }
 .field.danger.no-icon:after { display: none; }
 .field.danger.append:after, .field.danger.prepend:after { content: ""; }
 .field.danger input, .field.danger .input, .field.danger textarea, .field.danger .textarea, .field.danger .radio span, .field.danger .checkbox span, .field.danger .picker { border-color: #ca3838; background: #f0c5c5; }
 .field.danger input, .field.danger .input, .field.danger textarea, .field.danger .textarea, .field.danger .radio span, .field.danger .checkbox span, .field.danger .picker, .field.danger input::-webkit-input-placeholder, .field.danger textarea::-webkit-input-placeholder, .field.danger input:-moz-placeholder, .field.danger textarea:-moz-placeholder textarea { color: #ca3838; }
-.field.warning:after { font-family: "entypo"; content: "\26a0"; font-size: 16px; position: absolute; top: 14%; right: 15px; z-index: 999; color: #f6b83f; }
+.field.warning:after { font-family: "entypo"; content: "\e687"; font-size: 16px; position: absolute; top: 14%; right: 15px; z-index: 999; color: #f6b83f; }
 .field.warning.no-icon:after { display: none; }
 .field.warning.append:after, .field.warning.prepend:after { content: ""; }
 .field.warning input, .field.warning .input, .field.warning textarea, .field.warning .textarea, .field.warning .radio span, .field.warning .checkbox span, .field.warning .picker { border-color: #f6b83f; background: #fef7ea; }
 .field.warning input, .field.warning .input, .field.warning textarea, .field.warning .textarea, .field.warning .radio span, .field.warning .checkbox span, .field.warning .picker, .field.warning input::-webkit-input-placeholder, .field.warning textarea::-webkit-input-placeholder, .field.warning input:-moz-placeholder, .field.warning textarea:-moz-placeholder textarea { color: #f6b83f; }
-.field.success:after { font-family: "entypo"; content: "\2713"; font-size: 16px; position: absolute; top: 14%; right: 15px; z-index: 999; color: #58c026; }
+.field.success:after { font-family: "entypo"; content: "\e677"; font-size: 16px; position: absolute; top: 14%; right: 15px; z-index: 999; color: #58c026; }
 .field.success.no-icon:after { display: none; }
 .field.success.append:after, .field.success.prepend:after { content: ""; }
 .field.success input, .field.success .input, .field.success textarea, .field.success .textarea, .field.success .radio span, .field.success .checkbox span, .field.success .picker { border-color: #58c026; background: #c0eeaa; }
