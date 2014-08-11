@@ -1,5 +1,12 @@
 {
   "name": "gumby",
   "version": "2.6.3",
-  "main": ["./js/libs/gumby.min.js", "./css/gumby.css"]
+  "main": ["./js/libs/gumby.min.js", "./css/gumby.css"],
+  "ignore": [],
+  "devDependencies": {},
+  "keywords": [
+    "gumby",
+    "css",
+    "library"
+  ]
 }
