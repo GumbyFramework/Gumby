@@ -12,7 +12,8 @@
   src: url(../fonts/icons/#{$icons}.eot);
   src: url('../fonts/icons/#{$icons}.eot?#iefix') format('ie9-skip-eot'),
        url('../fonts/icons/#{$icons}.woff') format('woff'),
-       url('../fonts/icons/#{$icons}.ttf')  format('truetype');
+       url('../fonts/icons/#{$icons}.ttf')  format('truetype'),
+       url('../fonts/icons/#{$icons}.svg?qov6qb##{$icons}') format('svg');
 }
 
 // To include your own, local copies of fonts, use the following template
