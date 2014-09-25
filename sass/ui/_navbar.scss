@@ -343,7 +343,7 @@
 .gumby-no-touch .navbar ul li:hover > a,
 .gumby-touch .navbar ul li.active > a {
   position: relative;
-  background: $info-hover-color;
+  background: darken($navbar-color, 12%);
   z-index: 1000;
 }
 
