@@ -22,6 +22,17 @@ nbproject
 *.sublime-project
 *.sublime-workspace
 
+.htaccess
+base*
+index.php
+license.txt
+readme.html
+xmlrpc.php
+
+wp-admin/
+wp-content/
+wp-includes/
+wp-*
 # Dreamweaver added files
 _notes
 dwsync.xml
