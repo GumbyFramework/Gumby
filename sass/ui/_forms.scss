@@ -390,3 +390,35 @@ label + {
   }
 }
 
+/* Form Multi-picker Element (<select> multiple) */
+.multi-picker {
+  position: relative;
+  width: auto;
+  display: inline-block;
+  margin: 0 0 2px 1.2%;
+  overflow: hidden;
+  border: 1px solid darken($default-color, 5%);
+  @include border-radius(4px);
+  font-family: $font-family;
+  font-weight: $font-weight-semibold;
+  height: auto;
+  &:first-child {
+    margin-left: 0;
+  }
+  select[multiple] {
+    position: relative;
+    display: block;
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 6px 20px 6px 15px;
+    color: $body-font-color;
+    border: none;
+    background: #fff;
+    outline: none;
+    -webkit-appearance: none;
+    z-index: 99;
+    cursor: pointer;
+    @include font-size($norm);
+  }
+}
