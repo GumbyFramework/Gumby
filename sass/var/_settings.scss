@@ -39,17 +39,17 @@ $button-font-weight: $font-weight-semibold;
 $tabs-font-weight: $font-weight-semibold;
 
 // Vertical Rhythm Spacing
-$base-line-height: ms(1) !default;
+$base-line-height: 26px !default;
 $rhythm-spacing: .168;
 $rhythm-height: .711;
 
 // Modular Scale Settings
 // http://www.modularscale.com by Tim Brown
 // https://github.com/scottkellum/modular-scale
-$ratio: golden();						// Ratio for Modular Scale
+$ms-ratio: $golden;						// Ratio for Modular Scale
 $base-font-size: 16px !default;
 $importantNum: 78px !default;
-$base-size: $base-font-size $importantNum;
+$ms-base: $base-font-size $importantNum;
 // Gumby Default Scale Values: 16, 18, 26, 30, 42, 48, 68, 78, 110, 126;
 
 // Sizing
