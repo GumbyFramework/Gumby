@@ -1,12 +1,12 @@
 // The main function that brings it all together
 @function ms($Value: 0, $Bases: $ms-base, $Ratios: $ms-ratio) {
-  
+
   // If no multi-base or multi-ratio stuff is going on
   // then just retrn the basic calculaiton
   @if length($Bases) == 1 and length($Ratios) == 1 {
-    @return ms-calc($Value, $Bases, $Ratios);
+    @return ms-round-px(ms-calc($Value, $Bases, $Ratios));
   }
-  
+
   // Do calculations directly in Ruby when avalible
   @if $MS-gem-exists {
 
@@ -17,14 +17,14 @@
       $Base: $Base/$Unit;
       $Unitless-Bases: join($Unitless-Bases, $Base);
     }
-    
+
     // Calculate natively in Ruby
-    @return ms-gem-func($Value, $Unitless-Bases, $Ratios) * $Unit;
+    @return ms-round-px(ms-gem-func($Value, $Unitless-Bases, $Ratios) * $Unit);
   }
-  
+
   // Generate a list of all possible values
   $Return: ms-generate-list($Value, $Bases, $Ratios);
-  
+
   // Sort the generated lists
   $Return: ms-sort-list($Return);
 
@@ -36,17 +36,17 @@
     }
     $Return: $MS-new-return;
   }
-  
+
   // Normalize value for counting from 1
   // Because CSS counts things from 1
   // So Sass does as well
   // So I get to write fun stuff like this
   $Value: abs($Value) + 1;
-  
+
   // Find the correct value in the list
   $Return: nth($Return, $Value);
 
-  @return $Return;
+  @return ms-round-px($Return);
 }
 
 // Same function, different name, for good measure.

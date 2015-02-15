@@ -2,6 +2,7 @@
 
 $ms-base: 1em !default;
 $ms-ratio: $golden !default;
+$ms-range: null !default;
 
 @import "modular-scale/tests";
 
@@ -9,5 +10,8 @@ $ms-ratio: $golden !default;
 @import "modular-scale/calc";
 @import "modular-scale/generate-list";
 @import "modular-scale/sort-list";
+@import "modular-scale/round-px";
 @import "modular-scale/function";
 @import "modular-scale/function-list";
+
+@import "modular-scale/respond";
