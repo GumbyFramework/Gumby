@@ -10,6 +10,9 @@ h1,h2,h3,h4,h5,h6 {
   @include padding-trailer($rhythm-spacing);
   a {
     color: $header-link-color;
+    &:hover {
+      color: $header-link-hover-color;
+    }
   }
 }
 
