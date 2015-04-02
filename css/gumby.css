@@ -1222,8 +1222,8 @@ img { -ms-interpolation-mode: bicubic; }
 .row:before, .row:after { content: ""; display: table; }
 .row:after { clear: both; }
 
-.valign:before { content: ' '; display: inline-block; height: 400px; vertical-align: middle; margin-right: -0.25em; }
-.valign > div, .valign > article, .valign > section, .valign > figure { display: inline-block; vertical-align: middle; }
+.valign { display: table; width: 100%; }
+.valign > div, .valign > article, .valign > section, .valign > figure { display: table-cell; vertical-align: middle; }
 
 /* Mobile */
 @media only screen and (max-width: 767px) { body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; }

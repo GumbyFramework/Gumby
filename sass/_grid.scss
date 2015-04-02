@@ -265,15 +265,11 @@ img {
 // vertically align stuff
 
 .valign {
-	&:before {
-		content:' ';
-		display: inline-block;
-		height: 400px;
-		vertical-align: middle;
-		margin-right: -0.25em;
-	}
+    display: table;
+    width: 100%;
+
 	> div, > article, > section, > figure {
-		display: inline-block;
+		display: table-cell;
 		vertical-align: middle;
 	}
 }
