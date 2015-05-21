@@ -1,3 +1,5 @@
+**Unfortunately Digital Surgeons has decided to retire Gumby Framework in order to focus our efforts on making other awesome things for the web. Please feel free to continue to use the framework, however development has ceased. If you are interested in inheriting the project please [get in touch](http://www.digitalsurgeons.com/contact/)!**
+
 Gumby Framework [![Build Status](https://travis-ci.org/GumbyFramework/Gumby.svg?branch=master)](https://travis-ci.org/GumbyFramework/Gumby)
 =====================
 
