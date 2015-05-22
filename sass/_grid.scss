@@ -195,9 +195,13 @@
 
 .pull_left { @include pull(left); }
 
-img, object, embed {
+img, object {
 	max-width: 100%;
 	height: auto;
+}
+
+embed {
+	max-width: 100%;
 }
 
 img {
