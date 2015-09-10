@@ -3,12 +3,10 @@
 # Tell compass where to find local extensions
 # If you followed directions and ran 'gem install modular-scale' comment the next two lines out:
 extensions_dir = "sass/extensions"
-
 Compass::Frameworks.register('modular-scale', :path => File.expand_path("#{extensions_dir}/modular-scale"))
 
-# Uncomment these to use regular Ruby gems.
+# Uncomment the line below to use out regular Ruby gems.
 # require 'modular-scale'
-# require 'sassy-math'
 
 # Set this to the root of your project when deployed:
 http_path = "/"

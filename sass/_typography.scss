@@ -10,6 +10,9 @@ h1,h2,h3,h4,h5,h6 {
   @include padding-trailer($rhythm-spacing);
   a {
     color: $header-link-color;
+    &:hover {
+      color: $header-link-hover-color;
+    }
   }
 }
 
@@ -51,9 +54,9 @@ h6 { @include font-size($norm);}
 }
 
 /*=====================================================
- 
+
   Links & Paragraph styles
-  
+
   ======================================================*/
 
 p {
@@ -85,7 +88,7 @@ a {
 /*=====================================================
 
   Lists
-  
+
  ======================================================*/
 
 ul, ol {
@@ -102,7 +105,7 @@ ol {
 }
 
 ul {
-  &.square, &.circle, &.disc {
+  &.square, &.circle, &.disc, &.blank {
     margin-left: 25px;
   }
   &.square {
@@ -137,7 +140,7 @@ dl dt {
 }
 
 @include respond(portrait-tablets) {
-  
+
   ul, ol, dl, p { text-align: left;}
 
 }
