@@ -1,4 +1,4 @@
-// Color Pallete
+// Color Palette
 
 @function getColor($key, $state: false, $list: $ui-coloring) {
   @each $color in $list {
