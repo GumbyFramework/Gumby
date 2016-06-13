@@ -81,7 +81,7 @@
 		this.fixedPointjQ = this.fixedPoint instanceof jQuery;
 		this.pinPointjQ = this.pinPoint instanceof jQuery;
 
-		// if we have a parent constrain dimenions
+		// if we have a parent constrain dimensions
 		if(this.$parent && this.constrainEl) {
 			// measure up
 			this.measure();
@@ -137,7 +137,7 @@
 			'top' : this.top
 		}).addClass('fixed').removeClass('unfixed pinned').trigger('gumby.onFixed');
 
-		// if we have a parent constrain dimenions
+		// if we have a parent constrain dimensions
 		if(this.$parent) {
 			this.constrain();
 		}
