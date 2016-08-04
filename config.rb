@@ -1,3 +1,5 @@
+# For correctly genetating css in non-utf locales
+Encoding.default_external = "utf-8"
 # Require any additional compass plugins here.
 
 # Tell compass where to find local extensions
