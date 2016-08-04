@@ -21,6 +21,16 @@ $gutter: percentage($gutter-in-px / $row-max-width); // 2.1276596
   }
 }
 
+// The following function accepts a desired global column count and a current parent column count to
+// calculate the proper width
+@function global-columns($desired_cols, $container_cols, $hybrid-grid: false){
+  @if ($hybrid-grid == true) {
+    @return (100% * (columns($desired_cols, true) / columns($container_cols, true)));
+  }
+  @else {
+    @return (100% * (columns($desired_cols) / columns($container_cols)));
+  }
+}
 
 // Calculate the width required to acheive a desired global column number within a nested grid
 @function global-columns($desired_cols, $container_cols, $hybrid-grid: false){
