@@ -60,9 +60,9 @@
 		this.$input.prop('checked', true);
 		$span.append('<i class="icon-dot" />');
 
-		Gumby.debug('Triggering onCheck event', this.$el);
+		Gumby.debug('Triggering onChange event', this.$el);
 
-		this.$el.addClass('checked').trigger('gumby.onCheck');
+		this.$el.addClass('checked').trigger('gumby.onChange');
 	};
 
 	// add initialisation
